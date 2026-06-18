@@ -20,6 +20,8 @@ let app = {
   selected: [],
   subjectiveDraft: "",
   checked: null,
+  completedReview: null,
+  submittedReview: null,
   exam: null,
 };
 
@@ -32,10 +34,13 @@ function loadProgress() {
       wrong: {},
       exams: [],
       self: {},
+      activeReview: null,
+      reviewSessions: [],
+      activeExam: null,
       ...(JSON.parse(localStorage.getItem(STORE_KEY)) || {}),
     };
   } catch {
-    return { attempts: {}, wrong: {}, exams: [], self: {} };
+    return { attempts: {}, wrong: {}, exams: [], self: {}, activeReview: null, reviewSessions: [], activeExam: null };
   }
 }
 
@@ -90,6 +95,187 @@ function recordAttempt(question, correct) {
   saveProgress();
 }
 
+function makeReviewSession(sourceQuestions = questions, source = "practice") {
+  const filtered = sourceQuestions.filter((q) => app.typeFilter === "all" || q.type === app.typeFilter);
+  const queue = (app.order === "random" ? shuffle(filtered) : filtered).map((q) => q.id);
+  return {
+    id: `review-${Date.now()}`,
+    source,
+    typeFilter: app.typeFilter,
+    order: app.order,
+    queue,
+    current: 0,
+    answered: {},
+    answers: {},
+    subjective: {},
+    revealed: {},
+    submitted: false,
+    startedAt: new Date().toISOString(),
+    lastAt: new Date().toISOString(),
+    status: "active",
+  };
+}
+
+function activePracticeSession() {
+  return progress.activeReview || app.submittedReview;
+}
+
+function applyReviewSession(session) {
+  app.typeFilter = session.typeFilter || "all";
+  app.order = session.order || "sequential";
+  app.queue = session.queue?.length ? session.queue : questions.map((q) => q.id);
+  app.current = Math.min(session.current || 0, app.queue.length - 1);
+  app.selected = [];
+  app.subjectiveDraft = "";
+  app.checked = null;
+  app.completedReview = null;
+  app.submittedReview = null;
+}
+
+function saveActiveReview() {
+  if (!progress.activeReview || app.exam) return;
+  progress.activeReview.current = app.current;
+  progress.activeReview.lastAt = new Date().toISOString();
+  saveProgress();
+}
+
+function saveActiveExam() {
+  if (!app.exam) return;
+  progress.activeExam = app.exam;
+  saveProgress();
+}
+
+function savePracticeAnswer(question) {
+  const session = progress.activeReview;
+  if (!session || session.submitted) return;
+  if (isObjective(question)) {
+    const answer = selectedAnswer(question);
+    if (Array.isArray(answer) ? answer.length : answer) {
+      session.answers[question.id] = answer;
+      session.answered[question.id] = { at: new Date().toISOString() };
+    } else {
+      delete session.answers[question.id];
+      delete session.answered[question.id];
+    }
+  } else {
+    session.subjective[question.id] = app.subjectiveDraft;
+    if (app.subjectiveDraft.trim() || session.revealed?.[question.id]) {
+      session.answered[question.id] = { at: new Date().toISOString() };
+    } else {
+      delete session.answered[question.id];
+    }
+  }
+  session.current = app.current;
+  session.lastAt = new Date().toISOString();
+  saveProgress();
+}
+
+function loadPracticeAnswer(question) {
+  const session = activePracticeSession();
+  if (!session) return;
+  const saved = session.answers?.[question.id];
+  app.selected = Array.isArray(saved) ? saved : saved ? [saved] : [];
+  app.subjectiveDraft = session.subjective?.[question.id] || "";
+  app.checked = session.submitted || session.revealed?.[question.id] ? { correct: isObjective(question) ? grade(question, saved) : null } : null;
+}
+
+function reviewSummary(session, status) {
+  const answeredEntries = Object.entries(session.answered || {});
+  const objectiveEntries = answeredEntries.filter(([id]) => isObjective(byId(id)));
+  const correct = objectiveEntries.filter(([, item]) => item.correct === true).length;
+  return {
+    id: session.id,
+    status,
+    source: session.source,
+    typeFilter: session.typeFilter,
+    order: session.order,
+    total: session.queue.length,
+    answered: answeredEntries.length,
+    objectiveTotal: objectiveEntries.length,
+    correct,
+    accuracy: objectiveEntries.length ? Math.round((correct / objectiveEntries.length) * 100) : null,
+    startedAt: session.startedAt,
+    endedAt: new Date().toISOString(),
+  };
+}
+
+function completeActiveReviewIfReady() {
+  const session = progress.activeReview;
+  if (!session) return false;
+  const answeredCount = Object.keys(session.answered || {}).length;
+  if (answeredCount < session.queue.length) return false;
+  progress.reviewSessions.unshift(reviewSummary(session, "completed"));
+  progress.reviewSessions = progress.reviewSessions.slice(0, 50);
+  progress.activeReview = null;
+  saveProgress();
+  return true;
+}
+
+function abandonActiveReview() {
+  const session = progress.activeReview;
+  if (!session) return;
+  progress.reviewSessions.unshift(reviewSummary(session, "abandoned"));
+  progress.reviewSessions = progress.reviewSessions.slice(0, 50);
+  progress.activeReview = null;
+  saveProgress();
+  app.selected = [];
+  app.checked = null;
+  setView("dashboard");
+}
+
+function submitActiveReview() {
+  const session = progress.activeReview;
+  if (!session) return;
+  const answeredCount = Object.keys(session.answered || {}).length;
+  if (answeredCount < session.queue.length) return;
+  session.queue.map(byId).forEach((question) => {
+    if (!question) return;
+    const answer = session.answers?.[question.id];
+    const correct = isObjective(question) ? grade(question, answer) : null;
+    session.answered[question.id] = {
+      ...(session.answered[question.id] || {}),
+      correct,
+      submittedAt: new Date().toISOString(),
+    };
+    if (isObjective(question)) recordAttempt(question, correct);
+  });
+  session.submitted = true;
+  session.status = "completed";
+  session.endedAt = new Date().toISOString();
+  const summary = reviewSummary(session, "completed");
+  progress.reviewSessions.unshift(summary);
+  progress.reviewSessions = progress.reviewSessions.slice(0, 50);
+  progress.activeReview = null;
+  app.submittedReview = session;
+  app.completedReview = summary;
+  saveProgress();
+  render();
+}
+
+function revealCurrentAnswer() {
+  const session = progress.activeReview;
+  const question = currentQuestion();
+  if (!session || !question) return;
+  if (isObjective(question) && !app.selected.length) {
+    alert("请先选择答案，再提前看解析。");
+    return;
+  }
+  savePracticeAnswer(question);
+  session.revealed = session.revealed || {};
+  session.revealed[question.id] = new Date().toISOString();
+  session.current = app.current;
+  session.lastAt = new Date().toISOString();
+  saveProgress();
+  app.checked = { correct: isObjective(question) ? grade(question, session.answers?.[question.id]) : null };
+  render();
+}
+
+function resumeReview() {
+  if (!progress.activeReview) return startPractice();
+  applyReviewSession(progress.activeReview);
+  setView("practice");
+}
+
 function statSummary() {
   const attempts = Object.values(progress.attempts);
   const totalDone = attempts.reduce((sum, item) => sum + item.total, 0);
@@ -113,12 +299,13 @@ function setView(view) {
 }
 
 function startPractice(sourceQuestions = questions) {
-  const filtered = sourceQuestions.filter((q) => app.typeFilter === "all" || q.type === app.typeFilter);
-  app.queue = (app.order === "random" ? shuffle(filtered) : filtered).map((q) => q.id);
-  app.current = 0;
-  app.selected = [];
-  app.subjectiveDraft = "";
-  app.checked = null;
+  if (progress.activeReview) {
+    progress.reviewSessions.unshift(reviewSummary(progress.activeReview, "abandoned"));
+    progress.reviewSessions = progress.reviewSessions.slice(0, 50);
+  }
+  progress.activeReview = makeReviewSession(sourceQuestions, sourceQuestions === questions ? "practice" : "wrong");
+  saveProgress();
+  applyReviewSession(progress.activeReview);
   app.view = "practice";
   setView("practice");
 }
@@ -138,6 +325,9 @@ function render() {
 
 function renderDashboard() {
   const stats = statSummary();
+  const active = progress.activeReview;
+  const activeQuestion = active ? byId(active.queue?.[active.current || 0]) : null;
+  const recentReviews = (progress.reviewSessions || []).slice(0, 5);
   const typeCards = Object.entries(bank.meta.typeCounts || {})
     .map(([type, count]) => `<div class="type-card"><span class="muted">${TYPE_LABELS[type]}</span><strong>${count}</strong></div>`)
     .join("");
@@ -153,11 +343,24 @@ function renderDashboard() {
     <section class="panel">
       <h2>今天从哪里开始？</h2>
       <p class="muted">建议先做专项练习，再用错题本回补，最后进入模拟考试检验掌握度。</p>
+      ${active ? `
+        <div class="answer-box">
+          <strong>继续上次学习</strong>
+          <p class="muted">上次停在第 ${(active.current || 0) + 1} / ${active.queue.length} 题${activeQuestion ? `：${escapeHtml(activeQuestion.question.slice(0, 42))}` : ""}</p>
+        </div>
+      ` : ""}
       <div class="actions">
-        <button class="primary-action" data-action="practice">开始练习</button>
+        ${active ? `<button class="primary-action" data-action="resume-review">继续学习</button>` : `<button class="primary-action" data-action="practice">开始练习</button>`}
+        ${active ? `<button class="danger-action" data-action="abandon-review">放弃本轮</button>` : ""}
         <button class="ghost-action" data-action="wrong">复习错题</button>
         <button class="ghost-action" data-action="start-exam">模拟考试</button>
       </div>
+      ${recentReviews.length ? `
+        <div class="answer-box">
+          <strong>最近复习记录</strong>
+          <div class="progress-list">${recentReviews.map(reviewRow).join("")}</div>
+        </div>
+      ` : ""}
     </section>
     <aside class="side-panel">
       <h3>题型覆盖</h3>
@@ -174,14 +377,28 @@ function metric(label, value) {
   return `<div class="metric"><span>${label}</span><strong>${value}</strong></div>`;
 }
 
+function reviewRow(session) {
+  const status = session.status === "completed" ? "完整复习" : "中途放弃";
+  const statusClass = session.status === "completed" ? "status-good" : "status-warn";
+  const score = session.accuracy === null ? "主观题自评" : `客观题正确率 ${session.accuracy}%`;
+  return `
+    <div class="list-row">
+      <strong class="${statusClass}">${status} · ${session.answered} / ${session.total} 题</strong>
+      <span class="muted">${score} · ${new Date(session.endedAt).toLocaleString()}</span>
+    </div>
+  `;
+}
+
 function renderPractice() {
-  if (!app.queue.length) startPractice();
+  if (!app.queue.length && !app.submittedReview) startPractice();
   const question = currentQuestion();
+  loadPracticeAnswer(question);
   main.innerHTML = `
     <section class="question-panel">
       ${practiceToolbar()}
       ${renderQuestion(question)}
       ${renderPracticeActions(question)}
+      ${renderCompletedReviewNotice()}
     </section>
     <aside class="side-panel">
       ${renderSideInfo(question)}
@@ -190,11 +407,12 @@ function renderPractice() {
 }
 
 function practiceToolbar() {
+  const answered = Object.keys(progress.activeReview?.answered || {}).length;
   return `
     <div class="toolbar">
       <div>
         <h2>专项练习</h2>
-        <p class="muted">第 ${app.current + 1} / ${app.queue.length} 题</p>
+        <p class="muted">第 ${app.current + 1} / ${app.queue.length} 题 · 已完成 ${answered} 题</p>
       </div>
       <div class="filter-row">
         <select class="select" data-control="type">
@@ -206,6 +424,7 @@ function practiceToolbar() {
           <option value="random" ${app.order === "random" ? "selected" : ""}>随机练习</option>
         </select>
         <button class="ghost-action" data-action="reset-practice">重新开始</button>
+        ${progress.activeReview ? `<button class="danger-action" data-action="abandon-review">放弃本轮</button>` : ""}
       </div>
     </div>
   `;
@@ -253,12 +472,34 @@ function renderSubjective(question) {
 
 function renderPracticeActions(question) {
   if (!question) return "";
-  const canCheck = isObjective(question) ? app.selected.length > 0 : true;
+  const session = activePracticeSession();
+  const answered = Object.keys(session?.answered || {}).length;
+  const total = session?.queue?.length || app.queue.length;
+  const submitted = Boolean(session?.submitted);
+  const revealed = Boolean(session?.revealed?.[question.id]);
+  const canSubmit = answered === total && total > 0 && !submitted;
   return `
     <div class="actions">
       <button class="ghost-action" data-action="prev" ${app.current === 0 ? "disabled" : ""}>上一题</button>
-      <button class="primary-action" data-action="check" ${canCheck ? "" : "disabled"}>${isObjective(question) ? "检查答案" : "查看参考答案"}</button>
+      ${!submitted && !revealed ? `<button class="ghost-action" data-action="reveal-answer">提前看解析</button>` : ""}
+      ${submitted ? `<button class="ghost-action" disabled>已提交，正在复盘</button>` : `<button class="primary-action" data-action="submit-review" ${canSubmit ? "" : "disabled"}>提交本轮</button>`}
       <button class="ghost-action" data-action="next">下一题</button>
+    </div>
+    ${!submitted && !canSubmit ? `<p class="muted">还有 ${Math.max(0, total - answered)} 题未作答，全部完成后统一提交并显示解析。</p>` : ""}
+  `;
+}
+
+function renderCompletedReviewNotice() {
+  if (!app.completedReview) return "";
+  const score = app.completedReview.accuracy === null ? "本轮以主观题自评为主" : `客观题正确率 ${app.completedReview.accuracy}%`;
+  return `
+    <div class="answer-box">
+      <h3>本轮完整复习已记录</h3>
+      <p>${score}，共完成 ${app.completedReview.answered} / ${app.completedReview.total} 题。刷新页面后会从新一轮开始。</p>
+      <div class="actions">
+        <button class="primary-action" data-action="practice">开始新一轮</button>
+        <button class="ghost-action" data-view="stats">查看复习记录</button>
+      </div>
     </div>
   `;
 }
@@ -272,6 +513,7 @@ function renderAnswerBox(question, result) {
       <p><strong>正确答案：</strong>${escapeHtml(answer)}</p>
       ${question.referenceAnswer && !isObjective(question) ? `<div class="reference-answer">${escapeHtml(question.referenceAnswer)}</div>` : ""}
       <p><strong>解析：</strong>${escapeHtml(question.explanation)}</p>
+      ${question.memoryTip ? `<p><strong>记忆方法：</strong>${escapeHtml(question.memoryTip)}</p>` : ""}
       ${!isObjective(question) ? selfButtons(question) : ""}
     </div>
   `;
@@ -325,6 +567,9 @@ function wrongRow(question) {
 }
 
 function renderExam() {
+  if (!app.exam && progress.activeExam) {
+    app.exam = progress.activeExam;
+  }
   if (!app.exam) {
     main.innerHTML = `
       <section class="panel full-width">
@@ -406,7 +651,17 @@ function renderStats() {
     const rate = done ? Math.round((correct / done) * 100) : 0;
     return `<div class="list-row"><strong>${label}</strong><div class="bar"><span style="width:${rate}%"></span></div><span class="muted">${done} 次练习 · 正确率 ${rate}%</span></div>`;
   }).join("");
-  main.innerHTML = `<section class="panel full-width"><h2>学习统计</h2><div class="progress-list">${rows}</div></section>`;
+  const reviews = progress.reviewSessions || [];
+  main.innerHTML = `
+    <section class="panel">
+      <h2>学习统计</h2>
+      <div class="progress-list">${rows}</div>
+    </section>
+    <aside class="side-panel">
+      <h3>复习记录</h3>
+      ${reviews.length ? `<div class="progress-list">${reviews.slice(0, 12).map(reviewRow).join("")}</div>` : `<div class="empty">还没有完整复习记录。</div>`}
+    </aside>
+  `;
 }
 
 function renderData() {
@@ -426,13 +681,26 @@ function renderData() {
 
 function checkCurrent() {
   const question = currentQuestion();
+  let correct = null;
   if (isObjective(question)) {
     const answer = selectedAnswer(question);
-    const correct = grade(question, answer);
+    correct = grade(question, answer);
     recordAttempt(question, correct);
     app.checked = { correct };
   } else {
     app.checked = { correct: null };
+  }
+  if (progress.activeReview && progress.activeReview.queue.includes(question.id)) {
+    progress.activeReview.answered[question.id] = {
+      correct,
+      at: new Date().toISOString(),
+    };
+    progress.activeReview.current = app.current;
+    progress.activeReview.lastAt = new Date().toISOString();
+    if (completeActiveReviewIfReady()) {
+      app.completedReview = progress.reviewSessions[0];
+    }
+    saveProgress();
   }
   render();
 }
@@ -442,6 +710,7 @@ function moveQuestion(delta) {
   app.selected = [];
   app.subjectiveDraft = "";
   app.checked = null;
+  saveActiveReview();
   render();
 }
 
@@ -458,6 +727,7 @@ function beginExam() {
     minutes,
     submitted: false,
   };
+  saveActiveExam();
   render();
 }
 
@@ -471,6 +741,7 @@ function submitExam() {
   objective.forEach((q) => recordAttempt(q, grade(q, exam.answers[q.id])));
   progress.exams.unshift({ score, total: objective.length, correct, at: new Date().toISOString() });
   progress.exams = progress.exams.slice(0, 20);
+  progress.activeExam = exam;
   saveProgress();
   render();
 }
@@ -511,12 +782,17 @@ document.addEventListener("click", (event) => {
     const key = option.dataset.option;
     const question = app.exam ? byId(app.exam.ids[app.exam.index]) : currentQuestion();
     if (app.exam?.submitted) return;
+    if (!app.exam && activePracticeSession()?.submitted) return;
     if (question.type === "multiple") {
       app.selected = app.selected.includes(key) ? app.selected.filter((item) => item !== key) : [...app.selected, key];
     } else {
       app.selected = [key];
     }
-    if (app.exam) app.exam.answers[question.id] = selectedAnswer(question);
+    if (app.exam) {
+      app.exam.answers[question.id] = selectedAnswer(question);
+      saveActiveExam();
+    }
+    if (!app.exam) savePracticeAnswer(question);
     app.checked = null;
     render();
     return;
@@ -533,37 +809,41 @@ document.addEventListener("click", (event) => {
   const action = event.target.closest("[data-action]")?.dataset.action;
   if (!action) return;
   if (action === "practice") startPractice();
+  if (action === "resume-review") resumeReview();
+  if (action === "abandon-review" && confirm("确定放弃当前这一轮复习吗？本次会记录为中途放弃。")) abandonActiveReview();
   if (action === "wrong") setView("wrong");
   if (action === "reset-practice") startPractice();
   if (action === "check") checkCurrent();
+  if (action === "reveal-answer") revealCurrentAnswer();
+  if (action === "submit-review") submitActiveReview();
   if (action === "prev") moveQuestion(-1);
   if (action === "next") moveQuestion(1);
   if (action === "practice-wrong") {
     const wrongQuestions = Object.entries(progress.wrong).filter(([, item]) => !item.resolvedAt).map(([id]) => byId(id)).filter(Boolean);
-    app.queue = wrongQuestions.map((q) => q.id);
-    app.current = 0;
-    app.selected = [];
-    app.checked = null;
-    setView("practice");
+    startPractice(wrongQuestions);
   }
   if (action === "start-exam") setView("exam");
   if (action === "begin-exam") beginExam();
   if (action === "exam-prev" && app.exam) {
     app.exam.index -= 1;
+    saveActiveExam();
     render();
   }
   if (action === "exam-next" && app.exam) {
     app.exam.index += 1;
+    saveActiveExam();
     render();
   }
   if (action === "submit-exam") submitExam();
   if (action === "finish-exam") {
     app.exam = null;
+    progress.activeExam = null;
+    saveProgress();
     setView("dashboard");
   }
   if (action === "export-progress") exportProgress();
   if (action === "clear-progress" && confirm("确认清空本浏览器里的学习记录？")) {
-    progress = { attempts: {}, wrong: {}, exams: [], self: {} };
+    progress = { attempts: {}, wrong: {}, exams: [], self: {}, activeReview: null, reviewSessions: [], activeExam: null };
     saveProgress();
     render();
   }
@@ -594,8 +874,10 @@ document.addEventListener("input", (event) => {
   if (app.exam) {
     const question = byId(app.exam.ids[app.exam.index]);
     app.exam.subjective[question.id] = text;
+    saveActiveExam();
   } else {
     app.subjectiveDraft = text;
+    savePracticeAnswer(currentQuestion());
   }
 });
 
