@@ -1975,10 +1975,10 @@ window.QUESTION_BANK = {
       "type": "judge",
       "question": "ElasticSearch 是一个开源的高扩展的分布式全文检索引擎。",
       "options": {
-        "正确": "正确",
-        "错误": "错误"
+        "A": "正确",
+        "B": "错误"
       },
-      "answer": "正确",
+      "answer": "A",
       "referenceAnswer": "正确",
       "explanation": "该说法为“正确”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
       "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
@@ -1992,10 +1992,10 @@ window.QUESTION_BANK = {
       "type": "judge",
       "question": "ElasticSearch 可以处理 PB 级别的数据。",
       "options": {
-        "正确": "正确",
-        "错误": "错误"
+        "A": "正确",
+        "B": "错误"
       },
-      "answer": "正确",
+      "answer": "A",
       "referenceAnswer": "正确",
       "explanation": "该说法为“正确”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
       "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
@@ -2009,10 +2009,10 @@ window.QUESTION_BANK = {
       "type": "judge",
       "question": "ElasticSearch 是 Elastic Stack 的核心组件。",
       "options": {
-        "正确": "正确",
-        "错误": "错误"
+        "A": "正确",
+        "B": "错误"
       },
-      "answer": "正确",
+      "answer": "A",
       "referenceAnswer": "正确",
       "explanation": "该说法为“正确”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
       "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
@@ -2026,10 +2026,10 @@ window.QUESTION_BANK = {
       "type": "judge",
       "question": "ElasticSearch 只能在 Linux 系统上运行。",
       "options": {
-        "正确": "正确",
-        "错误": "错误"
+        "A": "正确",
+        "B": "错误"
       },
-      "answer": "错误",
+      "answer": "B",
       "referenceAnswer": "错误",
       "explanation": "该说法为“错误”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
       "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
@@ -2043,10 +2043,10 @@ window.QUESTION_BANK = {
       "type": "judge",
       "question": "ElasticSearch 只能用于全文检索，不能用于数据分析。",
       "options": {
-        "正确": "正确",
-        "错误": "错误"
+        "A": "正确",
+        "B": "错误"
       },
-      "answer": "错误",
+      "answer": "B",
       "referenceAnswer": "错误",
       "explanation": "该说法为“错误”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
       "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
@@ -2060,10 +2060,10 @@ window.QUESTION_BANK = {
       "type": "judge",
       "question": "ElasticSearch 只能在服务器上运行，不能在个人电脑上运行。",
       "options": {
-        "正确": "正确",
-        "错误": "错误"
+        "A": "正确",
+        "B": "错误"
       },
-      "answer": "错误",
+      "answer": "B",
       "referenceAnswer": "错误",
       "explanation": "该说法为“错误”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
       "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
@@ -2077,10 +2077,10 @@ window.QUESTION_BANK = {
       "type": "judge",
       "question": "ElasticSearch 7.x 版本需要 JDK 11 及以上版本支持。",
       "options": {
-        "正确": "正确",
-        "错误": "错误"
+        "A": "正确",
+        "B": "错误"
       },
-      "answer": "正确",
+      "answer": "A",
       "referenceAnswer": "正确",
       "explanation": "该说法为“正确”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
       "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
@@ -2094,10 +2094,10 @@ window.QUESTION_BANK = {
       "type": "judge",
       "question": "安装 ElasticSearch Head 插件需要先安装 Node.js。",
       "options": {
-        "正确": "正确",
-        "错误": "错误"
+        "A": "正确",
+        "B": "错误"
       },
-      "answer": "正确",
+      "answer": "A",
       "referenceAnswer": "正确",
       "explanation": "该说法为“正确”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
       "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
@@ -2111,10 +2111,10 @@ window.QUESTION_BANK = {
       "type": "judge",
       "question": "安装 ElasticSearch7.14.0 时必须配置 JAVA_HOME 环境变量。",
       "options": {
-        "正确": "正确",
-        "错误": "错误"
+        "A": "正确",
+        "B": "错误"
       },
-      "answer": "错误",
+      "answer": "B",
       "referenceAnswer": "错误",
       "explanation": "该说法为“错误”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
       "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
@@ -2128,10 +2128,10 @@ window.QUESTION_BANK = {
       "type": "judge",
       "question": "一个 ElasticSearch 集群只能有一个节点。",
       "options": {
-        "正确": "正确",
-        "错误": "错误"
+        "A": "正确",
+        "B": "错误"
       },
-      "answer": "错误",
+      "answer": "B",
       "referenceAnswer": "错误",
       "explanation": "该说法为“错误”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
       "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
@@ -2145,10 +2145,10 @@ window.QUESTION_BANK = {
       "type": "judge",
       "question": "一个 ElasticSearch 集群可以有多个主节点。",
       "options": {
-        "正确": "正确",
-        "错误": "错误"
+        "A": "正确",
+        "B": "错误"
       },
-      "answer": "错误",
+      "answer": "B",
       "referenceAnswer": "错误",
       "explanation": "该说法为“错误”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
       "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
@@ -2162,10 +2162,10 @@ window.QUESTION_BANK = {
       "type": "judge",
       "question": "ElasticSearch 集群中只能有一个主节点在运行。",
       "options": {
-        "正确": "正确",
-        "错误": "错误"
+        "A": "正确",
+        "B": "错误"
       },
-      "answer": "正确",
+      "answer": "A",
       "referenceAnswer": "正确",
       "explanation": "该说法为“正确”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
       "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
@@ -2179,10 +2179,10 @@ window.QUESTION_BANK = {
       "type": "judge",
       "question": "复制分片可以与主分片放在同一个节点上。",
       "options": {
-        "正确": "正确",
-        "错误": "错误"
+        "A": "正确",
+        "B": "错误"
       },
-      "answer": "错误",
+      "answer": "B",
       "referenceAnswer": "错误",
       "explanation": "该说法为“错误”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
       "memoryTip": "主分片记“原件”：真正承载数据；复制分片记“复印件”：容灾和分摊查询。",
@@ -2196,10 +2196,10 @@ window.QUESTION_BANK = {
       "type": "judge",
       "question": "ElasticSearch 中的文档只能是 JSON 格式。",
       "options": {
-        "正确": "正确",
-        "错误": "错误"
+        "A": "正确",
+        "B": "错误"
       },
-      "answer": "正确",
+      "answer": "A",
       "referenceAnswer": "正确",
       "explanation": "该说法为“正确”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
       "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
@@ -2213,10 +2213,10 @@ window.QUESTION_BANK = {
       "type": "judge",
       "question": "复制分片的数量在索引创建后可以动态修改。",
       "options": {
-        "正确": "正确",
-        "错误": "错误"
+        "A": "正确",
+        "B": "错误"
       },
-      "answer": "正确",
+      "answer": "A",
       "referenceAnswer": "正确",
       "explanation": "该说法为“正确”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
       "memoryTip": "复制分片记“复印件”：主分片坏了可顶上，也能分摊搜索压力。",
@@ -2231,10 +2231,10 @@ window.QUESTION_BANK = {
       "type": "judge",
       "question": "ElasticSearch 是面向文档的，它可以存储整个对象或文档。",
       "options": {
-        "正确": "正确",
-        "错误": "错误"
+        "A": "正确",
+        "B": "错误"
       },
-      "answer": "正确",
+      "answer": "A",
       "referenceAnswer": "正确",
       "explanation": "该说法为“正确”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
       "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
@@ -2248,10 +2248,10 @@ window.QUESTION_BANK = {
       "type": "judge",
       "question": "在 ElasticSearch 中，使用 GET 方法可以查询文档。",
       "options": {
-        "正确": "正确",
-        "错误": "错误"
+        "A": "正确",
+        "B": "错误"
       },
-      "answer": "正确",
+      "answer": "A",
       "referenceAnswer": "正确",
       "explanation": "该说法为“正确”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
       "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
@@ -2265,10 +2265,10 @@ window.QUESTION_BANK = {
       "type": "judge",
       "question": "在 ElasticSearch 中，使用 POST 方法创建文档时必须指定 ID。",
       "options": {
-        "正确": "正确",
-        "错误": "错误"
+        "A": "正确",
+        "B": "错误"
       },
-      "answer": "错误",
+      "answer": "B",
       "referenceAnswer": "错误",
       "explanation": "该说法为“错误”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
       "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
@@ -2282,10 +2282,10 @@ window.QUESTION_BANK = {
       "type": "judge",
       "question": "在 ElasticSearch 中，索引名称可以包含大写字母。",
       "options": {
-        "正确": "正确",
-        "错误": "错误"
+        "A": "正确",
+        "B": "错误"
       },
-      "answer": "错误",
+      "answer": "B",
       "referenceAnswer": "错误",
       "explanation": "该说法为“错误”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
       "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
@@ -2299,10 +2299,10 @@ window.QUESTION_BANK = {
       "type": "judge",
       "question": "ElasticSearch 的默认分词器对中文支持很好。",
       "options": {
-        "正确": "正确",
-        "错误": "错误"
+        "A": "正确",
+        "B": "错误"
       },
-      "answer": "错误",
+      "answer": "B",
       "referenceAnswer": "错误",
       "explanation": "该说法为“错误”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
       "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
@@ -2316,10 +2316,10 @@ window.QUESTION_BANK = {
       "type": "judge",
       "question": "ElasticSearch 的 standard 分词器对中文支持不好。",
       "options": {
-        "正确": "正确",
-        "错误": "错误"
+        "A": "正确",
+        "B": "错误"
       },
-      "answer": "正确",
+      "answer": "A",
       "referenceAnswer": "正确",
       "explanation": "该说法为“正确”。standard 分词器对中文通常按单字切分，语义效果不如 IK 中文分词器。",
       "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
@@ -2333,10 +2333,10 @@ window.QUESTION_BANK = {
       "type": "judge",
       "question": "使用 POST 方法创建文档时，如果指定了已存在的 ID，则会更新该文档。",
       "options": {
-        "正确": "正确",
-        "错误": "错误"
+        "A": "正确",
+        "B": "错误"
       },
-      "answer": "正确",
+      "answer": "A",
       "referenceAnswer": "正确",
       "explanation": "该说法为“正确”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
       "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
@@ -2350,10 +2350,10 @@ window.QUESTION_BANK = {
       "type": "judge",
       "question": "IK 分词器只能用于中文分词。",
       "options": {
-        "正确": "正确",
-        "错误": "错误"
+        "A": "正确",
+        "B": "错误"
       },
-      "answer": "错误",
+      "answer": "B",
       "referenceAnswer": "错误",
       "explanation": "该说法为“错误”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
       "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
@@ -2367,10 +2367,10 @@ window.QUESTION_BANK = {
       "type": "judge",
       "question": "IK 分词器的 ik_max_word 算法适合用于查询。",
       "options": {
-        "正确": "正确",
-        "错误": "错误"
+        "A": "正确",
+        "B": "错误"
       },
-      "answer": "错误",
+      "answer": "B",
       "referenceAnswer": "错误",
       "explanation": "该说法为“错误”。ik_max_word 是最细切分，切出的词多，召回更多，适合新闻、文章等全文搜索。 术语理解：ik_max_word：IK 最细切分，词更多，偏提高召回率。",
       "memoryTip": "max_word = 最大词量：切词多，偏召回、适合文章搜索。",
@@ -2385,10 +2385,10 @@ window.QUESTION_BANK = {
       "type": "judge",
       "question": "ElasticSearch 默认的分词器是 standard 分词器。",
       "options": {
-        "正确": "正确",
-        "错误": "错误"
+        "A": "正确",
+        "B": "错误"
       },
-      "answer": "正确",
+      "answer": "A",
       "referenceAnswer": "正确",
       "explanation": "该说法为“正确”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
       "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
@@ -2402,10 +2402,10 @@ window.QUESTION_BANK = {
       "type": "judge",
       "question": "在 ElasticSearch 查询中，sort 参数用于对结果进行排序。",
       "options": {
-        "正确": "正确",
-        "错误": "错误"
+        "A": "正确",
+        "B": "错误"
       },
-      "answer": "正确",
+      "answer": "A",
       "referenceAnswer": "正确",
       "explanation": "该说法为“正确”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
       "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
@@ -2419,10 +2419,10 @@ window.QUESTION_BANK = {
       "type": "judge",
       "question": "在 ElasticSearch 查询中，aggs 参数用于进行聚合查询。",
       "options": {
-        "正确": "正确",
-        "错误": "错误"
+        "A": "正确",
+        "B": "错误"
       },
-      "answer": "正确",
+      "answer": "A",
       "referenceAnswer": "正确",
       "explanation": "该说法为“正确”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
       "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
@@ -2436,10 +2436,10 @@ window.QUESTION_BANK = {
       "type": "judge",
       "question": "IK 分词器的 ik_smart 算法会将文本拆分成尽可能多的词。",
       "options": {
-        "正确": "正确",
-        "错误": "错误"
+        "A": "正确",
+        "B": "错误"
       },
-      "answer": "错误",
+      "answer": "B",
       "referenceAnswer": "错误",
       "explanation": "该说法为“错误”。ik_smart 是最少切分，切出的词少，查询更精确、噪声更少。 术语理解：ik_smart：IK 最少切分，词更少，偏精确和高效。",
       "memoryTip": "smart = 聪明省事：切词少，偏精确、效率高。",
@@ -2453,10 +2453,10 @@ window.QUESTION_BANK = {
       "type": "judge",
       "question": "ElasticSearch 集群的健康状态为 red 表示部分主分片不可用。",
       "options": {
-        "正确": "正确",
-        "错误": "错误"
+        "A": "正确",
+        "B": "错误"
       },
-      "answer": "错误",
+      "answer": "B",
       "referenceAnswer": "错误",
       "explanation": "该说法为“错误”。red 表示至少有主分片不可用，数据读写会受影响。",
       "memoryTip": "主分片记“原件”：真正承载数据；复制分片记“复印件”：容灾和分摊查询。",
@@ -2470,10 +2470,10 @@ window.QUESTION_BANK = {
       "type": "judge",
       "question": "ElasticSearch 集群的健康状态为 green 表示所有主分片和复制分片都正常运行。",
       "options": {
-        "正确": "正确",
-        "错误": "错误"
+        "A": "正确",
+        "B": "错误"
       },
-      "answer": "正确",
+      "answer": "A",
       "referenceAnswer": "正确",
       "explanation": "该说法为“正确”。green 表示主分片和复制分片都正常，是最健康的状态。",
       "memoryTip": "主分片记“原件”：真正承载数据；复制分片记“复印件”：容灾和分摊查询。",
@@ -2487,10 +2487,10 @@ window.QUESTION_BANK = {
       "type": "judge",
       "question": "在 ElasticSearch 查询中，_source 参数用于指定返回哪些字段。",
       "options": {
-        "正确": "正确",
-        "错误": "错误"
+        "A": "正确",
+        "B": "错误"
       },
-      "answer": "正确",
+      "answer": "A",
       "referenceAnswer": "正确",
       "explanation": "该说法为“正确”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
       "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
@@ -2505,10 +2505,10 @@ window.QUESTION_BANK = {
       "type": "judge",
       "question": "Spring Boot 整合 ElasticSearch 时，只能使用 RestHighLevelClient。",
       "options": {
-        "正确": "正确",
-        "错误": "错误"
+        "A": "正确",
+        "B": "错误"
       },
-      "answer": "错误",
+      "answer": "B",
       "referenceAnswer": "错误",
       "explanation": "该说法为“错误”。ES 7.x 的 Java 集成常用 RestHighLevelClient；TransportClient 已逐步废弃。 术语理解：RestHighLevelClient：Java 高级 REST 客户端，Spring Boot 整合 ES 7.x 常见。",
       "memoryTip": "RestHighLevelClient 直译“高级 REST 客户端”，ES 7.x Java 整合常见。",
@@ -2522,10 +2522,10 @@ window.QUESTION_BANK = {
       "type": "judge",
       "question": "Spring Boot 整合 ElasticSearch 时，不需要任何配置即可连接到本地的 ElasticSearch 服务。",
       "options": {
-        "正确": "正确",
-        "错误": "错误"
+        "A": "正确",
+        "B": "错误"
       },
-      "answer": "错误",
+      "answer": "B",
       "referenceAnswer": "错误",
       "explanation": "该说法为“错误”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
       "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
@@ -2540,10 +2540,10 @@ window.QUESTION_BANK = {
       "type": "judge",
       "question": "ElasticSearch 集群的健康状态为 yellow 表示所有主分片和复制分片都正常运行。",
       "options": {
-        "正确": "正确",
-        "错误": "错误"
+        "A": "正确",
+        "B": "错误"
       },
-      "answer": "错误",
+      "answer": "B",
       "referenceAnswer": "错误",
       "explanation": "该说法为“错误”。yellow 表示主分片可用但复制分片未完全分配；常见于单节点有副本的情况。",
       "memoryTip": "主分片记“原件”：真正承载数据；复制分片记“复印件”：容灾和分摊查询。",
@@ -2557,10 +2557,10 @@ window.QUESTION_BANK = {
       "type": "judge",
       "question": "在 ElasticSearch 中，批量插入数据可以使用 BulkRequest。",
       "options": {
-        "正确": "正确",
-        "错误": "错误"
+        "A": "正确",
+        "B": "错误"
       },
-      "answer": "正确",
+      "answer": "A",
       "referenceAnswer": "正确",
       "explanation": "该说法为“正确”。Bulk 表示“批量”，BulkRequest 就是批量增删改请求。 术语理解：BulkRequest：批量请求类，用来一次提交多条增删改操作。",
       "memoryTip": "Bulk 是“批量”：BulkRequest 看到批量增删改就选它。",
@@ -2574,10 +2574,10 @@ window.QUESTION_BANK = {
       "type": "judge",
       "question": "在 ElasticSearch 中，批量操作可以提高数据处理的效率。",
       "options": {
-        "正确": "正确",
-        "错误": "错误"
+        "A": "正确",
+        "B": "错误"
       },
-      "answer": "正确",
+      "answer": "A",
       "referenceAnswer": "正确",
       "explanation": "该说法为“正确”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
       "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
@@ -2591,10 +2591,10 @@ window.QUESTION_BANK = {
       "type": "judge",
       "question": "Spring Boot 2.5.0 版本整合 ElasticSearch 时，需要引入 spring-boot-starter-data-elasticsearch 依赖。",
       "options": {
-        "正确": "正确",
-        "错误": "错误"
+        "A": "正确",
+        "B": "错误"
       },
-      "answer": "正确",
+      "answer": "A",
       "referenceAnswer": "正确",
       "explanation": "该说法为“正确”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
       "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
@@ -2608,10 +2608,10 @@ window.QUESTION_BANK = {
       "type": "judge",
       "question": "ElasticSearch 中的类型（Type）在 6.x 版本中已经被废弃。",
       "options": {
-        "正确": "正确",
-        "错误": "错误"
+        "A": "正确",
+        "B": "错误"
       },
-      "answer": "错误",
+      "answer": "B",
       "referenceAnswer": "错误",
       "explanation": "该说法为“错误”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
       "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
@@ -2625,10 +2625,10 @@ window.QUESTION_BANK = {
       "type": "judge",
       "question": "ElasticSearch 中的类型（Type）在 8.x 版本中已经被完全移除。",
       "options": {
-        "正确": "正确",
-        "错误": "错误"
+        "A": "正确",
+        "B": "错误"
       },
-      "answer": "正确",
+      "answer": "A",
       "referenceAnswer": "正确",
       "explanation": "该说法为“正确”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
       "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
@@ -2642,10 +2642,10 @@ window.QUESTION_BANK = {
       "type": "judge",
       "question": "在 ElasticSearch 中，删除索引会同时删除该索引下的所有文档。",
       "options": {
-        "正确": "正确",
-        "错误": "错误"
+        "A": "正确",
+        "B": "错误"
       },
-      "answer": "正确",
+      "answer": "A",
       "referenceAnswer": "正确",
       "explanation": "该说法为“正确”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
       "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
@@ -2660,10 +2660,10 @@ window.QUESTION_BANK = {
       "type": "judge",
       "question": "分片的数量在索引创建后可以随时修改。",
       "options": {
-        "正确": "正确",
-        "错误": "错误"
+        "A": "正确",
+        "B": "错误"
       },
-      "answer": "错误",
+      "answer": "B",
       "referenceAnswer": "错误",
       "explanation": "该说法为“错误”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
       "memoryTip": "Shard 分片记“拆”：把一个索引拆成多份，解决容量和并行处理。",
@@ -2678,10 +2678,10 @@ window.QUESTION_BANK = {
       "type": "judge",
       "question": "一个分片可以存储无限多的文档。",
       "options": {
-        "正确": "正确",
-        "错误": "错误"
+        "A": "正确",
+        "B": "错误"
       },
-      "answer": "错误",
+      "answer": "B",
       "referenceAnswer": "错误",
       "explanation": "该说法为“错误”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
       "memoryTip": "Shard 分片记“拆”：把一个索引拆成多份，解决容量和并行处理。",
@@ -2695,10 +2695,10 @@ window.QUESTION_BANK = {
       "type": "judge",
       "question": "ElasticSearch 中的类型（Type）在 8.x 版本中已经被废弃。",
       "options": {
-        "正确": "正确",
-        "错误": "错误"
+        "A": "正确",
+        "B": "错误"
       },
-      "answer": "正确",
+      "answer": "A",
       "referenceAnswer": "正确",
       "explanation": "该说法为“正确”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
       "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
@@ -2712,10 +2712,10 @@ window.QUESTION_BANK = {
       "type": "judge",
       "question": "ElasticSearch 提供了自动故障转移机制。",
       "options": {
-        "正确": "正确",
-        "错误": "错误"
+        "A": "正确",
+        "B": "错误"
       },
-      "answer": "正确",
+      "answer": "A",
       "referenceAnswer": "正确",
       "explanation": "该说法为“正确”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
       "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
@@ -2729,10 +2729,10 @@ window.QUESTION_BANK = {
       "type": "judge",
       "question": "ElasticSearch 提供了自动分片分配和负载均衡功能。",
       "options": {
-        "正确": "正确",
-        "错误": "错误"
+        "A": "正确",
+        "B": "错误"
       },
-      "answer": "正确",
+      "answer": "A",
       "referenceAnswer": "正确",
       "explanation": "该说法为“正确”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
       "memoryTip": "Shard 分片记“拆”：把一个索引拆成多份，解决容量和并行处理。",

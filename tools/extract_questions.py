@@ -246,16 +246,17 @@ def parse_judge(lines: list[str], start_id: int) -> list[dict]:
         question, answer = split_answer_from_text(line)
         if not answer:
             continue
-        answer = "正确" if answer in {"正确", "对", "√"} else "错误"
+        answer_label = "正确" if answer in {"正确", "对", "√"} else "错误"
+        answer_key = "A" if answer_label == "正确" else "B"
         questions.append(
             {
                 "id": f"q{qid:03d}",
                 "type": "judge",
                 "question": question,
-                "options": {"正确": "正确", "错误": "错误"},
-                "answer": answer,
-                "referenceAnswer": answer,
-                "explanation": objective_explanation(question, answer, {}, "judge"),
+                "options": {"A": "正确", "B": "错误"},
+                "answer": answer_key,
+                "referenceAnswer": answer_label,
+                "explanation": objective_explanation(question, answer_label, {}, "judge"),
                 "memoryTip": memory_tip(question, "judge"),
                 "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
                 "tags": infer_tags(question),

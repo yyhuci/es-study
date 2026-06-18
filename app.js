@@ -66,6 +66,8 @@ function isObjective(question) {
 }
 
 function normalizeAnswer(answer) {
+  if (answer === "正确") return "A";
+  if (answer === "错误") return "B";
   return Array.isArray(answer) ? [...answer].sort().join("") : String(answer || "");
 }
 
@@ -611,7 +613,8 @@ function renderCompletedReviewNotice() {
 }
 
 function renderAnswerBox(question, result) {
-  const answer = Array.isArray(question.answer) ? question.answer.join("") : question.answer;
+  const rawAnswer = Array.isArray(question.answer) ? question.answer.join("") : question.answer;
+  const answer = question.type === "judge" ? `${rawAnswer}（${question.options?.[rawAnswer] || question.referenceAnswer || ""}）` : rawAnswer;
   const className = result.correct === false ? "answer-box is-wrong" : "answer-box";
   return `
     <div class="${className}">
