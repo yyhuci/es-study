@@ -205,6 +205,7 @@ function reviewSummary(session, status) {
     typeFilter: session.typeFilter,
     order: session.order,
     queue: session.queue || [],
+    current: session.current || 0,
     answers: session.answers || {},
     subjective: session.subjective || {},
     answeredMap: session.answered || {},
@@ -306,6 +307,33 @@ function openReviewSession(sessionId) {
   if (!session) return;
   if (!session.queue?.length) {
     alert("这条旧记录没有保存题目明细，只能在列表中查看概要。");
+    return;
+  }
+  if (session.status === "abandoned") {
+    if (progress.activeReview && !confirmPracticeSwitch()) return;
+    stashActiveReview();
+    const answeredCount = Object.keys(session.answeredMap || {}).length;
+    const nextIndex = session.queue.findIndex((id) => !session.answeredMap?.[id]);
+    progress.activeReview = {
+      id: `review-${Date.now()}`,
+      source: session.source || "practice",
+      typeFilter: session.typeFilter || "all",
+      order: session.order || "sequential",
+      queue: session.queue,
+      current: nextIndex >= 0 ? nextIndex : Math.min(answeredCount, session.queue.length - 1),
+      answered: session.answeredMap || {},
+      answers: session.answers || {},
+      subjective: session.subjective || {},
+      revealed: {},
+      submitted: false,
+      startedAt: session.startedAt || new Date().toISOString(),
+      lastAt: new Date().toISOString(),
+      status: "active",
+    };
+    progress.reviewSessions = progress.reviewSessions.filter((item) => item.id !== sessionId);
+    saveProgress();
+    applyReviewSession(progress.activeReview);
+    setView("practice");
     return;
   }
   const review = {
@@ -454,12 +482,13 @@ function reviewRow(session) {
   const status = session.status === "completed" ? "完整复习" : "中途放弃";
   const statusClass = session.status === "completed" ? "status-good" : "status-warn";
   const score = session.accuracy === null ? "主观题自评" : `客观题正确率 ${session.accuracy}%`;
+  const openLabel = session.status === "completed" ? "查看" : "继续";
   return `
     <div class="list-row">
       <strong class="${statusClass}">${status} · ${session.answered} / ${session.total} 题</strong>
       <span class="muted">${score} · ${new Date(session.endedAt).toLocaleString()}</span>
       <div class="actions">
-        <button class="small-action" data-action="open-review-session" data-session-id="${session.id}">选择</button>
+        <button class="small-action" data-action="open-review-session" data-session-id="${session.id}">${openLabel}</button>
         <button class="small-action danger-action" data-action="delete-review-session" data-session-id="${session.id}">删除</button>
       </div>
     </div>
