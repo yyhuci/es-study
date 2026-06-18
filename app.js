@@ -204,6 +204,10 @@ function reviewSummary(session, status) {
     source: session.source,
     typeFilter: session.typeFilter,
     order: session.order,
+    queue: session.queue || [],
+    answers: session.answers || {},
+    subjective: session.subjective || {},
+    answeredMap: session.answered || {},
     total: session.queue.length,
     answered: answeredEntries.length,
     objectiveTotal: objectiveEntries.length,
@@ -295,6 +299,42 @@ function hasUnsubmittedReviewWork() {
 function confirmPracticeSwitch() {
   if (!hasUnsubmittedReviewWork()) return true;
   return confirm("当前专项练习还没有提交，已作答内容会先保存为草稿；切回这个题型时可以继续。确定切换吗？");
+}
+
+function openReviewSession(sessionId) {
+  const session = (progress.reviewSessions || []).find((item) => item.id === sessionId);
+  if (!session) return;
+  if (!session.queue?.length) {
+    alert("这条旧记录没有保存题目明细，只能在列表中查看概要。");
+    return;
+  }
+  const review = {
+    ...session,
+    queue: session.queue || [],
+    answers: session.answers || {},
+    subjective: session.subjective || {},
+    revealed: {},
+    submitted: true,
+  };
+  app.typeFilter = review.typeFilter || "all";
+  app.order = review.order || "sequential";
+  app.queue = review.queue;
+  app.current = 0;
+  app.selected = [];
+  app.subjectiveDraft = "";
+  app.checked = null;
+  app.completedReview = null;
+  app.submittedReview = review;
+  setView("practice");
+}
+
+function deleteReviewSession(sessionId) {
+  const session = (progress.reviewSessions || []).find((item) => item.id === sessionId);
+  if (!session) return;
+  if (!confirm("确定删除这条复习记录吗？不会删除题库和其它学习记录。")) return;
+  progress.reviewSessions = progress.reviewSessions.filter((item) => item.id !== sessionId);
+  saveProgress();
+  render();
 }
 
 function resumeReview() {
@@ -418,6 +458,10 @@ function reviewRow(session) {
     <div class="list-row">
       <strong class="${statusClass}">${status} · ${session.answered} / ${session.total} 题</strong>
       <span class="muted">${score} · ${new Date(session.endedAt).toLocaleString()}</span>
+      <div class="actions">
+        <button class="small-action" data-action="open-review-session" data-session-id="${session.id}">选择</button>
+        <button class="small-action danger-action" data-action="delete-review-session" data-session-id="${session.id}">删除</button>
+      </div>
     </div>
   `;
 }
@@ -841,6 +885,14 @@ document.addEventListener("click", (event) => {
 
   const action = event.target.closest("[data-action]")?.dataset.action;
   if (!action) return;
+  if (action === "open-review-session") {
+    openReviewSession(event.target.closest("[data-session-id]")?.dataset.sessionId);
+    return;
+  }
+  if (action === "delete-review-session") {
+    deleteReviewSession(event.target.closest("[data-session-id]")?.dataset.sessionId);
+    return;
+  }
   if (action === "practice") startPractice();
   if (action === "resume-review") resumeReview();
   if (action === "abandon-review" && confirm("确定放弃当前这一轮复习吗？本次会记录为中途放弃。")) abandonActiveReview();
