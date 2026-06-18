@@ -1,0 +1,3006 @@
+{
+  "meta": {
+    "title": "ElasticSearch 分布式搜索引擎复习题库",
+    "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+    "generatedBy": "tools/extract_questions.py",
+    "questionCount": 160,
+    "typeCounts": {
+      "single": 45,
+      "multiple": 45,
+      "judge": 45,
+      "short": 11,
+      "comprehensive": 14
+    }
+  },
+  "questions": [
+    {
+      "id": "q001",
+      "type": "single",
+      "question": "ElasticSearch 是基于以下哪个核心库实现的全文检索功能？",
+      "options": {
+        "A": "Lucene",
+        "B": "Solr",
+        "C": "Hadoop",
+        "D": "Spark"
+      },
+      "answer": "A",
+      "referenceAnswer": "A",
+      "explanation": "正确选项是 A（A. Lucene）。题干考查的是 ElasticSearch 相关基础概念，复习时把关键词和正确选项绑定记忆。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "基础概念"
+      ]
+    },
+    {
+      "id": "q002",
+      "type": "single",
+      "question": "ElasticSearch 是由哪种编程语言开发的？",
+      "options": {
+        "A": "C++",
+        "B": "Java",
+        "C": "Python",
+        "D": "Go"
+      },
+      "answer": "B",
+      "referenceAnswer": "B",
+      "explanation": "正确选项是 B（B. Java）。题干考查的是 ElasticSearch 相关基础概念，复习时把关键词和正确选项绑定记忆。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "综合复习"
+      ]
+    },
+    {
+      "id": "q003",
+      "type": "single",
+      "question": "ElasticSearch 的核心功能不包括以下哪项？",
+      "options": {
+        "A": "全文检索",
+        "B": "数据分析",
+        "C": "关系型数据库存储",
+        "D": "分布式存储"
+      },
+      "answer": "C",
+      "referenceAnswer": "C",
+      "explanation": "正确选项是 C（C. 关系型数据库存储）。题干考查的是 ElasticSearch 相关基础概念，复习时把关键词和正确选项绑定记忆。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "基础概念"
+      ]
+    },
+    {
+      "id": "q004",
+      "type": "single",
+      "question": "ElasticSearch 默认的 HTTP 协议 RESTful 接口端口号是？",
+      "options": {
+        "A": "8080",
+        "B": "9300",
+        "C": "9200",
+        "D": "3306"
+      },
+      "answer": "C",
+      "referenceAnswer": "C",
+      "explanation": "正确选项是 C（C. 9200）。题干考查的是 ElasticSearch 相关基础概念，复习时把关键词和正确选项绑定记忆。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "安装配置"
+      ]
+    },
+    {
+      "id": "q005",
+      "type": "single",
+      "question": "以下哪个公司在 2013 年初抛弃了 Solr，转而使用 ElasticSearch 进行 PB 级搜索？",
+      "options": {
+        "A": "GitHub",
+        "B": "维基百科",
+        "C": "SoundCloud",
+        "D": "百度"
+      },
+      "answer": "A",
+      "referenceAnswer": "A",
+      "explanation": "正确选项是 A（A. GitHub）。题干考查的是 ElasticSearch 相关基础概念，复习时把关键词和正确选项绑定记忆。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "基础概念"
+      ]
+    },
+    {
+      "id": "q006",
+      "type": "single",
+      "question": "百度使用 ElasticSearch 主要用于什么目的？",
+      "options": {
+        "A": "网页搜索",
+        "B": "文本数据分析",
+        "C": "视频搜索",
+        "D": "图片搜索"
+      },
+      "answer": "B",
+      "referenceAnswer": "B",
+      "explanation": "正确选项是 B（B. 文本数据分析）。题干考查的是 ElasticSearch 相关基础概念，复习时把关键词和正确选项绑定记忆。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "综合复习"
+      ]
+    },
+    {
+      "id": "q007",
+      "type": "single",
+      "question": "ElasticSearch 中，一个索引默认会创建多少个主分片？",
+      "options": {
+        "A": "1",
+        "B": "3",
+        "C": "5",
+        "D": "10"
+      },
+      "answer": "C",
+      "referenceAnswer": "C",
+      "explanation": "正确选项是 C（C. 5）。题干考查的是 ElasticSearch 相关基础概念，复习时把关键词和正确选项绑定记忆。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "集群与分片",
+        "索引与映射"
+      ]
+    },
+    {
+      "id": "q008",
+      "type": "single",
+      "question": "ElasticSearch 中，用于查询所有索引的请求路径是？",
+      "options": {
+        "A": "/_all",
+        "B": "/_cat/indices?v",
+        "C": "/_search",
+        "D": "/_cluster/health"
+      },
+      "answer": "B",
+      "referenceAnswer": "B",
+      "explanation": "正确选项是 B（B. /_cat/indices?v）。题干考查的是 ElasticSearch 相关基础概念，复习时把关键词和正确选项绑定记忆。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "索引与映射",
+        "查询 DSL"
+      ]
+    },
+    {
+      "id": "q009",
+      "type": "single",
+      "question": "ElasticSearch 中，用于查看集群健康状态的请求路径是？",
+      "options": {
+        "A": "/_cluster/health",
+        "B": "/_cat/nodes",
+        "C": "/_cat/indices",
+        "D": "/_search"
+      },
+      "answer": "A",
+      "referenceAnswer": "A",
+      "explanation": "正确选项是 A（A. /_cluster/health）。题干考查的是 ElasticSearch 相关基础概念，复习时把关键词和正确选项绑定记忆。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "集群与分片"
+      ]
+    },
+    {
+      "id": "q010",
+      "type": "single",
+      "question": "以下哪个不是 ElasticSearch 的核心概念？",
+      "options": {
+        "A": "索引（Index）",
+        "B": "表（Table）",
+        "C": "文档（Document）",
+        "D": "分片（Shard）"
+      },
+      "answer": "B",
+      "referenceAnswer": "B",
+      "explanation": "正确选项是 B（B. 表（Table））。题干考查的是 ElasticSearch 相关基础概念，复习时把关键词和正确选项绑定记忆。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "基础概念",
+        "集群与分片",
+        "索引与映射"
+      ]
+    },
+    {
+      "id": "q011",
+      "type": "single",
+      "question": "在 ElasticSearch 中，以下哪个操作是幂等的？",
+      "options": {
+        "A": "使用 POST 创建文档（不指定 ID）",
+        "B": "使用 PUT 创建文档（指定 ID）",
+        "C": "使用 POST 更新文档",
+        "D": "使用 DELETE 删除文档"
+      },
+      "answer": "B",
+      "referenceAnswer": "B",
+      "explanation": "正确选项是 B（B. 使用 PUT 创建文档（指定 ID））。题干考查的是 ElasticSearch 相关基础概念，复习时把关键词和正确选项绑定记忆。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "运维优化"
+      ]
+    },
+    {
+      "id": "q012",
+      "type": "single",
+      "question": "在 ElasticSearch 中，以下哪个字段类型不适合进行全文检索？",
+      "options": {
+        "A": "text",
+        "B": "keyword",
+        "C": "long",
+        "D": "date"
+      },
+      "answer": "B",
+      "referenceAnswer": "B",
+      "explanation": "正确选项是 B（B. keyword）。题干考查的是 ElasticSearch 相关基础概念，复习时把关键词和正确选项绑定记忆。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "索引与映射"
+      ]
+    },
+    {
+      "id": "q013",
+      "type": "single",
+      "question": "ElasticSearch 集群间通信使用的端口号是？",
+      "options": {
+        "A": "9200",
+        "B": "9300",
+        "C": "8080",
+        "D": "2181"
+      },
+      "answer": "B",
+      "referenceAnswer": "B",
+      "explanation": "正确选项是 B（B. 9300）。题干考查的是 ElasticSearch 相关基础概念，复习时把关键词和正确选项绑定记忆。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "集群与分片",
+        "安装配置"
+      ]
+    },
+    {
+      "id": "q014",
+      "type": "single",
+      "question": "ElasticSearch 中，默认的复制分片数量是？",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "3"
+      },
+      "answer": "B",
+      "referenceAnswer": "B",
+      "explanation": "正确选项是 B（B. 1）。题干考查的是 ElasticSearch 相关基础概念，复习时把关键词和正确选项绑定记忆。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "集群与分片"
+      ]
+    },
+    {
+      "id": "q015",
+      "type": "single",
+      "question": "ElasticSearch 中，用于批量操作的请求类是？",
+      "options": {
+        "A": "IndexRequest",
+        "B": "UpdateRequest",
+        "C": "DeleteRequest",
+        "D": "BulkRequest"
+      },
+      "answer": "D",
+      "referenceAnswer": "D",
+      "explanation": "正确选项是 D（D. BulkRequest）。题干考查的是 ElasticSearch 相关基础概念，复习时把关键词和正确选项绑定记忆。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "Spring Boot"
+      ]
+    },
+    {
+      "id": "q016",
+      "type": "single",
+      "question": "以下哪种 HTTP 方法用于在 ElasticSearch 中创建索引？",
+      "options": {
+        "A": "GET",
+        "B": "POST",
+        "C": "PUT",
+        "D": "DELETE"
+      },
+      "answer": "C",
+      "referenceAnswer": "C",
+      "explanation": "正确选项是 C（C. PUT）。题干考查的是 ElasticSearch 相关基础概念，复习时把关键词和正确选项绑定记忆。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "索引与映射"
+      ]
+    },
+    {
+      "id": "q017",
+      "type": "single",
+      "question": "以下哪个配置项用于指定 ElasticSearch 节点是否可以被选举为 master 节点？",
+      "options": {
+        "A": "node.data",
+        "B": "node.master",
+        "C": "cluster.name",
+        "D": "network.host"
+      },
+      "answer": "B",
+      "referenceAnswer": "B",
+      "explanation": "正确选项是 B（B. node.master）。题干考查的是 ElasticSearch 相关基础概念，复习时把关键词和正确选项绑定记忆。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "集群与分片",
+        "安装配置"
+      ]
+    },
+    {
+      "id": "q018",
+      "type": "single",
+      "question": "以下哪个配置项用于指定 ElasticSearch 节点是否作为数据节点？",
+      "options": {
+        "A": "node.master",
+        "B": "node.data",
+        "C": "cluster.name",
+        "D": "network.host"
+      },
+      "answer": "B",
+      "referenceAnswer": "B",
+      "explanation": "正确选项是 B（B. node.data）。题干考查的是 ElasticSearch 相关基础概念，复习时把关键词和正确选项绑定记忆。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "集群与分片",
+        "安装配置"
+      ]
+    },
+    {
+      "id": "q019",
+      "type": "single",
+      "question": "IK 分词器提供的两种分词算法中，实现最少切分的是？",
+      "options": {
+        "A": "ik_smart",
+        "B": "ik_max_word",
+        "C": "standard",
+        "D": "keyword"
+      },
+      "answer": "A",
+      "referenceAnswer": "A",
+      "explanation": "正确选项是 A（A. ik_smart）。题干考查的是 ElasticSearch 相关基础概念，复习时把关键词和正确选项绑定记忆。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "索引与映射",
+        "IK 分词器"
+      ]
+    },
+    {
+      "id": "q020",
+      "type": "single",
+      "question": "在 ElasticSearch 查询中，用于指定每页返回多少条结果的参数是？",
+      "options": {
+        "A": "from",
+        "B": "size",
+        "C": "limit",
+        "D": "offset"
+      },
+      "answer": "B",
+      "referenceAnswer": "B",
+      "explanation": "正确选项是 B（B. size）。题干考查的是 ElasticSearch 相关基础概念，复习时把关键词和正确选项绑定记忆。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "查询 DSL"
+      ]
+    },
+    {
+      "id": "q021",
+      "type": "single",
+      "question": "在 ElasticSearch 查询中，用于实现多字段匹配查询的关键字是？",
+      "options": {
+        "A": "match",
+        "B": "match_phrase",
+        "C": "multi_match",
+        "D": "term"
+      },
+      "answer": "C",
+      "referenceAnswer": "C",
+      "explanation": "正确选项是 C（C. multi_match）。题干考查的是 ElasticSearch 相关基础概念，复习时把关键词和正确选项绑定记忆。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "索引与映射",
+        "查询 DSL"
+      ]
+    },
+    {
+      "id": "q022",
+      "type": "single",
+      "question": "在 ElasticSearch 中，用于实现完全匹配查询的关键字是？",
+      "options": {
+        "A": "match",
+        "B": "match_phrase",
+        "C": "term",
+        "D": "range"
+      },
+      "answer": "B",
+      "referenceAnswer": "B",
+      "explanation": "正确选项是 B（B. match_phrase）。题干考查的是 ElasticSearch 相关基础概念，复习时把关键词和正确选项绑定记忆。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "查询 DSL"
+      ]
+    },
+    {
+      "id": "q023",
+      "type": "single",
+      "question": "以下哪种分词器会将每个中文字符拆分成单独的词？",
+      "options": {
+        "A": "ik_smart",
+        "B": "ik_max_word",
+        "C": "standard",
+        "D": "keyword"
+      },
+      "answer": "C",
+      "referenceAnswer": "C",
+      "explanation": "正确选项是 C（C. standard）。题干考查的是 ElasticSearch 相关基础概念，复习时把关键词和正确选项绑定记忆。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "索引与映射",
+        "IK 分词器"
+      ]
+    },
+    {
+      "id": "q024",
+      "type": "single",
+      "question": "以下关于 IK 分词器的说法，错误的是？",
+      "options": {
+        "A": "IK 分词器是开源的中文分词插件",
+        "B": "IK 分词器支持自定义词库",
+        "C": "IK 分词器只能用于 ElasticSearch",
+        "D": "IK 分词器有两种分词算法"
+      },
+      "answer": "C",
+      "referenceAnswer": "C",
+      "explanation": "正确选项是 C（C. IK 分词器只能用于 ElasticSearch）。题干考查的是 ElasticSearch 相关基础概念，复习时把关键词和正确选项绑定记忆。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "IK 分词器"
+      ]
+    },
+    {
+      "id": "q025",
+      "type": "single",
+      "question": "Spring Boot 2.5.0 整合 ElasticSearch 7.14.0 时，推荐使用的客户端是？",
+      "options": {
+        "A": "TransportClient",
+        "B": "RestHighLevelClient",
+        "C": "Jedis",
+        "D": "HttpClient"
+      },
+      "answer": "B",
+      "referenceAnswer": "B",
+      "explanation": "正确选项是 B（B. RestHighLevelClient）。题干考查的是 ElasticSearch 相关基础概念，复习时把关键词和正确选项绑定记忆。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "Spring Boot"
+      ]
+    },
+    {
+      "id": "q026",
+      "type": "single",
+      "question": "在 Spring Boot 整合 ElasticSearch 时，用于创建索引的请求类是？",
+      "options": {
+        "A": "CreateIndexRequest",
+        "B": "GetIndexRequest",
+        "C": "DeleteIndexRequest",
+        "D": "IndexRequest"
+      },
+      "answer": "A",
+      "referenceAnswer": "A",
+      "explanation": "正确选项是 A（A. CreateIndexRequest）。题干考查的是 ElasticSearch 相关基础概念，复习时把关键词和正确选项绑定记忆。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "索引与映射",
+        "Spring Boot"
+      ]
+    },
+    {
+      "id": "q027",
+      "type": "single",
+      "question": "在 Spring Boot 整合 ElasticSearch 时，用于判断索引是否存在的方法是？",
+      "options": {
+        "A": "indices ().create ()",
+        "B": "indices ().exists ()",
+        "C": "indices ().delete ()",
+        "D": "indices ().get ()"
+      },
+      "answer": "B",
+      "referenceAnswer": "B",
+      "explanation": "正确选项是 B（B. indices ().exists ()）。题干考查的是 ElasticSearch 相关基础概念，复习时把关键词和正确选项绑定记忆。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "索引与映射",
+        "Spring Boot"
+      ]
+    },
+    {
+      "id": "q028",
+      "type": "single",
+      "question": "ElasticSearch 中，复制分片的主要作用不包括？",
+      "options": {
+        "A": "提高数据可用性",
+        "B": "扩展搜索吞吐量",
+        "C": "水平扩展存储容量",
+        "D": "故障转移"
+      },
+      "answer": "C",
+      "referenceAnswer": "C",
+      "explanation": "正确选项是 C（C. 水平扩展存储容量）。题干考查的是 ElasticSearch 相关基础概念，复习时把关键词和正确选项绑定记忆。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "集群与分片",
+        "运维优化"
+      ]
+    },
+    {
+      "id": "q029",
+      "type": "single",
+      "question": "ElasticSearch 中，接近实时（NRT）的延迟通常在多少以内？",
+      "options": {
+        "A": "100ms",
+        "B": "1 秒",
+        "C": "10 秒",
+        "D": "1 分钟"
+      },
+      "answer": "B",
+      "referenceAnswer": "B",
+      "explanation": "正确选项是 B（B. 1 秒）。题干考查的是 ElasticSearch 相关基础概念，复习时把关键词和正确选项绑定记忆。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "综合复习"
+      ]
+    },
+    {
+      "id": "q030",
+      "type": "single",
+      "question": "ElasticSearch 中，以下哪个概念与关系型数据库中的 \"表\" 最相似？",
+      "options": {
+        "A": "索引（Index）",
+        "B": "类型（Type）",
+        "C": "文档（Document）",
+        "D": "字段（Field）"
+      },
+      "answer": "A",
+      "referenceAnswer": "A",
+      "explanation": "正确选项是 A（A. 索引（Index））。题干考查的是 ElasticSearch 相关基础概念，复习时把关键词和正确选项绑定记忆。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "基础概念",
+        "索引与映射"
+      ]
+    },
+    {
+      "id": "q031",
+      "type": "single",
+      "question": "以下哪个配置项用于开启 ElasticSearch 的跨域访问支持？",
+      "options": {
+        "A": "http.cors.enabled: true",
+        "B": "network.host: 0.0.0.0",
+        "C": "cluster.name: my-es-cluster",
+        "D": "node.master: true"
+      },
+      "answer": "A",
+      "referenceAnswer": "A",
+      "explanation": "正确选项是 A（A. http.cors.enabled: true）。题干考查的是 ElasticSearch 相关基础概念，复习时把关键词和正确选项绑定记忆。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "集群与分片",
+        "安装配置"
+      ]
+    },
+    {
+      "id": "q032",
+      "type": "single",
+      "question": "以下哪个不是 ElasticSearch Head 插件的功能？",
+      "options": {
+        "A": "查看集群健康状态",
+        "B": "管理索引",
+        "C": "执行查询操作",
+        "D": "自动备份数据"
+      },
+      "answer": "D",
+      "referenceAnswer": "D",
+      "explanation": "正确选项是 D（D. 自动备份数据）。题干考查的是 ElasticSearch 相关基础概念，复习时把关键词和正确选项绑定记忆。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "集群与分片",
+        "索引与映射",
+        "查询 DSL",
+        "安装配置",
+        "运维优化"
+      ]
+    },
+    {
+      "id": "q033",
+      "type": "single",
+      "question": "以下哪个不是 ElasticSearch 集群的组成部分？",
+      "options": {
+        "A": "节点",
+        "B": "分片",
+        "C": "复制",
+        "D": "表"
+      },
+      "answer": "D",
+      "referenceAnswer": "D",
+      "explanation": "正确选项是 D（D. 表）。题干考查的是 ElasticSearch 相关基础概念，复习时把关键词和正确选项绑定记忆。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "集群与分片"
+      ]
+    },
+    {
+      "id": "q034",
+      "type": "single",
+      "question": "在 ElasticSearch 查询中，用于指定返回结果从第几条开始的参数是？",
+      "options": {
+        "A": "size",
+        "B": "from",
+        "C": "offset",
+        "D": "Start"
+      },
+      "answer": "B",
+      "referenceAnswer": "B",
+      "explanation": "正确选项是 B（B. from）。题干考查的是 ElasticSearch 相关基础概念，复习时把关键词和正确选项绑定记忆。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "查询 DSL"
+      ]
+    },
+    {
+      "id": "q035",
+      "type": "single",
+      "question": "在 ElasticSearch 中，用于删除索引的 HTTP 方法是？",
+      "options": {
+        "A": "GET",
+        "B": "POST",
+        "C": "PUT",
+        "D": "DELETE"
+      },
+      "answer": "D",
+      "referenceAnswer": "D",
+      "explanation": "正确选项是 D（D. DELETE）。题干考查的是 ElasticSearch 相关基础概念，复习时把关键词和正确选项绑定记忆。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "索引与映射",
+        "运维优化"
+      ]
+    },
+    {
+      "id": "q036",
+      "type": "single",
+      "question": "在 ElasticSearch 中，用于获取文档信息的请求类是？",
+      "options": {
+        "A": "GetRequest",
+        "B": "IndexRequest",
+        "C": "UpdateRequest",
+        "D": "DeleteRequest"
+      },
+      "answer": "A",
+      "referenceAnswer": "A",
+      "explanation": "正确选项是 A（A. GetRequest）。题干考查的是 ElasticSearch 相关基础概念，复习时把关键词和正确选项绑定记忆。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "Spring Boot"
+      ]
+    },
+    {
+      "id": "q037",
+      "type": "single",
+      "question": "ElasticSearch 中，用于对查询结果进行高亮显示的关键字是？",
+      "options": {
+        "A": "highlight",
+        "B": "sort",
+        "C": "aggs",
+        "D": "filter"
+      },
+      "answer": "A",
+      "referenceAnswer": "A",
+      "explanation": "正确选项是 A（A. highlight）。题干考查的是 ElasticSearch 相关基础概念，复习时把关键词和正确选项绑定记忆。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "查询 DSL"
+      ]
+    },
+    {
+      "id": "q038",
+      "type": "single",
+      "question": "以下关于 ElasticSearch 文档版本号的说法，正确的是？",
+      "options": {
+        "A": "文档创建时版本号为 0",
+        "B": "每次更新文档版本号会加 1",
+        "C": "删除文档不会改变版本号",
+        "D": "版本号可以手动修改"
+      },
+      "answer": "B",
+      "referenceAnswer": "B",
+      "explanation": "正确选项是 B（B. 每次更新文档版本号会加 1）。题干考查的是 ElasticSearch 相关基础概念，复习时把关键词和正确选项绑定记忆。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "运维优化"
+      ]
+    },
+    {
+      "id": "q039",
+      "type": "single",
+      "question": "以下关于 ElasticSearch 实时性的说法，正确的是？",
+      "options": {
+        "A": "ElasticSearch 是完全实时的",
+        "B": "ElasticSearch 是接近实时的，延迟通常在 1 秒以内",
+        "C": "ElasticSearch 的延迟通常在 10 秒左右",
+        "D": "ElasticSearch 的延迟通常在 1 分钟左右"
+      },
+      "answer": "B",
+      "referenceAnswer": "B",
+      "explanation": "正确选项是 B（B. ElasticSearch 是接近实时的，延迟通常在 1 秒以内）。题干考查的是 ElasticSearch 相关基础概念，复习时把关键词和正确选项绑定记忆。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "综合复习"
+      ]
+    },
+    {
+      "id": "q040",
+      "type": "single",
+      "question": "以下关于 ElasticSearch 与 Solr 对比的说法，错误的是？",
+      "options": {
+        "A": "ElasticSearch 自身带有分布式协调管理功能",
+        "B": "Solr 支持更多格式的数据",
+        "C": "ElasticSearch 在处理实时搜索应用时效率更高",
+        "D": "Solr 仅支持 JSON 文件格式"
+      },
+      "answer": "D",
+      "referenceAnswer": "D",
+      "explanation": "正确选项是 D（D. Solr 仅支持 JSON 文件格式）。题干考查的是 ElasticSearch 相关基础概念，复习时把关键词和正确选项绑定记忆。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "基础概念"
+      ]
+    },
+    {
+      "id": "q041",
+      "type": "single",
+      "question": "ElasticSearch 集群中，主节点的主要职责是？",
+      "options": {
+        "A": "存储数据",
+        "B": "处理搜索请求",
+        "C": "管理集群状态",
+        "D": "执行聚合操作"
+      },
+      "answer": "C",
+      "referenceAnswer": "C",
+      "explanation": "正确选项是 C（C. 管理集群状态）。题干考查的是 ElasticSearch 相关基础概念，复习时把关键词和正确选项绑定记忆。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "集群与分片"
+      ]
+    },
+    {
+      "id": "q042",
+      "type": "single",
+      "question": "ElasticSearch 中，用于实现分组聚合的关键字是？",
+      "options": {
+        "A": "terms",
+        "B": "avg",
+        "C": "max",
+        "D": "sum"
+      },
+      "answer": "A",
+      "referenceAnswer": "A",
+      "explanation": "正确选项是 A（A. terms）。题干考查的是 ElasticSearch 相关基础概念，复习时把关键词和正确选项绑定记忆。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "查询 DSL"
+      ]
+    },
+    {
+      "id": "q043",
+      "type": "single",
+      "question": "在 ElasticSearch 中，创建文档时如果不指定 ID，会发生什么？",
+      "options": {
+        "A": "创建失败",
+        "B": "自动生成一个随机 ID",
+        "C": "使用默认 ID \"1\"",
+        "D": "抛出异常"
+      },
+      "answer": "B",
+      "referenceAnswer": "B",
+      "explanation": "正确选项是 B（B. 自动生成一个随机 ID）。题干考查的是 ElasticSearch 相关基础概念，复习时把关键词和正确选项绑定记忆。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "综合复习"
+      ]
+    },
+    {
+      "id": "q044",
+      "type": "single",
+      "question": "在 ElasticSearch 中，用于实现范围查询的关键字是？",
+      "options": {
+        "A": "match",
+        "B": "term",
+        "C": "range",
+        "D": "bool"
+      },
+      "answer": "C",
+      "referenceAnswer": "C",
+      "explanation": "正确选项是 C（C. range）。题干考查的是 ElasticSearch 相关基础概念，复习时把关键词和正确选项绑定记忆。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "查询 DSL"
+      ]
+    },
+    {
+      "id": "q045",
+      "type": "single",
+      "question": "以下哪个端口是 ElasticSearch Head 插件默认的访问端口？",
+      "options": {
+        "A": "9200",
+        "B": "9300",
+        "C": "9100",
+        "D": "8080"
+      },
+      "answer": "C",
+      "referenceAnswer": "C",
+      "explanation": "正确选项是 C（C. 9100）。题干考查的是 ElasticSearch 相关基础概念，复习时把关键词和正确选项绑定记忆。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "安装配置"
+      ]
+    },
+    {
+      "id": "q046",
+      "type": "multiple",
+      "question": "以下哪些是 ElasticSearch 的特点？",
+      "options": {
+        "A": "分布式",
+        "B": "高扩展",
+        "C": "近乎实时",
+        "D": "基于 Java 开发"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "referenceAnswer": "ABCD",
+      "explanation": "正确选项是 ABCD（A. 分布式；B. 高扩展；C. 近乎实时；D. 基于 Java 开发）。多选题需要同时判断每个选项是否符合 ElasticSearch 的概念、特性或用法，漏选和多选都会影响得分。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "基础概念"
+      ]
+    },
+    {
+      "id": "q047",
+      "type": "multiple",
+      "question": "以下哪些公司在使用 ElasticSearch？",
+      "options": {
+        "A": "GitHub",
+        "B": "维基百科",
+        "C": "百度",
+        "D": "阿里巴巴"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "referenceAnswer": "ABCD",
+      "explanation": "正确选项是 ABCD（A. GitHub；B. 维基百科；C. 百度；D. 阿里巴巴）。多选题需要同时判断每个选项是否符合 ElasticSearch 的概念、特性或用法，漏选和多选都会影响得分。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "综合复习"
+      ]
+    },
+    {
+      "id": "q048",
+      "type": "multiple",
+      "question": "以下哪些是 ElasticSearch 的使用场景？",
+      "options": {
+        "A": "全文检索",
+        "B": "日志分析",
+        "C": "指标分析",
+        "D": "数据可视化"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "referenceAnswer": "ABCD",
+      "explanation": "正确选项是 ABCD（A. 全文检索；B. 日志分析；C. 指标分析；D. 数据可视化）。多选题需要同时判断每个选项是否符合 ElasticSearch 的概念、特性或用法，漏选和多选都会影响得分。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "综合复习"
+      ]
+    },
+    {
+      "id": "q049",
+      "type": "multiple",
+      "question": "ElasticSearch 的目录结构中，包含以下哪些文件夹？",
+      "options": {
+        "A": "bin",
+        "B": "config",
+        "C": "lib",
+        "D": "plugins"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "referenceAnswer": "ABCD",
+      "explanation": "正确选项是 ABCD（A. bin；B. config；C. lib；D. plugins）。多选题需要同时判断每个选项是否符合 ElasticSearch 的概念、特性或用法，漏选和多选都会影响得分。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "综合复习"
+      ]
+    },
+    {
+      "id": "q050",
+      "type": "multiple",
+      "question": "ElasticSearch 的基本操作包括以下哪些？",
+      "options": {
+        "A": "索引操作",
+        "B": "文档操作",
+        "C": "查询操作",
+        "D": "集群操作"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "referenceAnswer": "ABCD",
+      "explanation": "正确选项是 ABCD（A. 索引操作；B. 文档操作；C. 查询操作；D. 集群操作）。多选题需要同时判断每个选项是否符合 ElasticSearch 的概念、特性或用法，漏选和多选都会影响得分。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "集群与分片",
+        "索引与映射",
+        "查询 DSL"
+      ]
+    },
+    {
+      "id": "q051",
+      "type": "multiple",
+      "question": "ElasticSearch 的配置文件包括以下哪些？",
+      "options": {
+        "A": "elasticsearch.yml",
+        "B": "jvm.options",
+        "C": "log4j2.properties",
+        "D": "application.yml"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "referenceAnswer": "ABC",
+      "explanation": "正确选项是 ABC（A. elasticsearch.yml；B. jvm.options；C. log4j2.properties）。多选题需要同时判断每个选项是否符合 ElasticSearch 的概念、特性或用法，漏选和多选都会影响得分。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "安装配置"
+      ]
+    },
+    {
+      "id": "q052",
+      "type": "multiple",
+      "question": "以下哪些是 ElasticSearch Head 插件安装所需的环境？",
+      "options": {
+        "A": "Node.js",
+        "B": "Grunt",
+        "C": "JDK",
+        "D": "Maven"
+      },
+      "answer": [
+        "A",
+        "B"
+      ],
+      "referenceAnswer": "AB",
+      "explanation": "正确选项是 AB（A. Node.js；B. Grunt）。多选题需要同时判断每个选项是否符合 ElasticSearch 的概念、特性或用法，漏选和多选都会影响得分。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "安装配置"
+      ]
+    },
+    {
+      "id": "q053",
+      "type": "multiple",
+      "question": "以下关于 windows版的ElasticSearch7.14.0 安装的说法，正确的有？",
+      "options": {
+        "A": "Windows 版本解压即可安装",
+        "B": "需要配置 JDK 环境变量",
+        "C": "7.14.0 版本需要 JDK 11+以上版本",
+        "D": "可以通过修改 elasticsearch.yml 进行配置"
+      },
+      "answer": [
+        "A",
+        "C",
+        "D"
+      ],
+      "referenceAnswer": "ACD",
+      "explanation": "正确选项是 ACD（A. Windows 版本解压即可安装；C. 7.14.0 版本需要 JDK 11+以上版本；D. 可以通过修改 elasticsearch.yml 进行配置）。多选题需要同时判断每个选项是否符合 ElasticSearch 的概念、特性或用法，漏选和多选都会影响得分。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "安装配置"
+      ]
+    },
+    {
+      "id": "q054",
+      "type": "multiple",
+      "question": "以下关于 ElasticSearch JVM 内存配置的说法，正确的有？",
+      "options": {
+        "A": "-Xms 和 -Xmx 必须设置为相同值",
+        "B": "建议设置为物理内存的一半",
+        "C": "不要超过 32GB",
+        "D": "内存越大越好"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "referenceAnswer": "ABC",
+      "explanation": "正确选项是 ABC（A. -Xms 和 -Xmx 必须设置为相同值；B. 建议设置为物理内存的一半；C. 不要超过 32GB）。多选题需要同时判断每个选项是否符合 ElasticSearch 的概念、特性或用法，漏选和多选都会影响得分。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "安装配置"
+      ]
+    },
+    {
+      "id": "q055",
+      "type": "multiple",
+      "question": "以下关于 ElasticSearch 分片的说法，正确的有？",
+      "options": {
+        "A": "分片可以水平分割扩展内容容量",
+        "B": "分片可以在多个节点上并行操作提高性能",
+        "C": "索引创建后可以随时修改分片数量",
+        "D": "每个分片本身是一个独立的 \"索引\""
+      },
+      "answer": [
+        "A",
+        "B",
+        "D"
+      ],
+      "referenceAnswer": "ABD",
+      "explanation": "正确选项是 ABD（A. 分片可以水平分割扩展内容容量；B. 分片可以在多个节点上并行操作提高性能；D. 每个分片本身是一个独立的 \"索引\"）。多选题需要同时判断每个选项是否符合 ElasticSearch 的概念、特性或用法，漏选和多选都会影响得分。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "集群与分片",
+        "索引与映射",
+        "运维优化"
+      ]
+    },
+    {
+      "id": "q056",
+      "type": "multiple",
+      "question": "以下哪些是 ElasticSearch 集群的节点类型？",
+      "options": {
+        "A": "主节点（Master Node）",
+        "B": "数据节点（Data Node）",
+        "C": "协调节点（Coordinating Node）",
+        "D": "客户端节点（Client Node）"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "referenceAnswer": "ABC",
+      "explanation": "正确选项是 ABC（A. 主节点（Master Node）；B. 数据节点（Data Node）；C. 协调节点（Coordinating Node））。多选题需要同时判断每个选项是否符合 ElasticSearch 的概念、特性或用法，漏选和多选都会影响得分。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "集群与分片",
+        "索引与映射"
+      ]
+    },
+    {
+      "id": "q057",
+      "type": "multiple",
+      "question": "以下关于 ElasticSearch 主分片的说法，正确的有？",
+      "options": {
+        "A": "主分片是索引的一部分",
+        "B": "每个文档都存储在一个主分片上",
+        "C": "主分片的数量在索引创建时指定",
+        "D": "主分片的数量可以随时修改"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "referenceAnswer": "ABC",
+      "explanation": "正确选项是 ABC（A. 主分片是索引的一部分；B. 每个文档都存储在一个主分片上；C. 主分片的数量在索引创建时指定）。多选题需要同时判断每个选项是否符合 ElasticSearch 的概念、特性或用法，漏选和多选都会影响得分。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "集群与分片",
+        "索引与映射"
+      ]
+    },
+    {
+      "id": "q058",
+      "type": "multiple",
+      "question": "以下哪些 HTTP 方法可以用于在 ElasticSearch 中修改文档？",
+      "options": {
+        "A": "PUT",
+        "B": "POST",
+        "C": "GET",
+        "D": "DELETE"
+      },
+      "answer": [
+        "A",
+        "B"
+      ],
+      "referenceAnswer": "AB",
+      "explanation": "正确选项是 AB（A. PUT；B. POST）。多选题需要同时判断每个选项是否符合 ElasticSearch 的概念、特性或用法，漏选和多选都会影响得分。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "综合复习"
+      ]
+    },
+    {
+      "id": "q059",
+      "type": "multiple",
+      "question": "以下关于 ElasticSearch 复制的说法，正确的有？",
+      "options": {
+        "A": "复制可以提高数据的可用性",
+        "B": "复制可以提高搜索的吞吐量",
+        "C": "索引创建后可以动态修改复制的数量",
+        "D": "复制分片与主分片可以在同一个节点上"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "referenceAnswer": "ABC",
+      "explanation": "正确选项是 ABC（A. 复制可以提高数据的可用性；B. 复制可以提高搜索的吞吐量；C. 索引创建后可以动态修改复制的数量）。多选题需要同时判断每个选项是否符合 ElasticSearch 的概念、特性或用法，漏选和多选都会影响得分。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "集群与分片",
+        "索引与映射",
+        "运维优化"
+      ]
+    },
+    {
+      "id": "q060",
+      "type": "multiple",
+      "question": "以下哪些是 ElasticSearch 支持的数据类型？",
+      "options": {
+        "A": "text",
+        "B": "keyword",
+        "C": "long",
+        "D": "date"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "referenceAnswer": "ABCD",
+      "explanation": "正确选项是 ABCD（A. text；B. keyword；C. long；D. date）。多选题需要同时判断每个选项是否符合 ElasticSearch 的概念、特性或用法，漏选和多选都会影响得分。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "索引与映射"
+      ]
+    },
+    {
+      "id": "q061",
+      "type": "multiple",
+      "question": "ElasticSearch 的查询操作中，支持以下哪些功能？",
+      "options": {
+        "A": "条件查询",
+        "B": "分页查询",
+        "C": "排序查询",
+        "D": "分组查询"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "referenceAnswer": "ABCD",
+      "explanation": "正确选项是 ABCD（A. 条件查询；B. 分页查询；C. 排序查询；D. 分组查询）。多选题需要同时判断每个选项是否符合 ElasticSearch 的概念、特性或用法，漏选和多选都会影响得分。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "查询 DSL"
+      ]
+    },
+    {
+      "id": "q062",
+      "type": "multiple",
+      "question": "以下哪些是 ElasticSearch 支持的 HTTP 方法？",
+      "options": {
+        "A": "GET",
+        "B": "POST",
+        "C": "PUT",
+        "D": "DELETE"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "referenceAnswer": "ABCD",
+      "explanation": "正确选项是 ABCD（A. GET；B. POST；C. PUT；D. DELETE）。多选题需要同时判断每个选项是否符合 ElasticSearch 的概念、特性或用法，漏选和多选都会影响得分。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "综合复习"
+      ]
+    },
+    {
+      "id": "q063",
+      "type": "multiple",
+      "question": "在 ElasticSearch 中，以下哪些是有效的查询类型？",
+      "options": {
+        "A": "匹配查询（match）",
+        "B": "短语匹配查询（match_phrase）",
+        "C": "精确查询（term）",
+        "D": "范围查询（range）"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "referenceAnswer": "ABCD",
+      "explanation": "正确选项是 ABCD（A. 匹配查询（match）；B. 短语匹配查询（match_phrase）；C. 精确查询（term）；D. 范围查询（range））。多选题需要同时判断每个选项是否符合 ElasticSearch 的概念、特性或用法，漏选和多选都会影响得分。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "索引与映射",
+        "查询 DSL"
+      ]
+    },
+    {
+      "id": "q064",
+      "type": "multiple",
+      "question": "以下关于 IK 分词器的说法，正确的有？",
+      "options": {
+        "A": "IK 分词器是专门用于中文分词的插件",
+        "B": "ik_max_word 会将文本做最细粒度的拆分",
+        "C": "IK 分词器版本需要与 ElasticSearch 版本一致",
+        "D": "IK 分词器安装后需要重启 ElasticSearch 才能生效"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "referenceAnswer": "ABCD",
+      "explanation": "正确选项是 ABCD（A. IK 分词器是专门用于中文分词的插件；B. ik_max_word 会将文本做最细粒度的拆分；C. IK 分词器版本需要与 ElasticSearch 版本一致；D. IK 分词器安装后需要重启 ElasticSearch 才能生效）。多选题需要同时判断每个选项是否符合 ElasticSearch 的概念、特性或用法，漏选和多选都会影响得分。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "IK 分词器",
+        "安装配置"
+      ]
+    },
+    {
+      "id": "q065",
+      "type": "multiple",
+      "question": "在 ElasticSearch 中，以下哪些是有效的文档操作？",
+      "options": {
+        "A": "创建文档",
+        "B": "查询文档",
+        "C": "更新文档",
+        "D": "删除文档"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "referenceAnswer": "ABCD",
+      "explanation": "正确选项是 ABCD（A. 创建文档；B. 查询文档；C. 更新文档；D. 删除文档）。多选题需要同时判断每个选项是否符合 ElasticSearch 的概念、特性或用法，漏选和多选都会影响得分。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "查询 DSL",
+        "运维优化"
+      ]
+    },
+    {
+      "id": "q066",
+      "type": "multiple",
+      "question": "以下关于 ElasticSearch 高亮显示的说法，正确的有？",
+      "options": {
+        "A": "可以指定要高亮的字段",
+        "B": "可以自定义高亮标签",
+        "C": "只能对 text 类型的字段进行高亮",
+        "D": "高亮显示会影响查询性能"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "referenceAnswer": "ABCD",
+      "explanation": "正确选项是 ABCD（A. 可以指定要高亮的字段；B. 可以自定义高亮标签；C. 只能对 text 类型的字段进行高亮；D. 高亮显示会影响查询性能）。多选题需要同时判断每个选项是否符合 ElasticSearch 的概念、特性或用法，漏选和多选都会影响得分。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "索引与映射",
+        "查询 DSL",
+        "运维优化"
+      ]
+    },
+    {
+      "id": "q067",
+      "type": "multiple",
+      "question": "在 ElasticSearch 中，以下哪些是有效的查询条件组合？",
+      "options": {
+        "A": "must（AND）",
+        "B": "should（OR）",
+        "C": "must_not（NOT）",
+        "D": "filter（过滤）"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "referenceAnswer": "ABCD",
+      "explanation": "正确选项是 ABCD（A. must（AND）；B. should（OR）；C. must_not（NOT）；D. filter（过滤））。多选题需要同时判断每个选项是否符合 ElasticSearch 的概念、特性或用法，漏选和多选都会影响得分。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "查询 DSL"
+      ]
+    },
+    {
+      "id": "q068",
+      "type": "multiple",
+      "question": "以下关于 ElasticSearch 查询的说法，正确的有？",
+      "options": {
+        "A": "match 查询会对查询条件进行分词",
+        "B": "match_phrase 查询会进行完全匹配",
+        "C": "term 查询不会对查询条件进行分词",
+        "D": "range 查询用于查询指定范围内的数据"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "referenceAnswer": "ABCD",
+      "explanation": "正确选项是 ABCD（A. match 查询会对查询条件进行分词；B. match_phrase 查询会进行完全匹配；C. term 查询不会对查询条件进行分词；D. range 查询用于查询指定范围内的数据）。多选题需要同时判断每个选项是否符合 ElasticSearch 的概念、特性或用法，漏选和多选都会影响得分。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "查询 DSL",
+        "IK 分词器"
+      ]
+    },
+    {
+      "id": "q069",
+      "type": "multiple",
+      "question": "以下哪些是 Spring Boot 整合 ElasticSearch 时常用的类？",
+      "options": {
+        "A": "RestHighLevelClient",
+        "B": "CreateIndexRequest",
+        "C": "IndexRequest",
+        "D": "SearchRequest"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "referenceAnswer": "ABCD",
+      "explanation": "正确选项是 ABCD（A. RestHighLevelClient；B. CreateIndexRequest；C. IndexRequest；D. SearchRequest）。多选题需要同时判断每个选项是否符合 ElasticSearch 的概念、特性或用法，漏选和多选都会影响得分。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "Spring Boot"
+      ]
+    },
+    {
+      "id": "q070",
+      "type": "multiple",
+      "question": "Spring Boot 整合 ElasticSearch 时，需要在 application.yml 中配置以下哪些内容？",
+      "options": {
+        "A": "集群名称",
+        "B": "节点地址",
+        "C": "端口号",
+        "D": "用户名和密码"
+      },
+      "answer": [
+        "B",
+        "C"
+      ],
+      "referenceAnswer": "BC",
+      "explanation": "正确选项是 BC（B. 节点地址；C. 端口号）。多选题需要同时判断每个选项是否符合 ElasticSearch 的概念、特性或用法，漏选和多选都会影响得分。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "集群与分片",
+        "Spring Boot",
+        "安装配置"
+      ]
+    },
+    {
+      "id": "q071",
+      "type": "multiple",
+      "question": "以下哪些是 ElasticSearch 聚合查询的应用场景？",
+      "options": {
+        "A": "统计不同分类的商品数量",
+        "B": "计算商品的平均价格",
+        "C": "找出价格最高的商品",
+        "D": "计算商品的总销售额"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "referenceAnswer": "ABCD",
+      "explanation": "正确选项是 ABCD（A. 统计不同分类的商品数量；B. 计算商品的平均价格；C. 找出价格最高的商品；D. 计算商品的总销售额）。多选题需要同时判断每个选项是否符合 ElasticSearch 的概念、特性或用法，漏选和多选都会影响得分。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "查询 DSL"
+      ]
+    },
+    {
+      "id": "q072",
+      "type": "multiple",
+      "question": "以下关于 ElasticSearch 集群节点的说法，正确的有？",
+      "options": {
+        "A": "一个节点只能属于一个集群",
+        "B": "节点可以同时是主节点和数据节点",
+        "C": "主节点不存储数据",
+        "D": "数据节点负责存储数据和处理数据相关的操作"
+      },
+      "answer": [
+        "A",
+        "B",
+        "D"
+      ],
+      "referenceAnswer": "ABD",
+      "explanation": "正确选项是 ABD（A. 一个节点只能属于一个集群；B. 节点可以同时是主节点和数据节点；D. 数据节点负责存储数据和处理数据相关的操作）。多选题需要同时判断每个选项是否符合 ElasticSearch 的概念、特性或用法，漏选和多选都会影响得分。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "集群与分片"
+      ]
+    },
+    {
+      "id": "q073",
+      "type": "multiple",
+      "question": "以下哪些是 ElasticSearch 集群的健康状态？",
+      "options": {
+        "A": "green",
+        "B": "yellow",
+        "C": "red",
+        "D": "blue"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "referenceAnswer": "ABC",
+      "explanation": "正确选项是 ABC（A. green；B. yellow；C. red）。多选题需要同时判断每个选项是否符合 ElasticSearch 的概念、特性或用法，漏选和多选都会影响得分。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "集群与分片"
+      ]
+    },
+    {
+      "id": "q074",
+      "type": "multiple",
+      "question": "以下关于 IK 分词器安装的说法，正确的有？",
+      "options": {
+        "A": "需要下载与 ElasticSearch 版本一致的 IK 分词器",
+        "B": "将 IK 分词器解压到 plugins/ik 目录下",
+        "C": "安装后需要重启 ElasticSearch",
+        "D": "可以通过在线安装的方式安装 IK 分词器"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "referenceAnswer": "ABCD",
+      "explanation": "正确选项是 ABCD（A. 需要下载与 ElasticSearch 版本一致的 IK 分词器；B. 将 IK 分词器解压到 plugins/ik 目录下；C. 安装后需要重启 ElasticSearch；D. 可以通过在线安装的方式安装 IK 分词器）。多选题需要同时判断每个选项是否符合 ElasticSearch 的概念、特性或用法，漏选和多选都会影响得分。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "IK 分词器",
+        "安装配置"
+      ]
+    },
+    {
+      "id": "q075",
+      "type": "multiple",
+      "question": "以下哪些是 ElasticSearch 集群健康状态为 yellow 的原因？",
+      "options": {
+        "A": "部分主分片不可用",
+        "B": "所有主分片可用，但部分复制分片不可用",
+        "C": "集群中只有一个节点",
+        "D": "集群正在进行分片重分配"
+      },
+      "answer": [
+        "B",
+        "C"
+      ],
+      "referenceAnswer": "BC",
+      "explanation": "正确选项是 BC（B. 所有主分片可用，但部分复制分片不可用；C. 集群中只有一个节点）。多选题需要同时判断每个选项是否符合 ElasticSearch 的概念、特性或用法，漏选和多选都会影响得分。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "集群与分片"
+      ]
+    },
+    {
+      "id": "q076",
+      "type": "multiple",
+      "question": "以下关于 ElasticSearch 节点的说法，正确的有？",
+      "options": {
+        "A": "一个节点是集群中的一个服务器",
+        "B": "节点可以存储数据并参与索引和搜索功能",
+        "C": "默认情况下，每个节点都会被安排加入到名为 \"elasticsearch\" 的集群中",
+        "D": "节点名称默认是随机的漫威漫画角色名字"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "referenceAnswer": "ABCD",
+      "explanation": "正确选项是 ABCD（A. 一个节点是集群中的一个服务器；B. 节点可以存储数据并参与索引和搜索功能；C. 默认情况下，每个节点都会被安排加入到名为 \"elasticsearch\" 的集群中；D. 节点名称默认是随机的漫威漫画角色名字）。多选题需要同时判断每个选项是否符合 ElasticSearch 的概念、特性或用法，漏选和多选都会影响得分。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "集群与分片",
+        "索引与映射"
+      ]
+    },
+    {
+      "id": "q077",
+      "type": "multiple",
+      "question": "在 ElasticSearch 中，以下哪些配置项与跨域访问有关？",
+      "options": {
+        "A": "http.cors.enabled",
+        "B": "http.cors.allow-origin",
+        "C": "network.host",
+        "D": "http.port"
+      },
+      "answer": [
+        "A",
+        "B"
+      ],
+      "referenceAnswer": "AB",
+      "explanation": "正确选项是 AB（A. http.cors.enabled；B. http.cors.allow-origin）。多选题需要同时判断每个选项是否符合 ElasticSearch 的概念、特性或用法，漏选和多选都会影响得分。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "安装配置"
+      ]
+    },
+    {
+      "id": "q078",
+      "type": "multiple",
+      "question": "以下关于 ElasticSearch 索引的说法，正确的有？",
+      "options": {
+        "A": "索引名称必须全部是小写字母",
+        "B": "一个集群中可以有多个索引",
+        "C": "索引一旦创建就不能删除",
+        "D": "索引可以包含多个类型"
+      },
+      "answer": [
+        "A",
+        "B",
+        "D"
+      ],
+      "referenceAnswer": "ABD",
+      "explanation": "正确选项是 ABD（A. 索引名称必须全部是小写字母；B. 一个集群中可以有多个索引；D. 索引可以包含多个类型）。多选题需要同时判断每个选项是否符合 ElasticSearch 的概念、特性或用法，漏选和多选都会影响得分。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "集群与分片",
+        "索引与映射",
+        "运维优化"
+      ]
+    },
+    {
+      "id": "q079",
+      "type": "multiple",
+      "question": "在 ElasticSearch 中，以下哪些操作会导致文档的版本号增加？",
+      "options": {
+        "A": "创建文档",
+        "B": "更新文档",
+        "C": "删除文档",
+        "D": "查询文档"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "referenceAnswer": "ABC",
+      "explanation": "正确选项是 ABC（A. 创建文档；B. 更新文档；C. 删除文档）。多选题需要同时判断每个选项是否符合 ElasticSearch 的概念、特性或用法，漏选和多选都会影响得分。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "查询 DSL",
+        "运维优化"
+      ]
+    },
+    {
+      "id": "q080",
+      "type": "multiple",
+      "question": "以下关于 Spring Boot 整合 ElasticSearch 的说法，正确的有？",
+      "options": {
+        "A": "需要引入 spring-boot-starter-data-elasticsearch 依赖",
+        "B": "在 application.yml 中配置 ElasticSearch 的地址和端口",
+        "C": "使用 RestHighLevelClient 进行操作",
+        "D": "可以使用 ElasticsearchTemplate 进行操作"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "referenceAnswer": "ABCD",
+      "explanation": "正确选项是 ABCD（A. 需要引入 spring-boot-starter-data-elasticsearch 依赖；B. 在 application.yml 中配置 ElasticSearch 的地址和端口；C. 使用 RestHighLevelClient 进行操作；D. 可以使用 ElasticsearchTemplate 进行操作）。多选题需要同时判断每个选项是否符合 ElasticSearch 的概念、特性或用法，漏选和多选都会影响得分。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "Spring Boot",
+        "安装配置"
+      ]
+    },
+    {
+      "id": "q081",
+      "type": "multiple",
+      "question": "以下关于 ElasticSearch 文档的说法，正确的有？",
+      "options": {
+        "A": "文档是 ElasticSearch 中最小的数据单元",
+        "B": "文档以 JSON 格式存储",
+        "C": "每个文档都有一个唯一的 ID",
+        "D": "文档的结构是固定的"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "referenceAnswer": "ABC",
+      "explanation": "正确选项是 ABC（A. 文档是 ElasticSearch 中最小的数据单元；B. 文档以 JSON 格式存储；C. 每个文档都有一个唯一的 ID）。多选题需要同时判断每个选项是否符合 ElasticSearch 的概念、特性或用法，漏选和多选都会影响得分。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "综合复习"
+      ]
+    },
+    {
+      "id": "q082",
+      "type": "multiple",
+      "question": "以下哪些是 ElasticSearch 支持的聚合查询类型？",
+      "options": {
+        "A": "分组聚合（terms）",
+        "B": "平均值聚合（avg）",
+        "C": "最大值聚合（max）",
+        "D": "求和聚合（sum）"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "referenceAnswer": "ABCD",
+      "explanation": "正确选项是 ABCD（A. 分组聚合（terms）；B. 平均值聚合（avg）；C. 最大值聚合（max）；D. 求和聚合（sum））。多选题需要同时判断每个选项是否符合 ElasticSearch 的概念、特性或用法，漏选和多选都会影响得分。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "索引与映射",
+        "查询 DSL"
+      ]
+    },
+    {
+      "id": "q083",
+      "type": "multiple",
+      "question": "以下哪些是 ElasticSearch 集群搭建时需要注意的事项？",
+      "options": {
+        "A": "所有节点的集群名称必须相同",
+        "B": "每个节点的名称必须唯一",
+        "C": "每个节点的端口号必须不同",
+        "D": "必须清空所有节点的 data 目录"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "referenceAnswer": "ABCD",
+      "explanation": "正确选项是 ABCD（A. 所有节点的集群名称必须相同；B. 每个节点的名称必须唯一；C. 每个节点的端口号必须不同；D. 必须清空所有节点的 data 目录）。多选题需要同时判断每个选项是否符合 ElasticSearch 的概念、特性或用法，漏选和多选都会影响得分。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "集群与分片",
+        "安装配置"
+      ]
+    },
+    {
+      "id": "q084",
+      "type": "multiple",
+      "question": "以下哪些是 ElasticSearch 分词器的组成部分？",
+      "options": {
+        "A": "字符过滤器（Character Filter）",
+        "B": "分词器（Tokenizer）",
+        "C": "词元过滤器（Token Filter）",
+        "D": "索引器（Indexer）"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "referenceAnswer": "ABC",
+      "explanation": "正确选项是 ABC（A. 字符过滤器（Character Filter）；B. 分词器（Tokenizer）；C. 词元过滤器（Token Filter））。多选题需要同时判断每个选项是否符合 ElasticSearch 的概念、特性或用法，漏选和多选都会影响得分。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "索引与映射",
+        "IK 分词器"
+      ]
+    },
+    {
+      "id": "q085",
+      "type": "multiple",
+      "question": "安装 ElasticSearch Head 插件的步骤包括？",
+      "options": {
+        "A": "下载 Head 插件压缩包",
+        "B": "安装 Node.js",
+        "C": "全局安装 Grunt",
+        "D": "执行 npm install 和 grunt server"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "referenceAnswer": "ABCD",
+      "explanation": "正确选项是 ABCD（A. 下载 Head 插件压缩包；B. 安装 Node.js；C. 全局安装 Grunt；D. 执行 npm install 和 grunt server）。多选题需要同时判断每个选项是否符合 ElasticSearch 的概念、特性或用法，漏选和多选都会影响得分。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "安装配置"
+      ]
+    },
+    {
+      "id": "q086",
+      "type": "multiple",
+      "question": "以下关于 ElasticSearch 映射的说法，正确的有？",
+      "options": {
+        "A": "可以自动创建映射",
+        "B": "可以手动创建映射",
+        "C": "可以指定字段的数据类型",
+        "D": "可以指定字段是否被索引"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "referenceAnswer": "ABCD",
+      "explanation": "正确选项是 ABCD（A. 可以自动创建映射；B. 可以手动创建映射；C. 可以指定字段的数据类型；D. 可以指定字段是否被索引）。多选题需要同时判断每个选项是否符合 ElasticSearch 的概念、特性或用法，漏选和多选都会影响得分。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "索引与映射"
+      ]
+    },
+    {
+      "id": "q087",
+      "type": "multiple",
+      "question": "以下关于 ElasticSearch 映射的说法，正确的有？",
+      "options": {
+        "A": "映射定义了文档的结构",
+        "B": "映射定义了字段的数据类型",
+        "C": "映射定义了字段的分词器",
+        "D": "映射可以动态生成"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "referenceAnswer": "ABCD",
+      "explanation": "正确选项是 ABCD（A. 映射定义了文档的结构；B. 映射定义了字段的数据类型；C. 映射定义了字段的分词器；D. 映射可以动态生成）。多选题需要同时判断每个选项是否符合 ElasticSearch 的概念、特性或用法，漏选和多选都会影响得分。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "索引与映射",
+        "IK 分词器"
+      ]
+    },
+    {
+      "id": "q088",
+      "type": "multiple",
+      "question": "以下关于 ElasticSearch 映射（Mapping）的说法，正确的有？",
+      "options": {
+        "A": "映射用于定义文档及其字段的存储和索引方式",
+        "B": "可以指定字段的数据类型",
+        "C": "可以指定字段使用的分词器",
+        "D": "映射一旦创建就不能修改"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "referenceAnswer": "ABC",
+      "explanation": "正确选项是 ABC（A. 映射用于定义文档及其字段的存储和索引方式；B. 可以指定字段的数据类型；C. 可以指定字段使用的分词器）。多选题需要同时判断每个选项是否符合 ElasticSearch 的概念、特性或用法，漏选和多选都会影响得分。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "索引与映射",
+        "IK 分词器"
+      ]
+    },
+    {
+      "id": "q089",
+      "type": "multiple",
+      "question": "以下哪些是 ElasticSearch 的优势？",
+      "options": {
+        "A": "分布式架构，易于扩展",
+        "B": "近乎实时的搜索和分析",
+        "C": "简单易用的 RESTful API",
+        "D": "强大的全文检索能力"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "referenceAnswer": "ABCD",
+      "explanation": "正确选项是 ABCD（A. 分布式架构，易于扩展；B. 近乎实时的搜索和分析；C. 简单易用的 RESTful API；D. 强大的全文检索能力）。多选题需要同时判断每个选项是否符合 ElasticSearch 的概念、特性或用法，漏选和多选都会影响得分。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "综合复习"
+      ]
+    },
+    {
+      "id": "q090",
+      "type": "multiple",
+      "question": "以下哪些是 ElasticSearch 相对于传统关系型数据库的优势？",
+      "options": {
+        "A": "全文检索能力强",
+        "B": "分布式架构，易于扩展",
+        "C": "支持复杂的事务处理",
+        "D": "近乎实时的搜索和分析"
+      },
+      "answer": [
+        "A",
+        "B",
+        "D"
+      ],
+      "referenceAnswer": "ABD",
+      "explanation": "正确选项是 ABD（A. 全文检索能力强；B. 分布式架构，易于扩展；D. 近乎实时的搜索和分析）。多选题需要同时判断每个选项是否符合 ElasticSearch 的概念、特性或用法，漏选和多选都会影响得分。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "综合复习"
+      ]
+    },
+    {
+      "id": "q091",
+      "type": "judge",
+      "question": "ElasticSearch 是一个开源的高扩展的分布式全文检索引擎。",
+      "options": {
+        "正确": "正确",
+        "错误": "错误"
+      },
+      "answer": "正确",
+      "referenceAnswer": "正确",
+      "explanation": "本题考查对概念表述的判断。该说法为“正确”，复习时要抓住题干中的限定词，避免被“只能、必须、随时”等绝对说法误导。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "索引与映射"
+      ]
+    },
+    {
+      "id": "q092",
+      "type": "judge",
+      "question": "ElasticSearch 可以处理 PB 级别的数据。",
+      "options": {
+        "正确": "正确",
+        "错误": "错误"
+      },
+      "answer": "正确",
+      "referenceAnswer": "正确",
+      "explanation": "本题考查对概念表述的判断。该说法为“正确”，复习时要抓住题干中的限定词，避免被“只能、必须、随时”等绝对说法误导。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "综合复习"
+      ]
+    },
+    {
+      "id": "q093",
+      "type": "judge",
+      "question": "ElasticSearch 是 Elastic Stack 的核心组件。",
+      "options": {
+        "正确": "正确",
+        "错误": "错误"
+      },
+      "answer": "正确",
+      "referenceAnswer": "正确",
+      "explanation": "本题考查对概念表述的判断。该说法为“正确”，复习时要抓住题干中的限定词，避免被“只能、必须、随时”等绝对说法误导。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "基础概念"
+      ]
+    },
+    {
+      "id": "q094",
+      "type": "judge",
+      "question": "ElasticSearch 只能在 Linux 系统上运行。",
+      "options": {
+        "正确": "正确",
+        "错误": "错误"
+      },
+      "answer": "错误",
+      "referenceAnswer": "错误",
+      "explanation": "本题考查对概念表述的判断。该说法为“错误”，复习时要抓住题干中的限定词，避免被“只能、必须、随时”等绝对说法误导。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "综合复习"
+      ]
+    },
+    {
+      "id": "q095",
+      "type": "judge",
+      "question": "ElasticSearch 只能用于全文检索，不能用于数据分析。",
+      "options": {
+        "正确": "正确",
+        "错误": "错误"
+      },
+      "answer": "错误",
+      "referenceAnswer": "错误",
+      "explanation": "本题考查对概念表述的判断。该说法为“错误”，复习时要抓住题干中的限定词，避免被“只能、必须、随时”等绝对说法误导。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "综合复习"
+      ]
+    },
+    {
+      "id": "q096",
+      "type": "judge",
+      "question": "ElasticSearch 只能在服务器上运行，不能在个人电脑上运行。",
+      "options": {
+        "正确": "正确",
+        "错误": "错误"
+      },
+      "answer": "错误",
+      "referenceAnswer": "错误",
+      "explanation": "本题考查对概念表述的判断。该说法为“错误”，复习时要抓住题干中的限定词，避免被“只能、必须、随时”等绝对说法误导。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "综合复习"
+      ]
+    },
+    {
+      "id": "q097",
+      "type": "judge",
+      "question": "ElasticSearch 7.x 版本需要 JDK 11 及以上版本支持。",
+      "options": {
+        "正确": "正确",
+        "错误": "错误"
+      },
+      "answer": "正确",
+      "referenceAnswer": "正确",
+      "explanation": "本题考查对概念表述的判断。该说法为“正确”，复习时要抓住题干中的限定词，避免被“只能、必须、随时”等绝对说法误导。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "综合复习"
+      ]
+    },
+    {
+      "id": "q098",
+      "type": "judge",
+      "question": "安装 ElasticSearch Head 插件需要先安装 Node.js。",
+      "options": {
+        "正确": "正确",
+        "错误": "错误"
+      },
+      "answer": "正确",
+      "referenceAnswer": "正确",
+      "explanation": "本题考查对概念表述的判断。该说法为“正确”，复习时要抓住题干中的限定词，避免被“只能、必须、随时”等绝对说法误导。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "安装配置"
+      ]
+    },
+    {
+      "id": "q099",
+      "type": "judge",
+      "question": "安装 ElasticSearch7.14.0 时必须配置 JAVA_HOME 环境变量。",
+      "options": {
+        "正确": "正确",
+        "错误": "错误"
+      },
+      "answer": "错误",
+      "referenceAnswer": "错误",
+      "explanation": "本题考查对概念表述的判断。该说法为“错误”，复习时要抓住题干中的限定词，避免被“只能、必须、随时”等绝对说法误导。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "安装配置"
+      ]
+    },
+    {
+      "id": "q100",
+      "type": "judge",
+      "question": "一个 ElasticSearch 集群只能有一个节点。",
+      "options": {
+        "正确": "正确",
+        "错误": "错误"
+      },
+      "answer": "错误",
+      "referenceAnswer": "错误",
+      "explanation": "本题考查对概念表述的判断。该说法为“错误”，复习时要抓住题干中的限定词，避免被“只能、必须、随时”等绝对说法误导。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "集群与分片"
+      ]
+    },
+    {
+      "id": "q101",
+      "type": "judge",
+      "question": "一个 ElasticSearch 集群可以有多个主节点。",
+      "options": {
+        "正确": "正确",
+        "错误": "错误"
+      },
+      "answer": "错误",
+      "referenceAnswer": "错误",
+      "explanation": "本题考查对概念表述的判断。该说法为“错误”，复习时要抓住题干中的限定词，避免被“只能、必须、随时”等绝对说法误导。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "集群与分片"
+      ]
+    },
+    {
+      "id": "q102",
+      "type": "judge",
+      "question": "ElasticSearch 集群中只能有一个主节点在运行。",
+      "options": {
+        "正确": "正确",
+        "错误": "错误"
+      },
+      "answer": "正确",
+      "referenceAnswer": "正确",
+      "explanation": "本题考查对概念表述的判断。该说法为“正确”，复习时要抓住题干中的限定词，避免被“只能、必须、随时”等绝对说法误导。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "集群与分片"
+      ]
+    },
+    {
+      "id": "q103",
+      "type": "judge",
+      "question": "复制分片可以与主分片放在同一个节点上。",
+      "options": {
+        "正确": "正确",
+        "错误": "错误"
+      },
+      "answer": "错误",
+      "referenceAnswer": "错误",
+      "explanation": "本题考查对概念表述的判断。该说法为“错误”，复习时要抓住题干中的限定词，避免被“只能、必须、随时”等绝对说法误导。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "集群与分片"
+      ]
+    },
+    {
+      "id": "q104",
+      "type": "judge",
+      "question": "ElasticSearch 中的文档只能是 JSON 格式。",
+      "options": {
+        "正确": "正确",
+        "错误": "错误"
+      },
+      "answer": "正确",
+      "referenceAnswer": "正确",
+      "explanation": "本题考查对概念表述的判断。该说法为“正确”，复习时要抓住题干中的限定词，避免被“只能、必须、随时”等绝对说法误导。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "综合复习"
+      ]
+    },
+    {
+      "id": "q105",
+      "type": "judge",
+      "question": "复制分片的数量在索引创建后可以动态修改。",
+      "options": {
+        "正确": "正确",
+        "错误": "错误"
+      },
+      "answer": "正确",
+      "referenceAnswer": "正确",
+      "explanation": "本题考查对概念表述的判断。该说法为“正确”，复习时要抓住题干中的限定词，避免被“只能、必须、随时”等绝对说法误导。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "集群与分片",
+        "索引与映射"
+      ]
+    },
+    {
+      "id": "q106",
+      "type": "judge",
+      "question": "ElasticSearch 是面向文档的，它可以存储整个对象或文档。",
+      "options": {
+        "正确": "正确",
+        "错误": "错误"
+      },
+      "answer": "正确",
+      "referenceAnswer": "正确",
+      "explanation": "本题考查对概念表述的判断。该说法为“正确”，复习时要抓住题干中的限定词，避免被“只能、必须、随时”等绝对说法误导。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "综合复习"
+      ]
+    },
+    {
+      "id": "q107",
+      "type": "judge",
+      "question": "在 ElasticSearch 中，使用 GET 方法可以查询文档。",
+      "options": {
+        "正确": "正确",
+        "错误": "错误"
+      },
+      "answer": "正确",
+      "referenceAnswer": "正确",
+      "explanation": "本题考查对概念表述的判断。该说法为“正确”，复习时要抓住题干中的限定词，避免被“只能、必须、随时”等绝对说法误导。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "查询 DSL"
+      ]
+    },
+    {
+      "id": "q108",
+      "type": "judge",
+      "question": "在 ElasticSearch 中，使用 POST 方法创建文档时必须指定 ID。",
+      "options": {
+        "正确": "正确",
+        "错误": "错误"
+      },
+      "answer": "错误",
+      "referenceAnswer": "错误",
+      "explanation": "本题考查对概念表述的判断。该说法为“错误”，复习时要抓住题干中的限定词，避免被“只能、必须、随时”等绝对说法误导。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "综合复习"
+      ]
+    },
+    {
+      "id": "q109",
+      "type": "judge",
+      "question": "在 ElasticSearch 中，索引名称可以包含大写字母。",
+      "options": {
+        "正确": "正确",
+        "错误": "错误"
+      },
+      "answer": "错误",
+      "referenceAnswer": "错误",
+      "explanation": "本题考查对概念表述的判断。该说法为“错误”，复习时要抓住题干中的限定词，避免被“只能、必须、随时”等绝对说法误导。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "索引与映射"
+      ]
+    },
+    {
+      "id": "q110",
+      "type": "judge",
+      "question": "ElasticSearch 的默认分词器对中文支持很好。",
+      "options": {
+        "正确": "正确",
+        "错误": "错误"
+      },
+      "answer": "错误",
+      "referenceAnswer": "错误",
+      "explanation": "本题考查对概念表述的判断。该说法为“错误”，复习时要抓住题干中的限定词，避免被“只能、必须、随时”等绝对说法误导。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "IK 分词器"
+      ]
+    },
+    {
+      "id": "q111",
+      "type": "judge",
+      "question": "ElasticSearch 的 standard 分词器对中文支持不好。",
+      "options": {
+        "正确": "正确",
+        "错误": "错误"
+      },
+      "answer": "正确",
+      "referenceAnswer": "正确",
+      "explanation": "本题考查对概念表述的判断。该说法为“正确”，复习时要抓住题干中的限定词，避免被“只能、必须、随时”等绝对说法误导。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "IK 分词器"
+      ]
+    },
+    {
+      "id": "q112",
+      "type": "judge",
+      "question": "使用 POST 方法创建文档时，如果指定了已存在的 ID，则会更新该文档。",
+      "options": {
+        "正确": "正确",
+        "错误": "错误"
+      },
+      "answer": "正确",
+      "referenceAnswer": "正确",
+      "explanation": "本题考查对概念表述的判断。该说法为“正确”，复习时要抓住题干中的限定词，避免被“只能、必须、随时”等绝对说法误导。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "综合复习"
+      ]
+    },
+    {
+      "id": "q113",
+      "type": "judge",
+      "question": "IK 分词器只能用于中文分词。",
+      "options": {
+        "正确": "正确",
+        "错误": "错误"
+      },
+      "answer": "错误",
+      "referenceAnswer": "错误",
+      "explanation": "本题考查对概念表述的判断。该说法为“错误”，复习时要抓住题干中的限定词，避免被“只能、必须、随时”等绝对说法误导。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "IK 分词器"
+      ]
+    },
+    {
+      "id": "q114",
+      "type": "judge",
+      "question": "IK 分词器的 ik_max_word 算法适合用于查询。",
+      "options": {
+        "正确": "正确",
+        "错误": "错误"
+      },
+      "answer": "错误",
+      "referenceAnswer": "错误",
+      "explanation": "本题考查对概念表述的判断。该说法为“错误”，复习时要抓住题干中的限定词，避免被“只能、必须、随时”等绝对说法误导。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "查询 DSL",
+        "IK 分词器"
+      ]
+    },
+    {
+      "id": "q115",
+      "type": "judge",
+      "question": "ElasticSearch 默认的分词器是 standard 分词器。",
+      "options": {
+        "正确": "正确",
+        "错误": "错误"
+      },
+      "answer": "正确",
+      "referenceAnswer": "正确",
+      "explanation": "本题考查对概念表述的判断。该说法为“正确”，复习时要抓住题干中的限定词，避免被“只能、必须、随时”等绝对说法误导。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "IK 分词器"
+      ]
+    },
+    {
+      "id": "q116",
+      "type": "judge",
+      "question": "在 ElasticSearch 查询中，sort 参数用于对结果进行排序。",
+      "options": {
+        "正确": "正确",
+        "错误": "错误"
+      },
+      "answer": "正确",
+      "referenceAnswer": "正确",
+      "explanation": "本题考查对概念表述的判断。该说法为“正确”，复习时要抓住题干中的限定词，避免被“只能、必须、随时”等绝对说法误导。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "查询 DSL"
+      ]
+    },
+    {
+      "id": "q117",
+      "type": "judge",
+      "question": "在 ElasticSearch 查询中，aggs 参数用于进行聚合查询。",
+      "options": {
+        "正确": "正确",
+        "错误": "错误"
+      },
+      "answer": "正确",
+      "referenceAnswer": "正确",
+      "explanation": "本题考查对概念表述的判断。该说法为“正确”，复习时要抓住题干中的限定词，避免被“只能、必须、随时”等绝对说法误导。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "查询 DSL"
+      ]
+    },
+    {
+      "id": "q118",
+      "type": "judge",
+      "question": "IK 分词器的 ik_smart 算法会将文本拆分成尽可能多的词。",
+      "options": {
+        "正确": "正确",
+        "错误": "错误"
+      },
+      "answer": "错误",
+      "referenceAnswer": "错误",
+      "explanation": "本题考查对概念表述的判断。该说法为“错误”，复习时要抓住题干中的限定词，避免被“只能、必须、随时”等绝对说法误导。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "IK 分词器"
+      ]
+    },
+    {
+      "id": "q119",
+      "type": "judge",
+      "question": "ElasticSearch 集群的健康状态为 red 表示部分主分片不可用。",
+      "options": {
+        "正确": "正确",
+        "错误": "错误"
+      },
+      "answer": "错误",
+      "referenceAnswer": "错误",
+      "explanation": "本题考查对概念表述的判断。该说法为“错误”，复习时要抓住题干中的限定词，避免被“只能、必须、随时”等绝对说法误导。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "集群与分片"
+      ]
+    },
+    {
+      "id": "q120",
+      "type": "judge",
+      "question": "ElasticSearch 集群的健康状态为 green 表示所有主分片和复制分片都正常运行。",
+      "options": {
+        "正确": "正确",
+        "错误": "错误"
+      },
+      "answer": "正确",
+      "referenceAnswer": "正确",
+      "explanation": "本题考查对概念表述的判断。该说法为“正确”，复习时要抓住题干中的限定词，避免被“只能、必须、随时”等绝对说法误导。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "集群与分片"
+      ]
+    },
+    {
+      "id": "q121",
+      "type": "judge",
+      "question": "在 ElasticSearch 查询中，_source 参数用于指定返回哪些字段。",
+      "options": {
+        "正确": "正确",
+        "错误": "错误"
+      },
+      "answer": "正确",
+      "referenceAnswer": "正确",
+      "explanation": "本题考查对概念表述的判断。该说法为“正确”，复习时要抓住题干中的限定词，避免被“只能、必须、随时”等绝对说法误导。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "索引与映射",
+        "查询 DSL"
+      ]
+    },
+    {
+      "id": "q122",
+      "type": "judge",
+      "question": "Spring Boot 整合 ElasticSearch 时，只能使用 RestHighLevelClient。",
+      "options": {
+        "正确": "正确",
+        "错误": "错误"
+      },
+      "answer": "错误",
+      "referenceAnswer": "错误",
+      "explanation": "本题考查对概念表述的判断。该说法为“错误”，复习时要抓住题干中的限定词，避免被“只能、必须、随时”等绝对说法误导。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "Spring Boot"
+      ]
+    },
+    {
+      "id": "q123",
+      "type": "judge",
+      "question": "Spring Boot 整合 ElasticSearch 时，不需要任何配置即可连接到本地的 ElasticSearch 服务。",
+      "options": {
+        "正确": "正确",
+        "错误": "错误"
+      },
+      "answer": "错误",
+      "referenceAnswer": "错误",
+      "explanation": "本题考查对概念表述的判断。该说法为“错误”，复习时要抓住题干中的限定词，避免被“只能、必须、随时”等绝对说法误导。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "Spring Boot",
+        "安装配置"
+      ]
+    },
+    {
+      "id": "q124",
+      "type": "judge",
+      "question": "ElasticSearch 集群的健康状态为 yellow 表示所有主分片和复制分片都正常运行。",
+      "options": {
+        "正确": "正确",
+        "错误": "错误"
+      },
+      "answer": "错误",
+      "referenceAnswer": "错误",
+      "explanation": "本题考查对概念表述的判断。该说法为“错误”，复习时要抓住题干中的限定词，避免被“只能、必须、随时”等绝对说法误导。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "集群与分片"
+      ]
+    },
+    {
+      "id": "q125",
+      "type": "judge",
+      "question": "在 ElasticSearch 中，批量插入数据可以使用 BulkRequest。",
+      "options": {
+        "正确": "正确",
+        "错误": "错误"
+      },
+      "answer": "正确",
+      "referenceAnswer": "正确",
+      "explanation": "本题考查对概念表述的判断。该说法为“正确”，复习时要抓住题干中的限定词，避免被“只能、必须、随时”等绝对说法误导。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "Spring Boot"
+      ]
+    },
+    {
+      "id": "q126",
+      "type": "judge",
+      "question": "在 ElasticSearch 中，批量操作可以提高数据处理的效率。",
+      "options": {
+        "正确": "正确",
+        "错误": "错误"
+      },
+      "answer": "正确",
+      "referenceAnswer": "正确",
+      "explanation": "本题考查对概念表述的判断。该说法为“正确”，复习时要抓住题干中的限定词，避免被“只能、必须、随时”等绝对说法误导。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "综合复习"
+      ]
+    },
+    {
+      "id": "q127",
+      "type": "judge",
+      "question": "Spring Boot 2.5.0 版本整合 ElasticSearch 时，需要引入 spring-boot-starter-data-elasticsearch 依赖。",
+      "options": {
+        "正确": "正确",
+        "错误": "错误"
+      },
+      "answer": "正确",
+      "referenceAnswer": "正确",
+      "explanation": "本题考查对概念表述的判断。该说法为“正确”，复习时要抓住题干中的限定词，避免被“只能、必须、随时”等绝对说法误导。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "Spring Boot"
+      ]
+    },
+    {
+      "id": "q128",
+      "type": "judge",
+      "question": "ElasticSearch 中的类型（Type）在 6.x 版本中已经被废弃。",
+      "options": {
+        "正确": "正确",
+        "错误": "错误"
+      },
+      "answer": "错误",
+      "referenceAnswer": "错误",
+      "explanation": "本题考查对概念表述的判断。该说法为“错误”，复习时要抓住题干中的限定词，避免被“只能、必须、随时”等绝对说法误导。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "索引与映射"
+      ]
+    },
+    {
+      "id": "q129",
+      "type": "judge",
+      "question": "ElasticSearch 中的类型（Type）在 8.x 版本中已经被完全移除。",
+      "options": {
+        "正确": "正确",
+        "错误": "错误"
+      },
+      "answer": "正确",
+      "referenceAnswer": "正确",
+      "explanation": "本题考查对概念表述的判断。该说法为“正确”，复习时要抓住题干中的限定词，避免被“只能、必须、随时”等绝对说法误导。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "索引与映射"
+      ]
+    },
+    {
+      "id": "q130",
+      "type": "judge",
+      "question": "在 ElasticSearch 中，删除索引会同时删除该索引下的所有文档。",
+      "options": {
+        "正确": "正确",
+        "错误": "错误"
+      },
+      "answer": "正确",
+      "referenceAnswer": "正确",
+      "explanation": "本题考查对概念表述的判断。该说法为“正确”，复习时要抓住题干中的限定词，避免被“只能、必须、随时”等绝对说法误导。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "索引与映射",
+        "运维优化"
+      ]
+    },
+    {
+      "id": "q131",
+      "type": "judge",
+      "question": "分片的数量在索引创建后可以随时修改。",
+      "options": {
+        "正确": "正确",
+        "错误": "错误"
+      },
+      "answer": "错误",
+      "referenceAnswer": "错误",
+      "explanation": "本题考查对概念表述的判断。该说法为“错误”，复习时要抓住题干中的限定词，避免被“只能、必须、随时”等绝对说法误导。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "集群与分片",
+        "索引与映射"
+      ]
+    },
+    {
+      "id": "q132",
+      "type": "judge",
+      "question": "一个分片可以存储无限多的文档。",
+      "options": {
+        "正确": "正确",
+        "错误": "错误"
+      },
+      "answer": "错误",
+      "referenceAnswer": "错误",
+      "explanation": "本题考查对概念表述的判断。该说法为“错误”，复习时要抓住题干中的限定词，避免被“只能、必须、随时”等绝对说法误导。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "集群与分片"
+      ]
+    },
+    {
+      "id": "q133",
+      "type": "judge",
+      "question": "ElasticSearch 中的类型（Type）在 8.x 版本中已经被废弃。",
+      "options": {
+        "正确": "正确",
+        "错误": "错误"
+      },
+      "answer": "正确",
+      "referenceAnswer": "正确",
+      "explanation": "本题考查对概念表述的判断。该说法为“正确”，复习时要抓住题干中的限定词，避免被“只能、必须、随时”等绝对说法误导。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "索引与映射"
+      ]
+    },
+    {
+      "id": "q134",
+      "type": "judge",
+      "question": "ElasticSearch 提供了自动故障转移机制。",
+      "options": {
+        "正确": "正确",
+        "错误": "错误"
+      },
+      "answer": "正确",
+      "referenceAnswer": "正确",
+      "explanation": "本题考查对概念表述的判断。该说法为“正确”，复习时要抓住题干中的限定词，避免被“只能、必须、随时”等绝对说法误导。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "运维优化"
+      ]
+    },
+    {
+      "id": "q135",
+      "type": "judge",
+      "question": "ElasticSearch 提供了自动分片分配和负载均衡功能。",
+      "options": {
+        "正确": "正确",
+        "错误": "错误"
+      },
+      "answer": "正确",
+      "referenceAnswer": "正确",
+      "explanation": "本题考查对概念表述的判断。该说法为“正确”，复习时要抓住题干中的限定词，避免被“只能、必须、随时”等绝对说法误导。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "集群与分片"
+      ]
+    },
+    {
+      "id": "q136",
+      "type": "short",
+      "question": "简述 ElasticSearch 与 Solr 的主要区别。",
+      "options": {},
+      "answer": "分布式管理：Solr 使用 Zookeeper 进行分布式管理，ElasticSearch 自身带有分布式协调管理功能\n数据格式支持：Solr 支持更多格式的数据，ElasticSearch 仅支持 JSON 文件格式\n功能特性：Solr 官方提供的功能更多，ElasticSearch 更注重核心功能，高级功能多由第三方插件提供\n搜索性能：Solr 在传统搜索应用中表现更好，ElasticSearch 在处理实时搜索应用时效率更高\n易用性：ElasticSearch 提供简单的 RESTful API，隐藏了 Lucene 的复杂性，更易于使用",
+      "referenceAnswer": "分布式管理：Solr 使用 Zookeeper 进行分布式管理，ElasticSearch 自身带有分布式协调管理功能\n数据格式支持：Solr 支持更多格式的数据，ElasticSearch 仅支持 JSON 文件格式\n功能特性：Solr 官方提供的功能更多，ElasticSearch 更注重核心功能，高级功能多由第三方插件提供\n搜索性能：Solr 在传统搜索应用中表现更好，ElasticSearch 在处理实时搜索应用时效率更高\n易用性：ElasticSearch 提供简单的 RESTful API，隐藏了 Lucene 的复杂性，更易于使用",
+      "explanation": "主观题以参考答案为准。答题时先覆盖关键词，再补充原因、步骤或对比点。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "基础概念",
+        "运维优化"
+      ]
+    },
+    {
+      "id": "q137",
+      "type": "short",
+      "question": "简述 ElasticSearch 的安装和启动步骤（Windows 环境）。",
+      "options": {},
+      "answer": "下载：从官方网站下载对应版本的 Windows 版 ElasticSearch 压缩包\n解压：将压缩包解压到指定目录\n配置：修改 config/elasticsearch.yml 文件，开启跨域访问支持\n环境准备：确保已安装 JDK 11+ 并配置好环境变量\n启动：运行 bin/elasticsearch.bat 文件，通过浏览器访问 http://localhost:9200 验证是否启动成功",
+      "referenceAnswer": "下载：从官方网站下载对应版本的 Windows 版 ElasticSearch 压缩包\n解压：将压缩包解压到指定目录\n配置：修改 config/elasticsearch.yml 文件，开启跨域访问支持\n环境准备：确保已安装 JDK 11+ 并配置好环境变量\n启动：运行 bin/elasticsearch.bat 文件，通过浏览器访问 http://localhost:9200 验证是否启动成功",
+      "explanation": "主观题以参考答案为准。答题时先覆盖关键词，再补充原因、步骤或对比点。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "安装配置",
+        "综合复习"
+      ]
+    },
+    {
+      "id": "q138",
+      "type": "short",
+      "question": "简述 ElasticSearch 的核心概念及其与关系型数据库的对应关系。",
+      "options": {},
+      "answer": "索引（Index）对应关系型数据库中的数据库（Database）\n类型（Type）对应关系型数据库中的表（Table）\n文档（Document）对应关系型数据库中的行（Row）\n字段（Field）对应关系型数据库中的列（Column）\n映射（Mapping）对应关系型数据库中的表结构（Schema）\n解释 ElasticSearch 中索引、类型、文档和字段的概念。\n索引（Index）：一个拥有相似特征的文档的集合，由小写字母名称标识\n类型（Type）：索引的逻辑分类与分区，为具有共同字段的文档定义\n文档（Document）：可被索引的基础信息单元，以 JSON 格式表示\n字段（Field）：相当于数据表的字段，对文档数据根据不同属性进行分类标识\n关系：一个索引可以包含多个类型，一个类型可以包含多个文档，一个文档包含多个字段",
+      "referenceAnswer": "索引（Index）对应关系型数据库中的数据库（Database）\n类型（Type）对应关系型数据库中的表（Table）\n文档（Document）对应关系型数据库中的行（Row）\n字段（Field）对应关系型数据库中的列（Column）\n映射（Mapping）对应关系型数据库中的表结构（Schema）\n解释 ElasticSearch 中索引、类型、文档和字段的概念。\n索引（Index）：一个拥有相似特征的文档的集合，由小写字母名称标识\n类型（Type）：索引的逻辑分类与分区，为具有共同字段的文档定义\n文档（Document）：可被索引的基础信息单元，以 JSON 格式表示\n字段（Field）：相当于数据表的字段，对文档数据根据不同属性进行分类标识\n关系：一个索引可以包含多个类型，一个类型可以包含多个文档，一个文档包含多个字段",
+      "explanation": "主观题以参考答案为准。答题时先覆盖关键词，再补充原因、步骤或对比点。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "基础概念",
+        "索引与映射",
+        "综合复习"
+      ]
+    },
+    {
+      "id": "q139",
+      "type": "short",
+      "question": "简述 ElasticSearch Head 插件的安装步骤。",
+      "options": {},
+      "answer": "下载 Head 插件：从 GitHub 下载 elasticsearch-head-master 压缩包\n安装 Node.js：下载并安装 Node.js，通过 node -v 验证安装成功\n安装 Grunt：执行 npm install -g grunt-cli 全局安装 Grunt\n安装依赖：进入 elasticsearch-head-master 目录，执行 npm install 安装依赖\n启动插件：执行 grunt server 启动 Head 插件，通过 http://localhost:9100 访问",
+      "referenceAnswer": "下载 Head 插件：从 GitHub 下载 elasticsearch-head-master 压缩包\n安装 Node.js：下载并安装 Node.js，通过 node -v 验证安装成功\n安装 Grunt：执行 npm install -g grunt-cli 全局安装 Grunt\n安装依赖：进入 elasticsearch-head-master 目录，执行 npm install 安装依赖\n启动插件：执行 grunt server 启动 Head 插件，通过 http://localhost:9100 访问",
+      "explanation": "主观题以参考答案为准。答题时先覆盖关键词，再补充原因、步骤或对比点。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "安装配置",
+        "集群与分片"
+      ]
+    },
+    {
+      "id": "q140",
+      "type": "short",
+      "question": "简述 ElasticSearch 中 match 查询和 term 查询的区别。",
+      "options": {},
+      "answer": "match 查询：\n会对查询条件进行分词处理\n将分词后的词项与索引中的词项进行匹配\n适合用于全文检索场景\nterm 查询：\n不会对查询条件进行分词处理\n直接将查询条件作为整体与索引中的词项进行精确匹配\n适合用于 keyword、数字、日期等类型的字段查询",
+      "referenceAnswer": "match 查询：\n会对查询条件进行分词处理\n将分词后的词项与索引中的词项进行匹配\n适合用于全文检索场景\nterm 查询：\n不会对查询条件进行分词处理\n直接将查询条件作为整体与索引中的词项进行精确匹配\n适合用于 keyword、数字、日期等类型的字段查询",
+      "explanation": "主观题以参考答案为准。答题时先覆盖关键词，再补充原因、步骤或对比点。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "IK 分词器",
+        "查询 DSL",
+        "索引与映射",
+        "综合复习"
+      ]
+    },
+    {
+      "id": "q141",
+      "type": "short",
+      "question": "简述 IK 分词器的两种分词算法及其区别。",
+      "options": {},
+      "answer": "ik_smart：最少切分算法，会将文本进行最粗粒度的拆分，尽可能少地生成词项\nik_max_word：最细粒度划分算法，会将文本拆分成尽可能多的词项，穷尽所有可能的组合区别：ik_smart 适合用于查询，ik_max_word 适合用于索引构建",
+      "referenceAnswer": "ik_smart：最少切分算法，会将文本进行最粗粒度的拆分，尽可能少地生成词项\nik_max_word：最细粒度划分算法，会将文本拆分成尽可能多的词项，穷尽所有可能的组合区别：ik_smart 适合用于查询，ik_max_word 适合用于索引构建",
+      "explanation": "主观题以参考答案为准。答题时先覆盖关键词，再补充原因、步骤或对比点。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "IK 分词器",
+        "查询 DSL",
+        "索引与映射"
+      ]
+    },
+    {
+      "id": "q142",
+      "type": "short",
+      "question": "简述 ElasticSearch 中文档的创建、查询、更新和删除操作的 RESTful API。",
+      "options": {},
+      "answer": "创建文档：\n指定 ID：PUT / 索引名 / 类型名 / 文档\n自动生成 ID：POST / 索引名 / 类型名\n查询文档：GET / 索引名 / 类型名 / 文档 ID\n更新文档：PUT / 索引名 / 类型名 / 文档 ID 或 POST / 索引名 / 类型名 / 文档 ID\n删除文档：DELETE / 索引名 / 类型名 / 文档 ID",
+      "referenceAnswer": "创建文档：\n指定 ID：PUT / 索引名 / 类型名 / 文档\n自动生成 ID：POST / 索引名 / 类型名\n查询文档：GET / 索引名 / 类型名 / 文档 ID\n更新文档：PUT / 索引名 / 类型名 / 文档 ID 或 POST / 索引名 / 类型名 / 文档 ID\n删除文档：DELETE / 索引名 / 类型名 / 文档 ID",
+      "explanation": "主观题以参考答案为准。答题时先覆盖关键词，再补充原因、步骤或对比点。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "查询 DSL",
+        "索引与映射",
+        "综合复习",
+        "运维优化"
+      ]
+    },
+    {
+      "id": "q143",
+      "type": "short",
+      "question": "简述 ElasticSearch 中聚合查询的概念及其常用类型。",
+      "options": {},
+      "answer": "概念：聚合查询用于对数据进行统计和分析，可以从不同维度对数据进行汇总\n常用类型：\n桶聚合（Bucket Aggregation）：将数据分组到不同的桶中，如 terms 聚合\n指标聚合（Metric Aggregation）：计算数据的统计指标，如 avg、max、min、sum 等\n管道聚合（Pipeline Aggregation）：对其他聚合的结果进行再次聚合\n矩阵聚合（Matrix Aggregation）：对多个字段进行统计分析",
+      "referenceAnswer": "概念：聚合查询用于对数据进行统计和分析，可以从不同维度对数据进行汇总\n常用类型：\n桶聚合（Bucket Aggregation）：将数据分组到不同的桶中，如 terms 聚合\n指标聚合（Metric Aggregation）：计算数据的统计指标，如 avg、max、min、sum 等\n管道聚合（Pipeline Aggregation）：对其他聚合的结果进行再次聚合\n矩阵聚合（Matrix Aggregation）：对多个字段进行统计分析",
+      "explanation": "主观题以参考答案为准。答题时先覆盖关键词，再补充原因、步骤或对比点。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "基础概念",
+        "查询 DSL",
+        "索引与映射",
+        "综合复习"
+      ]
+    },
+    {
+      "id": "q144",
+      "type": "short",
+      "question": "简述 ElasticSearch 中分片和复制的作用。",
+      "options": {},
+      "answer": "分片的作用：\n允许水平分割与扩展内容容量\n允许在分片之上进行分布式、并行的操作，提高性能和吞吐量\n复制的作用：\n在分片节点失败时提供高可用性，实现故障转移\n扩展搜索量吞吐量，搜索可以在所有复制上并行运行\n注意：复制分片从不与主分片置于同一节点上",
+      "referenceAnswer": "分片的作用：\n允许水平分割与扩展内容容量\n允许在分片之上进行分布式、并行的操作，提高性能和吞吐量\n复制的作用：\n在分片节点失败时提供高可用性，实现故障转移\n扩展搜索量吞吐量，搜索可以在所有复制上并行运行\n注意：复制分片从不与主分片置于同一节点上",
+      "explanation": "主观题以参考答案为准。答题时先覆盖关键词，再补充原因、步骤或对比点。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "综合复习",
+        "运维优化",
+        "集群与分片"
+      ]
+    },
+    {
+      "id": "q145",
+      "type": "short",
+      "question": "简述 ElasticSearch 集群的工作原理。",
+      "options": {},
+      "answer": "集群由一个或多个节点组成，共同持有整个数据并提供索引和搜索功能）\n集群有一个唯一的名称，节点通过指定集群名称加入集群\n集群中有一个主节点，负责管理集群状态，包括索引的创建和删除、节点的加入和离开等\n索引被分成多个主分片，分布在不同的节点上，每个主分片可以有多个复制分片\n当节点失败时，集群会自动将该节点上的分片分配到其他节点，实现故障转移",
+      "referenceAnswer": "集群由一个或多个节点组成，共同持有整个数据并提供索引和搜索功能）\n集群有一个唯一的名称，节点通过指定集群名称加入集群\n集群中有一个主节点，负责管理集群状态，包括索引的创建和删除、节点的加入和离开等\n索引被分成多个主分片，分布在不同的节点上，每个主分片可以有多个复制分片\n当节点失败时，集群会自动将该节点上的分片分配到其他节点，实现故障转移",
+      "explanation": "主观题以参考答案为准。答题时先覆盖关键词，再补充原因、步骤或对比点。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "索引与映射",
+        "运维优化",
+        "集群与分片"
+      ]
+    },
+    {
+      "id": "q146",
+      "type": "short",
+      "question": "简述 ElasticSearch 集群搭建的基本步骤。",
+      "options": {},
+      "answer": "准备环境：安装 JDK 11+，配置环境变量\n下载并解压 ElasticSearch 安装包到各个节点\n修改每个节点的配置文件，包括集群名称、节点名称、网络配置、集群发现配置等\n清空所有节点的 data 目录\n依次启动所有节点，验证集群是否正常运行",
+      "referenceAnswer": "准备环境：安装 JDK 11+，配置环境变量\n下载并解压 ElasticSearch 安装包到各个节点\n修改每个节点的配置文件，包括集群名称、节点名称、网络配置、集群发现配置等\n清空所有节点的 data 目录\n依次启动所有节点，验证集群是否正常运行",
+      "explanation": "主观题以参考答案为准。答题时先覆盖关键词，再补充原因、步骤或对比点。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "安装配置",
+        "集群与分片"
+      ]
+    },
+    {
+      "id": "q147",
+      "type": "comprehensive",
+      "question": "背景：某互联网公司为了排查线上服务器故障，决定使用 ElasticSearch 存储所有服务器的系统日志。日志数据包含以下字段：\nlog_id：日志唯一标识（长整型）\nserver_ip：服务器 IP 地址（字符串，不需要分词）\nlog_level：日志级别（字符串，可选值：DEBUG、INFO、WARN、ERROR，不需要分词）\nlog_content：日志内容（长文本，需要支持全文检索）\ncreate_time：日志生成时间（日期类型）\nprocess_name：产生日志的进程名称（字符串，不需要分词）\n公司计划创建一个名为system_logs的索引来存储这些日志，每天大约产生 50 万条日志数据，需要保留 30 天的日志记录。运维人员需要能够快速查询特定服务器、特定级别的错误日志，以及根据日志内容搜索相关故障信息。\n\n问题：（1）请写出创建system_logs索引时，log_content字段的映射配置，要求使用 IK 分词器的最少切分算法，并说明为什么选择该算法。",
+      "options": {},
+      "answer": "log_content字段的映射配置：\n\"log_content\": {\n\"type\": \"text\",\n\"analyzer\": \"ik_smart\"\n}\n选择`ik_smart`算法的原因：\n`ik_smart`是最少切分算法，会将文本进行最粗粒度的拆分，生成的词项数量较少\n对于日志查询场景，用户通常搜索完整的错误关键词，最少切分可以提高查询效率，减少无关结果",
+      "referenceAnswer": "log_content字段的映射配置：\n\"log_content\": {\n\"type\": \"text\",\n\"analyzer\": \"ik_smart\"\n}\n选择`ik_smart`算法的原因：\n`ik_smart`是最少切分算法，会将文本进行最粗粒度的拆分，生成的词项数量较少\n对于日志查询场景，用户通常搜索完整的错误关键词，最少切分可以提高查询效率，减少无关结果",
+      "explanation": "综合题以参考答案为准。先识别业务场景，再写映射、DSL、原因或优化步骤。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "IK 分词器",
+        "安装配置",
+        "查询 DSL",
+        "索引与映射",
+        "综合复习",
+        "运维优化"
+      ]
+    },
+    {
+      "id": "q148",
+      "type": "comprehensive",
+      "question": "背景：某互联网公司为了排查线上服务器故障，决定使用 ElasticSearch 存储所有服务器的系统日志。日志数据包含以下字段：\nlog_id：日志唯一标识（长整型）\nserver_ip：服务器 IP 地址（字符串，不需要分词）\nlog_level：日志级别（字符串，可选值：DEBUG、INFO、WARN、ERROR，不需要分词）\nlog_content：日志内容（长文本，需要支持全文检索）\ncreate_time：日志生成时间（日期类型）\nprocess_name：产生日志的进程名称（字符串，不需要分词）\n公司计划创建一个名为system_logs的索引来存储这些日志，每天大约产生 50 万条日志数据，需要保留 30 天的日志记录。运维人员需要能够快速查询特定服务器、特定级别的错误日志，以及根据日志内容搜索相关故障信息。\n\n问题：运维人员需要查询 IP 为192.168.1.100的服务器在 2024 年 6 月 1 日产生的所有 ERROR 级别日志，请写出该查询的核心 DSL 语句（只需要写出query部分即可）。",
+      "options": {},
+      "answer": "\"query\": {\n\"bool\": {\n\"must\": [\n{\"match\": {\"server_ip\": \"192.168.1.100\"}},\n{\"match\": {\"log_level\": \"ERROR\"}}\n],\n\"filter\": {\n\"range\": {\n\"create_time\": {\n\"gte\": \"2024-06-01\",\n\"lt\": \"2024-06-02\"\n}\n}\n}\n}\n}",
+      "referenceAnswer": "\"query\": {\n\"bool\": {\n\"must\": [\n{\"match\": {\"server_ip\": \"192.168.1.100\"}},\n{\"match\": {\"log_level\": \"ERROR\"}}\n],\n\"filter\": {\n\"range\": {\n\"create_time\": {\n\"gte\": \"2024-06-01\",\n\"lt\": \"2024-06-02\"\n}\n}\n}\n}\n}",
+      "explanation": "综合题以参考答案为准。先识别业务场景，再写映射、DSL、原因或优化步骤。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "IK 分词器",
+        "基础概念",
+        "查询 DSL",
+        "索引与映射",
+        "综合复习",
+        "运维优化"
+      ]
+    },
+    {
+      "id": "q149",
+      "type": "comprehensive",
+      "question": "背景：某互联网公司为了排查线上服务器故障，决定使用 ElasticSearch 存储所有服务器的系统日志。日志数据包含以下字段：\nlog_id：日志唯一标识（长整型）\nserver_ip：服务器 IP 地址（字符串，不需要分词）\nlog_level：日志级别（字符串，可选值：DEBUG、INFO、WARN、ERROR，不需要分词）\nlog_content：日志内容（长文本，需要支持全文检索）\ncreate_time：日志生成时间（日期类型）\nprocess_name：产生日志的进程名称（字符串，不需要分词）\n公司计划创建一个名为system_logs的索引来存储这些日志，每天大约产生 50 万条日志数据，需要保留 30 天的日志记录。运维人员需要能够快速查询特定服务器、特定级别的错误日志，以及根据日志内容搜索相关故障信息。\n\n问题：如果某天运维人员发现查询日志的速度变得很慢，经过检查发现集群健康状态为yellow，请说明可能的原因以及对应的解决方法（写出 2 种）。",
+      "options": {},
+      "answer": "可能原因 1：集群中只有一个节点，索引的复制分片无法分配\n解决方法：增加至少一个节点，让复制分片可以分配到其他节点上\n可能原因 2：某个节点离线，导致该节点上的复制分片丢失\n解决方法：重启离线的节点，或者重新分配丢失的分片",
+      "referenceAnswer": "可能原因 1：集群中只有一个节点，索引的复制分片无法分配\n解决方法：增加至少一个节点，让复制分片可以分配到其他节点上\n可能原因 2：某个节点离线，导致该节点上的复制分片丢失\n解决方法：重启离线的节点，或者重新分配丢失的分片",
+      "explanation": "综合题以参考答案为准。先识别业务场景，再写映射、DSL、原因或优化步骤。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "IK 分词器",
+        "查询 DSL",
+        "索引与映射",
+        "运维优化",
+        "集群与分片"
+      ]
+    },
+    {
+      "id": "q150",
+      "type": "comprehensive",
+      "question": "背景：某地方新闻网站为了提升用户的搜索体验，决定将原有的数据库搜索替换为 ElasticSearch 全文搜索。新闻数据包含以下字段：\nnews_id：新闻唯一标识（长整型）\ntitle：新闻标题（字符串，需要支持全文检索和高亮显示）\ncontent：新闻内容（长文本，需要支持全文检索和高亮显示）\nauthor：作者姓名（字符串，不需要分词）\npublish_time：发布时间（日期类型）\nsource：新闻来源（字符串，不需要分词）\n网站每天发布约 200 条新闻，总新闻量约 10 万条。用户可以通过关键词搜索新闻标题和内容，搜索结果需要按发布时间倒序排序，并高亮显示匹配的关键词。\n\n问题：在创建news索引时，title和content字段应该使用哪种分词器？请说明选择该分词器的原因。",
+      "options": {},
+      "answer": "",
+      "referenceAnswer": "",
+      "explanation": "综合题以参考答案为准。先识别业务场景，再写映射、DSL、原因或优化步骤。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "索引与映射",
+        "IK 分词器"
+      ]
+    },
+    {
+      "id": "q151",
+      "type": "comprehensive",
+      "question": "背景：某地方新闻网站为了提升用户的搜索体验，决定将原有的数据库搜索替换为 ElasticSearch 全文搜索。新闻数据包含以下字段：\nnews_id：新闻唯一标识（长整型）\ntitle：新闻标题（字符串，需要支持全文检索和高亮显示）\ncontent：新闻内容（长文本，需要支持全文检索和高亮显示）\nauthor：作者姓名（字符串，不需要分词）\npublish_time：发布时间（日期类型）\nsource：新闻来源（字符串，不需要分词）\n网站每天发布约 200 条新闻，总新闻量约 10 万条。用户可以通过关键词搜索新闻标题和内容，搜索结果需要按发布时间倒序排序，并高亮显示匹配的关键词。\n\n问题：应该使用 IK 分词器的ik_max_word算法 原因：",
+      "options": {},
+      "answer": "ik_max_word是最细粒度划分算法，会将文本拆分成尽可能多的词项\n对于新闻搜索场景，用户可能搜索新闻中的任意关键词，最细粒度划分可以提高召回率，确保相关新闻都能被搜索到",
+      "referenceAnswer": "ik_max_word是最细粒度划分算法，会将文本拆分成尽可能多的词项\n对于新闻搜索场景，用户可能搜索新闻中的任意关键词，最细粒度划分可以提高召回率，确保相关新闻都能被搜索到",
+      "explanation": "综合题以参考答案为准。先识别业务场景，再写映射、DSL、原因或优化步骤。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "IK 分词器",
+        "索引与映射",
+        "综合复习"
+      ]
+    },
+    {
+      "id": "q152",
+      "type": "comprehensive",
+      "question": "背景：某地方新闻网站为了提升用户的搜索体验，决定将原有的数据库搜索替换为 ElasticSearch 全文搜索。新闻数据包含以下字段：\nnews_id：新闻唯一标识（长整型）\ntitle：新闻标题（字符串，需要支持全文检索和高亮显示）\ncontent：新闻内容（长文本，需要支持全文检索和高亮显示）\nauthor：作者姓名（字符串，不需要分词）\npublish_time：发布时间（日期类型）\nsource：新闻来源（字符串，不需要分词）\n网站每天发布约 200 条新闻，总新闻量约 10 万条。用户可以通过关键词搜索新闻标题和内容，搜索结果需要按发布时间倒序排序，并高亮显示匹配的关键词。\n\n问题：用户搜索关键词 \"高考\"，需要在新闻标题和内容中进行搜索，并对匹配的关键词进行高亮显示，请写出该查询的核心 DSL 语句（只需要写出query和highlight部分即可）。",
+      "options": {},
+      "answer": "\"query\": {\n\"multi_match\": {\n\"query\": \"高考\",\n\"fields\": [\"title\", \"content\"]\n}\n}\n\"highlight\": {\n\"fields\": {\n\"title\": {},\n\"content\": {}\n}\n}",
+      "referenceAnswer": "\"query\": {\n\"multi_match\": {\n\"query\": \"高考\",\n\"fields\": [\"title\", \"content\"]\n}\n}\n\"highlight\": {\n\"fields\": {\n\"title\": {},\n\"content\": {}\n}\n}",
+      "explanation": "综合题以参考答案为准。先识别业务场景，再写映射、DSL、原因或优化步骤。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "IK 分词器",
+        "基础概念",
+        "查询 DSL",
+        "索引与映射",
+        "综合复习"
+      ]
+    },
+    {
+      "id": "q153",
+      "type": "comprehensive",
+      "question": "背景：某地方新闻网站为了提升用户的搜索体验，决定将原有的数据库搜索替换为 ElasticSearch 全文搜索。新闻数据包含以下字段：\nnews_id：新闻唯一标识（长整型）\ntitle：新闻标题（字符串，需要支持全文检索和高亮显示）\ncontent：新闻内容（长文本，需要支持全文检索和高亮显示）\nauthor：作者姓名（字符串，不需要分词）\npublish_time：发布时间（日期类型）\nsource：新闻来源（字符串，不需要分词）\n网站每天发布约 200 条新闻，总新闻量约 10 万条。用户可以通过关键词搜索新闻标题和内容，搜索结果需要按发布时间倒序排序，并高亮显示匹配的关键词。\n\n问题：如果用户反映搜索结果中出现了很多不相关的新闻，比如搜索 \"高考\" 时出现了 \"中考\" 相关的新闻，请分析可能的原因，并提出2 种优化方法。",
+      "options": {},
+      "answer": "可能原因：分词器将 \"高考\" 和 \"中考\" 都拆分成了 \"考\" 这个词项，导致匹配到了包含 \"考\" 的所有新闻\n优化方法：\n使用match_phrase短语查询，要求关键词作为一个整体出现\n调整字段的权重，让标题字段的权重高于内容字段，提高标题匹配的新闻的排名",
+      "referenceAnswer": "可能原因：分词器将 \"高考\" 和 \"中考\" 都拆分成了 \"考\" 这个词项，导致匹配到了包含 \"考\" 的所有新闻\n优化方法：\n使用match_phrase短语查询，要求关键词作为一个整体出现\n调整字段的权重，让标题字段的权重高于内容字段，提高标题匹配的新闻的排名",
+      "explanation": "综合题以参考答案为准。先识别业务场景，再写映射、DSL、原因或优化步骤。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "IK 分词器",
+        "查询 DSL",
+        "索引与映射",
+        "运维优化"
+      ]
+    },
+    {
+      "id": "q154",
+      "type": "comprehensive",
+      "question": "背景：某大学图书馆为了方便师生查找图书，决定使用 ElasticSearch 搭建图书检索系统。图书信息包含以下字段：\nbook_id：图书唯一标识（长整型）\nbook_name：图书名称（字符串，需要支持全文检索）\nauthor：作者姓名（字符串，需要支持全文检索）\npublisher：出版社名称（字符串，不需要分词）\npublish_date：出版日期（日期类型）\ncategory：图书分类（字符串，不需要分词）\nintroduction：图书简介（长文本，需要支持全文检索）\nstock：库存数量（整型）\n图书馆目前有大约 20 万册图书，师生可以通过图书名称、作者、出版社和分类进行查询，查询结果需要按出版日期倒序排序。\n\n问题：在创建books索引时，publisher字段应该设置为哪种数据类型？请说明原因。",
+      "options": {},
+      "answer": "",
+      "referenceAnswer": "",
+      "explanation": "综合题以参考答案为准。先识别业务场景，再写映射、DSL、原因或优化步骤。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "索引与映射",
+        "查询 DSL",
+        "IK 分词器"
+      ]
+    },
+    {
+      "id": "q155",
+      "type": "comprehensive",
+      "question": "背景：某大学图书馆为了方便师生查找图书，决定使用 ElasticSearch 搭建图书检索系统。图书信息包含以下字段：\nbook_id：图书唯一标识（长整型）\nbook_name：图书名称（字符串，需要支持全文检索）\nauthor：作者姓名（字符串，需要支持全文检索）\npublisher：出版社名称（字符串，不需要分词）\npublish_date：出版日期（日期类型）\ncategory：图书分类（字符串，不需要分词）\nintroduction：图书简介（长文本，需要支持全文检索）\nstock：库存数量（整型）\n图书馆目前有大约 20 万册图书，师生可以通过图书名称、作者、出版社和分类进行查询，查询结果需要按出版日期倒序排序。\n\n问题：应该设置为keyword类型",
+      "options": {},
+      "answer": "原因：\nkeyword类型不会对字段值进行分词，会将整个字符串作为一个词项进行索引\n出版社名称是一个整体，不需要进行全文检索，只需要精确匹配，使用keyword类型可以提高查询效率",
+      "referenceAnswer": "原因：\nkeyword类型不会对字段值进行分词，会将整个字符串作为一个词项进行索引\n出版社名称是一个整体，不需要进行全文检索，只需要精确匹配，使用keyword类型可以提高查询效率",
+      "explanation": "综合题以参考答案为准。先识别业务场景，再写映射、DSL、原因或优化步骤。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "IK 分词器",
+        "查询 DSL",
+        "索引与映射",
+        "综合复习"
+      ]
+    },
+    {
+      "id": "q156",
+      "type": "comprehensive",
+      "question": "背景：某大学图书馆为了方便师生查找图书，决定使用 ElasticSearch 搭建图书检索系统。图书信息包含以下字段：\nbook_id：图书唯一标识（长整型）\nbook_name：图书名称（字符串，需要支持全文检索）\nauthor：作者姓名（字符串，需要支持全文检索）\npublisher：出版社名称（字符串，不需要分词）\npublish_date：出版日期（日期类型）\ncategory：图书分类（字符串，不需要分词）\nintroduction：图书简介（长文本，需要支持全文检索）\nstock：库存数量（整型）\n图书馆目前有大约 20 万册图书，师生可以通过图书名称、作者、出版社和分类进行查询，查询结果需要按出版日期倒序排序。\n\n问题：师生需要查询 \"机械工业出版社\" 出版的所有 \"计算机\" 类图书，请写出该查询的核心 DSL 语句（只需要写出query部分即可）。",
+      "options": {},
+      "answer": "\"query\": {\n\"bool\": {\n\"must\": [\n{\"match\": {\"publisher\": \"机械工业出版社\"}},\n{\"match\": {\"category\": \"计算机\"}}\n]\n}\n}",
+      "referenceAnswer": "\"query\": {\n\"bool\": {\n\"must\": [\n{\"match\": {\"publisher\": \"机械工业出版社\"}},\n{\"match\": {\"category\": \"计算机\"}}\n]\n}\n}",
+      "explanation": "综合题以参考答案为准。先识别业务场景，再写映射、DSL、原因或优化步骤。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "IK 分词器",
+        "基础概念",
+        "查询 DSL",
+        "索引与映射",
+        "综合复习"
+      ]
+    },
+    {
+      "id": "q157",
+      "type": "comprehensive",
+      "question": "背景：某大学图书馆为了方便师生查找图书，决定使用 ElasticSearch 搭建图书检索系统。图书信息包含以下字段：\nbook_id：图书唯一标识（长整型）\nbook_name：图书名称（字符串，需要支持全文检索）\nauthor：作者姓名（字符串，需要支持全文检索）\npublisher：出版社名称（字符串，不需要分词）\npublish_date：出版日期（日期类型）\ncategory：图书分类（字符串，不需要分词）\nintroduction：图书简介（长文本，需要支持全文检索）\nstock：库存数量（整型）\n图书馆目前有大约 20 万册图书，师生可以通过图书名称、作者、出版社和分类进行查询，查询结果需要按出版日期倒序排序。\n\n问题：随着图书数量的增加，查询速度逐渐变慢，请提出 4 种针对索引设计的优化方法。",
+      "options": {},
+      "answer": "合理设置分片数量：根据数据量和节点数量，将主分片数量设置为 3-5 个，每个分片大小控制在 20-50GB\n优化字段类型：对于不需要全文检索的字段，如book_id、stock等，使用对应的数值类型，避免使用text类型\n关闭不需要的字段功能：对于不需要排序和聚合的字段，关闭doc_values和fielddata功能，节省存储空间\n使用索引别名：将不同年份的图书数据分别存储在不同的索引中，使用别名进行统一查询，提高查询效率",
+      "referenceAnswer": "合理设置分片数量：根据数据量和节点数量，将主分片数量设置为 3-5 个，每个分片大小控制在 20-50GB\n优化字段类型：对于不需要全文检索的字段，如book_id、stock等，使用对应的数值类型，避免使用text类型\n关闭不需要的字段功能：对于不需要排序和聚合的字段，关闭doc_values和fielddata功能，节省存储空间\n使用索引别名：将不同年份的图书数据分别存储在不同的索引中，使用别名进行统一查询，提高查询效率",
+      "explanation": "综合题以参考答案为准。先识别业务场景，再写映射、DSL、原因或优化步骤。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "IK 分词器",
+        "查询 DSL",
+        "索引与映射",
+        "运维优化",
+        "集群与分片"
+      ]
+    },
+    {
+      "id": "q158",
+      "type": "comprehensive",
+      "question": "背景：某小型电商平台使用 ElasticSearch 存储订单数据，方便客服人员快速查询订单信息。订单数据包含以下字段：\norder_id：订单唯一标识（长整型）\nuser_name：用户姓名（字符串，需要支持模糊查询）\nphone：用户手机号（字符串，不需要分词）\norder_status：订单状态（字符串，可选值：待付款、待发货、已发货、已完成、已取消，不需要分词）\ntotal_amount：订单总金额（浮点型）\ncreate_time：订单创建时间（日期类型）\naddress：收货地址（字符串，需要支持全文检索）\n平台目前有大约 50 万条订单数据，客服人员每天需要查询数百次订单信息，主要通过订单号、用户手机号和订单状态进行查询。\n\n问题：由于业务调整，平台需要删除所有 2023 年 1 月 1 日之前的订单数据，请写出删除这些订单的操作步骤（用文字描述即可）。",
+      "options": {},
+      "answer": "首先使用查询语句确认 2023 年 1 月 1 日之前的订单数量，避免误删（1 分）\n使用DeleteByQueryRequest执行按条件删除操作，查询条件为create_time < \"2023-01-01\"（1 分）\n删除完成后，验证删除结果，确认所有符合条件的订单都已被删除（1 分）",
+      "referenceAnswer": "首先使用查询语句确认 2023 年 1 月 1 日之前的订单数量，避免误删（1 分）\n使用DeleteByQueryRequest执行按条件删除操作，查询条件为create_time < \"2023-01-01\"（1 分）\n删除完成后，验证删除结果，确认所有符合条件的订单都已被删除（1 分）",
+      "explanation": "综合题以参考答案为准。先识别业务场景，再写映射、DSL、原因或优化步骤。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "IK 分词器",
+        "Spring Boot",
+        "查询 DSL",
+        "索引与映射",
+        "运维优化"
+      ]
+    },
+    {
+      "id": "q159",
+      "type": "comprehensive",
+      "question": "背景：某小型电商平台使用 ElasticSearch 存储订单数据，方便客服人员快速查询订单信息。订单数据包含以下字段：\norder_id：订单唯一标识（长整型）\nuser_name：用户姓名（字符串，需要支持模糊查询）\nphone：用户手机号（字符串，不需要分词）\norder_status：订单状态（字符串，可选值：待付款、待发货、已发货、已完成、已取消，不需要分词）\ntotal_amount：订单总金额（浮点型）\ncreate_time：订单创建时间（日期类型）\naddress：收货地址（字符串，需要支持全文检索）\n平台目前有大约 50 万条订单数据，客服人员每天需要查询数百次订单信息，主要通过订单号、用户手机号和订单状态进行查询。\n\n问题：客服人员需要查询所有状态为 \"待发货\" 且总金额大于 100 元的订单，请写出该查询的核心 DSL 语句（只需要写出query部分即可）。",
+      "options": {},
+      "answer": "\"query\": {\n\"bool\": {\n\"must\": [\n{\"match\": {\"order_status\": \"待发货\"}}\n],\n\"filter\": {\n\"range\": {\n\"total_amount\": {\n\"gt\": 100\n}\n}\n}\n}\n}",
+      "referenceAnswer": "\"query\": {\n\"bool\": {\n\"must\": [\n{\"match\": {\"order_status\": \"待发货\"}}\n],\n\"filter\": {\n\"range\": {\n\"total_amount\": {\n\"gt\": 100\n}\n}\n}\n}\n}",
+      "explanation": "综合题以参考答案为准。先识别业务场景，再写映射、DSL、原因或优化步骤。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "IK 分词器",
+        "基础概念",
+        "查询 DSL",
+        "索引与映射",
+        "综合复习"
+      ]
+    },
+    {
+      "id": "q160",
+      "type": "comprehensive",
+      "question": "背景：某小型电商平台使用 ElasticSearch 存储订单数据，方便客服人员快速查询订单信息。订单数据包含以下字段：\norder_id：订单唯一标识（长整型）\nuser_name：用户姓名（字符串，需要支持模糊查询）\nphone：用户手机号（字符串，不需要分词）\norder_status：订单状态（字符串，可选值：待付款、待发货、已发货、已完成、已取消，不需要分词）\ntotal_amount：订单总金额（浮点型）\ncreate_time：订单创建时间（日期类型）\naddress：收货地址（字符串，需要支持全文检索）\n平台目前有大约 50 万条订单数据，客服人员每天需要查询数百次订单信息，主要通过订单号、用户手机号和订单状态进行查询。\n\n问题：为了防止数据丢失，平台需要定期对 ElasticSearch 中的订单数据进行备份，请写出 2 种常用的备份方法，并说明各自的优点。",
+      "options": {},
+      "answer": "方法 1：使用 ElasticSearch 的快照功能（Snapshot）\n优点：支持增量备份，备份和恢复速度快，支持备份整个集群或指定索引）\n方法 2：使用_reindexAPI 将数据复制到另一个集群\n优点：操作简单，不需要额外的存储系统，适合小数据量备份",
+      "referenceAnswer": "方法 1：使用 ElasticSearch 的快照功能（Snapshot）\n优点：支持增量备份，备份和恢复速度快，支持备份整个集群或指定索引）\n方法 2：使用_reindexAPI 将数据复制到另一个集群\n优点：操作简单，不需要额外的存储系统，适合小数据量备份",
+      "explanation": "综合题以参考答案为准。先识别业务场景，再写映射、DSL、原因或优化步骤。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "IK 分词器",
+        "查询 DSL",
+        "索引与映射",
+        "综合复习",
+        "运维优化",
+        "集群与分片"
+      ]
+    }
+  ]
+}
