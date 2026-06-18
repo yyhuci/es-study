@@ -613,6 +613,15 @@ function renderCompletedReviewNotice() {
 }
 
 function renderAnswerBox(question, result) {
+  if (!isObjective(question)) {
+    return `
+      <div class="answer-box">
+        <h3>参考答案</h3>
+        <div class="reference-answer">${formatSubjectiveAnswer(question.referenceAnswer || question.answer)}</div>
+        ${selfButtons(question)}
+      </div>
+    `;
+  }
   const rawAnswer = Array.isArray(question.answer) ? question.answer.join("") : question.answer;
   const answer = question.type === "judge" ? `${rawAnswer}（${question.options?.[rawAnswer] || question.referenceAnswer || ""}）` : rawAnswer;
   const className = result.correct === false ? "answer-box is-wrong" : "answer-box";
@@ -620,12 +629,22 @@ function renderAnswerBox(question, result) {
     <div class="${className}">
       <h3>${result.correct === null ? "参考答案" : result.correct ? "回答正确" : "回答错误"}</h3>
       <p><strong>正确答案：</strong>${escapeHtml(answer)}</p>
-      ${question.referenceAnswer && !isObjective(question) ? `<div class="reference-answer">${escapeHtml(question.referenceAnswer)}</div>` : ""}
       <p><strong>解析：</strong>${escapeHtml(question.explanation)}</p>
       ${question.memoryTip ? `<p><strong>记忆方法：</strong>${escapeHtml(question.memoryTip)}</p>` : ""}
-      ${!isObjective(question) ? selfButtons(question) : ""}
     </div>
   `;
+}
+
+function formatSubjectiveAnswer(answer) {
+  const lines = String(answer || "")
+    .split(/\n+/)
+    .map((line) => line.trim())
+    .filter(Boolean);
+  if (!lines.length) return "<p>暂无参考答案。</p>";
+  const compact = lines
+    .map((line) => line.replace(/^[-•]\s*/, ""))
+    .filter((line, index, array) => array.indexOf(line) === index);
+  return `<ol>${compact.map((line) => `<li>${escapeHtml(line)}</li>`).join("")}</ol>`;
 }
 
 function selfButtons(question) {

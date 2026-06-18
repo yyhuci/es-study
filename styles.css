@@ -321,6 +321,16 @@ h3 {
   overflow-wrap: anywhere;
 }
 
+.reference-answer ol {
+  margin: 8px 0 0;
+  padding-left: 24px;
+  white-space: normal;
+}
+
+.reference-answer li {
+  margin: 8px 0;
+}
+
 .progress-list,
 .wrong-list,
 .exam-review {
