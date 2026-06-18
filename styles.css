@@ -331,6 +331,33 @@ h3 {
   margin: 8px 0;
 }
 
+.subjective-summary {
+  margin: 10px 0 16px;
+  padding: 12px 14px;
+  border: 1px solid rgba(15, 139, 117, 0.22);
+  border-radius: var(--radius);
+  background: #e9f7f3;
+}
+
+.subjective-summary p {
+  margin: 6px 0 0;
+  line-height: 1.7;
+}
+
+.answer-code {
+  margin: 12px 0;
+  padding: 14px;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #101817;
+  color: #eef8f5;
+  font-family: Consolas, "Cascadia Code", "Courier New", monospace;
+  font-size: 14px;
+  line-height: 1.65;
+  white-space: pre;
+}
+
 .progress-list,
 .wrong-list,
 .exam-review {

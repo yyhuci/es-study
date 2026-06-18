@@ -617,7 +617,13 @@ function renderAnswerBox(question, result) {
     return `
       <div class="answer-box">
         <h3>参考答案</h3>
-        <div class="reference-answer">${formatSubjectiveAnswer(question.referenceAnswer || question.answer)}</div>
+        ${question.conciseAnswer ? `
+          <div class="subjective-summary">
+            <strong>简化版答案</strong>
+            <p>${escapeHtml(question.conciseAnswer)}</p>
+          </div>
+        ` : ""}
+        <div class="reference-answer">${formatSubjectiveAnswer(question)}</div>
         ${selfButtons(question)}
       </div>
     `;
@@ -635,8 +641,16 @@ function renderAnswerBox(question, result) {
   `;
 }
 
-function formatSubjectiveAnswer(answer) {
-  const lines = String(answer || "")
+function formatSubjectiveAnswer(question) {
+  if (question.answerBlocks?.length) {
+    return question.answerBlocks.map((block) => {
+      if (block.type === "code") {
+        return `<pre class="answer-code"><code>${escapeHtml(block.content)}</code></pre>`;
+      }
+      return `<ol>${(block.items || []).map((line) => `<li>${escapeHtml(line)}</li>`).join("")}</ol>`;
+    }).join("");
+  }
+  const lines = String(question.referenceAnswer || question.answer || "")
     .split(/\n+/)
     .map((line) => line.trim())
     .filter(Boolean);
