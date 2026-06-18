@@ -36,11 +36,12 @@ function loadProgress() {
       self: {},
       activeReview: null,
       reviewSessions: [],
+      reviewDrafts: {},
       activeExam: null,
       ...(JSON.parse(localStorage.getItem(STORE_KEY)) || {}),
     };
   } catch {
-    return { attempts: {}, wrong: {}, exams: [], self: {}, activeReview: null, reviewSessions: [], activeExam: null };
+    return { attempts: {}, wrong: {}, exams: [], self: {}, activeReview: null, reviewSessions: [], reviewDrafts: {}, activeExam: null };
   }
 }
 
@@ -114,6 +115,20 @@ function makeReviewSession(sourceQuestions = questions, source = "practice") {
     lastAt: new Date().toISOString(),
     status: "active",
   };
+}
+
+function reviewDraftKey(source = "practice", typeFilter = app.typeFilter, order = app.order) {
+  return `${source}:${typeFilter}:${order}`;
+}
+
+function stashActiveReview() {
+  const session = progress.activeReview;
+  if (!session || session.submitted) return;
+  progress.reviewDrafts = progress.reviewDrafts || {};
+  session.current = app.current;
+  session.lastAt = new Date().toISOString();
+  progress.reviewDrafts[reviewDraftKey(session.source, session.typeFilter, session.order)] = session;
+  saveProgress();
 }
 
 function activePracticeSession() {
@@ -216,6 +231,7 @@ function abandonActiveReview() {
   if (!session) return;
   progress.reviewSessions.unshift(reviewSummary(session, "abandoned"));
   progress.reviewSessions = progress.reviewSessions.slice(0, 50);
+  if (progress.reviewDrafts) delete progress.reviewDrafts[reviewDraftKey(session.source, session.typeFilter, session.order)];
   progress.activeReview = null;
   saveProgress();
   app.selected = [];
@@ -245,6 +261,7 @@ function submitActiveReview() {
   const summary = reviewSummary(session, "completed");
   progress.reviewSessions.unshift(summary);
   progress.reviewSessions = progress.reviewSessions.slice(0, 50);
+  if (progress.reviewDrafts) delete progress.reviewDrafts[reviewDraftKey(session.source, session.typeFilter, session.order)];
   progress.activeReview = null;
   app.submittedReview = session;
   app.completedReview = summary;
@@ -268,6 +285,16 @@ function revealCurrentAnswer() {
   saveProgress();
   app.checked = { correct: isObjective(question) ? grade(question, session.answers?.[question.id]) : null };
   render();
+}
+
+function hasUnsubmittedReviewWork() {
+  const session = progress.activeReview;
+  return Boolean(session && !session.submitted && Object.keys(session.answered || {}).length);
+}
+
+function confirmPracticeSwitch() {
+  if (!hasUnsubmittedReviewWork()) return true;
+  return confirm("当前专项练习还没有提交，已作答内容会先保存为草稿；切回这个题型时可以继续。确定切换吗？");
 }
 
 function resumeReview() {
@@ -298,12 +325,18 @@ function setView(view) {
   render();
 }
 
-function startPractice(sourceQuestions = questions) {
-  if (progress.activeReview) {
+function startPractice(sourceQuestions = questions, options = {}) {
+  const source = sourceQuestions === questions ? "practice" : "wrong";
+  const { recordAbandoned = true, restoreDraft = false } = options;
+  if (progress.activeReview && recordAbandoned) {
     progress.reviewSessions.unshift(reviewSummary(progress.activeReview, "abandoned"));
     progress.reviewSessions = progress.reviewSessions.slice(0, 50);
+  } else if (progress.activeReview && !recordAbandoned) {
+    stashActiveReview();
   }
-  progress.activeReview = makeReviewSession(sourceQuestions, sourceQuestions === questions ? "practice" : "wrong");
+  const key = reviewDraftKey(source);
+  const draft = restoreDraft ? progress.reviewDrafts?.[key] : null;
+  progress.activeReview = draft || makeReviewSession(sourceQuestions, source);
   saveProgress();
   applyReviewSession(progress.activeReview);
   app.view = "practice";
@@ -843,7 +876,7 @@ document.addEventListener("click", (event) => {
   }
   if (action === "export-progress") exportProgress();
   if (action === "clear-progress" && confirm("确认清空本浏览器里的学习记录？")) {
-    progress = { attempts: {}, wrong: {}, exams: [], self: {}, activeReview: null, reviewSessions: [], activeExam: null };
+    progress = { attempts: {}, wrong: {}, exams: [], self: {}, activeReview: null, reviewSessions: [], reviewDrafts: {}, activeExam: null };
     saveProgress();
     render();
   }
@@ -852,12 +885,22 @@ document.addEventListener("click", (event) => {
 document.addEventListener("change", async (event) => {
   const control = event.target.dataset.control;
   if (control === "type") {
+    const previous = app.typeFilter;
+    if (!confirmPracticeSwitch()) {
+      event.target.value = previous;
+      return;
+    }
     app.typeFilter = event.target.value;
-    startPractice();
+    startPractice(questions, { recordAbandoned: false, restoreDraft: true });
   }
   if (control === "order") {
+    const previous = app.order;
+    if (!confirmPracticeSwitch()) {
+      event.target.value = previous;
+      return;
+    }
     app.order = event.target.value;
-    startPractice();
+    startPractice(questions, { recordAbandoned: false, restoreDraft: true });
   }
   if (control === "import-progress") {
     const file = event.target.files?.[0];
