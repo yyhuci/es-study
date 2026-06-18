@@ -3,12 +3,12 @@
     "title": "ElasticSearch 分布式搜索引擎复习题库",
     "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
     "generatedBy": "tools/extract_questions.py",
-    "questionCount": 158,
+    "questionCount": 159,
     "typeCounts": {
       "single": 45,
       "multiple": 45,
       "judge": 45,
-      "short": 11,
+      "short": 12,
       "comprehensive": 12
     }
   },
@@ -2802,8 +2802,8 @@
       "type": "short",
       "question": "简述 ElasticSearch 的核心概念及其与关系型数据库的对应关系。",
       "options": {},
-      "answer": "索引（Index）对应关系型数据库中的数据库（Database）\n类型（Type）对应关系型数据库中的表（Table）\n文档（Document）对应关系型数据库中的行（Row）\n字段（Field）对应关系型数据库中的列（Column）\n映射（Mapping）对应关系型数据库中的表结构（Schema）\n解释 ElasticSearch 中索引、类型、文档和字段的概念。\n索引（Index）：一个拥有相似特征的文档的集合，由小写字母名称标识\n类型（Type）：索引的逻辑分类与分区，为具有共同字段的文档定义\n文档（Document）：可被索引的基础信息单元，以 JSON 格式表示\n字段（Field）：相当于数据表的字段，对文档数据根据不同属性进行分类标识\n关系：一个索引可以包含多个类型，一个类型可以包含多个文档，一个文档包含多个字段",
-      "referenceAnswer": "索引（Index）对应关系型数据库中的数据库（Database）\n类型（Type）对应关系型数据库中的表（Table）\n文档（Document）对应关系型数据库中的行（Row）\n字段（Field）对应关系型数据库中的列（Column）\n映射（Mapping）对应关系型数据库中的表结构（Schema）\n解释 ElasticSearch 中索引、类型、文档和字段的概念。\n索引（Index）：一个拥有相似特征的文档的集合，由小写字母名称标识\n类型（Type）：索引的逻辑分类与分区，为具有共同字段的文档定义\n文档（Document）：可被索引的基础信息单元，以 JSON 格式表示\n字段（Field）：相当于数据表的字段，对文档数据根据不同属性进行分类标识\n关系：一个索引可以包含多个类型，一个类型可以包含多个文档，一个文档包含多个字段",
+      "answer": "索引（Index）对应关系型数据库中的数据库（Database）\n类型（Type）对应关系型数据库中的表（Table）\n文档（Document）对应关系型数据库中的行（Row）\n字段（Field）对应关系型数据库中的列（Column）\n映射（Mapping）对应关系型数据库中的表结构（Schema）",
+      "referenceAnswer": "索引（Index）对应关系型数据库中的数据库（Database）\n类型（Type）对应关系型数据库中的表（Table）\n文档（Document）对应关系型数据库中的行（Row）\n字段（Field）对应关系型数据库中的列（Column）\n映射（Mapping）对应关系型数据库中的表结构（Schema）",
       "explanation": "主观题以参考答案为准。答题时先覆盖关键词，再补充原因、步骤或对比点。 术语理解：Document：文档，ElasticSearch 中存储和检索的基本数据单位。 Index：索引，类似关系型数据库里的表，用来组织一类文档。 Field：字段，文档里的属性，类似数据库表中的列。 答题方法：先写核心概念，再列关键区别、作用或步骤。",
       "memoryTip": "简答题用“三点式”：先写核心概念，再列 2-4 个要点，最后补一句作用或适用场景。",
       "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
@@ -2821,8 +2821,30 @@
             "类型（Type）对应关系型数据库中的表（Table）",
             "文档（Document）对应关系型数据库中的行（Row）",
             "字段（Field）对应关系型数据库中的列（Column）",
-            "映射（Mapping）对应关系型数据库中的表结构（Schema）",
-            "解释 ElasticSearch 中索引、类型、文档和字段的概念。",
+            "映射（Mapping）对应关系型数据库中的表结构（Schema）"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q139",
+      "type": "short",
+      "question": "解释 ElasticSearch 中索引、类型、文档和字段的概念。",
+      "options": {},
+      "answer": "索引（Index）：一个拥有相似特征的文档的集合，由小写字母名称标识\n类型（Type）：索引的逻辑分类与分区，为具有共同字段的文档定义\n文档（Document）：可被索引的基础信息单元，以 JSON 格式表示\n字段（Field）：相当于数据表的字段，对文档数据根据不同属性进行分类标识\n关系：一个索引可以包含多个类型，一个类型可以包含多个文档，一个文档包含多个字段",
+      "referenceAnswer": "索引（Index）：一个拥有相似特征的文档的集合，由小写字母名称标识\n类型（Type）：索引的逻辑分类与分区，为具有共同字段的文档定义\n文档（Document）：可被索引的基础信息单元，以 JSON 格式表示\n字段（Field）：相当于数据表的字段，对文档数据根据不同属性进行分类标识\n关系：一个索引可以包含多个类型，一个类型可以包含多个文档，一个文档包含多个字段",
+      "explanation": "主观题以参考答案为准。答题时先覆盖关键词，再补充原因、步骤或对比点。 术语理解：Document：文档，ElasticSearch 中存储和检索的基本数据单位。 Index：索引，类似关系型数据库里的表，用来组织一类文档。 Field：字段，文档里的属性，类似数据库表中的列。 答题方法：先写核心概念，再列关键区别、作用或步骤。",
+      "memoryTip": "简答题用“三点式”：先写核心概念，再列 2-4 个要点，最后补一句作用或适用场景。",
+      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "tags": [
+        "基础概念",
+        "索引与映射"
+      ],
+      "conciseAnswer": "Index 是文档集合；Type 是逻辑分类；Document 是 JSON 数据单元；Field 是文档属性。",
+      "answerBlocks": [
+        {
+          "type": "text",
+          "items": [
             "索引（Index）：一个拥有相似特征的文档的集合，由小写字母名称标识",
             "类型（Type）：索引的逻辑分类与分区，为具有共同字段的文档定义",
             "文档（Document）：可被索引的基础信息单元，以 JSON 格式表示",
@@ -2833,7 +2855,7 @@
       ]
     },
     {
-      "id": "q139",
+      "id": "q140",
       "type": "short",
       "question": "简述 ElasticSearch Head 插件的安装步骤。",
       "options": {},
@@ -2861,7 +2883,7 @@
       ]
     },
     {
-      "id": "q140",
+      "id": "q141",
       "type": "short",
       "question": "简述 ElasticSearch 中 match 查询和 term 查询的区别。",
       "options": {},
@@ -2894,7 +2916,7 @@
       ]
     },
     {
-      "id": "q141",
+      "id": "q142",
       "type": "short",
       "question": "简述 IK 分词器的两种分词算法及其区别。",
       "options": {},
@@ -2920,7 +2942,7 @@
       ]
     },
     {
-      "id": "q142",
+      "id": "q143",
       "type": "short",
       "question": "简述 ElasticSearch 中文档的创建、查询、更新和删除操作的 RESTful API。",
       "options": {},
@@ -2951,7 +2973,7 @@
       ]
     },
     {
-      "id": "q143",
+      "id": "q144",
       "type": "short",
       "question": "简述 ElasticSearch 中聚合查询的概念及其常用类型。",
       "options": {},
@@ -2982,7 +3004,7 @@
       ]
     },
     {
-      "id": "q144",
+      "id": "q145",
       "type": "short",
       "question": "简述 ElasticSearch 中分片和复制的作用。",
       "options": {},
@@ -3013,7 +3035,7 @@
       ]
     },
     {
-      "id": "q145",
+      "id": "q146",
       "type": "short",
       "question": "简述 ElasticSearch 集群的工作原理。",
       "options": {},
@@ -3042,7 +3064,7 @@
       ]
     },
     {
-      "id": "q146",
+      "id": "q147",
       "type": "short",
       "question": "简述 ElasticSearch 集群搭建的基本步骤。",
       "options": {},
@@ -3070,7 +3092,7 @@
       ]
     },
     {
-      "id": "q147",
+      "id": "q148",
       "type": "comprehensive",
       "question": "背景：某互联网公司为了排查线上服务器故障，决定使用 ElasticSearch 存储所有服务器的系统日志。日志数据包含以下字段：\nlog_id：日志唯一标识（长整型）\nserver_ip：服务器 IP 地址（字符串，不需要分词）\nlog_level：日志级别（字符串，可选值：DEBUG、INFO、WARN、ERROR，不需要分词）\nlog_content：日志内容（长文本，需要支持全文检索）\ncreate_time：日志生成时间（日期类型）\nprocess_name：产生日志的进程名称（字符串，不需要分词）\n公司计划创建一个名为system_logs的索引来存储这些日志，每天大约产生 50 万条日志数据，需要保留 30 天的日志记录。运维人员需要能够快速查询特定服务器、特定级别的错误日志，以及根据日志内容搜索相关故障信息。\n\n问题：（1）请写出创建system_logs索引时，log_content字段的映射配置，要求使用 IK 分词器的最少切分算法，并说明为什么选择该算法。",
       "options": {},
@@ -3097,7 +3119,7 @@
         },
         {
           "type": "code",
-          "content": "\"log_content\": {\n\"type\": \"text\",\n\"analyzer\": \"ik_smart\"\n}"
+          "content": "\"log_content\": {\n  \"type\": \"text\",\n  \"analyzer\": \"ik_smart\"\n}"
         },
         {
           "type": "text",
@@ -3110,7 +3132,7 @@
       ]
     },
     {
-      "id": "q148",
+      "id": "q149",
       "type": "comprehensive",
       "question": "背景：某互联网公司为了排查线上服务器故障，决定使用 ElasticSearch 存储所有服务器的系统日志。日志数据包含以下字段：\nlog_id：日志唯一标识（长整型）\nserver_ip：服务器 IP 地址（字符串，不需要分词）\nlog_level：日志级别（字符串，可选值：DEBUG、INFO、WARN、ERROR，不需要分词）\nlog_content：日志内容（长文本，需要支持全文检索）\ncreate_time：日志生成时间（日期类型）\nprocess_name：产生日志的进程名称（字符串，不需要分词）\n公司计划创建一个名为system_logs的索引来存储这些日志，每天大约产生 50 万条日志数据，需要保留 30 天的日志记录。运维人员需要能够快速查询特定服务器、特定级别的错误日志，以及根据日志内容搜索相关故障信息。\n\n问题：运维人员需要查询 IP 为192.168.1.100的服务器在 2024 年 6 月 1 日产生的所有 ERROR 级别日志，请写出该查询的核心 DSL 语句（只需要写出query部分即可）。",
       "options": {},
@@ -3131,12 +3153,12 @@
       "answerBlocks": [
         {
           "type": "code",
-          "content": "\"query\": {\n\"bool\": {\n\"must\": [\n{\"match\": {\"server_ip\": \"192.168.1.100\"}},\n{\"match\": {\"log_level\": \"ERROR\"}}\n],\n\"filter\": {\n\"range\": {\n\"create_time\": {\n\"gte\": \"2024-06-01\",\n\"lt\": \"2024-06-02\"\n}\n}\n}\n}\n}"
+          "content": "\"query\": {\n  \"bool\": {\n    \"must\": [\n      {\"match\": {\"server_ip\": \"192.168.1.100\"}},\n      {\"match\": {\"log_level\": \"ERROR\"}}\n    ],\n  \"filter\": {\n    \"range\": {\n      \"create_time\": {\n        \"gte\": \"2024-06-01\",\n        \"lt\": \"2024-06-02\"\n      }\n  }\n}\n}\n}"
         }
       ]
     },
     {
-      "id": "q149",
+      "id": "q150",
       "type": "comprehensive",
       "question": "背景：某互联网公司为了排查线上服务器故障，决定使用 ElasticSearch 存储所有服务器的系统日志。日志数据包含以下字段：\nlog_id：日志唯一标识（长整型）\nserver_ip：服务器 IP 地址（字符串，不需要分词）\nlog_level：日志级别（字符串，可选值：DEBUG、INFO、WARN、ERROR，不需要分词）\nlog_content：日志内容（长文本，需要支持全文检索）\ncreate_time：日志生成时间（日期类型）\nprocess_name：产生日志的进程名称（字符串，不需要分词）\n公司计划创建一个名为system_logs的索引来存储这些日志，每天大约产生 50 万条日志数据，需要保留 30 天的日志记录。运维人员需要能够快速查询特定服务器、特定级别的错误日志，以及根据日志内容搜索相关故障信息。\n\n问题：如果某天运维人员发现查询日志的速度变得很慢，经过检查发现集群健康状态为yellow，请说明可能的原因以及对应的解决方法（写出 2 种）。",
       "options": {},
@@ -3166,7 +3188,7 @@
       ]
     },
     {
-      "id": "q150",
+      "id": "q151",
       "type": "comprehensive",
       "question": "背景：某地方新闻网站为了提升用户的搜索体验，决定将原有的数据库搜索替换为 ElasticSearch 全文搜索。新闻数据包含以下字段：\nnews_id：新闻唯一标识（长整型）\ntitle：新闻标题（字符串，需要支持全文检索和高亮显示）\ncontent：新闻内容（长文本，需要支持全文检索和高亮显示）\nauthor：作者姓名（字符串，不需要分词）\npublish_time：发布时间（日期类型）\nsource：新闻来源（字符串，不需要分词）\n网站每天发布约 200 条新闻，总新闻量约 10 万条。用户可以通过关键词搜索新闻标题和内容，搜索结果需要按发布时间倒序排序，并高亮显示匹配的关键词。\n\n问题：在创建news索引时，title和content字段应该使用哪种分词器？请说明选择该分词器的原因。",
       "options": {},
@@ -3193,7 +3215,7 @@
       ]
     },
     {
-      "id": "q151",
+      "id": "q152",
       "type": "comprehensive",
       "question": "背景：某地方新闻网站为了提升用户的搜索体验，决定将原有的数据库搜索替换为 ElasticSearch 全文搜索。新闻数据包含以下字段：\nnews_id：新闻唯一标识（长整型）\ntitle：新闻标题（字符串，需要支持全文检索和高亮显示）\ncontent：新闻内容（长文本，需要支持全文检索和高亮显示）\nauthor：作者姓名（字符串，不需要分词）\npublish_time：发布时间（日期类型）\nsource：新闻来源（字符串，不需要分词）\n网站每天发布约 200 条新闻，总新闻量约 10 万条。用户可以通过关键词搜索新闻标题和内容，搜索结果需要按发布时间倒序排序，并高亮显示匹配的关键词。\n\n问题：用户搜索关键词 \"高考\"，需要在新闻标题和内容中进行搜索，并对匹配的关键词进行高亮显示，请写出该查询的核心 DSL 语句（只需要写出query和highlight部分即可）。",
       "options": {},
@@ -3213,12 +3235,12 @@
       "answerBlocks": [
         {
           "type": "code",
-          "content": "\"query\": {\n\"multi_match\": {\n\"query\": \"高考\",\n\"fields\": [\"title\", \"content\"]\n}\n}\n\"highlight\": {\n\"fields\": {\n\"title\": {},\n\"content\": {}\n}\n}"
+          "content": "\"query\": {\n  \"multi_match\": {\n    \"query\": \"高考\",\n    \"fields\": [\"title\", \"content\"]\n  }\n}\n\"highlight\": {\n  \"fields\": {\n    \"title\": {},\n    \"content\": {}\n  }\n}"
         }
       ]
     },
     {
-      "id": "q152",
+      "id": "q153",
       "type": "comprehensive",
       "question": "背景：某地方新闻网站为了提升用户的搜索体验，决定将原有的数据库搜索替换为 ElasticSearch 全文搜索。新闻数据包含以下字段：\nnews_id：新闻唯一标识（长整型）\ntitle：新闻标题（字符串，需要支持全文检索和高亮显示）\ncontent：新闻内容（长文本，需要支持全文检索和高亮显示）\nauthor：作者姓名（字符串，不需要分词）\npublish_time：发布时间（日期类型）\nsource：新闻来源（字符串，不需要分词）\n网站每天发布约 200 条新闻，总新闻量约 10 万条。用户可以通过关键词搜索新闻标题和内容，搜索结果需要按发布时间倒序排序，并高亮显示匹配的关键词。\n\n问题：如果用户反映搜索结果中出现了很多不相关的新闻，比如搜索 \"高考\" 时出现了 \"中考\" 相关的新闻，请分析可能的原因，并提出2 种优化方法。",
       "options": {},
@@ -3247,7 +3269,7 @@
       ]
     },
     {
-      "id": "q153",
+      "id": "q154",
       "type": "comprehensive",
       "question": "背景：某大学图书馆为了方便师生查找图书，决定使用 ElasticSearch 搭建图书检索系统。图书信息包含以下字段：\nbook_id：图书唯一标识（长整型）\nbook_name：图书名称（字符串，需要支持全文检索）\nauthor：作者姓名（字符串，需要支持全文检索）\npublisher：出版社名称（字符串，不需要分词）\npublish_date：出版日期（日期类型）\ncategory：图书分类（字符串，不需要分词）\nintroduction：图书简介（长文本，需要支持全文检索）\nstock：库存数量（整型）\n图书馆目前有大约 20 万册图书，师生可以通过图书名称、作者、出版社和分类进行查询，查询结果需要按出版日期倒序排序。\n\n问题：在创建books索引时，publisher字段应该设置为哪种数据类型？请说明原因。",
       "options": {},
@@ -3276,7 +3298,7 @@
       ]
     },
     {
-      "id": "q154",
+      "id": "q155",
       "type": "comprehensive",
       "question": "背景：某大学图书馆为了方便师生查找图书，决定使用 ElasticSearch 搭建图书检索系统。图书信息包含以下字段：\nbook_id：图书唯一标识（长整型）\nbook_name：图书名称（字符串，需要支持全文检索）\nauthor：作者姓名（字符串，需要支持全文检索）\npublisher：出版社名称（字符串，不需要分词）\npublish_date：出版日期（日期类型）\ncategory：图书分类（字符串，不需要分词）\nintroduction：图书简介（长文本，需要支持全文检索）\nstock：库存数量（整型）\n图书馆目前有大约 20 万册图书，师生可以通过图书名称、作者、出版社和分类进行查询，查询结果需要按出版日期倒序排序。\n\n问题：师生需要查询 \"机械工业出版社\" 出版的所有 \"计算机\" 类图书，请写出该查询的核心 DSL 语句（只需要写出query部分即可）。",
       "options": {},
@@ -3296,12 +3318,12 @@
       "answerBlocks": [
         {
           "type": "code",
-          "content": "\"query\": {\n\"bool\": {\n\"must\": [\n{\"match\": {\"publisher\": \"机械工业出版社\"}},\n{\"match\": {\"category\": \"计算机\"}}\n]\n}\n}"
+          "content": "\"query\": {\n  \"bool\": {\n    \"must\": [\n      {\"match\": {\"publisher\": \"机械工业出版社\"}},\n      {\"match\": {\"category\": \"计算机\"}}\n    ]\n}\n}"
         }
       ]
     },
     {
-      "id": "q155",
+      "id": "q156",
       "type": "comprehensive",
       "question": "背景：某大学图书馆为了方便师生查找图书，决定使用 ElasticSearch 搭建图书检索系统。图书信息包含以下字段：\nbook_id：图书唯一标识（长整型）\nbook_name：图书名称（字符串，需要支持全文检索）\nauthor：作者姓名（字符串，需要支持全文检索）\npublisher：出版社名称（字符串，不需要分词）\npublish_date：出版日期（日期类型）\ncategory：图书分类（字符串，不需要分词）\nintroduction：图书简介（长文本，需要支持全文检索）\nstock：库存数量（整型）\n图书馆目前有大约 20 万册图书，师生可以通过图书名称、作者、出版社和分类进行查询，查询结果需要按出版日期倒序排序。\n\n问题：随着图书数量的增加，查询速度逐渐变慢，请提出 4 种针对索引设计的优化方法。",
       "options": {},
@@ -3331,7 +3353,7 @@
       ]
     },
     {
-      "id": "q156",
+      "id": "q157",
       "type": "comprehensive",
       "question": "背景：某小型电商平台使用 ElasticSearch 存储订单数据，方便客服人员快速查询订单信息。订单数据包含以下字段：\norder_id：订单唯一标识（长整型）\nuser_name：用户姓名（字符串，需要支持模糊查询）\nphone：用户手机号（字符串，不需要分词）\norder_status：订单状态（字符串，可选值：待付款、待发货、已发货、已完成、已取消，不需要分词）\ntotal_amount：订单总金额（浮点型）\ncreate_time：订单创建时间（日期类型）\naddress：收货地址（字符串，需要支持全文检索）\n平台目前有大约 50 万条订单数据，客服人员每天需要查询数百次订单信息，主要通过订单号、用户手机号和订单状态进行查询。\n\n问题：由于业务调整，平台需要删除所有 2023 年 1 月 1 日之前的订单数据，请写出删除这些订单的操作步骤（用文字描述即可）。",
       "options": {},
@@ -3360,7 +3382,7 @@
       ]
     },
     {
-      "id": "q157",
+      "id": "q158",
       "type": "comprehensive",
       "question": "背景：某小型电商平台使用 ElasticSearch 存储订单数据，方便客服人员快速查询订单信息。订单数据包含以下字段：\norder_id：订单唯一标识（长整型）\nuser_name：用户姓名（字符串，需要支持模糊查询）\nphone：用户手机号（字符串，不需要分词）\norder_status：订单状态（字符串，可选值：待付款、待发货、已发货、已完成、已取消，不需要分词）\ntotal_amount：订单总金额（浮点型）\ncreate_time：订单创建时间（日期类型）\naddress：收货地址（字符串，需要支持全文检索）\n平台目前有大约 50 万条订单数据，客服人员每天需要查询数百次订单信息，主要通过订单号、用户手机号和订单状态进行查询。\n\n问题：客服人员需要查询所有状态为 \"待发货\" 且总金额大于 100 元的订单，请写出该查询的核心 DSL 语句（只需要写出query部分即可）。",
       "options": {},
@@ -3380,12 +3402,12 @@
       "answerBlocks": [
         {
           "type": "code",
-          "content": "\"query\": {\n\"bool\": {\n\"must\": [\n{\"match\": {\"order_status\": \"待发货\"}}\n],\n\"filter\": {\n\"range\": {\n\"total_amount\": {\n\"gt\": 100\n}\n}\n}\n}\n}"
+          "content": "\"query\": {\n  \"bool\": {\n    \"must\": [\n      {\"match\": {\"order_status\": \"待发货\"}}\n    ],\n  \"filter\": {\n    \"range\": {\n      \"total_amount\": {\n        \"gt\": 100\n      }\n  }\n}\n}\n}"
         }
       ]
     },
     {
-      "id": "q158",
+      "id": "q159",
       "type": "comprehensive",
       "question": "背景：某小型电商平台使用 ElasticSearch 存储订单数据，方便客服人员快速查询订单信息。订单数据包含以下字段：\norder_id：订单唯一标识（长整型）\nuser_name：用户姓名（字符串，需要支持模糊查询）\nphone：用户手机号（字符串，不需要分词）\norder_status：订单状态（字符串，可选值：待付款、待发货、已发货、已完成、已取消，不需要分词）\ntotal_amount：订单总金额（浮点型）\ncreate_time：订单创建时间（日期类型）\naddress：收货地址（字符串，需要支持全文检索）\n平台目前有大约 50 万条订单数据，客服人员每天需要查询数百次订单信息，主要通过订单号、用户手机号和订单状态进行查询。\n\n问题：为了防止数据丢失，平台需要定期对 ElasticSearch 中的订单数据进行备份，请写出 2 种常用的备份方法，并说明各自的优点。",
       "options": {},

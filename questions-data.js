@@ -1,14 +1,14 @@
-window.QUESTION_BANK = {
+﻿window.QUESTION_BANK = {
   "meta": {
-    "title": "ElasticSearch 分布式搜索引擎复习题库",
-    "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+    "title": "ElasticSearch 鍒嗗竷寮忔悳绱㈠紩鎿庡涔犻搴?,
+    "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
     "generatedBy": "tools/extract_questions.py",
-    "questionCount": 158,
+    "questionCount": 159,
     "typeCounts": {
       "single": 45,
       "multiple": 45,
       "judge": 45,
-      "short": 11,
+      "short": 12,
       "comprehensive": 12
     }
   },
@@ -16,7 +16,7 @@ window.QUESTION_BANK = {
     {
       "id": "q001",
       "type": "single",
-      "question": "ElasticSearch 是基于以下哪个核心库实现的全文检索功能？",
+      "question": "ElasticSearch 鏄熀浜庝互涓嬪摢涓牳蹇冨簱瀹炵幇鐨勫叏鏂囨绱㈠姛鑳斤紵",
       "options": {
         "A": "Lucene",
         "B": "Solr",
@@ -25,17 +25,17 @@ window.QUESTION_BANK = {
       },
       "answer": "A",
       "referenceAnswer": "A",
-      "explanation": "正确选项是 A（A. Lucene）。ElasticSearch 的全文检索能力建立在 Lucene 之上；ES 负责分布式、REST 接口和集群能力。 术语理解：Lucene：全文检索核心库，可以理解为 ElasticSearch 底层的“搜索发动机”。",
-      "memoryTip": "Lucene 读作“搜索内核”：ES = 分布式能力 + Lucene 搜索发动机。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?A锛圓. Lucene锛夈€侲lasticSearch 鐨勫叏鏂囨绱㈣兘鍔涘缓绔嬪湪 Lucene 涔嬩笂锛汦S 璐熻矗鍒嗗竷寮忋€丷EST 鎺ュ彛鍜岄泦缇よ兘鍔涖€?鏈鐞嗚В锛歀ucene锛氬叏鏂囨绱㈡牳蹇冨簱锛屽彲浠ョ悊瑙ｄ负 ElasticSearch 搴曞眰鐨勨€滄悳绱㈠彂鍔ㄦ満鈥濄€?,
+      "memoryTip": "Lucene 璇讳綔鈥滄悳绱㈠唴鏍糕€濓細ES = 鍒嗗竷寮忚兘鍔?+ Lucene 鎼滅储鍙戝姩鏈恒€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "基础概念"
+        "鍩虹姒傚康"
       ]
     },
     {
       "id": "q002",
       "type": "single",
-      "question": "ElasticSearch 是由哪种编程语言开发的？",
+      "question": "ElasticSearch 鏄敱鍝缂栫▼璇█寮€鍙戠殑锛?,
       "options": {
         "A": "C++",
         "B": "Java",
@@ -44,36 +44,36 @@ window.QUESTION_BANK = {
       },
       "answer": "B",
       "referenceAnswer": "B",
-      "explanation": "正确选项是 B（B. Java）。ElasticSearch 本身由 Java 开发，所以部署时经常会遇到 JDK 版本要求。",
-      "memoryTip": "ES 用 Java 写，所以安装部署常和 JDK 版本绑定记。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?B锛圔. Java锛夈€侲lasticSearch 鏈韩鐢?Java 寮€鍙戯紝鎵€浠ラ儴缃叉椂缁忓父浼氶亣鍒?JDK 鐗堟湰瑕佹眰銆?,
+      "memoryTip": "ES 鐢?Java 鍐欙紝鎵€浠ュ畨瑁呴儴缃插父鍜?JDK 鐗堟湰缁戝畾璁般€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "综合复习"
+        "缁煎悎澶嶄範"
       ]
     },
     {
       "id": "q003",
       "type": "single",
-      "question": "ElasticSearch 的核心功能不包括以下哪项？",
+      "question": "ElasticSearch 鐨勬牳蹇冨姛鑳戒笉鍖呮嫭浠ヤ笅鍝」锛?,
       "options": {
-        "A": "全文检索",
-        "B": "数据分析",
-        "C": "关系型数据库存储",
-        "D": "分布式存储"
+        "A": "鍏ㄦ枃妫€绱?,
+        "B": "鏁版嵁鍒嗘瀽",
+        "C": "鍏崇郴鍨嬫暟鎹簱瀛樺偍",
+        "D": "鍒嗗竷寮忓瓨鍌?
       },
       "answer": "C",
       "referenceAnswer": "C",
-      "explanation": "正确选项是 C（C. 关系型数据库存储）。ElasticSearch 是搜索和分析引擎，不是强调事务和表关系的关系型数据库。",
-      "memoryTip": "基础概念题用“是什么、做什么、不是什么”三步记：先说定义，再说作用，最后排除容易混淆的概念。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?C锛圕. 鍏崇郴鍨嬫暟鎹簱瀛樺偍锛夈€侲lasticSearch 鏄悳绱㈠拰鍒嗘瀽寮曟搸锛屼笉鏄己璋冧簨鍔″拰琛ㄥ叧绯荤殑鍏崇郴鍨嬫暟鎹簱銆?,
+      "memoryTip": "鍩虹姒傚康棰樼敤鈥滄槸浠€涔堛€佸仛浠€涔堛€佷笉鏄粈涔堚€濅笁姝ヨ锛氬厛璇村畾涔夛紝鍐嶈浣滅敤锛屾渶鍚庢帓闄ゅ鏄撴贩娣嗙殑姒傚康銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "基础概念"
+        "鍩虹姒傚康"
       ]
     },
     {
       "id": "q004",
       "type": "single",
-      "question": "ElasticSearch 默认的 HTTP 协议 RESTful 接口端口号是？",
+      "question": "ElasticSearch 榛樿鐨?HTTP 鍗忚 RESTful 鎺ュ彛绔彛鍙锋槸锛?,
       "options": {
         "A": "8080",
         "B": "9300",
@@ -82,55 +82,55 @@ window.QUESTION_BANK = {
       },
       "answer": "C",
       "referenceAnswer": "C",
-      "explanation": "正确选项是 C（C. 9200）。9200 是默认 HTTP REST 接口端口，浏览器、Postman 或程序客户端通常通过它访问 ES。 术语理解：RESTful：一种 HTTP 接口风格，用 GET、POST、PUT、DELETE 表示不同操作。 HTTP：浏览器和客户端访问服务常用的网络协议。",
-      "memoryTip": "9200 记“HTTP 给人用”：浏览器、REST 请求、Postman 访问 ES 时想到 9200。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?C锛圕. 9200锛夈€?200 鏄粯璁?HTTP REST 鎺ュ彛绔彛锛屾祻瑙堝櫒銆丳ostman 鎴栫▼搴忓鎴风閫氬父閫氳繃瀹冭闂?ES銆?鏈鐞嗚В锛歊ESTful锛氫竴绉?HTTP 鎺ュ彛椋庢牸锛岀敤 GET銆丳OST銆丳UT銆丏ELETE 琛ㄧず涓嶅悓鎿嶄綔銆?HTTP锛氭祻瑙堝櫒鍜屽鎴风璁块棶鏈嶅姟甯哥敤鐨勭綉缁滃崗璁€?,
+      "memoryTip": "9200 璁扳€淗TTP 缁欎汉鐢ㄢ€濓細娴忚鍣ㄣ€丷EST 璇锋眰銆丳ostman 璁块棶 ES 鏃舵兂鍒?9200銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "安装配置"
+        "瀹夎閰嶇疆"
       ]
     },
     {
       "id": "q005",
       "type": "single",
-      "question": "以下哪个公司在 2013 年初抛弃了 Solr，转而使用 ElasticSearch 进行 PB 级搜索？",
+      "question": "浠ヤ笅鍝釜鍏徃鍦?2013 骞村垵鎶涘純浜?Solr锛岃浆鑰屼娇鐢?ElasticSearch 杩涜 PB 绾ф悳绱紵",
       "options": {
         "A": "GitHub",
-        "B": "维基百科",
+        "B": "缁村熀鐧剧",
         "C": "SoundCloud",
-        "D": "百度"
+        "D": "鐧惧害"
       },
       "answer": "A",
       "referenceAnswer": "A",
-      "explanation": "正确选项是 A（A. GitHub）。本题考查基础概念。复习时抓住题干关键词，再把它和正确答案中的核心术语对应起来。 术语理解：Solr：同样基于 Lucene 的搜索服务器，常与传统搜索、ZooKeeper 管理联系在一起。",
-      "memoryTip": "Solr 和 ES 都基于 Lucene；Solr 常联想 ZooKeeper，ES 常联想开箱即用和近实时。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?A锛圓. GitHub锛夈€傛湰棰樿€冩煡鍩虹姒傚康銆傚涔犳椂鎶撲綇棰樺共鍏抽敭璇嶏紝鍐嶆妸瀹冨拰姝ｇ‘绛旀涓殑鏍稿績鏈瀵瑰簲璧锋潵銆?鏈鐞嗚В锛歋olr锛氬悓鏍峰熀浜?Lucene 鐨勬悳绱㈡湇鍔″櫒锛屽父涓庝紶缁熸悳绱€乑ooKeeper 绠＄悊鑱旂郴鍦ㄤ竴璧枫€?,
+      "memoryTip": "Solr 鍜?ES 閮藉熀浜?Lucene锛汼olr 甯歌仈鎯?ZooKeeper锛孍S 甯歌仈鎯冲紑绠卞嵆鐢ㄥ拰杩戝疄鏃躲€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "基础概念"
+        "鍩虹姒傚康"
       ]
     },
     {
       "id": "q006",
       "type": "single",
-      "question": "百度使用 ElasticSearch 主要用于什么目的？",
+      "question": "鐧惧害浣跨敤 ElasticSearch 涓昏鐢ㄤ簬浠€涔堢洰鐨勶紵",
       "options": {
-        "A": "网页搜索",
-        "B": "文本数据分析",
-        "C": "视频搜索",
-        "D": "图片搜索"
+        "A": "缃戦〉鎼滅储",
+        "B": "鏂囨湰鏁版嵁鍒嗘瀽",
+        "C": "瑙嗛鎼滅储",
+        "D": "鍥剧墖鎼滅储"
       },
       "answer": "B",
       "referenceAnswer": "B",
-      "explanation": "正确选项是 B（B. 文本数据分析）。本题考查基础概念。复习时抓住题干关键词，再把它和正确答案中的核心术语对应起来。",
-      "memoryTip": "复习时先圈出题干关键词，再用一句中文把英文术语翻译出来，最后对应到答案。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?B锛圔. 鏂囨湰鏁版嵁鍒嗘瀽锛夈€傛湰棰樿€冩煡鍩虹姒傚康銆傚涔犳椂鎶撲綇棰樺共鍏抽敭璇嶏紝鍐嶆妸瀹冨拰姝ｇ‘绛旀涓殑鏍稿績鏈瀵瑰簲璧锋潵銆?,
+      "memoryTip": "澶嶄範鏃跺厛鍦堝嚭棰樺共鍏抽敭璇嶏紝鍐嶇敤涓€鍙ヤ腑鏂囨妸鑻辨枃鏈缈昏瘧鍑烘潵锛屾渶鍚庡搴斿埌绛旀銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "综合复习"
+        "缁煎悎澶嶄範"
       ]
     },
     {
       "id": "q007",
       "type": "single",
-      "question": "ElasticSearch 中，一个索引默认会创建多少个主分片？",
+      "question": "ElasticSearch 涓紝涓€涓储寮曢粯璁や細鍒涘缓澶氬皯涓富鍒嗙墖锛?,
       "options": {
         "A": "1",
         "B": "3",
@@ -139,18 +139,18 @@ window.QUESTION_BANK = {
       },
       "answer": "C",
       "referenceAnswer": "C",
-      "explanation": "正确选项是 C（C. 5）。资料按 ES 早期默认值记：一个索引默认 5 个主分片；新版本默认值可能不同，考试按资料为准。",
-      "memoryTip": "主分片记“原件”：真正承载数据；复制分片记“复印件”：容灾和分摊查询。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?C锛圕. 5锛夈€傝祫鏂欐寜 ES 鏃╂湡榛樿鍊艰锛氫竴涓储寮曢粯璁?5 涓富鍒嗙墖锛涙柊鐗堟湰榛樿鍊煎彲鑳戒笉鍚岋紝鑰冭瘯鎸夎祫鏂欎负鍑嗐€?,
+      "memoryTip": "涓诲垎鐗囪鈥滃師浠垛€濓細鐪熸鎵胯浇鏁版嵁锛涘鍒跺垎鐗囪鈥滃鍗颁欢鈥濓細瀹圭伨鍜屽垎鎽婃煡璇€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "集群与分片",
-        "索引与映射"
+        "闆嗙兢涓庡垎鐗?,
+        "绱㈠紩涓庢槧灏?
       ]
     },
     {
       "id": "q008",
       "type": "single",
-      "question": "ElasticSearch 中，用于查询所有索引的请求路径是？",
+      "question": "ElasticSearch 涓紝鐢ㄤ簬鏌ヨ鎵€鏈夌储寮曠殑璇锋眰璺緞鏄紵",
       "options": {
         "A": "/_all",
         "B": "/_cat/indices?v",
@@ -159,18 +159,18 @@ window.QUESTION_BANK = {
       },
       "answer": "B",
       "referenceAnswer": "B",
-      "explanation": "正确选项是 B（B. /_cat/indices?v）。_cat 系列 API 适合查看集群/索引状态；indices 表示索引列表。",
-      "memoryTip": "映射题先问字段要不要分词：要全文检索选 text；要精确匹配、排序、聚合选 keyword 或数值/日期类型。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?B锛圔. /_cat/indices?v锛夈€俖cat 绯诲垪 API 閫傚悎鏌ョ湅闆嗙兢/绱㈠紩鐘舵€侊紱indices 琛ㄧず绱㈠紩鍒楄〃銆?,
+      "memoryTip": "鏄犲皠棰樺厛闂瓧娈佃涓嶈鍒嗚瘝锛氳鍏ㄦ枃妫€绱㈤€?text锛涜绮剧‘鍖归厤銆佹帓搴忋€佽仛鍚堥€?keyword 鎴栨暟鍊?鏃ユ湡绫诲瀷銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "索引与映射",
-        "查询 DSL"
+        "绱㈠紩涓庢槧灏?,
+        "鏌ヨ DSL"
       ]
     },
     {
       "id": "q009",
       "type": "single",
-      "question": "ElasticSearch 中，用于查看集群健康状态的请求路径是？",
+      "question": "ElasticSearch 涓紝鐢ㄤ簬鏌ョ湅闆嗙兢鍋ュ悍鐘舵€佺殑璇锋眰璺緞鏄紵",
       "options": {
         "A": "/_cluster/health",
         "B": "/_cat/nodes",
@@ -179,57 +179,57 @@ window.QUESTION_BANK = {
       },
       "answer": "A",
       "referenceAnswer": "A",
-      "explanation": "正确选项是 A（A. /_cluster/health）。cluster 是集群，health 是健康状态，所以查看集群健康用 /_cluster/health。",
-      "memoryTip": "集群题先分角色：cluster 是整体，node 是节点，shard 是分片，replica 是副本，master 管调度。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?A锛圓. /_cluster/health锛夈€俢luster 鏄泦缇わ紝health 鏄仴搴风姸鎬侊紝鎵€浠ユ煡鐪嬮泦缇ゅ仴搴风敤 /_cluster/health銆?,
+      "memoryTip": "闆嗙兢棰樺厛鍒嗚鑹诧細cluster 鏄暣浣擄紝node 鏄妭鐐癸紝shard 鏄垎鐗囷紝replica 鏄壇鏈紝master 绠¤皟搴︺€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "集群与分片"
+        "闆嗙兢涓庡垎鐗?
       ]
     },
     {
       "id": "q010",
       "type": "single",
-      "question": "以下哪个不是 ElasticSearch 的核心概念？",
+      "question": "浠ヤ笅鍝釜涓嶆槸 ElasticSearch 鐨勬牳蹇冩蹇碉紵",
       "options": {
-        "A": "索引（Index）",
-        "B": "表（Table）",
-        "C": "文档（Document）",
-        "D": "分片（Shard）"
+        "A": "绱㈠紩锛圛ndex锛?,
+        "B": "琛紙Table锛?,
+        "C": "鏂囨。锛圖ocument锛?,
+        "D": "鍒嗙墖锛圫hard锛?
       },
       "answer": "B",
       "referenceAnswer": "B",
-      "explanation": "正确选项是 B（B. 表（Table））。本题考查基础概念。复习时抓住题干关键词，再把它和正确答案中的核心术语对应起来。",
-      "memoryTip": "基础概念题用“是什么、做什么、不是什么”三步记：先说定义，再说作用，最后排除容易混淆的概念。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?B锛圔. 琛紙Table锛夛級銆傛湰棰樿€冩煡鍩虹姒傚康銆傚涔犳椂鎶撲綇棰樺共鍏抽敭璇嶏紝鍐嶆妸瀹冨拰姝ｇ‘绛旀涓殑鏍稿績鏈瀵瑰簲璧锋潵銆?,
+      "memoryTip": "鍩虹姒傚康棰樼敤鈥滄槸浠€涔堛€佸仛浠€涔堛€佷笉鏄粈涔堚€濅笁姝ヨ锛氬厛璇村畾涔夛紝鍐嶈浣滅敤锛屾渶鍚庢帓闄ゅ鏄撴贩娣嗙殑姒傚康銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "基础概念",
-        "集群与分片",
-        "索引与映射"
+        "鍩虹姒傚康",
+        "闆嗙兢涓庡垎鐗?,
+        "绱㈠紩涓庢槧灏?
       ]
     },
     {
       "id": "q011",
       "type": "single",
-      "question": "在 ElasticSearch 中，以下哪个操作是幂等的？",
+      "question": "鍦?ElasticSearch 涓紝浠ヤ笅鍝釜鎿嶄綔鏄箓绛夌殑锛?,
       "options": {
-        "A": "使用 POST 创建文档（不指定 ID）",
-        "B": "使用 PUT 创建文档（指定 ID）",
-        "C": "使用 POST 更新文档",
-        "D": "使用 DELETE 删除文档"
+        "A": "浣跨敤 POST 鍒涘缓鏂囨。锛堜笉鎸囧畾 ID锛?,
+        "B": "浣跨敤 PUT 鍒涘缓鏂囨。锛堟寚瀹?ID锛?,
+        "C": "浣跨敤 POST 鏇存柊鏂囨。",
+        "D": "浣跨敤 DELETE 鍒犻櫎鏂囨。"
       },
       "answer": "B",
       "referenceAnswer": "B",
-      "explanation": "正确选项是 B（B. 使用 PUT 创建文档（指定 ID））。PUT 指定 ID，多次执行结果一致；POST 自动生成 ID，多次执行会产生多条文档。",
-      "memoryTip": "运维题按目标记：备份防丢，分片扩容，副本保可用，索引设计提查询速度。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?B锛圔. 浣跨敤 PUT 鍒涘缓鏂囨。锛堟寚瀹?ID锛夛級銆侾UT 鎸囧畾 ID锛屽娆℃墽琛岀粨鏋滀竴鑷达紱POST 鑷姩鐢熸垚 ID锛屽娆℃墽琛屼細浜х敓澶氭潯鏂囨。銆?,
+      "memoryTip": "杩愮淮棰樻寜鐩爣璁帮細澶囦唤闃蹭涪锛屽垎鐗囨墿瀹癸紝鍓湰淇濆彲鐢紝绱㈠紩璁捐鎻愭煡璇㈤€熷害銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "运维优化"
+        "杩愮淮浼樺寲"
       ]
     },
     {
       "id": "q012",
       "type": "single",
-      "question": "在 ElasticSearch 中，以下哪个字段类型不适合进行全文检索？",
+      "question": "鍦?ElasticSearch 涓紝浠ヤ笅鍝釜瀛楁绫诲瀷涓嶉€傚悎杩涜鍏ㄦ枃妫€绱紵",
       "options": {
         "A": "text",
         "B": "keyword",
@@ -238,17 +238,17 @@ window.QUESTION_BANK = {
       },
       "answer": "B",
       "referenceAnswer": "B",
-      "explanation": "正确选项是 B（B. keyword）。本题考查基础概念。复习时抓住题干关键词，再把它和正确答案中的核心术语对应起来。 术语理解：keyword：关键词类型，不分词，适合精确匹配、排序和聚合。",
-      "memoryTip": "keyword 记“整词保存”：不拆开，适合精确匹配、排序、聚合。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?B锛圔. keyword锛夈€傛湰棰樿€冩煡鍩虹姒傚康銆傚涔犳椂鎶撲綇棰樺共鍏抽敭璇嶏紝鍐嶆妸瀹冨拰姝ｇ‘绛旀涓殑鏍稿績鏈瀵瑰簲璧锋潵銆?鏈鐞嗚В锛歬eyword锛氬叧閿瘝绫诲瀷锛屼笉鍒嗚瘝锛岄€傚悎绮剧‘鍖归厤銆佹帓搴忓拰鑱氬悎銆?,
+      "memoryTip": "keyword 璁扳€滄暣璇嶄繚瀛樷€濓細涓嶆媶寮€锛岄€傚悎绮剧‘鍖归厤銆佹帓搴忋€佽仛鍚堛€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "索引与映射"
+        "绱㈠紩涓庢槧灏?
       ]
     },
     {
       "id": "q013",
       "type": "single",
-      "question": "ElasticSearch 集群间通信使用的端口号是？",
+      "question": "ElasticSearch 闆嗙兢闂撮€氫俊浣跨敤鐨勭鍙ｅ彿鏄紵",
       "options": {
         "A": "9200",
         "B": "9300",
@@ -257,18 +257,18 @@ window.QUESTION_BANK = {
       },
       "answer": "B",
       "referenceAnswer": "B",
-      "explanation": "正确选项是 B（B. 9300）。9300 是 ElasticSearch 节点之间通信的端口；9200 是给外部 HTTP/REST 客户端访问的端口。",
-      "memoryTip": "9300 记“节点内部聊”：ES 节点之间通信走 9300；9200 是外部 HTTP 访问。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?B锛圔. 9300锛夈€?300 鏄?ElasticSearch 鑺傜偣涔嬮棿閫氫俊鐨勭鍙ｏ紱9200 鏄粰澶栭儴 HTTP/REST 瀹㈡埛绔闂殑绔彛銆?,
+      "memoryTip": "9300 璁扳€滆妭鐐瑰唴閮ㄨ亰鈥濓細ES 鑺傜偣涔嬮棿閫氫俊璧?9300锛?200 鏄閮?HTTP 璁块棶銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "集群与分片",
-        "安装配置"
+        "闆嗙兢涓庡垎鐗?,
+        "瀹夎閰嶇疆"
       ]
     },
     {
       "id": "q014",
       "type": "single",
-      "question": "ElasticSearch 中，默认的复制分片数量是？",
+      "question": "ElasticSearch 涓紝榛樿鐨勫鍒跺垎鐗囨暟閲忔槸锛?,
       "options": {
         "A": "0",
         "B": "1",
@@ -277,17 +277,17 @@ window.QUESTION_BANK = {
       },
       "answer": "B",
       "referenceAnswer": "B",
-      "explanation": "正确选项是 B（B. 1）。复制分片默认 1 份，作用是容灾和提升搜索吞吐，不负责扩大主数据容量。",
-      "memoryTip": "复制分片记“复印件”：主分片坏了可顶上，也能分摊搜索压力。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?B锛圔. 1锛夈€傚鍒跺垎鐗囬粯璁?1 浠斤紝浣滅敤鏄鐏惧拰鎻愬崌鎼滅储鍚炲悙锛屼笉璐熻矗鎵╁ぇ涓绘暟鎹閲忋€?,
+      "memoryTip": "澶嶅埗鍒嗙墖璁扳€滃鍗颁欢鈥濓細涓诲垎鐗囧潖浜嗗彲椤朵笂锛屼篃鑳藉垎鎽婃悳绱㈠帇鍔涖€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "集群与分片"
+        "闆嗙兢涓庡垎鐗?
       ]
     },
     {
       "id": "q015",
       "type": "single",
-      "question": "ElasticSearch 中，用于批量操作的请求类是？",
+      "question": "ElasticSearch 涓紝鐢ㄤ簬鎵归噺鎿嶄綔鐨勮姹傜被鏄紵",
       "options": {
         "A": "IndexRequest",
         "B": "UpdateRequest",
@@ -296,9 +296,9 @@ window.QUESTION_BANK = {
       },
       "answer": "D",
       "referenceAnswer": "D",
-      "explanation": "正确选项是 D（D. BulkRequest）。Bulk 表示“批量”，BulkRequest 就是批量增删改请求。 术语理解：BulkRequest：批量请求类，用来一次提交多条增删改操作。",
-      "memoryTip": "Bulk 是“批量”：BulkRequest 看到批量增删改就选它。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?D锛圖. BulkRequest锛夈€侭ulk 琛ㄧず鈥滄壒閲忊€濓紝BulkRequest 灏辨槸鎵归噺澧炲垹鏀硅姹傘€?鏈鐞嗚В锛欱ulkRequest锛氭壒閲忚姹傜被锛岀敤鏉ヤ竴娆℃彁浜ゅ鏉″鍒犳敼鎿嶄綔銆?,
+      "memoryTip": "Bulk 鏄€滄壒閲忊€濓細BulkRequest 鐪嬪埌鎵归噺澧炲垹鏀瑰氨閫夊畠銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
         "Spring Boot"
       ]
@@ -306,7 +306,7 @@ window.QUESTION_BANK = {
     {
       "id": "q016",
       "type": "single",
-      "question": "以下哪种 HTTP 方法用于在 ElasticSearch 中创建索引？",
+      "question": "浠ヤ笅鍝 HTTP 鏂规硶鐢ㄤ簬鍦?ElasticSearch 涓垱寤虹储寮曪紵",
       "options": {
         "A": "GET",
         "B": "POST",
@@ -315,17 +315,17 @@ window.QUESTION_BANK = {
       },
       "answer": "C",
       "referenceAnswer": "C",
-      "explanation": "正确选项是 C（C. PUT）。PUT 通常用于创建或替换指定资源；创建指定名称的索引用 PUT。 术语理解：HTTP：浏览器和客户端访问服务常用的网络协议。",
-      "memoryTip": "映射题先问字段要不要分词：要全文检索选 text；要精确匹配、排序、聚合选 keyword 或数值/日期类型。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?C锛圕. PUT锛夈€侾UT 閫氬父鐢ㄤ簬鍒涘缓鎴栨浛鎹㈡寚瀹氳祫婧愶紱鍒涘缓鎸囧畾鍚嶇О鐨勭储寮曠敤 PUT銆?鏈鐞嗚В锛欻TTP锛氭祻瑙堝櫒鍜屽鎴风璁块棶鏈嶅姟甯哥敤鐨勭綉缁滃崗璁€?,
+      "memoryTip": "鏄犲皠棰樺厛闂瓧娈佃涓嶈鍒嗚瘝锛氳鍏ㄦ枃妫€绱㈤€?text锛涜绮剧‘鍖归厤銆佹帓搴忋€佽仛鍚堥€?keyword 鎴栨暟鍊?鏃ユ湡绫诲瀷銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "索引与映射"
+        "绱㈠紩涓庢槧灏?
       ]
     },
     {
       "id": "q017",
       "type": "single",
-      "question": "以下哪个配置项用于指定 ElasticSearch 节点是否可以被选举为 master 节点？",
+      "question": "浠ヤ笅鍝釜閰嶇疆椤圭敤浜庢寚瀹?ElasticSearch 鑺傜偣鏄惁鍙互琚€変妇涓?master 鑺傜偣锛?,
       "options": {
         "A": "node.data",
         "B": "node.master",
@@ -334,18 +334,18 @@ window.QUESTION_BANK = {
       },
       "answer": "B",
       "referenceAnswer": "B",
-      "explanation": "正确选项是 B（B. node.master）。node.master 控制节点是否有资格成为 master；node.data 控制是否保存数据。 术语理解：master：主节点角色，负责集群管理、元数据变更和分片调度。",
-      "memoryTip": "集群题先分角色：cluster 是整体，node 是节点，shard 是分片，replica 是副本，master 管调度。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?B锛圔. node.master锛夈€俷ode.master 鎺у埗鑺傜偣鏄惁鏈夎祫鏍兼垚涓?master锛沶ode.data 鎺у埗鏄惁淇濆瓨鏁版嵁銆?鏈鐞嗚В锛歮aster锛氫富鑺傜偣瑙掕壊锛岃礋璐ｉ泦缇ょ鐞嗐€佸厓鏁版嵁鍙樻洿鍜屽垎鐗囪皟搴︺€?,
+      "memoryTip": "闆嗙兢棰樺厛鍒嗚鑹诧細cluster 鏄暣浣擄紝node 鏄妭鐐癸紝shard 鏄垎鐗囷紝replica 鏄壇鏈紝master 绠¤皟搴︺€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "集群与分片",
-        "安装配置"
+        "闆嗙兢涓庡垎鐗?,
+        "瀹夎閰嶇疆"
       ]
     },
     {
       "id": "q018",
       "type": "single",
-      "question": "以下哪个配置项用于指定 ElasticSearch 节点是否作为数据节点？",
+      "question": "浠ヤ笅鍝釜閰嶇疆椤圭敤浜庢寚瀹?ElasticSearch 鑺傜偣鏄惁浣滀负鏁版嵁鑺傜偣锛?,
       "options": {
         "A": "node.master",
         "B": "node.data",
@@ -354,18 +354,18 @@ window.QUESTION_BANK = {
       },
       "answer": "B",
       "referenceAnswer": "B",
-      "explanation": "正确选项是 B（B. node.data）。node.data 表示数据节点角色，负责存储数据和执行数据相关操作。",
-      "memoryTip": "集群题先分角色：cluster 是整体，node 是节点，shard 是分片，replica 是副本，master 管调度。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?B锛圔. node.data锛夈€俷ode.data 琛ㄧず鏁版嵁鑺傜偣瑙掕壊锛岃礋璐ｅ瓨鍌ㄦ暟鎹拰鎵ц鏁版嵁鐩稿叧鎿嶄綔銆?,
+      "memoryTip": "闆嗙兢棰樺厛鍒嗚鑹诧細cluster 鏄暣浣擄紝node 鏄妭鐐癸紝shard 鏄垎鐗囷紝replica 鏄壇鏈紝master 绠¤皟搴︺€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "集群与分片",
-        "安装配置"
+        "闆嗙兢涓庡垎鐗?,
+        "瀹夎閰嶇疆"
       ]
     },
     {
       "id": "q019",
       "type": "single",
-      "question": "IK 分词器提供的两种分词算法中，实现最少切分的是？",
+      "question": "IK 鍒嗚瘝鍣ㄦ彁渚涚殑涓ょ鍒嗚瘝绠楁硶涓紝瀹炵幇鏈€灏戝垏鍒嗙殑鏄紵",
       "options": {
         "A": "ik_smart",
         "B": "ik_max_word",
@@ -374,18 +374,18 @@ window.QUESTION_BANK = {
       },
       "answer": "A",
       "referenceAnswer": "A",
-      "explanation": "正确选项是 A（A. ik_smart）。ik_smart 是最少切分，切出的词少，查询更精确、噪声更少。 术语理解：ik_smart：IK 最少切分，词更少，偏精确和高效。",
-      "memoryTip": "smart = 聪明省事：切词少，偏精确、效率高。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?A锛圓. ik_smart锛夈€俰k_smart 鏄渶灏戝垏鍒嗭紝鍒囧嚭鐨勮瘝灏戯紝鏌ヨ鏇寸簿纭€佸櫔澹版洿灏戙€?鏈鐞嗚В锛歩k_smart锛欼K 鏈€灏戝垏鍒嗭紝璇嶆洿灏戯紝鍋忕簿纭拰楂樻晥銆?,
+      "memoryTip": "smart = 鑱槑鐪佷簨锛氬垏璇嶅皯锛屽亸绮剧‘銆佹晥鐜囬珮銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "索引与映射",
-        "IK 分词器"
+        "绱㈠紩涓庢槧灏?,
+        "IK 鍒嗚瘝鍣?
       ]
     },
     {
       "id": "q020",
       "type": "single",
-      "question": "在 ElasticSearch 查询中，用于指定每页返回多少条结果的参数是？",
+      "question": "鍦?ElasticSearch 鏌ヨ涓紝鐢ㄤ簬鎸囧畾姣忛〉杩斿洖澶氬皯鏉＄粨鏋滅殑鍙傛暟鏄紵",
       "options": {
         "A": "from",
         "B": "size",
@@ -394,17 +394,17 @@ window.QUESTION_BANK = {
       },
       "answer": "B",
       "referenceAnswer": "B",
-      "explanation": "正确选项是 B（B. size）。分页时 from 表示从哪里开始，size 表示每页返回多少条。",
-      "memoryTip": "DSL 题先看目的：全文搜用 match，多字段用 multi_match，精确值用 term，范围用 range，组合条件用 bool。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?B锛圔. size锛夈€傚垎椤垫椂 from 琛ㄧず浠庡摢閲屽紑濮嬶紝size 琛ㄧず姣忛〉杩斿洖澶氬皯鏉°€?,
+      "memoryTip": "DSL 棰樺厛鐪嬬洰鐨勶細鍏ㄦ枃鎼滅敤 match锛屽瀛楁鐢?multi_match锛岀簿纭€肩敤 term锛岃寖鍥寸敤 range锛岀粍鍚堟潯浠剁敤 bool銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "查询 DSL"
+        "鏌ヨ DSL"
       ]
     },
     {
       "id": "q021",
       "type": "single",
-      "question": "在 ElasticSearch 查询中，用于实现多字段匹配查询的关键字是？",
+      "question": "鍦?ElasticSearch 鏌ヨ涓紝鐢ㄤ簬瀹炵幇澶氬瓧娈靛尮閰嶆煡璇㈢殑鍏抽敭瀛楁槸锛?,
       "options": {
         "A": "match",
         "B": "match_phrase",
@@ -413,18 +413,18 @@ window.QUESTION_BANK = {
       },
       "answer": "C",
       "referenceAnswer": "C",
-      "explanation": "正确选项是 C（C. multi_match）。multi_match 中 multi 是“多个”的意思，用于多个字段同时匹配。 术语理解：multi_match：多字段匹配，一次在多个字段里搜索。",
-      "memoryTip": "multi 是“多个”：multi_match 就是多个字段一起搜。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?C锛圕. multi_match锛夈€俶ulti_match 涓?multi 鏄€滃涓€濈殑鎰忔€濓紝鐢ㄤ簬澶氫釜瀛楁鍚屾椂鍖归厤銆?鏈鐞嗚В锛歮ulti_match锛氬瀛楁鍖归厤锛屼竴娆″湪澶氫釜瀛楁閲屾悳绱€?,
+      "memoryTip": "multi 鏄€滃涓€濓細multi_match 灏辨槸澶氫釜瀛楁涓€璧锋悳銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "索引与映射",
-        "查询 DSL"
+        "绱㈠紩涓庢槧灏?,
+        "鏌ヨ DSL"
       ]
     },
     {
       "id": "q022",
       "type": "single",
-      "question": "在 ElasticSearch 中，用于实现完全匹配查询的关键字是？",
+      "question": "鍦?ElasticSearch 涓紝鐢ㄤ簬瀹炵幇瀹屽叏鍖归厤鏌ヨ鐨勫叧閿瓧鏄紵",
       "options": {
         "A": "match",
         "B": "match_phrase",
@@ -433,17 +433,17 @@ window.QUESTION_BANK = {
       },
       "answer": "B",
       "referenceAnswer": "B",
-      "explanation": "正确选项是 B（B. match_phrase）。phrase 是“短语”，match_phrase 要求短语整体匹配，比 match 更严格。 术语理解：match_phrase：短语匹配，要求词语按顺序整体出现。",
-      "memoryTip": "phrase 是“短语”：match_phrase 要求整句话或短语按顺序匹配。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?B锛圔. match_phrase锛夈€俻hrase 鏄€滅煭璇€濓紝match_phrase 瑕佹眰鐭鏁翠綋鍖归厤锛屾瘮 match 鏇翠弗鏍笺€?鏈鐞嗚В锛歮atch_phrase锛氱煭璇尮閰嶏紝瑕佹眰璇嶈鎸夐『搴忔暣浣撳嚭鐜般€?,
+      "memoryTip": "phrase 鏄€滅煭璇€濓細match_phrase 瑕佹眰鏁村彞璇濇垨鐭鎸夐『搴忓尮閰嶃€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "查询 DSL"
+        "鏌ヨ DSL"
       ]
     },
     {
       "id": "q023",
       "type": "single",
-      "question": "以下哪种分词器会将每个中文字符拆分成单独的词？",
+      "question": "浠ヤ笅鍝鍒嗚瘝鍣ㄤ細灏嗘瘡涓腑鏂囧瓧绗︽媶鍒嗘垚鍗曠嫭鐨勮瘝锛?,
       "options": {
         "A": "ik_smart",
         "B": "ik_max_word",
@@ -452,37 +452,37 @@ window.QUESTION_BANK = {
       },
       "answer": "C",
       "referenceAnswer": "C",
-      "explanation": "正确选项是 C（C. standard）。standard 分词器对中文通常按单字切分，语义效果不如 IK 中文分词器。",
-      "memoryTip": "映射题先问字段要不要分词：要全文检索选 text；要精确匹配、排序、聚合选 keyword 或数值/日期类型。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?C锛圕. standard锛夈€俿tandard 鍒嗚瘝鍣ㄥ涓枃閫氬父鎸夊崟瀛楀垏鍒嗭紝璇箟鏁堟灉涓嶅 IK 涓枃鍒嗚瘝鍣ㄣ€?,
+      "memoryTip": "鏄犲皠棰樺厛闂瓧娈佃涓嶈鍒嗚瘝锛氳鍏ㄦ枃妫€绱㈤€?text锛涜绮剧‘鍖归厤銆佹帓搴忋€佽仛鍚堥€?keyword 鎴栨暟鍊?鏃ユ湡绫诲瀷銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "索引与映射",
-        "IK 分词器"
+        "绱㈠紩涓庢槧灏?,
+        "IK 鍒嗚瘝鍣?
       ]
     },
     {
       "id": "q024",
       "type": "single",
-      "question": "以下关于 IK 分词器的说法，错误的是？",
+      "question": "浠ヤ笅鍏充簬 IK 鍒嗚瘝鍣ㄧ殑璇存硶锛岄敊璇殑鏄紵",
       "options": {
-        "A": "IK 分词器是开源的中文分词插件",
-        "B": "IK 分词器支持自定义词库",
-        "C": "IK 分词器只能用于 ElasticSearch",
-        "D": "IK 分词器有两种分词算法"
+        "A": "IK 鍒嗚瘝鍣ㄦ槸寮€婧愮殑涓枃鍒嗚瘝鎻掍欢",
+        "B": "IK 鍒嗚瘝鍣ㄦ敮鎸佽嚜瀹氫箟璇嶅簱",
+        "C": "IK 鍒嗚瘝鍣ㄥ彧鑳界敤浜?ElasticSearch",
+        "D": "IK 鍒嗚瘝鍣ㄦ湁涓ょ鍒嗚瘝绠楁硶"
       },
       "answer": "C",
       "referenceAnswer": "C",
-      "explanation": "正确选项是 C（C. IK 分词器只能用于 ElasticSearch）。本题考查基础概念。复习时抓住题干关键词，再把它和正确答案中的核心术语对应起来。",
-      "memoryTip": "IK 只记一对反义：smart 少切更精确；max_word 多切召回高。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?C锛圕. IK 鍒嗚瘝鍣ㄥ彧鑳界敤浜?ElasticSearch锛夈€傛湰棰樿€冩煡鍩虹姒傚康銆傚涔犳椂鎶撲綇棰樺共鍏抽敭璇嶏紝鍐嶆妸瀹冨拰姝ｇ‘绛旀涓殑鏍稿績鏈瀵瑰簲璧锋潵銆?,
+      "memoryTip": "IK 鍙涓€瀵瑰弽涔夛細smart 灏戝垏鏇寸簿纭紱max_word 澶氬垏鍙洖楂樸€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "IK 分词器"
+        "IK 鍒嗚瘝鍣?
       ]
     },
     {
       "id": "q025",
       "type": "single",
-      "question": "Spring Boot 2.5.0 整合 ElasticSearch 7.14.0 时，推荐使用的客户端是？",
+      "question": "Spring Boot 2.5.0 鏁村悎 ElasticSearch 7.14.0 鏃讹紝鎺ㄨ崘浣跨敤鐨勫鎴风鏄紵",
       "options": {
         "A": "TransportClient",
         "B": "RestHighLevelClient",
@@ -491,9 +491,9 @@ window.QUESTION_BANK = {
       },
       "answer": "B",
       "referenceAnswer": "B",
-      "explanation": "正确选项是 B（B. RestHighLevelClient）。ES 7.x 的 Java 集成常用 RestHighLevelClient；TransportClient 已逐步废弃。 术语理解：RestHighLevelClient：Java 高级 REST 客户端，Spring Boot 整合 ES 7.x 常见。",
-      "memoryTip": "RestHighLevelClient 直译“高级 REST 客户端”，ES 7.x Java 整合常见。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?B锛圔. RestHighLevelClient锛夈€侲S 7.x 鐨?Java 闆嗘垚甯哥敤 RestHighLevelClient锛汿ransportClient 宸查€愭搴熷純銆?鏈鐞嗚В锛歊estHighLevelClient锛欽ava 楂樼骇 REST 瀹㈡埛绔紝Spring Boot 鏁村悎 ES 7.x 甯歌銆?,
+      "memoryTip": "RestHighLevelClient 鐩磋瘧鈥滈珮绾?REST 瀹㈡埛绔€濓紝ES 7.x Java 鏁村悎甯歌銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
         "Spring Boot"
       ]
@@ -501,7 +501,7 @@ window.QUESTION_BANK = {
     {
       "id": "q026",
       "type": "single",
-      "question": "在 Spring Boot 整合 ElasticSearch 时，用于创建索引的请求类是？",
+      "question": "鍦?Spring Boot 鏁村悎 ElasticSearch 鏃讹紝鐢ㄤ簬鍒涘缓绱㈠紩鐨勮姹傜被鏄紵",
       "options": {
         "A": "CreateIndexRequest",
         "B": "GetIndexRequest",
@@ -510,18 +510,18 @@ window.QUESTION_BANK = {
       },
       "answer": "A",
       "referenceAnswer": "A",
-      "explanation": "正确选项是 A（A. CreateIndexRequest）。CreateIndexRequest 按名字直译就是“创建索引请求”。 术语理解：Index：索引，类似关系型数据库里的表，用来组织一类文档。",
-      "memoryTip": "CreateIndexRequest 拆词记：Create 创建 + Index 索引 + Request 请求。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?A锛圓. CreateIndexRequest锛夈€侰reateIndexRequest 鎸夊悕瀛楃洿璇戝氨鏄€滃垱寤虹储寮曡姹傗€濄€?鏈鐞嗚В锛欼ndex锛氱储寮曪紝绫讳技鍏崇郴鍨嬫暟鎹簱閲岀殑琛紝鐢ㄦ潵缁勭粐涓€绫绘枃妗ｃ€?,
+      "memoryTip": "CreateIndexRequest 鎷嗚瘝璁帮細Create 鍒涘缓 + Index 绱㈠紩 + Request 璇锋眰銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "索引与映射",
+        "绱㈠紩涓庢槧灏?,
         "Spring Boot"
       ]
     },
     {
       "id": "q027",
       "type": "single",
-      "question": "在 Spring Boot 整合 ElasticSearch 时，用于判断索引是否存在的方法是？",
+      "question": "鍦?Spring Boot 鏁村悎 ElasticSearch 鏃讹紝鐢ㄤ簬鍒ゆ柇绱㈠紩鏄惁瀛樺湪鐨勬柟娉曟槸锛?,
       "options": {
         "A": "indices ().create ()",
         "B": "indices ().exists ()",
@@ -530,77 +530,77 @@ window.QUESTION_BANK = {
       },
       "answer": "B",
       "referenceAnswer": "B",
-      "explanation": "正确选项是 B（B. indices ().exists ()）。exists 表示“存在”，indices().exists() 用来判断索引是否存在。",
-      "memoryTip": "exists 就是“存在”：判断索引是否存在看 exists。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?B锛圔. indices ().exists ()锛夈€俥xists 琛ㄧず鈥滃瓨鍦ㄢ€濓紝indices().exists() 鐢ㄦ潵鍒ゆ柇绱㈠紩鏄惁瀛樺湪銆?,
+      "memoryTip": "exists 灏辨槸鈥滃瓨鍦ㄢ€濓細鍒ゆ柇绱㈠紩鏄惁瀛樺湪鐪?exists銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "索引与映射",
+        "绱㈠紩涓庢槧灏?,
         "Spring Boot"
       ]
     },
     {
       "id": "q028",
       "type": "single",
-      "question": "ElasticSearch 中，复制分片的主要作用不包括？",
+      "question": "ElasticSearch 涓紝澶嶅埗鍒嗙墖鐨勪富瑕佷綔鐢ㄤ笉鍖呮嫭锛?,
       "options": {
-        "A": "提高数据可用性",
-        "B": "扩展搜索吞吐量",
-        "C": "水平扩展存储容量",
-        "D": "故障转移"
+        "A": "鎻愰珮鏁版嵁鍙敤鎬?,
+        "B": "鎵╁睍鎼滅储鍚炲悙閲?,
+        "C": "姘村钩鎵╁睍瀛樺偍瀹归噺",
+        "D": "鏁呴殰杞Щ"
       },
       "answer": "C",
       "referenceAnswer": "C",
-      "explanation": "正确选项是 C（C. 水平扩展存储容量）。本题考查基础概念。复习时抓住题干关键词，再把它和正确答案中的核心术语对应起来。",
-      "memoryTip": "复制分片记“复印件”：主分片坏了可顶上，也能分摊搜索压力。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?C锛圕. 姘村钩鎵╁睍瀛樺偍瀹归噺锛夈€傛湰棰樿€冩煡鍩虹姒傚康銆傚涔犳椂鎶撲綇棰樺共鍏抽敭璇嶏紝鍐嶆妸瀹冨拰姝ｇ‘绛旀涓殑鏍稿績鏈瀵瑰簲璧锋潵銆?,
+      "memoryTip": "澶嶅埗鍒嗙墖璁扳€滃鍗颁欢鈥濓細涓诲垎鐗囧潖浜嗗彲椤朵笂锛屼篃鑳藉垎鎽婃悳绱㈠帇鍔涖€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "集群与分片",
-        "运维优化"
+        "闆嗙兢涓庡垎鐗?,
+        "杩愮淮浼樺寲"
       ]
     },
     {
       "id": "q029",
       "type": "single",
-      "question": "ElasticSearch 中，接近实时（NRT）的延迟通常在多少以内？",
+      "question": "ElasticSearch 涓紝鎺ヨ繎瀹炴椂锛圢RT锛夌殑寤惰繜閫氬父鍦ㄥ灏戜互鍐咃紵",
       "options": {
         "A": "100ms",
-        "B": "1 秒",
-        "C": "10 秒",
-        "D": "1 分钟"
+        "B": "1 绉?,
+        "C": "10 绉?,
+        "D": "1 鍒嗛挓"
       },
       "answer": "B",
       "referenceAnswer": "B",
-      "explanation": "正确选项是 B（B. 1 秒）。本题考查基础概念。复习时抓住题干关键词，再把它和正确答案中的核心术语对应起来。",
-      "memoryTip": "复习时先圈出题干关键词，再用一句中文把英文术语翻译出来，最后对应到答案。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?B锛圔. 1 绉掞級銆傛湰棰樿€冩煡鍩虹姒傚康銆傚涔犳椂鎶撲綇棰樺共鍏抽敭璇嶏紝鍐嶆妸瀹冨拰姝ｇ‘绛旀涓殑鏍稿績鏈瀵瑰簲璧锋潵銆?,
+      "memoryTip": "澶嶄範鏃跺厛鍦堝嚭棰樺共鍏抽敭璇嶏紝鍐嶇敤涓€鍙ヤ腑鏂囨妸鑻辨枃鏈缈昏瘧鍑烘潵锛屾渶鍚庡搴斿埌绛旀銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "综合复习"
+        "缁煎悎澶嶄範"
       ]
     },
     {
       "id": "q030",
       "type": "single",
-      "question": "ElasticSearch 中，以下哪个概念与关系型数据库中的 \"表\" 最相似？",
+      "question": "ElasticSearch 涓紝浠ヤ笅鍝釜姒傚康涓庡叧绯诲瀷鏁版嵁搴撲腑鐨?\"琛╘" 鏈€鐩镐技锛?,
       "options": {
-        "A": "索引（Index）",
-        "B": "类型（Type）",
-        "C": "文档（Document）",
-        "D": "字段（Field）"
+        "A": "绱㈠紩锛圛ndex锛?,
+        "B": "绫诲瀷锛圱ype锛?,
+        "C": "鏂囨。锛圖ocument锛?,
+        "D": "瀛楁锛團ield锛?
       },
       "answer": "A",
       "referenceAnswer": "A",
-      "explanation": "正确选项是 A（A. 索引（Index））。本题考查基础概念。复习时抓住题干关键词，再把它和正确答案中的核心术语对应起来。 术语理解：Index：索引，类似关系型数据库里的表，用来组织一类文档。",
-      "memoryTip": "基础概念题用“是什么、做什么、不是什么”三步记：先说定义，再说作用，最后排除容易混淆的概念。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?A锛圓. 绱㈠紩锛圛ndex锛夛級銆傛湰棰樿€冩煡鍩虹姒傚康銆傚涔犳椂鎶撲綇棰樺共鍏抽敭璇嶏紝鍐嶆妸瀹冨拰姝ｇ‘绛旀涓殑鏍稿績鏈瀵瑰簲璧锋潵銆?鏈鐞嗚В锛欼ndex锛氱储寮曪紝绫讳技鍏崇郴鍨嬫暟鎹簱閲岀殑琛紝鐢ㄦ潵缁勭粐涓€绫绘枃妗ｃ€?,
+      "memoryTip": "鍩虹姒傚康棰樼敤鈥滄槸浠€涔堛€佸仛浠€涔堛€佷笉鏄粈涔堚€濅笁姝ヨ锛氬厛璇村畾涔夛紝鍐嶈浣滅敤锛屾渶鍚庢帓闄ゅ鏄撴贩娣嗙殑姒傚康銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "基础概念",
-        "索引与映射"
+        "鍩虹姒傚康",
+        "绱㈠紩涓庢槧灏?
       ]
     },
     {
       "id": "q031",
       "type": "single",
-      "question": "以下哪个配置项用于开启 ElasticSearch 的跨域访问支持？",
+      "question": "浠ヤ笅鍝釜閰嶇疆椤圭敤浜庡紑鍚?ElasticSearch 鐨勮法鍩熻闂敮鎸侊紵",
       "options": {
         "A": "http.cors.enabled: true",
         "B": "network.host: 0.0.0.0",
@@ -609,60 +609,60 @@ window.QUESTION_BANK = {
       },
       "answer": "A",
       "referenceAnswer": "A",
-      "explanation": "正确选项是 A（A. http.cors.enabled: true）。本题考查基础概念。复习时抓住题干关键词，再把它和正确答案中的核心术语对应起来。",
-      "memoryTip": "跨域记 cors：http.cors.enabled 打开跨域；network.host 是网络绑定。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?A锛圓. http.cors.enabled: true锛夈€傛湰棰樿€冩煡鍩虹姒傚康銆傚涔犳椂鎶撲綇棰樺共鍏抽敭璇嶏紝鍐嶆妸瀹冨拰姝ｇ‘绛旀涓殑鏍稿績鏈瀵瑰簲璧锋潵銆?,
+      "memoryTip": "璺ㄥ煙璁?cors锛歨ttp.cors.enabled 鎵撳紑璺ㄥ煙锛沶etwork.host 鏄綉缁滅粦瀹氥€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "集群与分片",
-        "安装配置"
+        "闆嗙兢涓庡垎鐗?,
+        "瀹夎閰嶇疆"
       ]
     },
     {
       "id": "q032",
       "type": "single",
-      "question": "以下哪个不是 ElasticSearch Head 插件的功能？",
+      "question": "浠ヤ笅鍝釜涓嶆槸 ElasticSearch Head 鎻掍欢鐨勫姛鑳斤紵",
       "options": {
-        "A": "查看集群健康状态",
-        "B": "管理索引",
-        "C": "执行查询操作",
-        "D": "自动备份数据"
+        "A": "鏌ョ湅闆嗙兢鍋ュ悍鐘舵€?,
+        "B": "绠＄悊绱㈠紩",
+        "C": "鎵ц鏌ヨ鎿嶄綔",
+        "D": "鑷姩澶囦唤鏁版嵁"
       },
       "answer": "D",
       "referenceAnswer": "D",
-      "explanation": "正确选项是 D（D. 自动备份数据）。本题考查基础概念。复习时抓住题干关键词，再把它和正确答案中的核心术语对应起来。",
-      "memoryTip": "备份两条路：Snapshot 官方快照；_reindex 复制到别处。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?D锛圖. 鑷姩澶囦唤鏁版嵁锛夈€傛湰棰樿€冩煡鍩虹姒傚康銆傚涔犳椂鎶撲綇棰樺共鍏抽敭璇嶏紝鍐嶆妸瀹冨拰姝ｇ‘绛旀涓殑鏍稿績鏈瀵瑰簲璧锋潵銆?,
+      "memoryTip": "澶囦唤涓ゆ潯璺細Snapshot 瀹樻柟蹇収锛沖reindex 澶嶅埗鍒板埆澶勩€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "集群与分片",
-        "索引与映射",
-        "查询 DSL",
-        "安装配置",
-        "运维优化"
+        "闆嗙兢涓庡垎鐗?,
+        "绱㈠紩涓庢槧灏?,
+        "鏌ヨ DSL",
+        "瀹夎閰嶇疆",
+        "杩愮淮浼樺寲"
       ]
     },
     {
       "id": "q033",
       "type": "single",
-      "question": "以下哪个不是 ElasticSearch 集群的组成部分？",
+      "question": "浠ヤ笅鍝釜涓嶆槸 ElasticSearch 闆嗙兢鐨勭粍鎴愰儴鍒嗭紵",
       "options": {
-        "A": "节点",
-        "B": "分片",
-        "C": "复制",
-        "D": "表"
+        "A": "鑺傜偣",
+        "B": "鍒嗙墖",
+        "C": "澶嶅埗",
+        "D": "琛?
       },
       "answer": "D",
       "referenceAnswer": "D",
-      "explanation": "正确选项是 D（D. 表）。本题考查基础概念。复习时抓住题干关键词，再把它和正确答案中的核心术语对应起来。",
-      "memoryTip": "集群题先分角色：cluster 是整体，node 是节点，shard 是分片，replica 是副本，master 管调度。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?D锛圖. 琛級銆傛湰棰樿€冩煡鍩虹姒傚康銆傚涔犳椂鎶撲綇棰樺共鍏抽敭璇嶏紝鍐嶆妸瀹冨拰姝ｇ‘绛旀涓殑鏍稿績鏈瀵瑰簲璧锋潵銆?,
+      "memoryTip": "闆嗙兢棰樺厛鍒嗚鑹诧細cluster 鏄暣浣擄紝node 鏄妭鐐癸紝shard 鏄垎鐗囷紝replica 鏄壇鏈紝master 绠¤皟搴︺€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "集群与分片"
+        "闆嗙兢涓庡垎鐗?
       ]
     },
     {
       "id": "q034",
       "type": "single",
-      "question": "在 ElasticSearch 查询中，用于指定返回结果从第几条开始的参数是？",
+      "question": "鍦?ElasticSearch 鏌ヨ涓紝鐢ㄤ簬鎸囧畾杩斿洖缁撴灉浠庣鍑犳潯寮€濮嬬殑鍙傛暟鏄紵",
       "options": {
         "A": "size",
         "B": "from",
@@ -671,17 +671,17 @@ window.QUESTION_BANK = {
       },
       "answer": "B",
       "referenceAnswer": "B",
-      "explanation": "正确选项是 B（B. from）。本题考查基础概念。复习时抓住题干关键词，再把它和正确答案中的核心术语对应起来。",
-      "memoryTip": "DSL 题先看目的：全文搜用 match，多字段用 multi_match，精确值用 term，范围用 range，组合条件用 bool。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?B锛圔. from锛夈€傛湰棰樿€冩煡鍩虹姒傚康銆傚涔犳椂鎶撲綇棰樺共鍏抽敭璇嶏紝鍐嶆妸瀹冨拰姝ｇ‘绛旀涓殑鏍稿績鏈瀵瑰簲璧锋潵銆?,
+      "memoryTip": "DSL 棰樺厛鐪嬬洰鐨勶細鍏ㄦ枃鎼滅敤 match锛屽瀛楁鐢?multi_match锛岀簿纭€肩敤 term锛岃寖鍥寸敤 range锛岀粍鍚堟潯浠剁敤 bool銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "查询 DSL"
+        "鏌ヨ DSL"
       ]
     },
     {
       "id": "q035",
       "type": "single",
-      "question": "在 ElasticSearch 中，用于删除索引的 HTTP 方法是？",
+      "question": "鍦?ElasticSearch 涓紝鐢ㄤ簬鍒犻櫎绱㈠紩鐨?HTTP 鏂规硶鏄紵",
       "options": {
         "A": "GET",
         "B": "POST",
@@ -690,18 +690,18 @@ window.QUESTION_BANK = {
       },
       "answer": "D",
       "referenceAnswer": "D",
-      "explanation": "正确选项是 D（D. DELETE）。本题考查基础概念。复习时抓住题干关键词，再把它和正确答案中的核心术语对应起来。 术语理解：HTTP：浏览器和客户端访问服务常用的网络协议。",
-      "memoryTip": "映射题先问字段要不要分词：要全文检索选 text；要精确匹配、排序、聚合选 keyword 或数值/日期类型。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?D锛圖. DELETE锛夈€傛湰棰樿€冩煡鍩虹姒傚康銆傚涔犳椂鎶撲綇棰樺共鍏抽敭璇嶏紝鍐嶆妸瀹冨拰姝ｇ‘绛旀涓殑鏍稿績鏈瀵瑰簲璧锋潵銆?鏈鐞嗚В锛欻TTP锛氭祻瑙堝櫒鍜屽鎴风璁块棶鏈嶅姟甯哥敤鐨勭綉缁滃崗璁€?,
+      "memoryTip": "鏄犲皠棰樺厛闂瓧娈佃涓嶈鍒嗚瘝锛氳鍏ㄦ枃妫€绱㈤€?text锛涜绮剧‘鍖归厤銆佹帓搴忋€佽仛鍚堥€?keyword 鎴栨暟鍊?鏃ユ湡绫诲瀷銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "索引与映射",
-        "运维优化"
+        "绱㈠紩涓庢槧灏?,
+        "杩愮淮浼樺寲"
       ]
     },
     {
       "id": "q036",
       "type": "single",
-      "question": "在 ElasticSearch 中，用于获取文档信息的请求类是？",
+      "question": "鍦?ElasticSearch 涓紝鐢ㄤ簬鑾峰彇鏂囨。淇℃伅鐨勮姹傜被鏄紵",
       "options": {
         "A": "GetRequest",
         "B": "IndexRequest",
@@ -710,9 +710,9 @@ window.QUESTION_BANK = {
       },
       "answer": "A",
       "referenceAnswer": "A",
-      "explanation": "正确选项是 A（A. GetRequest）。本题考查基础概念。复习时抓住题干关键词，再把它和正确答案中的核心术语对应起来。",
-      "memoryTip": "Spring Boot 整合题按类名直译记：Create 创建，Get 获取，Delete 删除，Bulk 批量，exists 判断存在。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?A锛圓. GetRequest锛夈€傛湰棰樿€冩煡鍩虹姒傚康銆傚涔犳椂鎶撲綇棰樺共鍏抽敭璇嶏紝鍐嶆妸瀹冨拰姝ｇ‘绛旀涓殑鏍稿績鏈瀵瑰簲璧锋潵銆?,
+      "memoryTip": "Spring Boot 鏁村悎棰樻寜绫诲悕鐩磋瘧璁帮細Create 鍒涘缓锛孏et 鑾峰彇锛孌elete 鍒犻櫎锛孊ulk 鎵归噺锛宔xists 鍒ゆ柇瀛樺湪銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
         "Spring Boot"
       ]
@@ -720,7 +720,7 @@ window.QUESTION_BANK = {
     {
       "id": "q037",
       "type": "single",
-      "question": "ElasticSearch 中，用于对查询结果进行高亮显示的关键字是？",
+      "question": "ElasticSearch 涓紝鐢ㄤ簬瀵规煡璇㈢粨鏋滆繘琛岄珮浜樉绀虹殑鍏抽敭瀛楁槸锛?,
       "options": {
         "A": "highlight",
         "B": "sort",
@@ -729,93 +729,93 @@ window.QUESTION_BANK = {
       },
       "answer": "A",
       "referenceAnswer": "A",
-      "explanation": "正确选项是 A（A. highlight）。本题考查基础概念。复习时抓住题干关键词，再把它和正确答案中的核心术语对应起来。 术语理解：highlight：高亮显示，把命中的关键词突出展示。",
-      "memoryTip": "DSL 题先看目的：全文搜用 match，多字段用 multi_match，精确值用 term，范围用 range，组合条件用 bool。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?A锛圓. highlight锛夈€傛湰棰樿€冩煡鍩虹姒傚康銆傚涔犳椂鎶撲綇棰樺共鍏抽敭璇嶏紝鍐嶆妸瀹冨拰姝ｇ‘绛旀涓殑鏍稿績鏈瀵瑰簲璧锋潵銆?鏈鐞嗚В锛歨ighlight锛氶珮浜樉绀猴紝鎶婂懡涓殑鍏抽敭璇嶇獊鍑哄睍绀恒€?,
+      "memoryTip": "DSL 棰樺厛鐪嬬洰鐨勶細鍏ㄦ枃鎼滅敤 match锛屽瀛楁鐢?multi_match锛岀簿纭€肩敤 term锛岃寖鍥寸敤 range锛岀粍鍚堟潯浠剁敤 bool銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "查询 DSL"
+        "鏌ヨ DSL"
       ]
     },
     {
       "id": "q038",
       "type": "single",
-      "question": "以下关于 ElasticSearch 文档版本号的说法，正确的是？",
+      "question": "浠ヤ笅鍏充簬 ElasticSearch 鏂囨。鐗堟湰鍙风殑璇存硶锛屾纭殑鏄紵",
       "options": {
-        "A": "文档创建时版本号为 0",
-        "B": "每次更新文档版本号会加 1",
-        "C": "删除文档不会改变版本号",
-        "D": "版本号可以手动修改"
+        "A": "鏂囨。鍒涘缓鏃剁増鏈彿涓?0",
+        "B": "姣忔鏇存柊鏂囨。鐗堟湰鍙蜂細鍔?1",
+        "C": "鍒犻櫎鏂囨。涓嶄細鏀瑰彉鐗堟湰鍙?,
+        "D": "鐗堟湰鍙峰彲浠ユ墜鍔ㄤ慨鏀?
       },
       "answer": "B",
       "referenceAnswer": "B",
-      "explanation": "正确选项是 B（B. 每次更新文档版本号会加 1）。本题考查基础概念。复习时抓住题干关键词，再把它和正确答案中的核心术语对应起来。",
-      "memoryTip": "运维题按目标记：备份防丢，分片扩容，副本保可用，索引设计提查询速度。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?B锛圔. 姣忔鏇存柊鏂囨。鐗堟湰鍙蜂細鍔?1锛夈€傛湰棰樿€冩煡鍩虹姒傚康銆傚涔犳椂鎶撲綇棰樺共鍏抽敭璇嶏紝鍐嶆妸瀹冨拰姝ｇ‘绛旀涓殑鏍稿績鏈瀵瑰簲璧锋潵銆?,
+      "memoryTip": "杩愮淮棰樻寜鐩爣璁帮細澶囦唤闃蹭涪锛屽垎鐗囨墿瀹癸紝鍓湰淇濆彲鐢紝绱㈠紩璁捐鎻愭煡璇㈤€熷害銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "运维优化"
+        "杩愮淮浼樺寲"
       ]
     },
     {
       "id": "q039",
       "type": "single",
-      "question": "以下关于 ElasticSearch 实时性的说法，正确的是？",
+      "question": "浠ヤ笅鍏充簬 ElasticSearch 瀹炴椂鎬х殑璇存硶锛屾纭殑鏄紵",
       "options": {
-        "A": "ElasticSearch 是完全实时的",
-        "B": "ElasticSearch 是接近实时的，延迟通常在 1 秒以内",
-        "C": "ElasticSearch 的延迟通常在 10 秒左右",
-        "D": "ElasticSearch 的延迟通常在 1 分钟左右"
+        "A": "ElasticSearch 鏄畬鍏ㄥ疄鏃剁殑",
+        "B": "ElasticSearch 鏄帴杩戝疄鏃剁殑锛屽欢杩熼€氬父鍦?1 绉掍互鍐?,
+        "C": "ElasticSearch 鐨勫欢杩熼€氬父鍦?10 绉掑乏鍙?,
+        "D": "ElasticSearch 鐨勫欢杩熼€氬父鍦?1 鍒嗛挓宸﹀彸"
       },
       "answer": "B",
       "referenceAnswer": "B",
-      "explanation": "正确选项是 B（B. ElasticSearch 是接近实时的，延迟通常在 1 秒以内）。本题考查基础概念。复习时抓住题干关键词，再把它和正确答案中的核心术语对应起来。",
-      "memoryTip": "复习时先圈出题干关键词，再用一句中文把英文术语翻译出来，最后对应到答案。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?B锛圔. ElasticSearch 鏄帴杩戝疄鏃剁殑锛屽欢杩熼€氬父鍦?1 绉掍互鍐咃級銆傛湰棰樿€冩煡鍩虹姒傚康銆傚涔犳椂鎶撲綇棰樺共鍏抽敭璇嶏紝鍐嶆妸瀹冨拰姝ｇ‘绛旀涓殑鏍稿績鏈瀵瑰簲璧锋潵銆?,
+      "memoryTip": "澶嶄範鏃跺厛鍦堝嚭棰樺共鍏抽敭璇嶏紝鍐嶇敤涓€鍙ヤ腑鏂囨妸鑻辨枃鏈缈昏瘧鍑烘潵锛屾渶鍚庡搴斿埌绛旀銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "综合复习"
+        "缁煎悎澶嶄範"
       ]
     },
     {
       "id": "q040",
       "type": "single",
-      "question": "以下关于 ElasticSearch 与 Solr 对比的说法，错误的是？",
+      "question": "浠ヤ笅鍏充簬 ElasticSearch 涓?Solr 瀵规瘮鐨勮娉曪紝閿欒鐨勬槸锛?,
       "options": {
-        "A": "ElasticSearch 自身带有分布式协调管理功能",
-        "B": "Solr 支持更多格式的数据",
-        "C": "ElasticSearch 在处理实时搜索应用时效率更高",
-        "D": "Solr 仅支持 JSON 文件格式"
+        "A": "ElasticSearch 鑷韩甯︽湁鍒嗗竷寮忓崗璋冪鐞嗗姛鑳?,
+        "B": "Solr 鏀寔鏇村鏍煎紡鐨勬暟鎹?,
+        "C": "ElasticSearch 鍦ㄥ鐞嗗疄鏃舵悳绱㈠簲鐢ㄦ椂鏁堢巼鏇撮珮",
+        "D": "Solr 浠呮敮鎸?JSON 鏂囦欢鏍煎紡"
       },
       "answer": "D",
       "referenceAnswer": "D",
-      "explanation": "正确选项是 D（D. Solr 仅支持 JSON 文件格式）。本题考查基础概念。复习时抓住题干关键词，再把它和正确答案中的核心术语对应起来。 术语理解：Solr：同样基于 Lucene 的搜索服务器，常与传统搜索、ZooKeeper 管理联系在一起。",
-      "memoryTip": "Solr 和 ES 都基于 Lucene；Solr 常联想 ZooKeeper，ES 常联想开箱即用和近实时。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?D锛圖. Solr 浠呮敮鎸?JSON 鏂囦欢鏍煎紡锛夈€傛湰棰樿€冩煡鍩虹姒傚康銆傚涔犳椂鎶撲綇棰樺共鍏抽敭璇嶏紝鍐嶆妸瀹冨拰姝ｇ‘绛旀涓殑鏍稿績鏈瀵瑰簲璧锋潵銆?鏈鐞嗚В锛歋olr锛氬悓鏍峰熀浜?Lucene 鐨勬悳绱㈡湇鍔″櫒锛屽父涓庝紶缁熸悳绱€乑ooKeeper 绠＄悊鑱旂郴鍦ㄤ竴璧枫€?,
+      "memoryTip": "Solr 鍜?ES 閮藉熀浜?Lucene锛汼olr 甯歌仈鎯?ZooKeeper锛孍S 甯歌仈鎯冲紑绠卞嵆鐢ㄥ拰杩戝疄鏃躲€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "基础概念"
+        "鍩虹姒傚康"
       ]
     },
     {
       "id": "q041",
       "type": "single",
-      "question": "ElasticSearch 集群中，主节点的主要职责是？",
+      "question": "ElasticSearch 闆嗙兢涓紝涓昏妭鐐圭殑涓昏鑱岃矗鏄紵",
       "options": {
-        "A": "存储数据",
-        "B": "处理搜索请求",
-        "C": "管理集群状态",
-        "D": "执行聚合操作"
+        "A": "瀛樺偍鏁版嵁",
+        "B": "澶勭悊鎼滅储璇锋眰",
+        "C": "绠＄悊闆嗙兢鐘舵€?,
+        "D": "鎵ц鑱氬悎鎿嶄綔"
       },
       "answer": "C",
       "referenceAnswer": "C",
-      "explanation": "正确选项是 C（C. 管理集群状态）。本题考查基础概念。复习时抓住题干关键词，再把它和正确答案中的核心术语对应起来。",
-      "memoryTip": "集群题先分角色：cluster 是整体，node 是节点，shard 是分片，replica 是副本，master 管调度。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?C锛圕. 绠＄悊闆嗙兢鐘舵€侊級銆傛湰棰樿€冩煡鍩虹姒傚康銆傚涔犳椂鎶撲綇棰樺共鍏抽敭璇嶏紝鍐嶆妸瀹冨拰姝ｇ‘绛旀涓殑鏍稿績鏈瀵瑰簲璧锋潵銆?,
+      "memoryTip": "闆嗙兢棰樺厛鍒嗚鑹诧細cluster 鏄暣浣擄紝node 鏄妭鐐癸紝shard 鏄垎鐗囷紝replica 鏄壇鏈紝master 绠¤皟搴︺€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "集群与分片"
+        "闆嗙兢涓庡垎鐗?
       ]
     },
     {
       "id": "q042",
       "type": "single",
-      "question": "ElasticSearch 中，用于实现分组聚合的关键字是？",
+      "question": "ElasticSearch 涓紝鐢ㄤ簬瀹炵幇鍒嗙粍鑱氬悎鐨勫叧閿瓧鏄紵",
       "options": {
         "A": "terms",
         "B": "avg",
@@ -824,36 +824,36 @@ window.QUESTION_BANK = {
       },
       "answer": "A",
       "referenceAnswer": "A",
-      "explanation": "正确选项是 A（A. terms）。term 不会分词，适合 keyword、数字、日期等精确匹配字段。 术语理解：term：词项查询，不分析查询词，适合精确值。",
-      "memoryTip": "term 是“词项”：不分词，拿完整值去精确匹配。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?A锛圓. terms锛夈€倀erm 涓嶄細鍒嗚瘝锛岄€傚悎 keyword銆佹暟瀛椼€佹棩鏈熺瓑绮剧‘鍖归厤瀛楁銆?鏈鐞嗚В锛歵erm锛氳瘝椤规煡璇紝涓嶅垎鏋愭煡璇㈣瘝锛岄€傚悎绮剧‘鍊笺€?,
+      "memoryTip": "term 鏄€滆瘝椤光€濓細涓嶅垎璇嶏紝鎷垮畬鏁村€煎幓绮剧‘鍖归厤銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "查询 DSL"
+        "鏌ヨ DSL"
       ]
     },
     {
       "id": "q043",
       "type": "single",
-      "question": "在 ElasticSearch 中，创建文档时如果不指定 ID，会发生什么？",
+      "question": "鍦?ElasticSearch 涓紝鍒涘缓鏂囨。鏃跺鏋滀笉鎸囧畾 ID锛屼細鍙戠敓浠€涔堬紵",
       "options": {
-        "A": "创建失败",
-        "B": "自动生成一个随机 ID",
-        "C": "使用默认 ID \"1\"",
-        "D": "抛出异常"
+        "A": "鍒涘缓澶辫触",
+        "B": "鑷姩鐢熸垚涓€涓殢鏈?ID",
+        "C": "浣跨敤榛樿 ID \"1\"",
+        "D": "鎶涘嚭寮傚父"
       },
       "answer": "B",
       "referenceAnswer": "B",
-      "explanation": "正确选项是 B（B. 自动生成一个随机 ID）。本题考查基础概念。复习时抓住题干关键词，再把它和正确答案中的核心术语对应起来。",
-      "memoryTip": "复习时先圈出题干关键词，再用一句中文把英文术语翻译出来，最后对应到答案。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?B锛圔. 鑷姩鐢熸垚涓€涓殢鏈?ID锛夈€傛湰棰樿€冩煡鍩虹姒傚康銆傚涔犳椂鎶撲綇棰樺共鍏抽敭璇嶏紝鍐嶆妸瀹冨拰姝ｇ‘绛旀涓殑鏍稿績鏈瀵瑰簲璧锋潵銆?,
+      "memoryTip": "澶嶄範鏃跺厛鍦堝嚭棰樺共鍏抽敭璇嶏紝鍐嶇敤涓€鍙ヤ腑鏂囨妸鑻辨枃鏈缈昏瘧鍑烘潵锛屾渶鍚庡搴斿埌绛旀銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "综合复习"
+        "缁煎悎澶嶄範"
       ]
     },
     {
       "id": "q044",
       "type": "single",
-      "question": "在 ElasticSearch 中，用于实现范围查询的关键字是？",
+      "question": "鍦?ElasticSearch 涓紝鐢ㄤ簬瀹炵幇鑼冨洿鏌ヨ鐨勫叧閿瓧鏄紵",
       "options": {
         "A": "match",
         "B": "term",
@@ -862,17 +862,17 @@ window.QUESTION_BANK = {
       },
       "answer": "C",
       "referenceAnswer": "C",
-      "explanation": "正确选项是 C（C. range）。本题考查基础概念。复习时抓住题干关键词，再把它和正确答案中的核心术语对应起来。 术语理解：range：范围查询，常用于数字、日期区间。",
-      "memoryTip": "DSL 题先看目的：全文搜用 match，多字段用 multi_match，精确值用 term，范围用 range，组合条件用 bool。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?C锛圕. range锛夈€傛湰棰樿€冩煡鍩虹姒傚康銆傚涔犳椂鎶撲綇棰樺共鍏抽敭璇嶏紝鍐嶆妸瀹冨拰姝ｇ‘绛旀涓殑鏍稿績鏈瀵瑰簲璧锋潵銆?鏈鐞嗚В锛歳ange锛氳寖鍥存煡璇紝甯哥敤浜庢暟瀛椼€佹棩鏈熷尯闂淬€?,
+      "memoryTip": "DSL 棰樺厛鐪嬬洰鐨勶細鍏ㄦ枃鎼滅敤 match锛屽瀛楁鐢?multi_match锛岀簿纭€肩敤 term锛岃寖鍥寸敤 range锛岀粍鍚堟潯浠剁敤 bool銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "查询 DSL"
+        "鏌ヨ DSL"
       ]
     },
     {
       "id": "q045",
       "type": "single",
-      "question": "以下哪个端口是 ElasticSearch Head 插件默认的访问端口？",
+      "question": "浠ヤ笅鍝釜绔彛鏄?ElasticSearch Head 鎻掍欢榛樿鐨勮闂鍙ｏ紵",
       "options": {
         "A": "9200",
         "B": "9300",
@@ -881,22 +881,22 @@ window.QUESTION_BANK = {
       },
       "answer": "C",
       "referenceAnswer": "C",
-      "explanation": "正确选项是 C（C. 9100）。本题考查基础概念。复习时抓住题干关键词，再把它和正确答案中的核心术语对应起来。",
-      "memoryTip": "配置题按用途记：cluster.name 管集群名，node.* 管节点角色，network/http 管访问和网络。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?C锛圕. 9100锛夈€傛湰棰樿€冩煡鍩虹姒傚康銆傚涔犳椂鎶撲綇棰樺共鍏抽敭璇嶏紝鍐嶆妸瀹冨拰姝ｇ‘绛旀涓殑鏍稿績鏈瀵瑰簲璧锋潵銆?,
+      "memoryTip": "閰嶇疆棰樻寜鐢ㄩ€旇锛歝luster.name 绠￠泦缇ゅ悕锛宯ode.* 绠¤妭鐐硅鑹诧紝network/http 绠¤闂拰缃戠粶銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "安装配置"
+        "瀹夎閰嶇疆"
       ]
     },
     {
       "id": "q046",
       "type": "multiple",
-      "question": "以下哪些是 ElasticSearch 的特点？",
+      "question": "浠ヤ笅鍝簺鏄?ElasticSearch 鐨勭壒鐐癸紵",
       "options": {
-        "A": "分布式",
-        "B": "高扩展",
-        "C": "近乎实时",
-        "D": "基于 Java 开发"
+        "A": "鍒嗗竷寮?,
+        "B": "楂樻墿灞?,
+        "C": "杩戜箮瀹炴椂",
+        "D": "鍩轰簬 Java 寮€鍙?
       },
       "answer": [
         "A",
@@ -905,22 +905,22 @@ window.QUESTION_BANK = {
         "D"
       ],
       "referenceAnswer": "ABCD",
-      "explanation": "正确选项是 ABCD（A. 分布式；B. 高扩展；C. 近乎实时；D. 基于 Java 开发）。ElasticSearch 本身由 Java 开发，所以部署时经常会遇到 JDK 版本要求。",
-      "memoryTip": "ES 用 Java 写，所以安装部署常和 JDK 版本绑定记。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?ABCD锛圓. 鍒嗗竷寮忥紱B. 楂樻墿灞曪紱C. 杩戜箮瀹炴椂锛汥. 鍩轰簬 Java 寮€鍙戯級銆侲lasticSearch 鏈韩鐢?Java 寮€鍙戯紝鎵€浠ラ儴缃叉椂缁忓父浼氶亣鍒?JDK 鐗堟湰瑕佹眰銆?,
+      "memoryTip": "ES 鐢?Java 鍐欙紝鎵€浠ュ畨瑁呴儴缃插父鍜?JDK 鐗堟湰缁戝畾璁般€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "基础概念"
+        "鍩虹姒傚康"
       ]
     },
     {
       "id": "q047",
       "type": "multiple",
-      "question": "以下哪些公司在使用 ElasticSearch？",
+      "question": "浠ヤ笅鍝簺鍏徃鍦ㄤ娇鐢?ElasticSearch锛?,
       "options": {
         "A": "GitHub",
-        "B": "维基百科",
-        "C": "百度",
-        "D": "阿里巴巴"
+        "B": "缁村熀鐧剧",
+        "C": "鐧惧害",
+        "D": "闃块噷宸村反"
       },
       "answer": [
         "A",
@@ -929,22 +929,22 @@ window.QUESTION_BANK = {
         "D"
       ],
       "referenceAnswer": "ABCD",
-      "explanation": "正确选项是 ABCD（A. GitHub；B. 维基百科；C. 百度；D. 阿里巴巴）。本题是多选，要把每个选项逐项代入 ElasticSearch 的特点、概念或用法判断，不能只选最熟悉的一项。",
-      "memoryTip": "复习时先圈出题干关键词，再用一句中文把英文术语翻译出来，最后对应到答案。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?ABCD锛圓. GitHub锛汢. 缁村熀鐧剧锛汣. 鐧惧害锛汥. 闃块噷宸村反锛夈€傛湰棰樻槸澶氶€夛紝瑕佹妸姣忎釜閫夐」閫愰」浠ｅ叆 ElasticSearch 鐨勭壒鐐广€佹蹇垫垨鐢ㄦ硶鍒ゆ柇锛屼笉鑳藉彧閫夋渶鐔熸倝鐨勪竴椤广€?,
+      "memoryTip": "澶嶄範鏃跺厛鍦堝嚭棰樺共鍏抽敭璇嶏紝鍐嶇敤涓€鍙ヤ腑鏂囨妸鑻辨枃鏈缈昏瘧鍑烘潵锛屾渶鍚庡搴斿埌绛旀銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "综合复习"
+        "缁煎悎澶嶄範"
       ]
     },
     {
       "id": "q048",
       "type": "multiple",
-      "question": "以下哪些是 ElasticSearch 的使用场景？",
+      "question": "浠ヤ笅鍝簺鏄?ElasticSearch 鐨勪娇鐢ㄥ満鏅紵",
       "options": {
-        "A": "全文检索",
-        "B": "日志分析",
-        "C": "指标分析",
-        "D": "数据可视化"
+        "A": "鍏ㄦ枃妫€绱?,
+        "B": "鏃ュ織鍒嗘瀽",
+        "C": "鎸囨爣鍒嗘瀽",
+        "D": "鏁版嵁鍙鍖?
       },
       "answer": [
         "A",
@@ -953,17 +953,17 @@ window.QUESTION_BANK = {
         "D"
       ],
       "referenceAnswer": "ABCD",
-      "explanation": "正确选项是 ABCD（A. 全文检索；B. 日志分析；C. 指标分析；D. 数据可视化）。本题是多选，要把每个选项逐项代入 ElasticSearch 的特点、概念或用法判断，不能只选最熟悉的一项。",
-      "memoryTip": "复习时先圈出题干关键词，再用一句中文把英文术语翻译出来，最后对应到答案。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?ABCD锛圓. 鍏ㄦ枃妫€绱紱B. 鏃ュ織鍒嗘瀽锛汣. 鎸囨爣鍒嗘瀽锛汥. 鏁版嵁鍙鍖栵級銆傛湰棰樻槸澶氶€夛紝瑕佹妸姣忎釜閫夐」閫愰」浠ｅ叆 ElasticSearch 鐨勭壒鐐广€佹蹇垫垨鐢ㄦ硶鍒ゆ柇锛屼笉鑳藉彧閫夋渶鐔熸倝鐨勪竴椤广€?,
+      "memoryTip": "澶嶄範鏃跺厛鍦堝嚭棰樺共鍏抽敭璇嶏紝鍐嶇敤涓€鍙ヤ腑鏂囨妸鑻辨枃鏈缈昏瘧鍑烘潵锛屾渶鍚庡搴斿埌绛旀銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "综合复习"
+        "缁煎悎澶嶄範"
       ]
     },
     {
       "id": "q049",
       "type": "multiple",
-      "question": "ElasticSearch 的目录结构中，包含以下哪些文件夹？",
+      "question": "ElasticSearch 鐨勭洰褰曠粨鏋勪腑锛屽寘鍚互涓嬪摢浜涙枃浠跺す锛?,
       "options": {
         "A": "bin",
         "B": "config",
@@ -977,22 +977,22 @@ window.QUESTION_BANK = {
         "D"
       ],
       "referenceAnswer": "ABCD",
-      "explanation": "正确选项是 ABCD（A. bin；B. config；C. lib；D. plugins）。本题是多选，要把每个选项逐项代入 ElasticSearch 的特点、概念或用法判断，不能只选最熟悉的一项。",
-      "memoryTip": "复习时先圈出题干关键词，再用一句中文把英文术语翻译出来，最后对应到答案。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?ABCD锛圓. bin锛汢. config锛汣. lib锛汥. plugins锛夈€傛湰棰樻槸澶氶€夛紝瑕佹妸姣忎釜閫夐」閫愰」浠ｅ叆 ElasticSearch 鐨勭壒鐐广€佹蹇垫垨鐢ㄦ硶鍒ゆ柇锛屼笉鑳藉彧閫夋渶鐔熸倝鐨勪竴椤广€?,
+      "memoryTip": "澶嶄範鏃跺厛鍦堝嚭棰樺共鍏抽敭璇嶏紝鍐嶇敤涓€鍙ヤ腑鏂囨妸鑻辨枃鏈缈昏瘧鍑烘潵锛屾渶鍚庡搴斿埌绛旀銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "综合复习"
+        "缁煎悎澶嶄範"
       ]
     },
     {
       "id": "q050",
       "type": "multiple",
-      "question": "ElasticSearch 的基本操作包括以下哪些？",
+      "question": "ElasticSearch 鐨勫熀鏈搷浣滃寘鎷互涓嬪摢浜涳紵",
       "options": {
-        "A": "索引操作",
-        "B": "文档操作",
-        "C": "查询操作",
-        "D": "集群操作"
+        "A": "绱㈠紩鎿嶄綔",
+        "B": "鏂囨。鎿嶄綔",
+        "C": "鏌ヨ鎿嶄綔",
+        "D": "闆嗙兢鎿嶄綔"
       },
       "answer": [
         "A",
@@ -1001,19 +1001,19 @@ window.QUESTION_BANK = {
         "D"
       ],
       "referenceAnswer": "ABCD",
-      "explanation": "正确选项是 ABCD（A. 索引操作；B. 文档操作；C. 查询操作；D. 集群操作）。本题是多选，要把每个选项逐项代入 ElasticSearch 的特点、概念或用法判断，不能只选最熟悉的一项。",
-      "memoryTip": "集群题先分角色：cluster 是整体，node 是节点，shard 是分片，replica 是副本，master 管调度。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?ABCD锛圓. 绱㈠紩鎿嶄綔锛汢. 鏂囨。鎿嶄綔锛汣. 鏌ヨ鎿嶄綔锛汥. 闆嗙兢鎿嶄綔锛夈€傛湰棰樻槸澶氶€夛紝瑕佹妸姣忎釜閫夐」閫愰」浠ｅ叆 ElasticSearch 鐨勭壒鐐广€佹蹇垫垨鐢ㄦ硶鍒ゆ柇锛屼笉鑳藉彧閫夋渶鐔熸倝鐨勪竴椤广€?,
+      "memoryTip": "闆嗙兢棰樺厛鍒嗚鑹诧細cluster 鏄暣浣擄紝node 鏄妭鐐癸紝shard 鏄垎鐗囷紝replica 鏄壇鏈紝master 绠¤皟搴︺€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "集群与分片",
-        "索引与映射",
-        "查询 DSL"
+        "闆嗙兢涓庡垎鐗?,
+        "绱㈠紩涓庢槧灏?,
+        "鏌ヨ DSL"
       ]
     },
     {
       "id": "q051",
       "type": "multiple",
-      "question": "ElasticSearch 的配置文件包括以下哪些？",
+      "question": "ElasticSearch 鐨勯厤缃枃浠跺寘鎷互涓嬪摢浜涳紵",
       "options": {
         "A": "elasticsearch.yml",
         "B": "jvm.options",
@@ -1026,17 +1026,17 @@ window.QUESTION_BANK = {
         "C"
       ],
       "referenceAnswer": "ABC",
-      "explanation": "正确选项是 ABC（A. elasticsearch.yml；B. jvm.options；C. log4j2.properties）。本题是多选，要把每个选项逐项代入 ElasticSearch 的特点、概念或用法判断，不能只选最熟悉的一项。",
-      "memoryTip": "配置题按用途记：cluster.name 管集群名，node.* 管节点角色，network/http 管访问和网络。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?ABC锛圓. elasticsearch.yml锛汢. jvm.options锛汣. log4j2.properties锛夈€傛湰棰樻槸澶氶€夛紝瑕佹妸姣忎釜閫夐」閫愰」浠ｅ叆 ElasticSearch 鐨勭壒鐐广€佹蹇垫垨鐢ㄦ硶鍒ゆ柇锛屼笉鑳藉彧閫夋渶鐔熸倝鐨勪竴椤广€?,
+      "memoryTip": "閰嶇疆棰樻寜鐢ㄩ€旇锛歝luster.name 绠￠泦缇ゅ悕锛宯ode.* 绠¤妭鐐硅鑹诧紝network/http 绠¤闂拰缃戠粶銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "安装配置"
+        "瀹夎閰嶇疆"
       ]
     },
     {
       "id": "q052",
       "type": "multiple",
-      "question": "以下哪些是 ElasticSearch Head 插件安装所需的环境？",
+      "question": "浠ヤ笅鍝簺鏄?ElasticSearch Head 鎻掍欢瀹夎鎵€闇€鐨勭幆澧冿紵",
       "options": {
         "A": "Node.js",
         "B": "Grunt",
@@ -1048,22 +1048,22 @@ window.QUESTION_BANK = {
         "B"
       ],
       "referenceAnswer": "AB",
-      "explanation": "正确选项是 AB（A. Node.js；B. Grunt）。本题是多选，要把每个选项逐项代入 ElasticSearch 的特点、概念或用法判断，不能只选最熟悉的一项。",
-      "memoryTip": "配置题按用途记：cluster.name 管集群名，node.* 管节点角色，network/http 管访问和网络。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?AB锛圓. Node.js锛汢. Grunt锛夈€傛湰棰樻槸澶氶€夛紝瑕佹妸姣忎釜閫夐」閫愰」浠ｅ叆 ElasticSearch 鐨勭壒鐐广€佹蹇垫垨鐢ㄦ硶鍒ゆ柇锛屼笉鑳藉彧閫夋渶鐔熸倝鐨勪竴椤广€?,
+      "memoryTip": "閰嶇疆棰樻寜鐢ㄩ€旇锛歝luster.name 绠￠泦缇ゅ悕锛宯ode.* 绠¤妭鐐硅鑹诧紝network/http 绠¤闂拰缃戠粶銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "安装配置"
+        "瀹夎閰嶇疆"
       ]
     },
     {
       "id": "q053",
       "type": "multiple",
-      "question": "以下关于 windows版的ElasticSearch7.14.0 安装的说法，正确的有？",
+      "question": "浠ヤ笅鍏充簬 windows鐗堢殑ElasticSearch7.14.0 瀹夎鐨勮娉曪紝姝ｇ‘鐨勬湁锛?,
       "options": {
-        "A": "Windows 版本解压即可安装",
-        "B": "需要配置 JDK 环境变量",
-        "C": "7.14.0 版本需要 JDK 11+以上版本",
-        "D": "可以通过修改 elasticsearch.yml 进行配置"
+        "A": "Windows 鐗堟湰瑙ｅ帇鍗冲彲瀹夎",
+        "B": "闇€瑕侀厤缃?JDK 鐜鍙橀噺",
+        "C": "7.14.0 鐗堟湰闇€瑕?JDK 11+浠ヤ笂鐗堟湰",
+        "D": "鍙互閫氳繃淇敼 elasticsearch.yml 杩涜閰嶇疆"
       },
       "answer": [
         "A",
@@ -1071,22 +1071,22 @@ window.QUESTION_BANK = {
         "D"
       ],
       "referenceAnswer": "ACD",
-      "explanation": "正确选项是 ACD（A. Windows 版本解压即可安装；C. 7.14.0 版本需要 JDK 11+以上版本；D. 可以通过修改 elasticsearch.yml 进行配置）。本题是多选，要把每个选项逐项代入 ElasticSearch 的特点、概念或用法判断，不能只选最熟悉的一项。",
-      "memoryTip": "配置题按用途记：cluster.name 管集群名，node.* 管节点角色，network/http 管访问和网络。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?ACD锛圓. Windows 鐗堟湰瑙ｅ帇鍗冲彲瀹夎锛汣. 7.14.0 鐗堟湰闇€瑕?JDK 11+浠ヤ笂鐗堟湰锛汥. 鍙互閫氳繃淇敼 elasticsearch.yml 杩涜閰嶇疆锛夈€傛湰棰樻槸澶氶€夛紝瑕佹妸姣忎釜閫夐」閫愰」浠ｅ叆 ElasticSearch 鐨勭壒鐐广€佹蹇垫垨鐢ㄦ硶鍒ゆ柇锛屼笉鑳藉彧閫夋渶鐔熸倝鐨勪竴椤广€?,
+      "memoryTip": "閰嶇疆棰樻寜鐢ㄩ€旇锛歝luster.name 绠￠泦缇ゅ悕锛宯ode.* 绠¤妭鐐硅鑹诧紝network/http 绠¤闂拰缃戠粶銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "安装配置"
+        "瀹夎閰嶇疆"
       ]
     },
     {
       "id": "q054",
       "type": "multiple",
-      "question": "以下关于 ElasticSearch JVM 内存配置的说法，正确的有？",
+      "question": "浠ヤ笅鍏充簬 ElasticSearch JVM 鍐呭瓨閰嶇疆鐨勮娉曪紝姝ｇ‘鐨勬湁锛?,
       "options": {
-        "A": "-Xms 和 -Xmx 必须设置为相同值",
-        "B": "建议设置为物理内存的一半",
-        "C": "不要超过 32GB",
-        "D": "内存越大越好"
+        "A": "-Xms 鍜?-Xmx 蹇呴』璁剧疆涓虹浉鍚屽€?,
+        "B": "寤鸿璁剧疆涓虹墿鐞嗗唴瀛樼殑涓€鍗?,
+        "C": "涓嶈瓒呰繃 32GB",
+        "D": "鍐呭瓨瓒婂ぇ瓒婂ソ"
       },
       "answer": [
         "A",
@@ -1094,22 +1094,22 @@ window.QUESTION_BANK = {
         "C"
       ],
       "referenceAnswer": "ABC",
-      "explanation": "正确选项是 ABC（A. -Xms 和 -Xmx 必须设置为相同值；B. 建议设置为物理内存的一半；C. 不要超过 32GB）。本题是多选，要把每个选项逐项代入 ElasticSearch 的特点、概念或用法判断，不能只选最熟悉的一项。",
-      "memoryTip": "配置题按用途记：cluster.name 管集群名，node.* 管节点角色，network/http 管访问和网络。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?ABC锛圓. -Xms 鍜?-Xmx 蹇呴』璁剧疆涓虹浉鍚屽€硷紱B. 寤鸿璁剧疆涓虹墿鐞嗗唴瀛樼殑涓€鍗婏紱C. 涓嶈瓒呰繃 32GB锛夈€傛湰棰樻槸澶氶€夛紝瑕佹妸姣忎釜閫夐」閫愰」浠ｅ叆 ElasticSearch 鐨勭壒鐐广€佹蹇垫垨鐢ㄦ硶鍒ゆ柇锛屼笉鑳藉彧閫夋渶鐔熸倝鐨勪竴椤广€?,
+      "memoryTip": "閰嶇疆棰樻寜鐢ㄩ€旇锛歝luster.name 绠￠泦缇ゅ悕锛宯ode.* 绠¤妭鐐硅鑹诧紝network/http 绠¤闂拰缃戠粶銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "安装配置"
+        "瀹夎閰嶇疆"
       ]
     },
     {
       "id": "q055",
       "type": "multiple",
-      "question": "以下关于 ElasticSearch 分片的说法，正确的有？",
+      "question": "浠ヤ笅鍏充簬 ElasticSearch 鍒嗙墖鐨勮娉曪紝姝ｇ‘鐨勬湁锛?,
       "options": {
-        "A": "分片可以水平分割扩展内容容量",
-        "B": "分片可以在多个节点上并行操作提高性能",
-        "C": "索引创建后可以随时修改分片数量",
-        "D": "每个分片本身是一个独立的 \"索引\""
+        "A": "鍒嗙墖鍙互姘村钩鍒嗗壊鎵╁睍鍐呭瀹归噺",
+        "B": "鍒嗙墖鍙互鍦ㄥ涓妭鐐逛笂骞惰鎿嶄綔鎻愰珮鎬ц兘",
+        "C": "绱㈠紩鍒涘缓鍚庡彲浠ラ殢鏃朵慨鏀瑰垎鐗囨暟閲?,
+        "D": "姣忎釜鍒嗙墖鏈韩鏄竴涓嫭绔嬬殑 \"绱㈠紩\""
       },
       "answer": [
         "A",
@@ -1117,24 +1117,24 @@ window.QUESTION_BANK = {
         "D"
       ],
       "referenceAnswer": "ABD",
-      "explanation": "正确选项是 ABD（A. 分片可以水平分割扩展内容容量；B. 分片可以在多个节点上并行操作提高性能；D. 每个分片本身是一个独立的 \"索引\"）。本题是多选，要把每个选项逐项代入 ElasticSearch 的特点、概念或用法判断，不能只选最熟悉的一项。",
-      "memoryTip": "Shard 分片记“拆”：把一个索引拆成多份，解决容量和并行处理。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?ABD锛圓. 鍒嗙墖鍙互姘村钩鍒嗗壊鎵╁睍鍐呭瀹归噺锛汢. 鍒嗙墖鍙互鍦ㄥ涓妭鐐逛笂骞惰鎿嶄綔鎻愰珮鎬ц兘锛汥. 姣忎釜鍒嗙墖鏈韩鏄竴涓嫭绔嬬殑 \"绱㈠紩\"锛夈€傛湰棰樻槸澶氶€夛紝瑕佹妸姣忎釜閫夐」閫愰」浠ｅ叆 ElasticSearch 鐨勭壒鐐广€佹蹇垫垨鐢ㄦ硶鍒ゆ柇锛屼笉鑳藉彧閫夋渶鐔熸倝鐨勪竴椤广€?,
+      "memoryTip": "Shard 鍒嗙墖璁扳€滄媶鈥濓細鎶婁竴涓储寮曟媶鎴愬浠斤紝瑙ｅ喅瀹归噺鍜屽苟琛屽鐞嗐€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "集群与分片",
-        "索引与映射",
-        "运维优化"
+        "闆嗙兢涓庡垎鐗?,
+        "绱㈠紩涓庢槧灏?,
+        "杩愮淮浼樺寲"
       ]
     },
     {
       "id": "q056",
       "type": "multiple",
-      "question": "以下哪些是 ElasticSearch 集群的节点类型？",
+      "question": "浠ヤ笅鍝簺鏄?ElasticSearch 闆嗙兢鐨勮妭鐐圭被鍨嬶紵",
       "options": {
-        "A": "主节点（Master Node）",
-        "B": "数据节点（Data Node）",
-        "C": "协调节点（Coordinating Node）",
-        "D": "客户端节点（Client Node）"
+        "A": "涓昏妭鐐癸紙Master Node锛?,
+        "B": "鏁版嵁鑺傜偣锛圖ata Node锛?,
+        "C": "鍗忚皟鑺傜偣锛圕oordinating Node锛?,
+        "D": "瀹㈡埛绔妭鐐癸紙Client Node锛?
       },
       "answer": [
         "A",
@@ -1142,23 +1142,23 @@ window.QUESTION_BANK = {
         "C"
       ],
       "referenceAnswer": "ABC",
-      "explanation": "正确选项是 ABC（A. 主节点（Master Node）；B. 数据节点（Data Node）；C. 协调节点（Coordinating Node））。本题是多选，要把每个选项逐项代入 ElasticSearch 的特点、概念或用法判断，不能只选最熟悉的一项。",
-      "memoryTip": "集群题先分角色：cluster 是整体，node 是节点，shard 是分片，replica 是副本，master 管调度。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?ABC锛圓. 涓昏妭鐐癸紙Master Node锛夛紱B. 鏁版嵁鑺傜偣锛圖ata Node锛夛紱C. 鍗忚皟鑺傜偣锛圕oordinating Node锛夛級銆傛湰棰樻槸澶氶€夛紝瑕佹妸姣忎釜閫夐」閫愰」浠ｅ叆 ElasticSearch 鐨勭壒鐐广€佹蹇垫垨鐢ㄦ硶鍒ゆ柇锛屼笉鑳藉彧閫夋渶鐔熸倝鐨勪竴椤广€?,
+      "memoryTip": "闆嗙兢棰樺厛鍒嗚鑹诧細cluster 鏄暣浣擄紝node 鏄妭鐐癸紝shard 鏄垎鐗囷紝replica 鏄壇鏈紝master 绠¤皟搴︺€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "集群与分片",
-        "索引与映射"
+        "闆嗙兢涓庡垎鐗?,
+        "绱㈠紩涓庢槧灏?
       ]
     },
     {
       "id": "q057",
       "type": "multiple",
-      "question": "以下关于 ElasticSearch 主分片的说法，正确的有？",
+      "question": "浠ヤ笅鍏充簬 ElasticSearch 涓诲垎鐗囩殑璇存硶锛屾纭殑鏈夛紵",
       "options": {
-        "A": "主分片是索引的一部分",
-        "B": "每个文档都存储在一个主分片上",
-        "C": "主分片的数量在索引创建时指定",
-        "D": "主分片的数量可以随时修改"
+        "A": "涓诲垎鐗囨槸绱㈠紩鐨勪竴閮ㄥ垎",
+        "B": "姣忎釜鏂囨。閮藉瓨鍌ㄥ湪涓€涓富鍒嗙墖涓?,
+        "C": "涓诲垎鐗囩殑鏁伴噺鍦ㄧ储寮曞垱寤烘椂鎸囧畾",
+        "D": "涓诲垎鐗囩殑鏁伴噺鍙互闅忔椂淇敼"
       },
       "answer": [
         "A",
@@ -1166,18 +1166,18 @@ window.QUESTION_BANK = {
         "C"
       ],
       "referenceAnswer": "ABC",
-      "explanation": "正确选项是 ABC（A. 主分片是索引的一部分；B. 每个文档都存储在一个主分片上；C. 主分片的数量在索引创建时指定）。本题是多选，要把每个选项逐项代入 ElasticSearch 的特点、概念或用法判断，不能只选最熟悉的一项。",
-      "memoryTip": "主分片记“原件”：真正承载数据；复制分片记“复印件”：容灾和分摊查询。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?ABC锛圓. 涓诲垎鐗囨槸绱㈠紩鐨勪竴閮ㄥ垎锛汢. 姣忎釜鏂囨。閮藉瓨鍌ㄥ湪涓€涓富鍒嗙墖涓婏紱C. 涓诲垎鐗囩殑鏁伴噺鍦ㄧ储寮曞垱寤烘椂鎸囧畾锛夈€傛湰棰樻槸澶氶€夛紝瑕佹妸姣忎釜閫夐」閫愰」浠ｅ叆 ElasticSearch 鐨勭壒鐐广€佹蹇垫垨鐢ㄦ硶鍒ゆ柇锛屼笉鑳藉彧閫夋渶鐔熸倝鐨勪竴椤广€?,
+      "memoryTip": "涓诲垎鐗囪鈥滃師浠垛€濓細鐪熸鎵胯浇鏁版嵁锛涘鍒跺垎鐗囪鈥滃鍗颁欢鈥濓細瀹圭伨鍜屽垎鎽婃煡璇€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "集群与分片",
-        "索引与映射"
+        "闆嗙兢涓庡垎鐗?,
+        "绱㈠紩涓庢槧灏?
       ]
     },
     {
       "id": "q058",
       "type": "multiple",
-      "question": "以下哪些 HTTP 方法可以用于在 ElasticSearch 中修改文档？",
+      "question": "浠ヤ笅鍝簺 HTTP 鏂规硶鍙互鐢ㄤ簬鍦?ElasticSearch 涓慨鏀规枃妗ｏ紵",
       "options": {
         "A": "PUT",
         "B": "POST",
@@ -1189,22 +1189,22 @@ window.QUESTION_BANK = {
         "B"
       ],
       "referenceAnswer": "AB",
-      "explanation": "正确选项是 AB（A. PUT；B. POST）。本题是多选，要把每个选项逐项代入 ElasticSearch 的特点、概念或用法判断，不能只选最熟悉的一项。 术语理解：HTTP：浏览器和客户端访问服务常用的网络协议。",
-      "memoryTip": "复习时先圈出题干关键词，再用一句中文把英文术语翻译出来，最后对应到答案。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?AB锛圓. PUT锛汢. POST锛夈€傛湰棰樻槸澶氶€夛紝瑕佹妸姣忎釜閫夐」閫愰」浠ｅ叆 ElasticSearch 鐨勭壒鐐广€佹蹇垫垨鐢ㄦ硶鍒ゆ柇锛屼笉鑳藉彧閫夋渶鐔熸倝鐨勪竴椤广€?鏈鐞嗚В锛欻TTP锛氭祻瑙堝櫒鍜屽鎴风璁块棶鏈嶅姟甯哥敤鐨勭綉缁滃崗璁€?,
+      "memoryTip": "澶嶄範鏃跺厛鍦堝嚭棰樺共鍏抽敭璇嶏紝鍐嶇敤涓€鍙ヤ腑鏂囨妸鑻辨枃鏈缈昏瘧鍑烘潵锛屾渶鍚庡搴斿埌绛旀銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "综合复习"
+        "缁煎悎澶嶄範"
       ]
     },
     {
       "id": "q059",
       "type": "multiple",
-      "question": "以下关于 ElasticSearch 复制的说法，正确的有？",
+      "question": "浠ヤ笅鍏充簬 ElasticSearch 澶嶅埗鐨勮娉曪紝姝ｇ‘鐨勬湁锛?,
       "options": {
-        "A": "复制可以提高数据的可用性",
-        "B": "复制可以提高搜索的吞吐量",
-        "C": "索引创建后可以动态修改复制的数量",
-        "D": "复制分片与主分片可以在同一个节点上"
+        "A": "澶嶅埗鍙互鎻愰珮鏁版嵁鐨勫彲鐢ㄦ€?,
+        "B": "澶嶅埗鍙互鎻愰珮鎼滅储鐨勫悶鍚愰噺",
+        "C": "绱㈠紩鍒涘缓鍚庡彲浠ュ姩鎬佷慨鏀瑰鍒剁殑鏁伴噺",
+        "D": "澶嶅埗鍒嗙墖涓庝富鍒嗙墖鍙互鍦ㄥ悓涓€涓妭鐐逛笂"
       },
       "answer": [
         "A",
@@ -1212,19 +1212,19 @@ window.QUESTION_BANK = {
         "C"
       ],
       "referenceAnswer": "ABC",
-      "explanation": "正确选项是 ABC（A. 复制可以提高数据的可用性；B. 复制可以提高搜索的吞吐量；C. 索引创建后可以动态修改复制的数量）。本题是多选，要把每个选项逐项代入 ElasticSearch 的特点、概念或用法判断，不能只选最熟悉的一项。",
-      "memoryTip": "集群题先分角色：cluster 是整体，node 是节点，shard 是分片，replica 是副本，master 管调度。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?ABC锛圓. 澶嶅埗鍙互鎻愰珮鏁版嵁鐨勫彲鐢ㄦ€э紱B. 澶嶅埗鍙互鎻愰珮鎼滅储鐨勫悶鍚愰噺锛汣. 绱㈠紩鍒涘缓鍚庡彲浠ュ姩鎬佷慨鏀瑰鍒剁殑鏁伴噺锛夈€傛湰棰樻槸澶氶€夛紝瑕佹妸姣忎釜閫夐」閫愰」浠ｅ叆 ElasticSearch 鐨勭壒鐐广€佹蹇垫垨鐢ㄦ硶鍒ゆ柇锛屼笉鑳藉彧閫夋渶鐔熸倝鐨勪竴椤广€?,
+      "memoryTip": "闆嗙兢棰樺厛鍒嗚鑹诧細cluster 鏄暣浣擄紝node 鏄妭鐐癸紝shard 鏄垎鐗囷紝replica 鏄壇鏈紝master 绠¤皟搴︺€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "集群与分片",
-        "索引与映射",
-        "运维优化"
+        "闆嗙兢涓庡垎鐗?,
+        "绱㈠紩涓庢槧灏?,
+        "杩愮淮浼樺寲"
       ]
     },
     {
       "id": "q060",
       "type": "multiple",
-      "question": "以下哪些是 ElasticSearch 支持的数据类型？",
+      "question": "浠ヤ笅鍝簺鏄?ElasticSearch 鏀寔鐨勬暟鎹被鍨嬶紵",
       "options": {
         "A": "text",
         "B": "keyword",
@@ -1238,22 +1238,22 @@ window.QUESTION_BANK = {
         "D"
       ],
       "referenceAnswer": "ABCD",
-      "explanation": "正确选项是 ABCD（A. text；B. keyword；C. long；D. date）。text 会分词，适合全文检索；keyword 不分词，适合精确匹配。 术语理解：keyword：关键词类型，不分词，适合精确匹配、排序和聚合。 text：文本类型，会分词，适合全文检索。",
-      "memoryTip": "text 是“长文本”：会分词，适合全文检索；keyword 是“完整关键词”：不分词。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?ABCD锛圓. text锛汢. keyword锛汣. long锛汥. date锛夈€倀ext 浼氬垎璇嶏紝閫傚悎鍏ㄦ枃妫€绱紱keyword 涓嶅垎璇嶏紝閫傚悎绮剧‘鍖归厤銆?鏈鐞嗚В锛歬eyword锛氬叧閿瘝绫诲瀷锛屼笉鍒嗚瘝锛岄€傚悎绮剧‘鍖归厤銆佹帓搴忓拰鑱氬悎銆?text锛氭枃鏈被鍨嬶紝浼氬垎璇嶏紝閫傚悎鍏ㄦ枃妫€绱€?,
+      "memoryTip": "text 鏄€滈暱鏂囨湰鈥濓細浼氬垎璇嶏紝閫傚悎鍏ㄦ枃妫€绱紱keyword 鏄€滃畬鏁村叧閿瘝鈥濓細涓嶅垎璇嶃€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "索引与映射"
+        "绱㈠紩涓庢槧灏?
       ]
     },
     {
       "id": "q061",
       "type": "multiple",
-      "question": "ElasticSearch 的查询操作中，支持以下哪些功能？",
+      "question": "ElasticSearch 鐨勬煡璇㈡搷浣滀腑锛屾敮鎸佷互涓嬪摢浜涘姛鑳斤紵",
       "options": {
-        "A": "条件查询",
-        "B": "分页查询",
-        "C": "排序查询",
-        "D": "分组查询"
+        "A": "鏉′欢鏌ヨ",
+        "B": "鍒嗛〉鏌ヨ",
+        "C": "鎺掑簭鏌ヨ",
+        "D": "鍒嗙粍鏌ヨ"
       },
       "answer": [
         "A",
@@ -1262,17 +1262,17 @@ window.QUESTION_BANK = {
         "D"
       ],
       "referenceAnswer": "ABCD",
-      "explanation": "正确选项是 ABCD（A. 条件查询；B. 分页查询；C. 排序查询；D. 分组查询）。本题是多选，要把每个选项逐项代入 ElasticSearch 的特点、概念或用法判断，不能只选最熟悉的一项。",
-      "memoryTip": "DSL 题先看目的：全文搜用 match，多字段用 multi_match，精确值用 term，范围用 range，组合条件用 bool。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?ABCD锛圓. 鏉′欢鏌ヨ锛汢. 鍒嗛〉鏌ヨ锛汣. 鎺掑簭鏌ヨ锛汥. 鍒嗙粍鏌ヨ锛夈€傛湰棰樻槸澶氶€夛紝瑕佹妸姣忎釜閫夐」閫愰」浠ｅ叆 ElasticSearch 鐨勭壒鐐广€佹蹇垫垨鐢ㄦ硶鍒ゆ柇锛屼笉鑳藉彧閫夋渶鐔熸倝鐨勪竴椤广€?,
+      "memoryTip": "DSL 棰樺厛鐪嬬洰鐨勶細鍏ㄦ枃鎼滅敤 match锛屽瀛楁鐢?multi_match锛岀簿纭€肩敤 term锛岃寖鍥寸敤 range锛岀粍鍚堟潯浠剁敤 bool銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "查询 DSL"
+        "鏌ヨ DSL"
       ]
     },
     {
       "id": "q062",
       "type": "multiple",
-      "question": "以下哪些是 ElasticSearch 支持的 HTTP 方法？",
+      "question": "浠ヤ笅鍝簺鏄?ElasticSearch 鏀寔鐨?HTTP 鏂规硶锛?,
       "options": {
         "A": "GET",
         "B": "POST",
@@ -1286,22 +1286,22 @@ window.QUESTION_BANK = {
         "D"
       ],
       "referenceAnswer": "ABCD",
-      "explanation": "正确选项是 ABCD（A. GET；B. POST；C. PUT；D. DELETE）。本题是多选，要把每个选项逐项代入 ElasticSearch 的特点、概念或用法判断，不能只选最熟悉的一项。 术语理解：HTTP：浏览器和客户端访问服务常用的网络协议。",
-      "memoryTip": "复习时先圈出题干关键词，再用一句中文把英文术语翻译出来，最后对应到答案。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?ABCD锛圓. GET锛汢. POST锛汣. PUT锛汥. DELETE锛夈€傛湰棰樻槸澶氶€夛紝瑕佹妸姣忎釜閫夐」閫愰」浠ｅ叆 ElasticSearch 鐨勭壒鐐广€佹蹇垫垨鐢ㄦ硶鍒ゆ柇锛屼笉鑳藉彧閫夋渶鐔熸倝鐨勪竴椤广€?鏈鐞嗚В锛欻TTP锛氭祻瑙堝櫒鍜屽鎴风璁块棶鏈嶅姟甯哥敤鐨勭綉缁滃崗璁€?,
+      "memoryTip": "澶嶄範鏃跺厛鍦堝嚭棰樺共鍏抽敭璇嶏紝鍐嶇敤涓€鍙ヤ腑鏂囨妸鑻辨枃鏈缈昏瘧鍑烘潵锛屾渶鍚庡搴斿埌绛旀銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "综合复习"
+        "缁煎悎澶嶄範"
       ]
     },
     {
       "id": "q063",
       "type": "multiple",
-      "question": "在 ElasticSearch 中，以下哪些是有效的查询类型？",
+      "question": "鍦?ElasticSearch 涓紝浠ヤ笅鍝簺鏄湁鏁堢殑鏌ヨ绫诲瀷锛?,
       "options": {
-        "A": "匹配查询（match）",
-        "B": "短语匹配查询（match_phrase）",
-        "C": "精确查询（term）",
-        "D": "范围查询（range）"
+        "A": "鍖归厤鏌ヨ锛坢atch锛?,
+        "B": "鐭鍖归厤鏌ヨ锛坢atch_phrase锛?,
+        "C": "绮剧‘鏌ヨ锛坱erm锛?,
+        "D": "鑼冨洿鏌ヨ锛坮ange锛?
       },
       "answer": [
         "A",
@@ -1310,23 +1310,23 @@ window.QUESTION_BANK = {
         "D"
       ],
       "referenceAnswer": "ABCD",
-      "explanation": "正确选项是 ABCD（A. 匹配查询（match）；B. 短语匹配查询（match_phrase）；C. 精确查询（term）；D. 范围查询（range））。phrase 是“短语”，match_phrase 要求短语整体匹配，比 match 更严格。 术语理解：match_phrase：短语匹配，要求词语按顺序整体出现。 range：范围查询，常用于数字、日期区间。 term：词项查询，不分析查询词，适合精确值。",
-      "memoryTip": "phrase 是“短语”：match_phrase 要求整句话或短语按顺序匹配。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?ABCD锛圓. 鍖归厤鏌ヨ锛坢atch锛夛紱B. 鐭鍖归厤鏌ヨ锛坢atch_phrase锛夛紱C. 绮剧‘鏌ヨ锛坱erm锛夛紱D. 鑼冨洿鏌ヨ锛坮ange锛夛級銆俻hrase 鏄€滅煭璇€濓紝match_phrase 瑕佹眰鐭鏁翠綋鍖归厤锛屾瘮 match 鏇翠弗鏍笺€?鏈鐞嗚В锛歮atch_phrase锛氱煭璇尮閰嶏紝瑕佹眰璇嶈鎸夐『搴忔暣浣撳嚭鐜般€?range锛氳寖鍥存煡璇紝甯哥敤浜庢暟瀛椼€佹棩鏈熷尯闂淬€?term锛氳瘝椤规煡璇紝涓嶅垎鏋愭煡璇㈣瘝锛岄€傚悎绮剧‘鍊笺€?,
+      "memoryTip": "phrase 鏄€滅煭璇€濓細match_phrase 瑕佹眰鏁村彞璇濇垨鐭鎸夐『搴忓尮閰嶃€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "索引与映射",
-        "查询 DSL"
+        "绱㈠紩涓庢槧灏?,
+        "鏌ヨ DSL"
       ]
     },
     {
       "id": "q064",
       "type": "multiple",
-      "question": "以下关于 IK 分词器的说法，正确的有？",
+      "question": "浠ヤ笅鍏充簬 IK 鍒嗚瘝鍣ㄧ殑璇存硶锛屾纭殑鏈夛紵",
       "options": {
-        "A": "IK 分词器是专门用于中文分词的插件",
-        "B": "ik_max_word 会将文本做最细粒度的拆分",
-        "C": "IK 分词器版本需要与 ElasticSearch 版本一致",
-        "D": "IK 分词器安装后需要重启 ElasticSearch 才能生效"
+        "A": "IK 鍒嗚瘝鍣ㄦ槸涓撻棬鐢ㄤ簬涓枃鍒嗚瘝鐨勬彃浠?,
+        "B": "ik_max_word 浼氬皢鏂囨湰鍋氭渶缁嗙矑搴︾殑鎷嗗垎",
+        "C": "IK 鍒嗚瘝鍣ㄧ増鏈渶瑕佷笌 ElasticSearch 鐗堟湰涓€鑷?,
+        "D": "IK 鍒嗚瘝鍣ㄥ畨瑁呭悗闇€瑕侀噸鍚?ElasticSearch 鎵嶈兘鐢熸晥"
       },
       "answer": [
         "A",
@@ -1335,23 +1335,23 @@ window.QUESTION_BANK = {
         "D"
       ],
       "referenceAnswer": "ABCD",
-      "explanation": "正确选项是 ABCD（A. IK 分词器是专门用于中文分词的插件；B. ik_max_word 会将文本做最细粒度的拆分；C. IK 分词器版本需要与 ElasticSearch 版本一致；D. IK 分词器安装后需要重启 ElasticSearch 才能生效）。ik_max_word 是最细切分，切出的词多，召回更多，适合新闻、文章等全文搜索。 术语理解：ik_max_word：IK 最细切分，词更多，偏提高召回率。",
-      "memoryTip": "max_word = 最大词量：切词多，偏召回、适合文章搜索。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?ABCD锛圓. IK 鍒嗚瘝鍣ㄦ槸涓撻棬鐢ㄤ簬涓枃鍒嗚瘝鐨勬彃浠讹紱B. ik_max_word 浼氬皢鏂囨湰鍋氭渶缁嗙矑搴︾殑鎷嗗垎锛汣. IK 鍒嗚瘝鍣ㄧ増鏈渶瑕佷笌 ElasticSearch 鐗堟湰涓€鑷达紱D. IK 鍒嗚瘝鍣ㄥ畨瑁呭悗闇€瑕侀噸鍚?ElasticSearch 鎵嶈兘鐢熸晥锛夈€俰k_max_word 鏄渶缁嗗垏鍒嗭紝鍒囧嚭鐨勮瘝澶氾紝鍙洖鏇村锛岄€傚悎鏂伴椈銆佹枃绔犵瓑鍏ㄦ枃鎼滅储銆?鏈鐞嗚В锛歩k_max_word锛欼K 鏈€缁嗗垏鍒嗭紝璇嶆洿澶氾紝鍋忔彁楂樺彫鍥炵巼銆?,
+      "memoryTip": "max_word = 鏈€澶ц瘝閲忥細鍒囪瘝澶氾紝鍋忓彫鍥炪€侀€傚悎鏂囩珷鎼滅储銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "IK 分词器",
-        "安装配置"
+        "IK 鍒嗚瘝鍣?,
+        "瀹夎閰嶇疆"
       ]
     },
     {
       "id": "q065",
       "type": "multiple",
-      "question": "在 ElasticSearch 中，以下哪些是有效的文档操作？",
+      "question": "鍦?ElasticSearch 涓紝浠ヤ笅鍝簺鏄湁鏁堢殑鏂囨。鎿嶄綔锛?,
       "options": {
-        "A": "创建文档",
-        "B": "查询文档",
-        "C": "更新文档",
-        "D": "删除文档"
+        "A": "鍒涘缓鏂囨。",
+        "B": "鏌ヨ鏂囨。",
+        "C": "鏇存柊鏂囨。",
+        "D": "鍒犻櫎鏂囨。"
       },
       "answer": [
         "A",
@@ -1360,23 +1360,23 @@ window.QUESTION_BANK = {
         "D"
       ],
       "referenceAnswer": "ABCD",
-      "explanation": "正确选项是 ABCD（A. 创建文档；B. 查询文档；C. 更新文档；D. 删除文档）。本题是多选，要把每个选项逐项代入 ElasticSearch 的特点、概念或用法判断，不能只选最熟悉的一项。",
-      "memoryTip": "DSL 题先看目的：全文搜用 match，多字段用 multi_match，精确值用 term，范围用 range，组合条件用 bool。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?ABCD锛圓. 鍒涘缓鏂囨。锛汢. 鏌ヨ鏂囨。锛汣. 鏇存柊鏂囨。锛汥. 鍒犻櫎鏂囨。锛夈€傛湰棰樻槸澶氶€夛紝瑕佹妸姣忎釜閫夐」閫愰」浠ｅ叆 ElasticSearch 鐨勭壒鐐广€佹蹇垫垨鐢ㄦ硶鍒ゆ柇锛屼笉鑳藉彧閫夋渶鐔熸倝鐨勪竴椤广€?,
+      "memoryTip": "DSL 棰樺厛鐪嬬洰鐨勶細鍏ㄦ枃鎼滅敤 match锛屽瀛楁鐢?multi_match锛岀簿纭€肩敤 term锛岃寖鍥寸敤 range锛岀粍鍚堟潯浠剁敤 bool銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "查询 DSL",
-        "运维优化"
+        "鏌ヨ DSL",
+        "杩愮淮浼樺寲"
       ]
     },
     {
       "id": "q066",
       "type": "multiple",
-      "question": "以下关于 ElasticSearch 高亮显示的说法，正确的有？",
+      "question": "浠ヤ笅鍏充簬 ElasticSearch 楂樹寒鏄剧ず鐨勮娉曪紝姝ｇ‘鐨勬湁锛?,
       "options": {
-        "A": "可以指定要高亮的字段",
-        "B": "可以自定义高亮标签",
-        "C": "只能对 text 类型的字段进行高亮",
-        "D": "高亮显示会影响查询性能"
+        "A": "鍙互鎸囧畾瑕侀珮浜殑瀛楁",
+        "B": "鍙互鑷畾涔夐珮浜爣绛?,
+        "C": "鍙兘瀵?text 绫诲瀷鐨勫瓧娈佃繘琛岄珮浜?,
+        "D": "楂樹寒鏄剧ず浼氬奖鍝嶆煡璇㈡€ц兘"
       },
       "answer": [
         "A",
@@ -1385,24 +1385,24 @@ window.QUESTION_BANK = {
         "D"
       ],
       "referenceAnswer": "ABCD",
-      "explanation": "正确选项是 ABCD（A. 可以指定要高亮的字段；B. 可以自定义高亮标签；C. 只能对 text 类型的字段进行高亮；D. 高亮显示会影响查询性能）。本题是多选，要把每个选项逐项代入 ElasticSearch 的特点、概念或用法判断，不能只选最熟悉的一项。 术语理解：text：文本类型，会分词，适合全文检索。",
-      "memoryTip": "text 是“长文本”：会分词，适合全文检索；keyword 是“完整关键词”：不分词。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?ABCD锛圓. 鍙互鎸囧畾瑕侀珮浜殑瀛楁锛汢. 鍙互鑷畾涔夐珮浜爣绛撅紱C. 鍙兘瀵?text 绫诲瀷鐨勫瓧娈佃繘琛岄珮浜紱D. 楂樹寒鏄剧ず浼氬奖鍝嶆煡璇㈡€ц兘锛夈€傛湰棰樻槸澶氶€夛紝瑕佹妸姣忎釜閫夐」閫愰」浠ｅ叆 ElasticSearch 鐨勭壒鐐广€佹蹇垫垨鐢ㄦ硶鍒ゆ柇锛屼笉鑳藉彧閫夋渶鐔熸倝鐨勪竴椤广€?鏈鐞嗚В锛歵ext锛氭枃鏈被鍨嬶紝浼氬垎璇嶏紝閫傚悎鍏ㄦ枃妫€绱€?,
+      "memoryTip": "text 鏄€滈暱鏂囨湰鈥濓細浼氬垎璇嶏紝閫傚悎鍏ㄦ枃妫€绱紱keyword 鏄€滃畬鏁村叧閿瘝鈥濓細涓嶅垎璇嶃€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "索引与映射",
-        "查询 DSL",
-        "运维优化"
+        "绱㈠紩涓庢槧灏?,
+        "鏌ヨ DSL",
+        "杩愮淮浼樺寲"
       ]
     },
     {
       "id": "q067",
       "type": "multiple",
-      "question": "在 ElasticSearch 中，以下哪些是有效的查询条件组合？",
+      "question": "鍦?ElasticSearch 涓紝浠ヤ笅鍝簺鏄湁鏁堢殑鏌ヨ鏉′欢缁勫悎锛?,
       "options": {
-        "A": "must（AND）",
-        "B": "should（OR）",
-        "C": "must_not（NOT）",
-        "D": "filter（过滤）"
+        "A": "must锛圓ND锛?,
+        "B": "should锛圤R锛?,
+        "C": "must_not锛圢OT锛?,
+        "D": "filter锛堣繃婊わ級"
       },
       "answer": [
         "A",
@@ -1411,22 +1411,22 @@ window.QUESTION_BANK = {
         "D"
       ],
       "referenceAnswer": "ABCD",
-      "explanation": "正确选项是 ABCD（A. must（AND）；B. should（OR）；C. must_not（NOT）；D. filter（过滤））。本题是多选，要把每个选项逐项代入 ElasticSearch 的特点、概念或用法判断，不能只选最熟悉的一项。",
-      "memoryTip": "DSL 题先看目的：全文搜用 match，多字段用 multi_match，精确值用 term，范围用 range，组合条件用 bool。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?ABCD锛圓. must锛圓ND锛夛紱B. should锛圤R锛夛紱C. must_not锛圢OT锛夛紱D. filter锛堣繃婊わ級锛夈€傛湰棰樻槸澶氶€夛紝瑕佹妸姣忎釜閫夐」閫愰」浠ｅ叆 ElasticSearch 鐨勭壒鐐广€佹蹇垫垨鐢ㄦ硶鍒ゆ柇锛屼笉鑳藉彧閫夋渶鐔熸倝鐨勪竴椤广€?,
+      "memoryTip": "DSL 棰樺厛鐪嬬洰鐨勶細鍏ㄦ枃鎼滅敤 match锛屽瀛楁鐢?multi_match锛岀簿纭€肩敤 term锛岃寖鍥寸敤 range锛岀粍鍚堟潯浠剁敤 bool銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "查询 DSL"
+        "鏌ヨ DSL"
       ]
     },
     {
       "id": "q068",
       "type": "multiple",
-      "question": "以下关于 ElasticSearch 查询的说法，正确的有？",
+      "question": "浠ヤ笅鍏充簬 ElasticSearch 鏌ヨ鐨勮娉曪紝姝ｇ‘鐨勬湁锛?,
       "options": {
-        "A": "match 查询会对查询条件进行分词",
-        "B": "match_phrase 查询会进行完全匹配",
-        "C": "term 查询不会对查询条件进行分词",
-        "D": "range 查询用于查询指定范围内的数据"
+        "A": "match 鏌ヨ浼氬鏌ヨ鏉′欢杩涜鍒嗚瘝",
+        "B": "match_phrase 鏌ヨ浼氳繘琛屽畬鍏ㄥ尮閰?,
+        "C": "term 鏌ヨ涓嶄細瀵规煡璇㈡潯浠惰繘琛屽垎璇?,
+        "D": "range 鏌ヨ鐢ㄤ簬鏌ヨ鎸囧畾鑼冨洿鍐呯殑鏁版嵁"
       },
       "answer": [
         "A",
@@ -1435,18 +1435,18 @@ window.QUESTION_BANK = {
         "D"
       ],
       "referenceAnswer": "ABCD",
-      "explanation": "正确选项是 ABCD（A. match 查询会对查询条件进行分词；B. match_phrase 查询会进行完全匹配；C. term 查询不会对查询条件进行分词；D. range 查询用于查询指定范围内的数据）。phrase 是“短语”，match_phrase 要求短语整体匹配，比 match 更严格。 术语理解：match_phrase：短语匹配，要求词语按顺序整体出现。 range：范围查询，常用于数字、日期区间。 term：词项查询，不分析查询词，适合精确值。",
-      "memoryTip": "phrase 是“短语”：match_phrase 要求整句话或短语按顺序匹配。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?ABCD锛圓. match 鏌ヨ浼氬鏌ヨ鏉′欢杩涜鍒嗚瘝锛汢. match_phrase 鏌ヨ浼氳繘琛屽畬鍏ㄥ尮閰嶏紱C. term 鏌ヨ涓嶄細瀵规煡璇㈡潯浠惰繘琛屽垎璇嶏紱D. range 鏌ヨ鐢ㄤ簬鏌ヨ鎸囧畾鑼冨洿鍐呯殑鏁版嵁锛夈€俻hrase 鏄€滅煭璇€濓紝match_phrase 瑕佹眰鐭鏁翠綋鍖归厤锛屾瘮 match 鏇翠弗鏍笺€?鏈鐞嗚В锛歮atch_phrase锛氱煭璇尮閰嶏紝瑕佹眰璇嶈鎸夐『搴忔暣浣撳嚭鐜般€?range锛氳寖鍥存煡璇紝甯哥敤浜庢暟瀛椼€佹棩鏈熷尯闂淬€?term锛氳瘝椤规煡璇紝涓嶅垎鏋愭煡璇㈣瘝锛岄€傚悎绮剧‘鍊笺€?,
+      "memoryTip": "phrase 鏄€滅煭璇€濓細match_phrase 瑕佹眰鏁村彞璇濇垨鐭鎸夐『搴忓尮閰嶃€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "查询 DSL",
-        "IK 分词器"
+        "鏌ヨ DSL",
+        "IK 鍒嗚瘝鍣?
       ]
     },
     {
       "id": "q069",
       "type": "multiple",
-      "question": "以下哪些是 Spring Boot 整合 ElasticSearch 时常用的类？",
+      "question": "浠ヤ笅鍝簺鏄?Spring Boot 鏁村悎 ElasticSearch 鏃跺父鐢ㄧ殑绫伙紵",
       "options": {
         "A": "RestHighLevelClient",
         "B": "CreateIndexRequest",
@@ -1460,9 +1460,9 @@ window.QUESTION_BANK = {
         "D"
       ],
       "referenceAnswer": "ABCD",
-      "explanation": "正确选项是 ABCD（A. RestHighLevelClient；B. CreateIndexRequest；C. IndexRequest；D. SearchRequest）。ES 7.x 的 Java 集成常用 RestHighLevelClient；TransportClient 已逐步废弃。 术语理解：RestHighLevelClient：Java 高级 REST 客户端，Spring Boot 整合 ES 7.x 常见。 Index：索引，类似关系型数据库里的表，用来组织一类文档。",
-      "memoryTip": "RestHighLevelClient 直译“高级 REST 客户端”，ES 7.x Java 整合常见。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?ABCD锛圓. RestHighLevelClient锛汢. CreateIndexRequest锛汣. IndexRequest锛汥. SearchRequest锛夈€侲S 7.x 鐨?Java 闆嗘垚甯哥敤 RestHighLevelClient锛汿ransportClient 宸查€愭搴熷純銆?鏈鐞嗚В锛歊estHighLevelClient锛欽ava 楂樼骇 REST 瀹㈡埛绔紝Spring Boot 鏁村悎 ES 7.x 甯歌銆?Index锛氱储寮曪紝绫讳技鍏崇郴鍨嬫暟鎹簱閲岀殑琛紝鐢ㄦ潵缁勭粐涓€绫绘枃妗ｃ€?,
+      "memoryTip": "RestHighLevelClient 鐩磋瘧鈥滈珮绾?REST 瀹㈡埛绔€濓紝ES 7.x Java 鏁村悎甯歌銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
         "Spring Boot"
       ]
@@ -1470,36 +1470,36 @@ window.QUESTION_BANK = {
     {
       "id": "q070",
       "type": "multiple",
-      "question": "Spring Boot 整合 ElasticSearch 时，需要在 application.yml 中配置以下哪些内容？",
+      "question": "Spring Boot 鏁村悎 ElasticSearch 鏃讹紝闇€瑕佸湪 application.yml 涓厤缃互涓嬪摢浜涘唴瀹癸紵",
       "options": {
-        "A": "集群名称",
-        "B": "节点地址",
-        "C": "端口号",
-        "D": "用户名和密码"
+        "A": "闆嗙兢鍚嶇О",
+        "B": "鑺傜偣鍦板潃",
+        "C": "绔彛鍙?,
+        "D": "鐢ㄦ埛鍚嶅拰瀵嗙爜"
       },
       "answer": [
         "B",
         "C"
       ],
       "referenceAnswer": "BC",
-      "explanation": "正确选项是 BC（B. 节点地址；C. 端口号）。本题是多选，要把每个选项逐项代入 ElasticSearch 的特点、概念或用法判断，不能只选最熟悉的一项。",
-      "memoryTip": "集群题先分角色：cluster 是整体，node 是节点，shard 是分片，replica 是副本，master 管调度。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?BC锛圔. 鑺傜偣鍦板潃锛汣. 绔彛鍙凤級銆傛湰棰樻槸澶氶€夛紝瑕佹妸姣忎釜閫夐」閫愰」浠ｅ叆 ElasticSearch 鐨勭壒鐐广€佹蹇垫垨鐢ㄦ硶鍒ゆ柇锛屼笉鑳藉彧閫夋渶鐔熸倝鐨勪竴椤广€?,
+      "memoryTip": "闆嗙兢棰樺厛鍒嗚鑹诧細cluster 鏄暣浣擄紝node 鏄妭鐐癸紝shard 鏄垎鐗囷紝replica 鏄壇鏈紝master 绠¤皟搴︺€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "集群与分片",
+        "闆嗙兢涓庡垎鐗?,
         "Spring Boot",
-        "安装配置"
+        "瀹夎閰嶇疆"
       ]
     },
     {
       "id": "q071",
       "type": "multiple",
-      "question": "以下哪些是 ElasticSearch 聚合查询的应用场景？",
+      "question": "浠ヤ笅鍝簺鏄?ElasticSearch 鑱氬悎鏌ヨ鐨勫簲鐢ㄥ満鏅紵",
       "options": {
-        "A": "统计不同分类的商品数量",
-        "B": "计算商品的平均价格",
-        "C": "找出价格最高的商品",
-        "D": "计算商品的总销售额"
+        "A": "缁熻涓嶅悓鍒嗙被鐨勫晢鍝佹暟閲?,
+        "B": "璁＄畻鍟嗗搧鐨勫钩鍧囦环鏍?,
+        "C": "鎵惧嚭浠锋牸鏈€楂樼殑鍟嗗搧",
+        "D": "璁＄畻鍟嗗搧鐨勬€婚攢鍞"
       },
       "answer": [
         "A",
@@ -1508,22 +1508,22 @@ window.QUESTION_BANK = {
         "D"
       ],
       "referenceAnswer": "ABCD",
-      "explanation": "正确选项是 ABCD（A. 统计不同分类的商品数量；B. 计算商品的平均价格；C. 找出价格最高的商品；D. 计算商品的总销售额）。本题是多选，要把每个选项逐项代入 ElasticSearch 的特点、概念或用法判断，不能只选最熟悉的一项。",
-      "memoryTip": "DSL 题先看目的：全文搜用 match，多字段用 multi_match，精确值用 term，范围用 range，组合条件用 bool。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?ABCD锛圓. 缁熻涓嶅悓鍒嗙被鐨勫晢鍝佹暟閲忥紱B. 璁＄畻鍟嗗搧鐨勫钩鍧囦环鏍硷紱C. 鎵惧嚭浠锋牸鏈€楂樼殑鍟嗗搧锛汥. 璁＄畻鍟嗗搧鐨勬€婚攢鍞锛夈€傛湰棰樻槸澶氶€夛紝瑕佹妸姣忎釜閫夐」閫愰」浠ｅ叆 ElasticSearch 鐨勭壒鐐广€佹蹇垫垨鐢ㄦ硶鍒ゆ柇锛屼笉鑳藉彧閫夋渶鐔熸倝鐨勪竴椤广€?,
+      "memoryTip": "DSL 棰樺厛鐪嬬洰鐨勶細鍏ㄦ枃鎼滅敤 match锛屽瀛楁鐢?multi_match锛岀簿纭€肩敤 term锛岃寖鍥寸敤 range锛岀粍鍚堟潯浠剁敤 bool銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "查询 DSL"
+        "鏌ヨ DSL"
       ]
     },
     {
       "id": "q072",
       "type": "multiple",
-      "question": "以下关于 ElasticSearch 集群节点的说法，正确的有？",
+      "question": "浠ヤ笅鍏充簬 ElasticSearch 闆嗙兢鑺傜偣鐨勮娉曪紝姝ｇ‘鐨勬湁锛?,
       "options": {
-        "A": "一个节点只能属于一个集群",
-        "B": "节点可以同时是主节点和数据节点",
-        "C": "主节点不存储数据",
-        "D": "数据节点负责存储数据和处理数据相关的操作"
+        "A": "涓€涓妭鐐瑰彧鑳藉睘浜庝竴涓泦缇?,
+        "B": "鑺傜偣鍙互鍚屾椂鏄富鑺傜偣鍜屾暟鎹妭鐐?,
+        "C": "涓昏妭鐐逛笉瀛樺偍鏁版嵁",
+        "D": "鏁版嵁鑺傜偣璐熻矗瀛樺偍鏁版嵁鍜屽鐞嗘暟鎹浉鍏崇殑鎿嶄綔"
       },
       "answer": [
         "A",
@@ -1531,17 +1531,17 @@ window.QUESTION_BANK = {
         "D"
       ],
       "referenceAnswer": "ABD",
-      "explanation": "正确选项是 ABD（A. 一个节点只能属于一个集群；B. 节点可以同时是主节点和数据节点；D. 数据节点负责存储数据和处理数据相关的操作）。本题是多选，要把每个选项逐项代入 ElasticSearch 的特点、概念或用法判断，不能只选最熟悉的一项。",
-      "memoryTip": "集群题先分角色：cluster 是整体，node 是节点，shard 是分片，replica 是副本，master 管调度。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?ABD锛圓. 涓€涓妭鐐瑰彧鑳藉睘浜庝竴涓泦缇わ紱B. 鑺傜偣鍙互鍚屾椂鏄富鑺傜偣鍜屾暟鎹妭鐐癸紱D. 鏁版嵁鑺傜偣璐熻矗瀛樺偍鏁版嵁鍜屽鐞嗘暟鎹浉鍏崇殑鎿嶄綔锛夈€傛湰棰樻槸澶氶€夛紝瑕佹妸姣忎釜閫夐」閫愰」浠ｅ叆 ElasticSearch 鐨勭壒鐐广€佹蹇垫垨鐢ㄦ硶鍒ゆ柇锛屼笉鑳藉彧閫夋渶鐔熸倝鐨勪竴椤广€?,
+      "memoryTip": "闆嗙兢棰樺厛鍒嗚鑹诧細cluster 鏄暣浣擄紝node 鏄妭鐐癸紝shard 鏄垎鐗囷紝replica 鏄壇鏈紝master 绠¤皟搴︺€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "集群与分片"
+        "闆嗙兢涓庡垎鐗?
       ]
     },
     {
       "id": "q073",
       "type": "multiple",
-      "question": "以下哪些是 ElasticSearch 集群的健康状态？",
+      "question": "浠ヤ笅鍝簺鏄?ElasticSearch 闆嗙兢鐨勫仴搴风姸鎬侊紵",
       "options": {
         "A": "green",
         "B": "yellow",
@@ -1554,22 +1554,22 @@ window.QUESTION_BANK = {
         "C"
       ],
       "referenceAnswer": "ABC",
-      "explanation": "正确选项是 ABC（A. green；B. yellow；C. red）。yellow 表示主分片可用但复制分片未完全分配；常见于单节点有副本的情况。",
-      "memoryTip": "健康状态按红绿灯：green 全正常，yellow 副本有缺，red 主分片有缺。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?ABC锛圓. green锛汢. yellow锛汣. red锛夈€倅ellow 琛ㄧず涓诲垎鐗囧彲鐢ㄤ絾澶嶅埗鍒嗙墖鏈畬鍏ㄥ垎閰嶏紱甯歌浜庡崟鑺傜偣鏈夊壇鏈殑鎯呭喌銆?,
+      "memoryTip": "鍋ュ悍鐘舵€佹寜绾㈢豢鐏細green 鍏ㄦ甯革紝yellow 鍓湰鏈夌己锛宺ed 涓诲垎鐗囨湁缂恒€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "集群与分片"
+        "闆嗙兢涓庡垎鐗?
       ]
     },
     {
       "id": "q074",
       "type": "multiple",
-      "question": "以下关于 IK 分词器安装的说法，正确的有？",
+      "question": "浠ヤ笅鍏充簬 IK 鍒嗚瘝鍣ㄥ畨瑁呯殑璇存硶锛屾纭殑鏈夛紵",
       "options": {
-        "A": "需要下载与 ElasticSearch 版本一致的 IK 分词器",
-        "B": "将 IK 分词器解压到 plugins/ik 目录下",
-        "C": "安装后需要重启 ElasticSearch",
-        "D": "可以通过在线安装的方式安装 IK 分词器"
+        "A": "闇€瑕佷笅杞戒笌 ElasticSearch 鐗堟湰涓€鑷寸殑 IK 鍒嗚瘝鍣?,
+        "B": "灏?IK 鍒嗚瘝鍣ㄨВ鍘嬪埌 plugins/ik 鐩綍涓?,
+        "C": "瀹夎鍚庨渶瑕侀噸鍚?ElasticSearch",
+        "D": "鍙互閫氳繃鍦ㄧ嚎瀹夎鐨勬柟寮忓畨瑁?IK 鍒嗚瘝鍣?
       },
       "answer": [
         "A",
@@ -1578,45 +1578,45 @@ window.QUESTION_BANK = {
         "D"
       ],
       "referenceAnswer": "ABCD",
-      "explanation": "正确选项是 ABCD（A. 需要下载与 ElasticSearch 版本一致的 IK 分词器；B. 将 IK 分词器解压到 plugins/ik 目录下；C. 安装后需要重启 ElasticSearch；D. 可以通过在线安装的方式安装 IK 分词器）。本题是多选，要把每个选项逐项代入 ElasticSearch 的特点、概念或用法判断，不能只选最熟悉的一项。",
-      "memoryTip": "IK 只记一对反义：smart 少切更精确；max_word 多切召回高。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?ABCD锛圓. 闇€瑕佷笅杞戒笌 ElasticSearch 鐗堟湰涓€鑷寸殑 IK 鍒嗚瘝鍣紱B. 灏?IK 鍒嗚瘝鍣ㄨВ鍘嬪埌 plugins/ik 鐩綍涓嬶紱C. 瀹夎鍚庨渶瑕侀噸鍚?ElasticSearch锛汥. 鍙互閫氳繃鍦ㄧ嚎瀹夎鐨勬柟寮忓畨瑁?IK 鍒嗚瘝鍣級銆傛湰棰樻槸澶氶€夛紝瑕佹妸姣忎釜閫夐」閫愰」浠ｅ叆 ElasticSearch 鐨勭壒鐐广€佹蹇垫垨鐢ㄦ硶鍒ゆ柇锛屼笉鑳藉彧閫夋渶鐔熸倝鐨勪竴椤广€?,
+      "memoryTip": "IK 鍙涓€瀵瑰弽涔夛細smart 灏戝垏鏇寸簿纭紱max_word 澶氬垏鍙洖楂樸€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "IK 分词器",
-        "安装配置"
+        "IK 鍒嗚瘝鍣?,
+        "瀹夎閰嶇疆"
       ]
     },
     {
       "id": "q075",
       "type": "multiple",
-      "question": "以下哪些是 ElasticSearch 集群健康状态为 yellow 的原因？",
+      "question": "浠ヤ笅鍝簺鏄?ElasticSearch 闆嗙兢鍋ュ悍鐘舵€佷负 yellow 鐨勫師鍥狅紵",
       "options": {
-        "A": "部分主分片不可用",
-        "B": "所有主分片可用，但部分复制分片不可用",
-        "C": "集群中只有一个节点",
-        "D": "集群正在进行分片重分配"
+        "A": "閮ㄥ垎涓诲垎鐗囦笉鍙敤",
+        "B": "鎵€鏈変富鍒嗙墖鍙敤锛屼絾閮ㄥ垎澶嶅埗鍒嗙墖涓嶅彲鐢?,
+        "C": "闆嗙兢涓彧鏈変竴涓妭鐐?,
+        "D": "闆嗙兢姝ｅ湪杩涜鍒嗙墖閲嶅垎閰?
       },
       "answer": [
         "B",
         "C"
       ],
       "referenceAnswer": "BC",
-      "explanation": "正确选项是 BC（B. 所有主分片可用，但部分复制分片不可用；C. 集群中只有一个节点）。yellow 表示主分片可用但复制分片未完全分配；常见于单节点有副本的情况。",
-      "memoryTip": "主分片记“原件”：真正承载数据；复制分片记“复印件”：容灾和分摊查询。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?BC锛圔. 鎵€鏈変富鍒嗙墖鍙敤锛屼絾閮ㄥ垎澶嶅埗鍒嗙墖涓嶅彲鐢紱C. 闆嗙兢涓彧鏈変竴涓妭鐐癸級銆倅ellow 琛ㄧず涓诲垎鐗囧彲鐢ㄤ絾澶嶅埗鍒嗙墖鏈畬鍏ㄥ垎閰嶏紱甯歌浜庡崟鑺傜偣鏈夊壇鏈殑鎯呭喌銆?,
+      "memoryTip": "涓诲垎鐗囪鈥滃師浠垛€濓細鐪熸鎵胯浇鏁版嵁锛涘鍒跺垎鐗囪鈥滃鍗颁欢鈥濓細瀹圭伨鍜屽垎鎽婃煡璇€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "集群与分片"
+        "闆嗙兢涓庡垎鐗?
       ]
     },
     {
       "id": "q076",
       "type": "multiple",
-      "question": "以下关于 ElasticSearch 节点的说法，正确的有？",
+      "question": "浠ヤ笅鍏充簬 ElasticSearch 鑺傜偣鐨勮娉曪紝姝ｇ‘鐨勬湁锛?,
       "options": {
-        "A": "一个节点是集群中的一个服务器",
-        "B": "节点可以存储数据并参与索引和搜索功能",
-        "C": "默认情况下，每个节点都会被安排加入到名为 \"elasticsearch\" 的集群中",
-        "D": "节点名称默认是随机的漫威漫画角色名字"
+        "A": "涓€涓妭鐐规槸闆嗙兢涓殑涓€涓湇鍔″櫒",
+        "B": "鑺傜偣鍙互瀛樺偍鏁版嵁骞跺弬涓庣储寮曞拰鎼滅储鍔熻兘",
+        "C": "榛樿鎯呭喌涓嬶紝姣忎釜鑺傜偣閮戒細琚畨鎺掑姞鍏ュ埌鍚嶄负 \"elasticsearch\" 鐨勯泦缇や腑",
+        "D": "鑺傜偣鍚嶇О榛樿鏄殢鏈虹殑婕▉婕敾瑙掕壊鍚嶅瓧"
       },
       "answer": [
         "A",
@@ -1625,18 +1625,18 @@ window.QUESTION_BANK = {
         "D"
       ],
       "referenceAnswer": "ABCD",
-      "explanation": "正确选项是 ABCD（A. 一个节点是集群中的一个服务器；B. 节点可以存储数据并参与索引和搜索功能；C. 默认情况下，每个节点都会被安排加入到名为 \"elasticsearch\" 的集群中；D. 节点名称默认是随机的漫威漫画角色名字）。本题是多选，要把每个选项逐项代入 ElasticSearch 的特点、概念或用法判断，不能只选最熟悉的一项。",
-      "memoryTip": "集群题先分角色：cluster 是整体，node 是节点，shard 是分片，replica 是副本，master 管调度。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?ABCD锛圓. 涓€涓妭鐐规槸闆嗙兢涓殑涓€涓湇鍔″櫒锛汢. 鑺傜偣鍙互瀛樺偍鏁版嵁骞跺弬涓庣储寮曞拰鎼滅储鍔熻兘锛汣. 榛樿鎯呭喌涓嬶紝姣忎釜鑺傜偣閮戒細琚畨鎺掑姞鍏ュ埌鍚嶄负 \"elasticsearch\" 鐨勯泦缇や腑锛汥. 鑺傜偣鍚嶇О榛樿鏄殢鏈虹殑婕▉婕敾瑙掕壊鍚嶅瓧锛夈€傛湰棰樻槸澶氶€夛紝瑕佹妸姣忎釜閫夐」閫愰」浠ｅ叆 ElasticSearch 鐨勭壒鐐广€佹蹇垫垨鐢ㄦ硶鍒ゆ柇锛屼笉鑳藉彧閫夋渶鐔熸倝鐨勪竴椤广€?,
+      "memoryTip": "闆嗙兢棰樺厛鍒嗚鑹诧細cluster 鏄暣浣擄紝node 鏄妭鐐癸紝shard 鏄垎鐗囷紝replica 鏄壇鏈紝master 绠¤皟搴︺€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "集群与分片",
-        "索引与映射"
+        "闆嗙兢涓庡垎鐗?,
+        "绱㈠紩涓庢槧灏?
       ]
     },
     {
       "id": "q077",
       "type": "multiple",
-      "question": "在 ElasticSearch 中，以下哪些配置项与跨域访问有关？",
+      "question": "鍦?ElasticSearch 涓紝浠ヤ笅鍝簺閰嶇疆椤逛笌璺ㄥ煙璁块棶鏈夊叧锛?,
       "options": {
         "A": "http.cors.enabled",
         "B": "http.cors.allow-origin",
@@ -1648,22 +1648,22 @@ window.QUESTION_BANK = {
         "B"
       ],
       "referenceAnswer": "AB",
-      "explanation": "正确选项是 AB（A. http.cors.enabled；B. http.cors.allow-origin）。本题是多选，要把每个选项逐项代入 ElasticSearch 的特点、概念或用法判断，不能只选最熟悉的一项。",
-      "memoryTip": "跨域记 cors：http.cors.enabled 打开跨域；network.host 是网络绑定。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?AB锛圓. http.cors.enabled锛汢. http.cors.allow-origin锛夈€傛湰棰樻槸澶氶€夛紝瑕佹妸姣忎釜閫夐」閫愰」浠ｅ叆 ElasticSearch 鐨勭壒鐐广€佹蹇垫垨鐢ㄦ硶鍒ゆ柇锛屼笉鑳藉彧閫夋渶鐔熸倝鐨勪竴椤广€?,
+      "memoryTip": "璺ㄥ煙璁?cors锛歨ttp.cors.enabled 鎵撳紑璺ㄥ煙锛沶etwork.host 鏄綉缁滅粦瀹氥€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "安装配置"
+        "瀹夎閰嶇疆"
       ]
     },
     {
       "id": "q078",
       "type": "multiple",
-      "question": "以下关于 ElasticSearch 索引的说法，正确的有？",
+      "question": "浠ヤ笅鍏充簬 ElasticSearch 绱㈠紩鐨勮娉曪紝姝ｇ‘鐨勬湁锛?,
       "options": {
-        "A": "索引名称必须全部是小写字母",
-        "B": "一个集群中可以有多个索引",
-        "C": "索引一旦创建就不能删除",
-        "D": "索引可以包含多个类型"
+        "A": "绱㈠紩鍚嶇О蹇呴』鍏ㄩ儴鏄皬鍐欏瓧姣?,
+        "B": "涓€涓泦缇や腑鍙互鏈夊涓储寮?,
+        "C": "绱㈠紩涓€鏃﹀垱寤哄氨涓嶈兘鍒犻櫎",
+        "D": "绱㈠紩鍙互鍖呭惈澶氫釜绫诲瀷"
       },
       "answer": [
         "A",
@@ -1671,24 +1671,24 @@ window.QUESTION_BANK = {
         "D"
       ],
       "referenceAnswer": "ABD",
-      "explanation": "正确选项是 ABD（A. 索引名称必须全部是小写字母；B. 一个集群中可以有多个索引；D. 索引可以包含多个类型）。本题是多选，要把每个选项逐项代入 ElasticSearch 的特点、概念或用法判断，不能只选最熟悉的一项。",
-      "memoryTip": "集群题先分角色：cluster 是整体，node 是节点，shard 是分片，replica 是副本，master 管调度。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?ABD锛圓. 绱㈠紩鍚嶇О蹇呴』鍏ㄩ儴鏄皬鍐欏瓧姣嶏紱B. 涓€涓泦缇や腑鍙互鏈夊涓储寮曪紱D. 绱㈠紩鍙互鍖呭惈澶氫釜绫诲瀷锛夈€傛湰棰樻槸澶氶€夛紝瑕佹妸姣忎釜閫夐」閫愰」浠ｅ叆 ElasticSearch 鐨勭壒鐐广€佹蹇垫垨鐢ㄦ硶鍒ゆ柇锛屼笉鑳藉彧閫夋渶鐔熸倝鐨勪竴椤广€?,
+      "memoryTip": "闆嗙兢棰樺厛鍒嗚鑹诧細cluster 鏄暣浣擄紝node 鏄妭鐐癸紝shard 鏄垎鐗囷紝replica 鏄壇鏈紝master 绠¤皟搴︺€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "集群与分片",
-        "索引与映射",
-        "运维优化"
+        "闆嗙兢涓庡垎鐗?,
+        "绱㈠紩涓庢槧灏?,
+        "杩愮淮浼樺寲"
       ]
     },
     {
       "id": "q079",
       "type": "multiple",
-      "question": "在 ElasticSearch 中，以下哪些操作会导致文档的版本号增加？",
+      "question": "鍦?ElasticSearch 涓紝浠ヤ笅鍝簺鎿嶄綔浼氬鑷存枃妗ｇ殑鐗堟湰鍙峰鍔狅紵",
       "options": {
-        "A": "创建文档",
-        "B": "更新文档",
-        "C": "删除文档",
-        "D": "查询文档"
+        "A": "鍒涘缓鏂囨。",
+        "B": "鏇存柊鏂囨。",
+        "C": "鍒犻櫎鏂囨。",
+        "D": "鏌ヨ鏂囨。"
       },
       "answer": [
         "A",
@@ -1696,23 +1696,23 @@ window.QUESTION_BANK = {
         "C"
       ],
       "referenceAnswer": "ABC",
-      "explanation": "正确选项是 ABC（A. 创建文档；B. 更新文档；C. 删除文档）。本题是多选，要把每个选项逐项代入 ElasticSearch 的特点、概念或用法判断，不能只选最熟悉的一项。",
-      "memoryTip": "DSL 题先看目的：全文搜用 match，多字段用 multi_match，精确值用 term，范围用 range，组合条件用 bool。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?ABC锛圓. 鍒涘缓鏂囨。锛汢. 鏇存柊鏂囨。锛汣. 鍒犻櫎鏂囨。锛夈€傛湰棰樻槸澶氶€夛紝瑕佹妸姣忎釜閫夐」閫愰」浠ｅ叆 ElasticSearch 鐨勭壒鐐广€佹蹇垫垨鐢ㄦ硶鍒ゆ柇锛屼笉鑳藉彧閫夋渶鐔熸倝鐨勪竴椤广€?,
+      "memoryTip": "DSL 棰樺厛鐪嬬洰鐨勶細鍏ㄦ枃鎼滅敤 match锛屽瀛楁鐢?multi_match锛岀簿纭€肩敤 term锛岃寖鍥寸敤 range锛岀粍鍚堟潯浠剁敤 bool銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "查询 DSL",
-        "运维优化"
+        "鏌ヨ DSL",
+        "杩愮淮浼樺寲"
       ]
     },
     {
       "id": "q080",
       "type": "multiple",
-      "question": "以下关于 Spring Boot 整合 ElasticSearch 的说法，正确的有？",
+      "question": "浠ヤ笅鍏充簬 Spring Boot 鏁村悎 ElasticSearch 鐨勮娉曪紝姝ｇ‘鐨勬湁锛?,
       "options": {
-        "A": "需要引入 spring-boot-starter-data-elasticsearch 依赖",
-        "B": "在 application.yml 中配置 ElasticSearch 的地址和端口",
-        "C": "使用 RestHighLevelClient 进行操作",
-        "D": "可以使用 ElasticsearchTemplate 进行操作"
+        "A": "闇€瑕佸紩鍏?spring-boot-starter-data-elasticsearch 渚濊禆",
+        "B": "鍦?application.yml 涓厤缃?ElasticSearch 鐨勫湴鍧€鍜岀鍙?,
+        "C": "浣跨敤 RestHighLevelClient 杩涜鎿嶄綔",
+        "D": "鍙互浣跨敤 ElasticsearchTemplate 杩涜鎿嶄綔"
       },
       "answer": [
         "A",
@@ -1721,23 +1721,23 @@ window.QUESTION_BANK = {
         "D"
       ],
       "referenceAnswer": "ABCD",
-      "explanation": "正确选项是 ABCD（A. 需要引入 spring-boot-starter-data-elasticsearch 依赖；B. 在 application.yml 中配置 ElasticSearch 的地址和端口；C. 使用 RestHighLevelClient 进行操作；D. 可以使用 ElasticsearchTemplate 进行操作）。ES 7.x 的 Java 集成常用 RestHighLevelClient；TransportClient 已逐步废弃。 术语理解：RestHighLevelClient：Java 高级 REST 客户端，Spring Boot 整合 ES 7.x 常见。",
-      "memoryTip": "RestHighLevelClient 直译“高级 REST 客户端”，ES 7.x Java 整合常见。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?ABCD锛圓. 闇€瑕佸紩鍏?spring-boot-starter-data-elasticsearch 渚濊禆锛汢. 鍦?application.yml 涓厤缃?ElasticSearch 鐨勫湴鍧€鍜岀鍙ｏ紱C. 浣跨敤 RestHighLevelClient 杩涜鎿嶄綔锛汥. 鍙互浣跨敤 ElasticsearchTemplate 杩涜鎿嶄綔锛夈€侲S 7.x 鐨?Java 闆嗘垚甯哥敤 RestHighLevelClient锛汿ransportClient 宸查€愭搴熷純銆?鏈鐞嗚В锛歊estHighLevelClient锛欽ava 楂樼骇 REST 瀹㈡埛绔紝Spring Boot 鏁村悎 ES 7.x 甯歌銆?,
+      "memoryTip": "RestHighLevelClient 鐩磋瘧鈥滈珮绾?REST 瀹㈡埛绔€濓紝ES 7.x Java 鏁村悎甯歌銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
         "Spring Boot",
-        "安装配置"
+        "瀹夎閰嶇疆"
       ]
     },
     {
       "id": "q081",
       "type": "multiple",
-      "question": "以下关于 ElasticSearch 文档的说法，正确的有？",
+      "question": "浠ヤ笅鍏充簬 ElasticSearch 鏂囨。鐨勮娉曪紝姝ｇ‘鐨勬湁锛?,
       "options": {
-        "A": "文档是 ElasticSearch 中最小的数据单元",
-        "B": "文档以 JSON 格式存储",
-        "C": "每个文档都有一个唯一的 ID",
-        "D": "文档的结构是固定的"
+        "A": "鏂囨。鏄?ElasticSearch 涓渶灏忕殑鏁版嵁鍗曞厓",
+        "B": "鏂囨。浠?JSON 鏍煎紡瀛樺偍",
+        "C": "姣忎釜鏂囨。閮芥湁涓€涓敮涓€鐨?ID",
+        "D": "鏂囨。鐨勭粨鏋勬槸鍥哄畾鐨?
       },
       "answer": [
         "A",
@@ -1745,22 +1745,22 @@ window.QUESTION_BANK = {
         "C"
       ],
       "referenceAnswer": "ABC",
-      "explanation": "正确选项是 ABC（A. 文档是 ElasticSearch 中最小的数据单元；B. 文档以 JSON 格式存储；C. 每个文档都有一个唯一的 ID）。本题是多选，要把每个选项逐项代入 ElasticSearch 的特点、概念或用法判断，不能只选最熟悉的一项。",
-      "memoryTip": "复习时先圈出题干关键词，再用一句中文把英文术语翻译出来，最后对应到答案。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?ABC锛圓. 鏂囨。鏄?ElasticSearch 涓渶灏忕殑鏁版嵁鍗曞厓锛汢. 鏂囨。浠?JSON 鏍煎紡瀛樺偍锛汣. 姣忎釜鏂囨。閮芥湁涓€涓敮涓€鐨?ID锛夈€傛湰棰樻槸澶氶€夛紝瑕佹妸姣忎釜閫夐」閫愰」浠ｅ叆 ElasticSearch 鐨勭壒鐐广€佹蹇垫垨鐢ㄦ硶鍒ゆ柇锛屼笉鑳藉彧閫夋渶鐔熸倝鐨勪竴椤广€?,
+      "memoryTip": "澶嶄範鏃跺厛鍦堝嚭棰樺共鍏抽敭璇嶏紝鍐嶇敤涓€鍙ヤ腑鏂囨妸鑻辨枃鏈缈昏瘧鍑烘潵锛屾渶鍚庡搴斿埌绛旀銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "综合复习"
+        "缁煎悎澶嶄範"
       ]
     },
     {
       "id": "q082",
       "type": "multiple",
-      "question": "以下哪些是 ElasticSearch 支持的聚合查询类型？",
+      "question": "浠ヤ笅鍝簺鏄?ElasticSearch 鏀寔鐨勮仛鍚堟煡璇㈢被鍨嬶紵",
       "options": {
-        "A": "分组聚合（terms）",
-        "B": "平均值聚合（avg）",
-        "C": "最大值聚合（max）",
-        "D": "求和聚合（sum）"
+        "A": "鍒嗙粍鑱氬悎锛坱erms锛?,
+        "B": "骞冲潎鍊艰仛鍚堬紙avg锛?,
+        "C": "鏈€澶у€艰仛鍚堬紙max锛?,
+        "D": "姹傚拰鑱氬悎锛坰um锛?
       },
       "answer": [
         "A",
@@ -1769,23 +1769,23 @@ window.QUESTION_BANK = {
         "D"
       ],
       "referenceAnswer": "ABCD",
-      "explanation": "正确选项是 ABCD（A. 分组聚合（terms）；B. 平均值聚合（avg）；C. 最大值聚合（max）；D. 求和聚合（sum））。term 不会分词，适合 keyword、数字、日期等精确匹配字段。 术语理解：term：词项查询，不分析查询词，适合精确值。",
-      "memoryTip": "term 是“词项”：不分词，拿完整值去精确匹配。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?ABCD锛圓. 鍒嗙粍鑱氬悎锛坱erms锛夛紱B. 骞冲潎鍊艰仛鍚堬紙avg锛夛紱C. 鏈€澶у€艰仛鍚堬紙max锛夛紱D. 姹傚拰鑱氬悎锛坰um锛夛級銆倀erm 涓嶄細鍒嗚瘝锛岄€傚悎 keyword銆佹暟瀛椼€佹棩鏈熺瓑绮剧‘鍖归厤瀛楁銆?鏈鐞嗚В锛歵erm锛氳瘝椤规煡璇紝涓嶅垎鏋愭煡璇㈣瘝锛岄€傚悎绮剧‘鍊笺€?,
+      "memoryTip": "term 鏄€滆瘝椤光€濓細涓嶅垎璇嶏紝鎷垮畬鏁村€煎幓绮剧‘鍖归厤銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "索引与映射",
-        "查询 DSL"
+        "绱㈠紩涓庢槧灏?,
+        "鏌ヨ DSL"
       ]
     },
     {
       "id": "q083",
       "type": "multiple",
-      "question": "以下哪些是 ElasticSearch 集群搭建时需要注意的事项？",
+      "question": "浠ヤ笅鍝簺鏄?ElasticSearch 闆嗙兢鎼缓鏃堕渶瑕佹敞鎰忕殑浜嬮」锛?,
       "options": {
-        "A": "所有节点的集群名称必须相同",
-        "B": "每个节点的名称必须唯一",
-        "C": "每个节点的端口号必须不同",
-        "D": "必须清空所有节点的 data 目录"
+        "A": "鎵€鏈夎妭鐐圭殑闆嗙兢鍚嶇О蹇呴』鐩稿悓",
+        "B": "姣忎釜鑺傜偣鐨勫悕绉板繀椤诲敮涓€",
+        "C": "姣忎釜鑺傜偣鐨勭鍙ｅ彿蹇呴』涓嶅悓",
+        "D": "蹇呴』娓呯┖鎵€鏈夎妭鐐圭殑 data 鐩綍"
       },
       "answer": [
         "A",
@@ -1794,23 +1794,23 @@ window.QUESTION_BANK = {
         "D"
       ],
       "referenceAnswer": "ABCD",
-      "explanation": "正确选项是 ABCD（A. 所有节点的集群名称必须相同；B. 每个节点的名称必须唯一；C. 每个节点的端口号必须不同；D. 必须清空所有节点的 data 目录）。本题是多选，要把每个选项逐项代入 ElasticSearch 的特点、概念或用法判断，不能只选最熟悉的一项。",
-      "memoryTip": "集群题先分角色：cluster 是整体，node 是节点，shard 是分片，replica 是副本，master 管调度。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?ABCD锛圓. 鎵€鏈夎妭鐐圭殑闆嗙兢鍚嶇О蹇呴』鐩稿悓锛汢. 姣忎釜鑺傜偣鐨勫悕绉板繀椤诲敮涓€锛汣. 姣忎釜鑺傜偣鐨勭鍙ｅ彿蹇呴』涓嶅悓锛汥. 蹇呴』娓呯┖鎵€鏈夎妭鐐圭殑 data 鐩綍锛夈€傛湰棰樻槸澶氶€夛紝瑕佹妸姣忎釜閫夐」閫愰」浠ｅ叆 ElasticSearch 鐨勭壒鐐广€佹蹇垫垨鐢ㄦ硶鍒ゆ柇锛屼笉鑳藉彧閫夋渶鐔熸倝鐨勪竴椤广€?,
+      "memoryTip": "闆嗙兢棰樺厛鍒嗚鑹诧細cluster 鏄暣浣擄紝node 鏄妭鐐癸紝shard 鏄垎鐗囷紝replica 鏄壇鏈紝master 绠¤皟搴︺€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "集群与分片",
-        "安装配置"
+        "闆嗙兢涓庡垎鐗?,
+        "瀹夎閰嶇疆"
       ]
     },
     {
       "id": "q084",
       "type": "multiple",
-      "question": "以下哪些是 ElasticSearch 分词器的组成部分？",
+      "question": "浠ヤ笅鍝簺鏄?ElasticSearch 鍒嗚瘝鍣ㄧ殑缁勬垚閮ㄥ垎锛?,
       "options": {
-        "A": "字符过滤器（Character Filter）",
-        "B": "分词器（Tokenizer）",
-        "C": "词元过滤器（Token Filter）",
-        "D": "索引器（Indexer）"
+        "A": "瀛楃杩囨护鍣紙Character Filter锛?,
+        "B": "鍒嗚瘝鍣紙Tokenizer锛?,
+        "C": "璇嶅厓杩囨护鍣紙Token Filter锛?,
+        "D": "绱㈠紩鍣紙Indexer锛?
       },
       "answer": [
         "A",
@@ -1818,23 +1818,23 @@ window.QUESTION_BANK = {
         "C"
       ],
       "referenceAnswer": "ABC",
-      "explanation": "正确选项是 ABC（A. 字符过滤器（Character Filter）；B. 分词器（Tokenizer）；C. 词元过滤器（Token Filter））。本题是多选，要把每个选项逐项代入 ElasticSearch 的特点、概念或用法判断，不能只选最熟悉的一项。",
-      "memoryTip": "映射题先问字段要不要分词：要全文检索选 text；要精确匹配、排序、聚合选 keyword 或数值/日期类型。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?ABC锛圓. 瀛楃杩囨护鍣紙Character Filter锛夛紱B. 鍒嗚瘝鍣紙Tokenizer锛夛紱C. 璇嶅厓杩囨护鍣紙Token Filter锛夛級銆傛湰棰樻槸澶氶€夛紝瑕佹妸姣忎釜閫夐」閫愰」浠ｅ叆 ElasticSearch 鐨勭壒鐐广€佹蹇垫垨鐢ㄦ硶鍒ゆ柇锛屼笉鑳藉彧閫夋渶鐔熸倝鐨勪竴椤广€?,
+      "memoryTip": "鏄犲皠棰樺厛闂瓧娈佃涓嶈鍒嗚瘝锛氳鍏ㄦ枃妫€绱㈤€?text锛涜绮剧‘鍖归厤銆佹帓搴忋€佽仛鍚堥€?keyword 鎴栨暟鍊?鏃ユ湡绫诲瀷銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "索引与映射",
-        "IK 分词器"
+        "绱㈠紩涓庢槧灏?,
+        "IK 鍒嗚瘝鍣?
       ]
     },
     {
       "id": "q085",
       "type": "multiple",
-      "question": "安装 ElasticSearch Head 插件的步骤包括？",
+      "question": "瀹夎 ElasticSearch Head 鎻掍欢鐨勬楠ゅ寘鎷紵",
       "options": {
-        "A": "下载 Head 插件压缩包",
-        "B": "安装 Node.js",
-        "C": "全局安装 Grunt",
-        "D": "执行 npm install 和 grunt server"
+        "A": "涓嬭浇 Head 鎻掍欢鍘嬬缉鍖?,
+        "B": "瀹夎 Node.js",
+        "C": "鍏ㄥ眬瀹夎 Grunt",
+        "D": "鎵ц npm install 鍜?grunt server"
       },
       "answer": [
         "A",
@@ -1843,22 +1843,22 @@ window.QUESTION_BANK = {
         "D"
       ],
       "referenceAnswer": "ABCD",
-      "explanation": "正确选项是 ABCD（A. 下载 Head 插件压缩包；B. 安装 Node.js；C. 全局安装 Grunt；D. 执行 npm install 和 grunt server）。本题是多选，要把每个选项逐项代入 ElasticSearch 的特点、概念或用法判断，不能只选最熟悉的一项。",
-      "memoryTip": "配置题按用途记：cluster.name 管集群名，node.* 管节点角色，network/http 管访问和网络。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?ABCD锛圓. 涓嬭浇 Head 鎻掍欢鍘嬬缉鍖咃紱B. 瀹夎 Node.js锛汣. 鍏ㄥ眬瀹夎 Grunt锛汥. 鎵ц npm install 鍜?grunt server锛夈€傛湰棰樻槸澶氶€夛紝瑕佹妸姣忎釜閫夐」閫愰」浠ｅ叆 ElasticSearch 鐨勭壒鐐广€佹蹇垫垨鐢ㄦ硶鍒ゆ柇锛屼笉鑳藉彧閫夋渶鐔熸倝鐨勪竴椤广€?,
+      "memoryTip": "閰嶇疆棰樻寜鐢ㄩ€旇锛歝luster.name 绠￠泦缇ゅ悕锛宯ode.* 绠¤妭鐐硅鑹诧紝network/http 绠¤闂拰缃戠粶銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "安装配置"
+        "瀹夎閰嶇疆"
       ]
     },
     {
       "id": "q086",
       "type": "multiple",
-      "question": "以下关于 ElasticSearch 映射的说法，正确的有？",
+      "question": "浠ヤ笅鍏充簬 ElasticSearch 鏄犲皠鐨勮娉曪紝姝ｇ‘鐨勬湁锛?,
       "options": {
-        "A": "可以自动创建映射",
-        "B": "可以手动创建映射",
-        "C": "可以指定字段的数据类型",
-        "D": "可以指定字段是否被索引"
+        "A": "鍙互鑷姩鍒涘缓鏄犲皠",
+        "B": "鍙互鎵嬪姩鍒涘缓鏄犲皠",
+        "C": "鍙互鎸囧畾瀛楁鐨勬暟鎹被鍨?,
+        "D": "鍙互鎸囧畾瀛楁鏄惁琚储寮?
       },
       "answer": [
         "A",
@@ -1867,22 +1867,22 @@ window.QUESTION_BANK = {
         "D"
       ],
       "referenceAnswer": "ABCD",
-      "explanation": "正确选项是 ABCD（A. 可以自动创建映射；B. 可以手动创建映射；C. 可以指定字段的数据类型；D. 可以指定字段是否被索引）。本题是多选，要把每个选项逐项代入 ElasticSearch 的特点、概念或用法判断，不能只选最熟悉的一项。",
-      "memoryTip": "映射题先问字段要不要分词：要全文检索选 text；要精确匹配、排序、聚合选 keyword 或数值/日期类型。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?ABCD锛圓. 鍙互鑷姩鍒涘缓鏄犲皠锛汢. 鍙互鎵嬪姩鍒涘缓鏄犲皠锛汣. 鍙互鎸囧畾瀛楁鐨勬暟鎹被鍨嬶紱D. 鍙互鎸囧畾瀛楁鏄惁琚储寮曪級銆傛湰棰樻槸澶氶€夛紝瑕佹妸姣忎釜閫夐」閫愰」浠ｅ叆 ElasticSearch 鐨勭壒鐐广€佹蹇垫垨鐢ㄦ硶鍒ゆ柇锛屼笉鑳藉彧閫夋渶鐔熸倝鐨勪竴椤广€?,
+      "memoryTip": "鏄犲皠棰樺厛闂瓧娈佃涓嶈鍒嗚瘝锛氳鍏ㄦ枃妫€绱㈤€?text锛涜绮剧‘鍖归厤銆佹帓搴忋€佽仛鍚堥€?keyword 鎴栨暟鍊?鏃ユ湡绫诲瀷銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "索引与映射"
+        "绱㈠紩涓庢槧灏?
       ]
     },
     {
       "id": "q087",
       "type": "multiple",
-      "question": "以下关于 ElasticSearch 映射的说法，正确的有？",
+      "question": "浠ヤ笅鍏充簬 ElasticSearch 鏄犲皠鐨勮娉曪紝姝ｇ‘鐨勬湁锛?,
       "options": {
-        "A": "映射定义了文档的结构",
-        "B": "映射定义了字段的数据类型",
-        "C": "映射定义了字段的分词器",
-        "D": "映射可以动态生成"
+        "A": "鏄犲皠瀹氫箟浜嗘枃妗ｇ殑缁撴瀯",
+        "B": "鏄犲皠瀹氫箟浜嗗瓧娈电殑鏁版嵁绫诲瀷",
+        "C": "鏄犲皠瀹氫箟浜嗗瓧娈电殑鍒嗚瘝鍣?,
+        "D": "鏄犲皠鍙互鍔ㄦ€佺敓鎴?
       },
       "answer": [
         "A",
@@ -1891,23 +1891,23 @@ window.QUESTION_BANK = {
         "D"
       ],
       "referenceAnswer": "ABCD",
-      "explanation": "正确选项是 ABCD（A. 映射定义了文档的结构；B. 映射定义了字段的数据类型；C. 映射定义了字段的分词器；D. 映射可以动态生成）。本题是多选，要把每个选项逐项代入 ElasticSearch 的特点、概念或用法判断，不能只选最熟悉的一项。",
-      "memoryTip": "映射题先问字段要不要分词：要全文检索选 text；要精确匹配、排序、聚合选 keyword 或数值/日期类型。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?ABCD锛圓. 鏄犲皠瀹氫箟浜嗘枃妗ｇ殑缁撴瀯锛汢. 鏄犲皠瀹氫箟浜嗗瓧娈电殑鏁版嵁绫诲瀷锛汣. 鏄犲皠瀹氫箟浜嗗瓧娈电殑鍒嗚瘝鍣紱D. 鏄犲皠鍙互鍔ㄦ€佺敓鎴愶級銆傛湰棰樻槸澶氶€夛紝瑕佹妸姣忎釜閫夐」閫愰」浠ｅ叆 ElasticSearch 鐨勭壒鐐广€佹蹇垫垨鐢ㄦ硶鍒ゆ柇锛屼笉鑳藉彧閫夋渶鐔熸倝鐨勪竴椤广€?,
+      "memoryTip": "鏄犲皠棰樺厛闂瓧娈佃涓嶈鍒嗚瘝锛氳鍏ㄦ枃妫€绱㈤€?text锛涜绮剧‘鍖归厤銆佹帓搴忋€佽仛鍚堥€?keyword 鎴栨暟鍊?鏃ユ湡绫诲瀷銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "索引与映射",
-        "IK 分词器"
+        "绱㈠紩涓庢槧灏?,
+        "IK 鍒嗚瘝鍣?
       ]
     },
     {
       "id": "q088",
       "type": "multiple",
-      "question": "以下关于 ElasticSearch 映射（Mapping）的说法，正确的有？",
+      "question": "浠ヤ笅鍏充簬 ElasticSearch 鏄犲皠锛圡apping锛夌殑璇存硶锛屾纭殑鏈夛紵",
       "options": {
-        "A": "映射用于定义文档及其字段的存储和索引方式",
-        "B": "可以指定字段的数据类型",
-        "C": "可以指定字段使用的分词器",
-        "D": "映射一旦创建就不能修改"
+        "A": "鏄犲皠鐢ㄤ簬瀹氫箟鏂囨。鍙婂叾瀛楁鐨勫瓨鍌ㄥ拰绱㈠紩鏂瑰紡",
+        "B": "鍙互鎸囧畾瀛楁鐨勬暟鎹被鍨?,
+        "C": "鍙互鎸囧畾瀛楁浣跨敤鐨勫垎璇嶅櫒",
+        "D": "鏄犲皠涓€鏃﹀垱寤哄氨涓嶈兘淇敼"
       },
       "answer": [
         "A",
@@ -1915,23 +1915,23 @@ window.QUESTION_BANK = {
         "C"
       ],
       "referenceAnswer": "ABC",
-      "explanation": "正确选项是 ABC（A. 映射用于定义文档及其字段的存储和索引方式；B. 可以指定字段的数据类型；C. 可以指定字段使用的分词器）。本题是多选，要把每个选项逐项代入 ElasticSearch 的特点、概念或用法判断，不能只选最熟悉的一项。",
-      "memoryTip": "映射题先问字段要不要分词：要全文检索选 text；要精确匹配、排序、聚合选 keyword 或数值/日期类型。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?ABC锛圓. 鏄犲皠鐢ㄤ簬瀹氫箟鏂囨。鍙婂叾瀛楁鐨勫瓨鍌ㄥ拰绱㈠紩鏂瑰紡锛汢. 鍙互鎸囧畾瀛楁鐨勬暟鎹被鍨嬶紱C. 鍙互鎸囧畾瀛楁浣跨敤鐨勫垎璇嶅櫒锛夈€傛湰棰樻槸澶氶€夛紝瑕佹妸姣忎釜閫夐」閫愰」浠ｅ叆 ElasticSearch 鐨勭壒鐐广€佹蹇垫垨鐢ㄦ硶鍒ゆ柇锛屼笉鑳藉彧閫夋渶鐔熸倝鐨勪竴椤广€?,
+      "memoryTip": "鏄犲皠棰樺厛闂瓧娈佃涓嶈鍒嗚瘝锛氳鍏ㄦ枃妫€绱㈤€?text锛涜绮剧‘鍖归厤銆佹帓搴忋€佽仛鍚堥€?keyword 鎴栨暟鍊?鏃ユ湡绫诲瀷銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "索引与映射",
-        "IK 分词器"
+        "绱㈠紩涓庢槧灏?,
+        "IK 鍒嗚瘝鍣?
       ]
     },
     {
       "id": "q089",
       "type": "multiple",
-      "question": "以下哪些是 ElasticSearch 的优势？",
+      "question": "浠ヤ笅鍝簺鏄?ElasticSearch 鐨勪紭鍔匡紵",
       "options": {
-        "A": "分布式架构，易于扩展",
-        "B": "近乎实时的搜索和分析",
-        "C": "简单易用的 RESTful API",
-        "D": "强大的全文检索能力"
+        "A": "鍒嗗竷寮忔灦鏋勶紝鏄撲簬鎵╁睍",
+        "B": "杩戜箮瀹炴椂鐨勬悳绱㈠拰鍒嗘瀽",
+        "C": "绠€鍗曟槗鐢ㄧ殑 RESTful API",
+        "D": "寮哄ぇ鐨勫叏鏂囨绱㈣兘鍔?
       },
       "answer": [
         "A",
@@ -1940,22 +1940,22 @@ window.QUESTION_BANK = {
         "D"
       ],
       "referenceAnswer": "ABCD",
-      "explanation": "正确选项是 ABCD（A. 分布式架构，易于扩展；B. 近乎实时的搜索和分析；C. 简单易用的 RESTful API；D. 强大的全文检索能力）。本题是多选，要把每个选项逐项代入 ElasticSearch 的特点、概念或用法判断，不能只选最熟悉的一项。 术语理解：RESTful：一种 HTTP 接口风格，用 GET、POST、PUT、DELETE 表示不同操作。",
-      "memoryTip": "复习时先圈出题干关键词，再用一句中文把英文术语翻译出来，最后对应到答案。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?ABCD锛圓. 鍒嗗竷寮忔灦鏋勶紝鏄撲簬鎵╁睍锛汢. 杩戜箮瀹炴椂鐨勬悳绱㈠拰鍒嗘瀽锛汣. 绠€鍗曟槗鐢ㄧ殑 RESTful API锛汥. 寮哄ぇ鐨勫叏鏂囨绱㈣兘鍔涳級銆傛湰棰樻槸澶氶€夛紝瑕佹妸姣忎釜閫夐」閫愰」浠ｅ叆 ElasticSearch 鐨勭壒鐐广€佹蹇垫垨鐢ㄦ硶鍒ゆ柇锛屼笉鑳藉彧閫夋渶鐔熸倝鐨勪竴椤广€?鏈鐞嗚В锛歊ESTful锛氫竴绉?HTTP 鎺ュ彛椋庢牸锛岀敤 GET銆丳OST銆丳UT銆丏ELETE 琛ㄧず涓嶅悓鎿嶄綔銆?,
+      "memoryTip": "澶嶄範鏃跺厛鍦堝嚭棰樺共鍏抽敭璇嶏紝鍐嶇敤涓€鍙ヤ腑鏂囨妸鑻辨枃鏈缈昏瘧鍑烘潵锛屾渶鍚庡搴斿埌绛旀銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "综合复习"
+        "缁煎悎澶嶄範"
       ]
     },
     {
       "id": "q090",
       "type": "multiple",
-      "question": "以下哪些是 ElasticSearch 相对于传统关系型数据库的优势？",
+      "question": "浠ヤ笅鍝簺鏄?ElasticSearch 鐩稿浜庝紶缁熷叧绯诲瀷鏁版嵁搴撶殑浼樺娍锛?,
       "options": {
-        "A": "全文检索能力强",
-        "B": "分布式架构，易于扩展",
-        "C": "支持复杂的事务处理",
-        "D": "近乎实时的搜索和分析"
+        "A": "鍏ㄦ枃妫€绱㈣兘鍔涘己",
+        "B": "鍒嗗竷寮忔灦鏋勶紝鏄撲簬鎵╁睍",
+        "C": "鏀寔澶嶆潅鐨勪簨鍔″鐞?,
+        "D": "杩戜箮瀹炴椂鐨勬悳绱㈠拰鍒嗘瀽"
       },
       "answer": [
         "A",
@@ -1963,556 +1963,556 @@ window.QUESTION_BANK = {
         "D"
       ],
       "referenceAnswer": "ABD",
-      "explanation": "正确选项是 ABD（A. 全文检索能力强；B. 分布式架构，易于扩展；D. 近乎实时的搜索和分析）。本题是多选，要把每个选项逐项代入 ElasticSearch 的特点、概念或用法判断，不能只选最熟悉的一项。",
-      "memoryTip": "复习时先圈出题干关键词，再用一句中文把英文术语翻译出来，最后对应到答案。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "explanation": "姝ｇ‘閫夐」鏄?ABD锛圓. 鍏ㄦ枃妫€绱㈣兘鍔涘己锛汢. 鍒嗗竷寮忔灦鏋勶紝鏄撲簬鎵╁睍锛汥. 杩戜箮瀹炴椂鐨勬悳绱㈠拰鍒嗘瀽锛夈€傛湰棰樻槸澶氶€夛紝瑕佹妸姣忎釜閫夐」閫愰」浠ｅ叆 ElasticSearch 鐨勭壒鐐广€佹蹇垫垨鐢ㄦ硶鍒ゆ柇锛屼笉鑳藉彧閫夋渶鐔熸倝鐨勪竴椤广€?,
+      "memoryTip": "澶嶄範鏃跺厛鍦堝嚭棰樺共鍏抽敭璇嶏紝鍐嶇敤涓€鍙ヤ腑鏂囨妸鑻辨枃鏈缈昏瘧鍑烘潵锛屾渶鍚庡搴斿埌绛旀銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "综合复习"
+        "缁煎悎澶嶄範"
       ]
     },
     {
       "id": "q091",
       "type": "judge",
-      "question": "ElasticSearch 是一个开源的高扩展的分布式全文检索引擎。",
+      "question": "ElasticSearch 鏄竴涓紑婧愮殑楂樻墿灞曠殑鍒嗗竷寮忓叏鏂囨绱㈠紩鎿庛€?,
       "options": {
-        "A": "正确",
-        "B": "错误"
+        "A": "姝ｇ‘",
+        "B": "閿欒"
       },
       "answer": "A",
-      "referenceAnswer": "正确",
-      "explanation": "该说法为“正确”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
-      "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "referenceAnswer": "姝ｇ‘",
+      "explanation": "璇ヨ娉曚负鈥滄纭€濄€傚垽鏂鍏堢湅棰樺共鏈夋病鏈夆€滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑缁濆璇嶏紝鍐嶅洖鍒?ES 鐨勫疄闄呮満鍒跺垽鏂€?,
+      "memoryTip": "鍒ゆ柇棰橀噸鐐圭湅缁濆璇嶏細鐪嬪埌鈥滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑璇嶏紝鍏堣鎯曞畠鍙兘鏄敊璇〃杩般€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "索引与映射"
+        "绱㈠紩涓庢槧灏?
       ]
     },
     {
       "id": "q092",
       "type": "judge",
-      "question": "ElasticSearch 可以处理 PB 级别的数据。",
+      "question": "ElasticSearch 鍙互澶勭悊 PB 绾у埆鐨勬暟鎹€?,
       "options": {
-        "A": "正确",
-        "B": "错误"
+        "A": "姝ｇ‘",
+        "B": "閿欒"
       },
       "answer": "A",
-      "referenceAnswer": "正确",
-      "explanation": "该说法为“正确”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
-      "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "referenceAnswer": "姝ｇ‘",
+      "explanation": "璇ヨ娉曚负鈥滄纭€濄€傚垽鏂鍏堢湅棰樺共鏈夋病鏈夆€滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑缁濆璇嶏紝鍐嶅洖鍒?ES 鐨勫疄闄呮満鍒跺垽鏂€?,
+      "memoryTip": "鍒ゆ柇棰橀噸鐐圭湅缁濆璇嶏細鐪嬪埌鈥滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑璇嶏紝鍏堣鎯曞畠鍙兘鏄敊璇〃杩般€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "综合复习"
+        "缁煎悎澶嶄範"
       ]
     },
     {
       "id": "q093",
       "type": "judge",
-      "question": "ElasticSearch 是 Elastic Stack 的核心组件。",
+      "question": "ElasticSearch 鏄?Elastic Stack 鐨勬牳蹇冪粍浠躲€?,
       "options": {
-        "A": "正确",
-        "B": "错误"
+        "A": "姝ｇ‘",
+        "B": "閿欒"
       },
       "answer": "A",
-      "referenceAnswer": "正确",
-      "explanation": "该说法为“正确”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
-      "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "referenceAnswer": "姝ｇ‘",
+      "explanation": "璇ヨ娉曚负鈥滄纭€濄€傚垽鏂鍏堢湅棰樺共鏈夋病鏈夆€滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑缁濆璇嶏紝鍐嶅洖鍒?ES 鐨勫疄闄呮満鍒跺垽鏂€?,
+      "memoryTip": "鍒ゆ柇棰橀噸鐐圭湅缁濆璇嶏細鐪嬪埌鈥滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑璇嶏紝鍏堣鎯曞畠鍙兘鏄敊璇〃杩般€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "基础概念"
+        "鍩虹姒傚康"
       ]
     },
     {
       "id": "q094",
       "type": "judge",
-      "question": "ElasticSearch 只能在 Linux 系统上运行。",
+      "question": "ElasticSearch 鍙兘鍦?Linux 绯荤粺涓婅繍琛屻€?,
       "options": {
-        "A": "正确",
-        "B": "错误"
+        "A": "姝ｇ‘",
+        "B": "閿欒"
       },
       "answer": "B",
-      "referenceAnswer": "错误",
-      "explanation": "该说法为“错误”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
-      "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "referenceAnswer": "閿欒",
+      "explanation": "璇ヨ娉曚负鈥滈敊璇€濄€傚垽鏂鍏堢湅棰樺共鏈夋病鏈夆€滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑缁濆璇嶏紝鍐嶅洖鍒?ES 鐨勫疄闄呮満鍒跺垽鏂€?,
+      "memoryTip": "鍒ゆ柇棰橀噸鐐圭湅缁濆璇嶏細鐪嬪埌鈥滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑璇嶏紝鍏堣鎯曞畠鍙兘鏄敊璇〃杩般€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "综合复习"
+        "缁煎悎澶嶄範"
       ]
     },
     {
       "id": "q095",
       "type": "judge",
-      "question": "ElasticSearch 只能用于全文检索，不能用于数据分析。",
+      "question": "ElasticSearch 鍙兘鐢ㄤ簬鍏ㄦ枃妫€绱紝涓嶈兘鐢ㄤ簬鏁版嵁鍒嗘瀽銆?,
       "options": {
-        "A": "正确",
-        "B": "错误"
+        "A": "姝ｇ‘",
+        "B": "閿欒"
       },
       "answer": "B",
-      "referenceAnswer": "错误",
-      "explanation": "该说法为“错误”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
-      "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "referenceAnswer": "閿欒",
+      "explanation": "璇ヨ娉曚负鈥滈敊璇€濄€傚垽鏂鍏堢湅棰樺共鏈夋病鏈夆€滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑缁濆璇嶏紝鍐嶅洖鍒?ES 鐨勫疄闄呮満鍒跺垽鏂€?,
+      "memoryTip": "鍒ゆ柇棰橀噸鐐圭湅缁濆璇嶏細鐪嬪埌鈥滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑璇嶏紝鍏堣鎯曞畠鍙兘鏄敊璇〃杩般€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "综合复习"
+        "缁煎悎澶嶄範"
       ]
     },
     {
       "id": "q096",
       "type": "judge",
-      "question": "ElasticSearch 只能在服务器上运行，不能在个人电脑上运行。",
+      "question": "ElasticSearch 鍙兘鍦ㄦ湇鍔″櫒涓婅繍琛岋紝涓嶈兘鍦ㄤ釜浜虹數鑴戜笂杩愯銆?,
       "options": {
-        "A": "正确",
-        "B": "错误"
+        "A": "姝ｇ‘",
+        "B": "閿欒"
       },
       "answer": "B",
-      "referenceAnswer": "错误",
-      "explanation": "该说法为“错误”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
-      "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "referenceAnswer": "閿欒",
+      "explanation": "璇ヨ娉曚负鈥滈敊璇€濄€傚垽鏂鍏堢湅棰樺共鏈夋病鏈夆€滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑缁濆璇嶏紝鍐嶅洖鍒?ES 鐨勫疄闄呮満鍒跺垽鏂€?,
+      "memoryTip": "鍒ゆ柇棰橀噸鐐圭湅缁濆璇嶏細鐪嬪埌鈥滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑璇嶏紝鍏堣鎯曞畠鍙兘鏄敊璇〃杩般€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "综合复习"
+        "缁煎悎澶嶄範"
       ]
     },
     {
       "id": "q097",
       "type": "judge",
-      "question": "ElasticSearch 7.x 版本需要 JDK 11 及以上版本支持。",
+      "question": "ElasticSearch 7.x 鐗堟湰闇€瑕?JDK 11 鍙婁互涓婄増鏈敮鎸併€?,
       "options": {
-        "A": "正确",
-        "B": "错误"
+        "A": "姝ｇ‘",
+        "B": "閿欒"
       },
       "answer": "A",
-      "referenceAnswer": "正确",
-      "explanation": "该说法为“正确”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
-      "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "referenceAnswer": "姝ｇ‘",
+      "explanation": "璇ヨ娉曚负鈥滄纭€濄€傚垽鏂鍏堢湅棰樺共鏈夋病鏈夆€滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑缁濆璇嶏紝鍐嶅洖鍒?ES 鐨勫疄闄呮満鍒跺垽鏂€?,
+      "memoryTip": "鍒ゆ柇棰橀噸鐐圭湅缁濆璇嶏細鐪嬪埌鈥滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑璇嶏紝鍏堣鎯曞畠鍙兘鏄敊璇〃杩般€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "综合复习"
+        "缁煎悎澶嶄範"
       ]
     },
     {
       "id": "q098",
       "type": "judge",
-      "question": "安装 ElasticSearch Head 插件需要先安装 Node.js。",
+      "question": "瀹夎 ElasticSearch Head 鎻掍欢闇€瑕佸厛瀹夎 Node.js銆?,
       "options": {
-        "A": "正确",
-        "B": "错误"
+        "A": "姝ｇ‘",
+        "B": "閿欒"
       },
       "answer": "A",
-      "referenceAnswer": "正确",
-      "explanation": "该说法为“正确”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
-      "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "referenceAnswer": "姝ｇ‘",
+      "explanation": "璇ヨ娉曚负鈥滄纭€濄€傚垽鏂鍏堢湅棰樺共鏈夋病鏈夆€滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑缁濆璇嶏紝鍐嶅洖鍒?ES 鐨勫疄闄呮満鍒跺垽鏂€?,
+      "memoryTip": "鍒ゆ柇棰橀噸鐐圭湅缁濆璇嶏細鐪嬪埌鈥滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑璇嶏紝鍏堣鎯曞畠鍙兘鏄敊璇〃杩般€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "安装配置"
+        "瀹夎閰嶇疆"
       ]
     },
     {
       "id": "q099",
       "type": "judge",
-      "question": "安装 ElasticSearch7.14.0 时必须配置 JAVA_HOME 环境变量。",
+      "question": "瀹夎 ElasticSearch7.14.0 鏃跺繀椤婚厤缃?JAVA_HOME 鐜鍙橀噺銆?,
       "options": {
-        "A": "正确",
-        "B": "错误"
+        "A": "姝ｇ‘",
+        "B": "閿欒"
       },
       "answer": "B",
-      "referenceAnswer": "错误",
-      "explanation": "该说法为“错误”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
-      "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "referenceAnswer": "閿欒",
+      "explanation": "璇ヨ娉曚负鈥滈敊璇€濄€傚垽鏂鍏堢湅棰樺共鏈夋病鏈夆€滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑缁濆璇嶏紝鍐嶅洖鍒?ES 鐨勫疄闄呮満鍒跺垽鏂€?,
+      "memoryTip": "鍒ゆ柇棰橀噸鐐圭湅缁濆璇嶏細鐪嬪埌鈥滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑璇嶏紝鍏堣鎯曞畠鍙兘鏄敊璇〃杩般€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "安装配置"
+        "瀹夎閰嶇疆"
       ]
     },
     {
       "id": "q100",
       "type": "judge",
-      "question": "一个 ElasticSearch 集群只能有一个节点。",
+      "question": "涓€涓?ElasticSearch 闆嗙兢鍙兘鏈変竴涓妭鐐广€?,
       "options": {
-        "A": "正确",
-        "B": "错误"
+        "A": "姝ｇ‘",
+        "B": "閿欒"
       },
       "answer": "B",
-      "referenceAnswer": "错误",
-      "explanation": "该说法为“错误”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
-      "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "referenceAnswer": "閿欒",
+      "explanation": "璇ヨ娉曚负鈥滈敊璇€濄€傚垽鏂鍏堢湅棰樺共鏈夋病鏈夆€滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑缁濆璇嶏紝鍐嶅洖鍒?ES 鐨勫疄闄呮満鍒跺垽鏂€?,
+      "memoryTip": "鍒ゆ柇棰橀噸鐐圭湅缁濆璇嶏細鐪嬪埌鈥滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑璇嶏紝鍏堣鎯曞畠鍙兘鏄敊璇〃杩般€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "集群与分片"
+        "闆嗙兢涓庡垎鐗?
       ]
     },
     {
       "id": "q101",
       "type": "judge",
-      "question": "一个 ElasticSearch 集群可以有多个主节点。",
+      "question": "涓€涓?ElasticSearch 闆嗙兢鍙互鏈夊涓富鑺傜偣銆?,
       "options": {
-        "A": "正确",
-        "B": "错误"
+        "A": "姝ｇ‘",
+        "B": "閿欒"
       },
       "answer": "B",
-      "referenceAnswer": "错误",
-      "explanation": "该说法为“错误”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
-      "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "referenceAnswer": "閿欒",
+      "explanation": "璇ヨ娉曚负鈥滈敊璇€濄€傚垽鏂鍏堢湅棰樺共鏈夋病鏈夆€滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑缁濆璇嶏紝鍐嶅洖鍒?ES 鐨勫疄闄呮満鍒跺垽鏂€?,
+      "memoryTip": "鍒ゆ柇棰橀噸鐐圭湅缁濆璇嶏細鐪嬪埌鈥滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑璇嶏紝鍏堣鎯曞畠鍙兘鏄敊璇〃杩般€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "集群与分片"
+        "闆嗙兢涓庡垎鐗?
       ]
     },
     {
       "id": "q102",
       "type": "judge",
-      "question": "ElasticSearch 集群中只能有一个主节点在运行。",
+      "question": "ElasticSearch 闆嗙兢涓彧鑳芥湁涓€涓富鑺傜偣鍦ㄨ繍琛屻€?,
       "options": {
-        "A": "正确",
-        "B": "错误"
+        "A": "姝ｇ‘",
+        "B": "閿欒"
       },
       "answer": "A",
-      "referenceAnswer": "正确",
-      "explanation": "该说法为“正确”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
-      "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "referenceAnswer": "姝ｇ‘",
+      "explanation": "璇ヨ娉曚负鈥滄纭€濄€傚垽鏂鍏堢湅棰樺共鏈夋病鏈夆€滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑缁濆璇嶏紝鍐嶅洖鍒?ES 鐨勫疄闄呮満鍒跺垽鏂€?,
+      "memoryTip": "鍒ゆ柇棰橀噸鐐圭湅缁濆璇嶏細鐪嬪埌鈥滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑璇嶏紝鍏堣鎯曞畠鍙兘鏄敊璇〃杩般€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "集群与分片"
+        "闆嗙兢涓庡垎鐗?
       ]
     },
     {
       "id": "q103",
       "type": "judge",
-      "question": "复制分片可以与主分片放在同一个节点上。",
+      "question": "澶嶅埗鍒嗙墖鍙互涓庝富鍒嗙墖鏀惧湪鍚屼竴涓妭鐐逛笂銆?,
       "options": {
-        "A": "正确",
-        "B": "错误"
+        "A": "姝ｇ‘",
+        "B": "閿欒"
       },
       "answer": "B",
-      "referenceAnswer": "错误",
-      "explanation": "该说法为“错误”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
-      "memoryTip": "主分片记“原件”：真正承载数据；复制分片记“复印件”：容灾和分摊查询。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "referenceAnswer": "閿欒",
+      "explanation": "璇ヨ娉曚负鈥滈敊璇€濄€傚垽鏂鍏堢湅棰樺共鏈夋病鏈夆€滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑缁濆璇嶏紝鍐嶅洖鍒?ES 鐨勫疄闄呮満鍒跺垽鏂€?,
+      "memoryTip": "涓诲垎鐗囪鈥滃師浠垛€濓細鐪熸鎵胯浇鏁版嵁锛涘鍒跺垎鐗囪鈥滃鍗颁欢鈥濓細瀹圭伨鍜屽垎鎽婃煡璇€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "集群与分片"
+        "闆嗙兢涓庡垎鐗?
       ]
     },
     {
       "id": "q104",
       "type": "judge",
-      "question": "ElasticSearch 中的文档只能是 JSON 格式。",
+      "question": "ElasticSearch 涓殑鏂囨。鍙兘鏄?JSON 鏍煎紡銆?,
       "options": {
-        "A": "正确",
-        "B": "错误"
+        "A": "姝ｇ‘",
+        "B": "閿欒"
       },
       "answer": "A",
-      "referenceAnswer": "正确",
-      "explanation": "该说法为“正确”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
-      "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "referenceAnswer": "姝ｇ‘",
+      "explanation": "璇ヨ娉曚负鈥滄纭€濄€傚垽鏂鍏堢湅棰樺共鏈夋病鏈夆€滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑缁濆璇嶏紝鍐嶅洖鍒?ES 鐨勫疄闄呮満鍒跺垽鏂€?,
+      "memoryTip": "鍒ゆ柇棰橀噸鐐圭湅缁濆璇嶏細鐪嬪埌鈥滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑璇嶏紝鍏堣鎯曞畠鍙兘鏄敊璇〃杩般€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "综合复习"
+        "缁煎悎澶嶄範"
       ]
     },
     {
       "id": "q105",
       "type": "judge",
-      "question": "复制分片的数量在索引创建后可以动态修改。",
+      "question": "澶嶅埗鍒嗙墖鐨勬暟閲忓湪绱㈠紩鍒涘缓鍚庡彲浠ュ姩鎬佷慨鏀广€?,
       "options": {
-        "A": "正确",
-        "B": "错误"
+        "A": "姝ｇ‘",
+        "B": "閿欒"
       },
       "answer": "A",
-      "referenceAnswer": "正确",
-      "explanation": "该说法为“正确”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
-      "memoryTip": "复制分片记“复印件”：主分片坏了可顶上，也能分摊搜索压力。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "referenceAnswer": "姝ｇ‘",
+      "explanation": "璇ヨ娉曚负鈥滄纭€濄€傚垽鏂鍏堢湅棰樺共鏈夋病鏈夆€滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑缁濆璇嶏紝鍐嶅洖鍒?ES 鐨勫疄闄呮満鍒跺垽鏂€?,
+      "memoryTip": "澶嶅埗鍒嗙墖璁扳€滃鍗颁欢鈥濓細涓诲垎鐗囧潖浜嗗彲椤朵笂锛屼篃鑳藉垎鎽婃悳绱㈠帇鍔涖€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "集群与分片",
-        "索引与映射"
+        "闆嗙兢涓庡垎鐗?,
+        "绱㈠紩涓庢槧灏?
       ]
     },
     {
       "id": "q106",
       "type": "judge",
-      "question": "ElasticSearch 是面向文档的，它可以存储整个对象或文档。",
+      "question": "ElasticSearch 鏄潰鍚戞枃妗ｇ殑锛屽畠鍙互瀛樺偍鏁翠釜瀵硅薄鎴栨枃妗ｃ€?,
       "options": {
-        "A": "正确",
-        "B": "错误"
+        "A": "姝ｇ‘",
+        "B": "閿欒"
       },
       "answer": "A",
-      "referenceAnswer": "正确",
-      "explanation": "该说法为“正确”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
-      "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "referenceAnswer": "姝ｇ‘",
+      "explanation": "璇ヨ娉曚负鈥滄纭€濄€傚垽鏂鍏堢湅棰樺共鏈夋病鏈夆€滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑缁濆璇嶏紝鍐嶅洖鍒?ES 鐨勫疄闄呮満鍒跺垽鏂€?,
+      "memoryTip": "鍒ゆ柇棰橀噸鐐圭湅缁濆璇嶏細鐪嬪埌鈥滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑璇嶏紝鍏堣鎯曞畠鍙兘鏄敊璇〃杩般€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "综合复习"
+        "缁煎悎澶嶄範"
       ]
     },
     {
       "id": "q107",
       "type": "judge",
-      "question": "在 ElasticSearch 中，使用 GET 方法可以查询文档。",
+      "question": "鍦?ElasticSearch 涓紝浣跨敤 GET 鏂规硶鍙互鏌ヨ鏂囨。銆?,
       "options": {
-        "A": "正确",
-        "B": "错误"
+        "A": "姝ｇ‘",
+        "B": "閿欒"
       },
       "answer": "A",
-      "referenceAnswer": "正确",
-      "explanation": "该说法为“正确”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
-      "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "referenceAnswer": "姝ｇ‘",
+      "explanation": "璇ヨ娉曚负鈥滄纭€濄€傚垽鏂鍏堢湅棰樺共鏈夋病鏈夆€滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑缁濆璇嶏紝鍐嶅洖鍒?ES 鐨勫疄闄呮満鍒跺垽鏂€?,
+      "memoryTip": "鍒ゆ柇棰橀噸鐐圭湅缁濆璇嶏細鐪嬪埌鈥滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑璇嶏紝鍏堣鎯曞畠鍙兘鏄敊璇〃杩般€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "查询 DSL"
+        "鏌ヨ DSL"
       ]
     },
     {
       "id": "q108",
       "type": "judge",
-      "question": "在 ElasticSearch 中，使用 POST 方法创建文档时必须指定 ID。",
+      "question": "鍦?ElasticSearch 涓紝浣跨敤 POST 鏂规硶鍒涘缓鏂囨。鏃跺繀椤绘寚瀹?ID銆?,
       "options": {
-        "A": "正确",
-        "B": "错误"
+        "A": "姝ｇ‘",
+        "B": "閿欒"
       },
       "answer": "B",
-      "referenceAnswer": "错误",
-      "explanation": "该说法为“错误”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
-      "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "referenceAnswer": "閿欒",
+      "explanation": "璇ヨ娉曚负鈥滈敊璇€濄€傚垽鏂鍏堢湅棰樺共鏈夋病鏈夆€滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑缁濆璇嶏紝鍐嶅洖鍒?ES 鐨勫疄闄呮満鍒跺垽鏂€?,
+      "memoryTip": "鍒ゆ柇棰橀噸鐐圭湅缁濆璇嶏細鐪嬪埌鈥滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑璇嶏紝鍏堣鎯曞畠鍙兘鏄敊璇〃杩般€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "综合复习"
+        "缁煎悎澶嶄範"
       ]
     },
     {
       "id": "q109",
       "type": "judge",
-      "question": "在 ElasticSearch 中，索引名称可以包含大写字母。",
+      "question": "鍦?ElasticSearch 涓紝绱㈠紩鍚嶇О鍙互鍖呭惈澶у啓瀛楁瘝銆?,
       "options": {
-        "A": "正确",
-        "B": "错误"
+        "A": "姝ｇ‘",
+        "B": "閿欒"
       },
       "answer": "B",
-      "referenceAnswer": "错误",
-      "explanation": "该说法为“错误”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
-      "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "referenceAnswer": "閿欒",
+      "explanation": "璇ヨ娉曚负鈥滈敊璇€濄€傚垽鏂鍏堢湅棰樺共鏈夋病鏈夆€滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑缁濆璇嶏紝鍐嶅洖鍒?ES 鐨勫疄闄呮満鍒跺垽鏂€?,
+      "memoryTip": "鍒ゆ柇棰橀噸鐐圭湅缁濆璇嶏細鐪嬪埌鈥滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑璇嶏紝鍏堣鎯曞畠鍙兘鏄敊璇〃杩般€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "索引与映射"
+        "绱㈠紩涓庢槧灏?
       ]
     },
     {
       "id": "q110",
       "type": "judge",
-      "question": "ElasticSearch 的默认分词器对中文支持很好。",
+      "question": "ElasticSearch 鐨勯粯璁ゅ垎璇嶅櫒瀵逛腑鏂囨敮鎸佸緢濂姐€?,
       "options": {
-        "A": "正确",
-        "B": "错误"
+        "A": "姝ｇ‘",
+        "B": "閿欒"
       },
       "answer": "B",
-      "referenceAnswer": "错误",
-      "explanation": "该说法为“错误”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
-      "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "referenceAnswer": "閿欒",
+      "explanation": "璇ヨ娉曚负鈥滈敊璇€濄€傚垽鏂鍏堢湅棰樺共鏈夋病鏈夆€滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑缁濆璇嶏紝鍐嶅洖鍒?ES 鐨勫疄闄呮満鍒跺垽鏂€?,
+      "memoryTip": "鍒ゆ柇棰橀噸鐐圭湅缁濆璇嶏細鐪嬪埌鈥滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑璇嶏紝鍏堣鎯曞畠鍙兘鏄敊璇〃杩般€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "IK 分词器"
+        "IK 鍒嗚瘝鍣?
       ]
     },
     {
       "id": "q111",
       "type": "judge",
-      "question": "ElasticSearch 的 standard 分词器对中文支持不好。",
+      "question": "ElasticSearch 鐨?standard 鍒嗚瘝鍣ㄥ涓枃鏀寔涓嶅ソ銆?,
       "options": {
-        "A": "正确",
-        "B": "错误"
+        "A": "姝ｇ‘",
+        "B": "閿欒"
       },
       "answer": "A",
-      "referenceAnswer": "正确",
-      "explanation": "该说法为“正确”。standard 分词器对中文通常按单字切分，语义效果不如 IK 中文分词器。",
-      "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "referenceAnswer": "姝ｇ‘",
+      "explanation": "璇ヨ娉曚负鈥滄纭€濄€俿tandard 鍒嗚瘝鍣ㄥ涓枃閫氬父鎸夊崟瀛楀垏鍒嗭紝璇箟鏁堟灉涓嶅 IK 涓枃鍒嗚瘝鍣ㄣ€?,
+      "memoryTip": "鍒ゆ柇棰橀噸鐐圭湅缁濆璇嶏細鐪嬪埌鈥滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑璇嶏紝鍏堣鎯曞畠鍙兘鏄敊璇〃杩般€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "IK 分词器"
+        "IK 鍒嗚瘝鍣?
       ]
     },
     {
       "id": "q112",
       "type": "judge",
-      "question": "使用 POST 方法创建文档时，如果指定了已存在的 ID，则会更新该文档。",
+      "question": "浣跨敤 POST 鏂规硶鍒涘缓鏂囨。鏃讹紝濡傛灉鎸囧畾浜嗗凡瀛樺湪鐨?ID锛屽垯浼氭洿鏂拌鏂囨。銆?,
       "options": {
-        "A": "正确",
-        "B": "错误"
+        "A": "姝ｇ‘",
+        "B": "閿欒"
       },
       "answer": "A",
-      "referenceAnswer": "正确",
-      "explanation": "该说法为“正确”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
-      "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "referenceAnswer": "姝ｇ‘",
+      "explanation": "璇ヨ娉曚负鈥滄纭€濄€傚垽鏂鍏堢湅棰樺共鏈夋病鏈夆€滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑缁濆璇嶏紝鍐嶅洖鍒?ES 鐨勫疄闄呮満鍒跺垽鏂€?,
+      "memoryTip": "鍒ゆ柇棰橀噸鐐圭湅缁濆璇嶏細鐪嬪埌鈥滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑璇嶏紝鍏堣鎯曞畠鍙兘鏄敊璇〃杩般€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "综合复习"
+        "缁煎悎澶嶄範"
       ]
     },
     {
       "id": "q113",
       "type": "judge",
-      "question": "IK 分词器只能用于中文分词。",
+      "question": "IK 鍒嗚瘝鍣ㄥ彧鑳界敤浜庝腑鏂囧垎璇嶃€?,
       "options": {
-        "A": "正确",
-        "B": "错误"
+        "A": "姝ｇ‘",
+        "B": "閿欒"
       },
       "answer": "B",
-      "referenceAnswer": "错误",
-      "explanation": "该说法为“错误”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
-      "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "referenceAnswer": "閿欒",
+      "explanation": "璇ヨ娉曚负鈥滈敊璇€濄€傚垽鏂鍏堢湅棰樺共鏈夋病鏈夆€滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑缁濆璇嶏紝鍐嶅洖鍒?ES 鐨勫疄闄呮満鍒跺垽鏂€?,
+      "memoryTip": "鍒ゆ柇棰橀噸鐐圭湅缁濆璇嶏細鐪嬪埌鈥滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑璇嶏紝鍏堣鎯曞畠鍙兘鏄敊璇〃杩般€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "IK 分词器"
+        "IK 鍒嗚瘝鍣?
       ]
     },
     {
       "id": "q114",
       "type": "judge",
-      "question": "IK 分词器的 ik_max_word 算法适合用于查询。",
+      "question": "IK 鍒嗚瘝鍣ㄧ殑 ik_max_word 绠楁硶閫傚悎鐢ㄤ簬鏌ヨ銆?,
       "options": {
-        "A": "正确",
-        "B": "错误"
+        "A": "姝ｇ‘",
+        "B": "閿欒"
       },
       "answer": "B",
-      "referenceAnswer": "错误",
-      "explanation": "该说法为“错误”。ik_max_word 是最细切分，切出的词多，召回更多，适合新闻、文章等全文搜索。 术语理解：ik_max_word：IK 最细切分，词更多，偏提高召回率。",
-      "memoryTip": "max_word = 最大词量：切词多，偏召回、适合文章搜索。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "referenceAnswer": "閿欒",
+      "explanation": "璇ヨ娉曚负鈥滈敊璇€濄€俰k_max_word 鏄渶缁嗗垏鍒嗭紝鍒囧嚭鐨勮瘝澶氾紝鍙洖鏇村锛岄€傚悎鏂伴椈銆佹枃绔犵瓑鍏ㄦ枃鎼滅储銆?鏈鐞嗚В锛歩k_max_word锛欼K 鏈€缁嗗垏鍒嗭紝璇嶆洿澶氾紝鍋忔彁楂樺彫鍥炵巼銆?,
+      "memoryTip": "max_word = 鏈€澶ц瘝閲忥細鍒囪瘝澶氾紝鍋忓彫鍥炪€侀€傚悎鏂囩珷鎼滅储銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "查询 DSL",
-        "IK 分词器"
+        "鏌ヨ DSL",
+        "IK 鍒嗚瘝鍣?
       ]
     },
     {
       "id": "q115",
       "type": "judge",
-      "question": "ElasticSearch 默认的分词器是 standard 分词器。",
+      "question": "ElasticSearch 榛樿鐨勫垎璇嶅櫒鏄?standard 鍒嗚瘝鍣ㄣ€?,
       "options": {
-        "A": "正确",
-        "B": "错误"
+        "A": "姝ｇ‘",
+        "B": "閿欒"
       },
       "answer": "A",
-      "referenceAnswer": "正确",
-      "explanation": "该说法为“正确”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
-      "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "referenceAnswer": "姝ｇ‘",
+      "explanation": "璇ヨ娉曚负鈥滄纭€濄€傚垽鏂鍏堢湅棰樺共鏈夋病鏈夆€滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑缁濆璇嶏紝鍐嶅洖鍒?ES 鐨勫疄闄呮満鍒跺垽鏂€?,
+      "memoryTip": "鍒ゆ柇棰橀噸鐐圭湅缁濆璇嶏細鐪嬪埌鈥滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑璇嶏紝鍏堣鎯曞畠鍙兘鏄敊璇〃杩般€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "IK 分词器"
+        "IK 鍒嗚瘝鍣?
       ]
     },
     {
       "id": "q116",
       "type": "judge",
-      "question": "在 ElasticSearch 查询中，sort 参数用于对结果进行排序。",
+      "question": "鍦?ElasticSearch 鏌ヨ涓紝sort 鍙傛暟鐢ㄤ簬瀵圭粨鏋滆繘琛屾帓搴忋€?,
       "options": {
-        "A": "正确",
-        "B": "错误"
+        "A": "姝ｇ‘",
+        "B": "閿欒"
       },
       "answer": "A",
-      "referenceAnswer": "正确",
-      "explanation": "该说法为“正确”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
-      "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "referenceAnswer": "姝ｇ‘",
+      "explanation": "璇ヨ娉曚负鈥滄纭€濄€傚垽鏂鍏堢湅棰樺共鏈夋病鏈夆€滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑缁濆璇嶏紝鍐嶅洖鍒?ES 鐨勫疄闄呮満鍒跺垽鏂€?,
+      "memoryTip": "鍒ゆ柇棰橀噸鐐圭湅缁濆璇嶏細鐪嬪埌鈥滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑璇嶏紝鍏堣鎯曞畠鍙兘鏄敊璇〃杩般€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "查询 DSL"
+        "鏌ヨ DSL"
       ]
     },
     {
       "id": "q117",
       "type": "judge",
-      "question": "在 ElasticSearch 查询中，aggs 参数用于进行聚合查询。",
+      "question": "鍦?ElasticSearch 鏌ヨ涓紝aggs 鍙傛暟鐢ㄤ簬杩涜鑱氬悎鏌ヨ銆?,
       "options": {
-        "A": "正确",
-        "B": "错误"
+        "A": "姝ｇ‘",
+        "B": "閿欒"
       },
       "answer": "A",
-      "referenceAnswer": "正确",
-      "explanation": "该说法为“正确”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
-      "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "referenceAnswer": "姝ｇ‘",
+      "explanation": "璇ヨ娉曚负鈥滄纭€濄€傚垽鏂鍏堢湅棰樺共鏈夋病鏈夆€滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑缁濆璇嶏紝鍐嶅洖鍒?ES 鐨勫疄闄呮満鍒跺垽鏂€?,
+      "memoryTip": "鍒ゆ柇棰橀噸鐐圭湅缁濆璇嶏細鐪嬪埌鈥滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑璇嶏紝鍏堣鎯曞畠鍙兘鏄敊璇〃杩般€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "查询 DSL"
+        "鏌ヨ DSL"
       ]
     },
     {
       "id": "q118",
       "type": "judge",
-      "question": "IK 分词器的 ik_smart 算法会将文本拆分成尽可能多的词。",
+      "question": "IK 鍒嗚瘝鍣ㄧ殑 ik_smart 绠楁硶浼氬皢鏂囨湰鎷嗗垎鎴愬敖鍙兘澶氱殑璇嶃€?,
       "options": {
-        "A": "正确",
-        "B": "错误"
+        "A": "姝ｇ‘",
+        "B": "閿欒"
       },
       "answer": "B",
-      "referenceAnswer": "错误",
-      "explanation": "该说法为“错误”。ik_smart 是最少切分，切出的词少，查询更精确、噪声更少。 术语理解：ik_smart：IK 最少切分，词更少，偏精确和高效。",
-      "memoryTip": "smart = 聪明省事：切词少，偏精确、效率高。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "referenceAnswer": "閿欒",
+      "explanation": "璇ヨ娉曚负鈥滈敊璇€濄€俰k_smart 鏄渶灏戝垏鍒嗭紝鍒囧嚭鐨勮瘝灏戯紝鏌ヨ鏇寸簿纭€佸櫔澹版洿灏戙€?鏈鐞嗚В锛歩k_smart锛欼K 鏈€灏戝垏鍒嗭紝璇嶆洿灏戯紝鍋忕簿纭拰楂樻晥銆?,
+      "memoryTip": "smart = 鑱槑鐪佷簨锛氬垏璇嶅皯锛屽亸绮剧‘銆佹晥鐜囬珮銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "IK 分词器"
+        "IK 鍒嗚瘝鍣?
       ]
     },
     {
       "id": "q119",
       "type": "judge",
-      "question": "ElasticSearch 集群的健康状态为 red 表示部分主分片不可用。",
+      "question": "ElasticSearch 闆嗙兢鐨勫仴搴风姸鎬佷负 red 琛ㄧず閮ㄥ垎涓诲垎鐗囦笉鍙敤銆?,
       "options": {
-        "A": "正确",
-        "B": "错误"
+        "A": "姝ｇ‘",
+        "B": "閿欒"
       },
       "answer": "B",
-      "referenceAnswer": "错误",
-      "explanation": "该说法为“错误”。red 表示至少有主分片不可用，数据读写会受影响。",
-      "memoryTip": "主分片记“原件”：真正承载数据；复制分片记“复印件”：容灾和分摊查询。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "referenceAnswer": "閿欒",
+      "explanation": "璇ヨ娉曚负鈥滈敊璇€濄€俽ed 琛ㄧず鑷冲皯鏈変富鍒嗙墖涓嶅彲鐢紝鏁版嵁璇诲啓浼氬彈褰卞搷銆?,
+      "memoryTip": "涓诲垎鐗囪鈥滃師浠垛€濓細鐪熸鎵胯浇鏁版嵁锛涘鍒跺垎鐗囪鈥滃鍗颁欢鈥濓細瀹圭伨鍜屽垎鎽婃煡璇€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "集群与分片"
+        "闆嗙兢涓庡垎鐗?
       ]
     },
     {
       "id": "q120",
       "type": "judge",
-      "question": "ElasticSearch 集群的健康状态为 green 表示所有主分片和复制分片都正常运行。",
+      "question": "ElasticSearch 闆嗙兢鐨勫仴搴风姸鎬佷负 green 琛ㄧず鎵€鏈変富鍒嗙墖鍜屽鍒跺垎鐗囬兘姝ｅ父杩愯銆?,
       "options": {
-        "A": "正确",
-        "B": "错误"
+        "A": "姝ｇ‘",
+        "B": "閿欒"
       },
       "answer": "A",
-      "referenceAnswer": "正确",
-      "explanation": "该说法为“正确”。green 表示主分片和复制分片都正常，是最健康的状态。",
-      "memoryTip": "主分片记“原件”：真正承载数据；复制分片记“复印件”：容灾和分摊查询。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "referenceAnswer": "姝ｇ‘",
+      "explanation": "璇ヨ娉曚负鈥滄纭€濄€俫reen 琛ㄧず涓诲垎鐗囧拰澶嶅埗鍒嗙墖閮芥甯革紝鏄渶鍋ュ悍鐨勭姸鎬併€?,
+      "memoryTip": "涓诲垎鐗囪鈥滃師浠垛€濓細鐪熸鎵胯浇鏁版嵁锛涘鍒跺垎鐗囪鈥滃鍗颁欢鈥濓細瀹圭伨鍜屽垎鎽婃煡璇€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "集群与分片"
+        "闆嗙兢涓庡垎鐗?
       ]
     },
     {
       "id": "q121",
       "type": "judge",
-      "question": "在 ElasticSearch 查询中，_source 参数用于指定返回哪些字段。",
+      "question": "鍦?ElasticSearch 鏌ヨ涓紝_source 鍙傛暟鐢ㄤ簬鎸囧畾杩斿洖鍝簺瀛楁銆?,
       "options": {
-        "A": "正确",
-        "B": "错误"
+        "A": "姝ｇ‘",
+        "B": "閿欒"
       },
       "answer": "A",
-      "referenceAnswer": "正确",
-      "explanation": "该说法为“正确”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
-      "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "referenceAnswer": "姝ｇ‘",
+      "explanation": "璇ヨ娉曚负鈥滄纭€濄€傚垽鏂鍏堢湅棰樺共鏈夋病鏈夆€滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑缁濆璇嶏紝鍐嶅洖鍒?ES 鐨勫疄闄呮満鍒跺垽鏂€?,
+      "memoryTip": "鍒ゆ柇棰橀噸鐐圭湅缁濆璇嶏細鐪嬪埌鈥滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑璇嶏紝鍏堣鎯曞畠鍙兘鏄敊璇〃杩般€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "索引与映射",
-        "查询 DSL"
+        "绱㈠紩涓庢槧灏?,
+        "鏌ヨ DSL"
       ]
     },
     {
       "id": "q122",
       "type": "judge",
-      "question": "Spring Boot 整合 ElasticSearch 时，只能使用 RestHighLevelClient。",
+      "question": "Spring Boot 鏁村悎 ElasticSearch 鏃讹紝鍙兘浣跨敤 RestHighLevelClient銆?,
       "options": {
-        "A": "正确",
-        "B": "错误"
+        "A": "姝ｇ‘",
+        "B": "閿欒"
       },
       "answer": "B",
-      "referenceAnswer": "错误",
-      "explanation": "该说法为“错误”。ES 7.x 的 Java 集成常用 RestHighLevelClient；TransportClient 已逐步废弃。 术语理解：RestHighLevelClient：Java 高级 REST 客户端，Spring Boot 整合 ES 7.x 常见。",
-      "memoryTip": "RestHighLevelClient 直译“高级 REST 客户端”，ES 7.x Java 整合常见。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "referenceAnswer": "閿欒",
+      "explanation": "璇ヨ娉曚负鈥滈敊璇€濄€侲S 7.x 鐨?Java 闆嗘垚甯哥敤 RestHighLevelClient锛汿ransportClient 宸查€愭搴熷純銆?鏈鐞嗚В锛歊estHighLevelClient锛欽ava 楂樼骇 REST 瀹㈡埛绔紝Spring Boot 鏁村悎 ES 7.x 甯歌銆?,
+      "memoryTip": "RestHighLevelClient 鐩磋瘧鈥滈珮绾?REST 瀹㈡埛绔€濓紝ES 7.x Java 鏁村悎甯歌銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
         "Spring Boot"
       ]
@@ -2520,51 +2520,51 @@ window.QUESTION_BANK = {
     {
       "id": "q123",
       "type": "judge",
-      "question": "Spring Boot 整合 ElasticSearch 时，不需要任何配置即可连接到本地的 ElasticSearch 服务。",
+      "question": "Spring Boot 鏁村悎 ElasticSearch 鏃讹紝涓嶉渶瑕佷换浣曢厤缃嵆鍙繛鎺ュ埌鏈湴鐨?ElasticSearch 鏈嶅姟銆?,
       "options": {
-        "A": "正确",
-        "B": "错误"
+        "A": "姝ｇ‘",
+        "B": "閿欒"
       },
       "answer": "B",
-      "referenceAnswer": "错误",
-      "explanation": "该说法为“错误”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
-      "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "referenceAnswer": "閿欒",
+      "explanation": "璇ヨ娉曚负鈥滈敊璇€濄€傚垽鏂鍏堢湅棰樺共鏈夋病鏈夆€滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑缁濆璇嶏紝鍐嶅洖鍒?ES 鐨勫疄闄呮満鍒跺垽鏂€?,
+      "memoryTip": "鍒ゆ柇棰橀噸鐐圭湅缁濆璇嶏細鐪嬪埌鈥滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑璇嶏紝鍏堣鎯曞畠鍙兘鏄敊璇〃杩般€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
         "Spring Boot",
-        "安装配置"
+        "瀹夎閰嶇疆"
       ]
     },
     {
       "id": "q124",
       "type": "judge",
-      "question": "ElasticSearch 集群的健康状态为 yellow 表示所有主分片和复制分片都正常运行。",
+      "question": "ElasticSearch 闆嗙兢鐨勫仴搴风姸鎬佷负 yellow 琛ㄧず鎵€鏈変富鍒嗙墖鍜屽鍒跺垎鐗囬兘姝ｅ父杩愯銆?,
       "options": {
-        "A": "正确",
-        "B": "错误"
+        "A": "姝ｇ‘",
+        "B": "閿欒"
       },
       "answer": "B",
-      "referenceAnswer": "错误",
-      "explanation": "该说法为“错误”。yellow 表示主分片可用但复制分片未完全分配；常见于单节点有副本的情况。",
-      "memoryTip": "主分片记“原件”：真正承载数据；复制分片记“复印件”：容灾和分摊查询。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "referenceAnswer": "閿欒",
+      "explanation": "璇ヨ娉曚负鈥滈敊璇€濄€倅ellow 琛ㄧず涓诲垎鐗囧彲鐢ㄤ絾澶嶅埗鍒嗙墖鏈畬鍏ㄥ垎閰嶏紱甯歌浜庡崟鑺傜偣鏈夊壇鏈殑鎯呭喌銆?,
+      "memoryTip": "涓诲垎鐗囪鈥滃師浠垛€濓細鐪熸鎵胯浇鏁版嵁锛涘鍒跺垎鐗囪鈥滃鍗颁欢鈥濓細瀹圭伨鍜屽垎鎽婃煡璇€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "集群与分片"
+        "闆嗙兢涓庡垎鐗?
       ]
     },
     {
       "id": "q125",
       "type": "judge",
-      "question": "在 ElasticSearch 中，批量插入数据可以使用 BulkRequest。",
+      "question": "鍦?ElasticSearch 涓紝鎵归噺鎻掑叆鏁版嵁鍙互浣跨敤 BulkRequest銆?,
       "options": {
-        "A": "正确",
-        "B": "错误"
+        "A": "姝ｇ‘",
+        "B": "閿欒"
       },
       "answer": "A",
-      "referenceAnswer": "正确",
-      "explanation": "该说法为“正确”。Bulk 表示“批量”，BulkRequest 就是批量增删改请求。 术语理解：BulkRequest：批量请求类，用来一次提交多条增删改操作。",
-      "memoryTip": "Bulk 是“批量”：BulkRequest 看到批量增删改就选它。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "referenceAnswer": "姝ｇ‘",
+      "explanation": "璇ヨ娉曚负鈥滄纭€濄€侭ulk 琛ㄧず鈥滄壒閲忊€濓紝BulkRequest 灏辨槸鎵归噺澧炲垹鏀硅姹傘€?鏈鐞嗚В锛欱ulkRequest锛氭壒閲忚姹傜被锛岀敤鏉ヤ竴娆℃彁浜ゅ鏉″鍒犳敼鎿嶄綔銆?,
+      "memoryTip": "Bulk 鏄€滄壒閲忊€濓細BulkRequest 鐪嬪埌鎵归噺澧炲垹鏀瑰氨閫夊畠銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
         "Spring Boot"
       ]
@@ -2572,33 +2572,33 @@ window.QUESTION_BANK = {
     {
       "id": "q126",
       "type": "judge",
-      "question": "在 ElasticSearch 中，批量操作可以提高数据处理的效率。",
+      "question": "鍦?ElasticSearch 涓紝鎵归噺鎿嶄綔鍙互鎻愰珮鏁版嵁澶勭悊鐨勬晥鐜囥€?,
       "options": {
-        "A": "正确",
-        "B": "错误"
+        "A": "姝ｇ‘",
+        "B": "閿欒"
       },
       "answer": "A",
-      "referenceAnswer": "正确",
-      "explanation": "该说法为“正确”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
-      "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "referenceAnswer": "姝ｇ‘",
+      "explanation": "璇ヨ娉曚负鈥滄纭€濄€傚垽鏂鍏堢湅棰樺共鏈夋病鏈夆€滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑缁濆璇嶏紝鍐嶅洖鍒?ES 鐨勫疄闄呮満鍒跺垽鏂€?,
+      "memoryTip": "鍒ゆ柇棰橀噸鐐圭湅缁濆璇嶏細鐪嬪埌鈥滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑璇嶏紝鍏堣鎯曞畠鍙兘鏄敊璇〃杩般€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "综合复习"
+        "缁煎悎澶嶄範"
       ]
     },
     {
       "id": "q127",
       "type": "judge",
-      "question": "Spring Boot 2.5.0 版本整合 ElasticSearch 时，需要引入 spring-boot-starter-data-elasticsearch 依赖。",
+      "question": "Spring Boot 2.5.0 鐗堟湰鏁村悎 ElasticSearch 鏃讹紝闇€瑕佸紩鍏?spring-boot-starter-data-elasticsearch 渚濊禆銆?,
       "options": {
-        "A": "正确",
-        "B": "错误"
+        "A": "姝ｇ‘",
+        "B": "閿欒"
       },
       "answer": "A",
-      "referenceAnswer": "正确",
-      "explanation": "该说法为“正确”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
-      "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "referenceAnswer": "姝ｇ‘",
+      "explanation": "璇ヨ娉曚负鈥滄纭€濄€傚垽鏂鍏堢湅棰樺共鏈夋病鏈夆€滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑缁濆璇嶏紝鍐嶅洖鍒?ES 鐨勫疄闄呮満鍒跺垽鏂€?,
+      "memoryTip": "鍒ゆ柇棰橀噸鐐圭湅缁濆璇嶏細鐪嬪埌鈥滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑璇嶏紝鍏堣鎯曞畠鍙兘鏄敊璇〃杩般€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
         "Spring Boot"
       ]
@@ -2606,165 +2606,165 @@ window.QUESTION_BANK = {
     {
       "id": "q128",
       "type": "judge",
-      "question": "ElasticSearch 中的类型（Type）在 6.x 版本中已经被废弃。",
+      "question": "ElasticSearch 涓殑绫诲瀷锛圱ype锛夊湪 6.x 鐗堟湰涓凡缁忚搴熷純銆?,
       "options": {
-        "A": "正确",
-        "B": "错误"
+        "A": "姝ｇ‘",
+        "B": "閿欒"
       },
       "answer": "B",
-      "referenceAnswer": "错误",
-      "explanation": "该说法为“错误”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
-      "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "referenceAnswer": "閿欒",
+      "explanation": "璇ヨ娉曚负鈥滈敊璇€濄€傚垽鏂鍏堢湅棰樺共鏈夋病鏈夆€滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑缁濆璇嶏紝鍐嶅洖鍒?ES 鐨勫疄闄呮満鍒跺垽鏂€?,
+      "memoryTip": "鍒ゆ柇棰橀噸鐐圭湅缁濆璇嶏細鐪嬪埌鈥滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑璇嶏紝鍏堣鎯曞畠鍙兘鏄敊璇〃杩般€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "索引与映射"
+        "绱㈠紩涓庢槧灏?
       ]
     },
     {
       "id": "q129",
       "type": "judge",
-      "question": "ElasticSearch 中的类型（Type）在 8.x 版本中已经被完全移除。",
+      "question": "ElasticSearch 涓殑绫诲瀷锛圱ype锛夊湪 8.x 鐗堟湰涓凡缁忚瀹屽叏绉婚櫎銆?,
       "options": {
-        "A": "正确",
-        "B": "错误"
+        "A": "姝ｇ‘",
+        "B": "閿欒"
       },
       "answer": "A",
-      "referenceAnswer": "正确",
-      "explanation": "该说法为“正确”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
-      "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "referenceAnswer": "姝ｇ‘",
+      "explanation": "璇ヨ娉曚负鈥滄纭€濄€傚垽鏂鍏堢湅棰樺共鏈夋病鏈夆€滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑缁濆璇嶏紝鍐嶅洖鍒?ES 鐨勫疄闄呮満鍒跺垽鏂€?,
+      "memoryTip": "鍒ゆ柇棰橀噸鐐圭湅缁濆璇嶏細鐪嬪埌鈥滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑璇嶏紝鍏堣鎯曞畠鍙兘鏄敊璇〃杩般€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "索引与映射"
+        "绱㈠紩涓庢槧灏?
       ]
     },
     {
       "id": "q130",
       "type": "judge",
-      "question": "在 ElasticSearch 中，删除索引会同时删除该索引下的所有文档。",
+      "question": "鍦?ElasticSearch 涓紝鍒犻櫎绱㈠紩浼氬悓鏃跺垹闄よ绱㈠紩涓嬬殑鎵€鏈夋枃妗ｃ€?,
       "options": {
-        "A": "正确",
-        "B": "错误"
+        "A": "姝ｇ‘",
+        "B": "閿欒"
       },
       "answer": "A",
-      "referenceAnswer": "正确",
-      "explanation": "该说法为“正确”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
-      "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "referenceAnswer": "姝ｇ‘",
+      "explanation": "璇ヨ娉曚负鈥滄纭€濄€傚垽鏂鍏堢湅棰樺共鏈夋病鏈夆€滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑缁濆璇嶏紝鍐嶅洖鍒?ES 鐨勫疄闄呮満鍒跺垽鏂€?,
+      "memoryTip": "鍒ゆ柇棰橀噸鐐圭湅缁濆璇嶏細鐪嬪埌鈥滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑璇嶏紝鍏堣鎯曞畠鍙兘鏄敊璇〃杩般€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "索引与映射",
-        "运维优化"
+        "绱㈠紩涓庢槧灏?,
+        "杩愮淮浼樺寲"
       ]
     },
     {
       "id": "q131",
       "type": "judge",
-      "question": "分片的数量在索引创建后可以随时修改。",
+      "question": "鍒嗙墖鐨勬暟閲忓湪绱㈠紩鍒涘缓鍚庡彲浠ラ殢鏃朵慨鏀广€?,
       "options": {
-        "A": "正确",
-        "B": "错误"
+        "A": "姝ｇ‘",
+        "B": "閿欒"
       },
       "answer": "B",
-      "referenceAnswer": "错误",
-      "explanation": "该说法为“错误”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
-      "memoryTip": "Shard 分片记“拆”：把一个索引拆成多份，解决容量和并行处理。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "referenceAnswer": "閿欒",
+      "explanation": "璇ヨ娉曚负鈥滈敊璇€濄€傚垽鏂鍏堢湅棰樺共鏈夋病鏈夆€滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑缁濆璇嶏紝鍐嶅洖鍒?ES 鐨勫疄闄呮満鍒跺垽鏂€?,
+      "memoryTip": "Shard 鍒嗙墖璁扳€滄媶鈥濓細鎶婁竴涓储寮曟媶鎴愬浠斤紝瑙ｅ喅瀹归噺鍜屽苟琛屽鐞嗐€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "集群与分片",
-        "索引与映射"
+        "闆嗙兢涓庡垎鐗?,
+        "绱㈠紩涓庢槧灏?
       ]
     },
     {
       "id": "q132",
       "type": "judge",
-      "question": "一个分片可以存储无限多的文档。",
+      "question": "涓€涓垎鐗囧彲浠ュ瓨鍌ㄦ棤闄愬鐨勬枃妗ｃ€?,
       "options": {
-        "A": "正确",
-        "B": "错误"
+        "A": "姝ｇ‘",
+        "B": "閿欒"
       },
       "answer": "B",
-      "referenceAnswer": "错误",
-      "explanation": "该说法为“错误”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
-      "memoryTip": "Shard 分片记“拆”：把一个索引拆成多份，解决容量和并行处理。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "referenceAnswer": "閿欒",
+      "explanation": "璇ヨ娉曚负鈥滈敊璇€濄€傚垽鏂鍏堢湅棰樺共鏈夋病鏈夆€滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑缁濆璇嶏紝鍐嶅洖鍒?ES 鐨勫疄闄呮満鍒跺垽鏂€?,
+      "memoryTip": "Shard 鍒嗙墖璁扳€滄媶鈥濓細鎶婁竴涓储寮曟媶鎴愬浠斤紝瑙ｅ喅瀹归噺鍜屽苟琛屽鐞嗐€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "集群与分片"
+        "闆嗙兢涓庡垎鐗?
       ]
     },
     {
       "id": "q133",
       "type": "judge",
-      "question": "ElasticSearch 中的类型（Type）在 8.x 版本中已经被废弃。",
+      "question": "ElasticSearch 涓殑绫诲瀷锛圱ype锛夊湪 8.x 鐗堟湰涓凡缁忚搴熷純銆?,
       "options": {
-        "A": "正确",
-        "B": "错误"
+        "A": "姝ｇ‘",
+        "B": "閿欒"
       },
       "answer": "A",
-      "referenceAnswer": "正确",
-      "explanation": "该说法为“正确”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
-      "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "referenceAnswer": "姝ｇ‘",
+      "explanation": "璇ヨ娉曚负鈥滄纭€濄€傚垽鏂鍏堢湅棰樺共鏈夋病鏈夆€滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑缁濆璇嶏紝鍐嶅洖鍒?ES 鐨勫疄闄呮満鍒跺垽鏂€?,
+      "memoryTip": "鍒ゆ柇棰橀噸鐐圭湅缁濆璇嶏細鐪嬪埌鈥滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑璇嶏紝鍏堣鎯曞畠鍙兘鏄敊璇〃杩般€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "索引与映射"
+        "绱㈠紩涓庢槧灏?
       ]
     },
     {
       "id": "q134",
       "type": "judge",
-      "question": "ElasticSearch 提供了自动故障转移机制。",
+      "question": "ElasticSearch 鎻愪緵浜嗚嚜鍔ㄦ晠闅滆浆绉绘満鍒躲€?,
       "options": {
-        "A": "正确",
-        "B": "错误"
+        "A": "姝ｇ‘",
+        "B": "閿欒"
       },
       "answer": "A",
-      "referenceAnswer": "正确",
-      "explanation": "该说法为“正确”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
-      "memoryTip": "判断题重点看绝对词：看到“只能、必须、随时、无限”等词，先警惕它可能是错误表述。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "referenceAnswer": "姝ｇ‘",
+      "explanation": "璇ヨ娉曚负鈥滄纭€濄€傚垽鏂鍏堢湅棰樺共鏈夋病鏈夆€滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑缁濆璇嶏紝鍐嶅洖鍒?ES 鐨勫疄闄呮満鍒跺垽鏂€?,
+      "memoryTip": "鍒ゆ柇棰橀噸鐐圭湅缁濆璇嶏細鐪嬪埌鈥滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑璇嶏紝鍏堣鎯曞畠鍙兘鏄敊璇〃杩般€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "运维优化"
+        "杩愮淮浼樺寲"
       ]
     },
     {
       "id": "q135",
       "type": "judge",
-      "question": "ElasticSearch 提供了自动分片分配和负载均衡功能。",
+      "question": "ElasticSearch 鎻愪緵浜嗚嚜鍔ㄥ垎鐗囧垎閰嶅拰璐熻浇鍧囪　鍔熻兘銆?,
       "options": {
-        "A": "正确",
-        "B": "错误"
+        "A": "姝ｇ‘",
+        "B": "閿欒"
       },
       "answer": "A",
-      "referenceAnswer": "正确",
-      "explanation": "该说法为“正确”。判断题先看题干有没有“只能、必须、随时、无限”等绝对词，再回到 ES 的实际机制判断。",
-      "memoryTip": "Shard 分片记“拆”：把一个索引拆成多份，解决容量和并行处理。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "referenceAnswer": "姝ｇ‘",
+      "explanation": "璇ヨ娉曚负鈥滄纭€濄€傚垽鏂鍏堢湅棰樺共鏈夋病鏈夆€滃彧鑳姐€佸繀椤汇€侀殢鏃躲€佹棤闄愨€濈瓑缁濆璇嶏紝鍐嶅洖鍒?ES 鐨勫疄闄呮満鍒跺垽鏂€?,
+      "memoryTip": "Shard 鍒嗙墖璁扳€滄媶鈥濓細鎶婁竴涓储寮曟媶鎴愬浠斤紝瑙ｅ喅瀹归噺鍜屽苟琛屽鐞嗐€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "集群与分片"
+        "闆嗙兢涓庡垎鐗?
       ]
     },
     {
       "id": "q136",
       "type": "short",
-      "question": "简述 ElasticSearch 与 Solr 的主要区别。",
+      "question": "绠€杩?ElasticSearch 涓?Solr 鐨勪富瑕佸尯鍒€?,
       "options": {},
-      "answer": "分布式管理：Solr 使用 Zookeeper 进行分布式管理，ElasticSearch 自身带有分布式协调管理功能\n数据格式支持：Solr 支持更多格式的数据，ElasticSearch 仅支持 JSON 文件格式\n功能特性：Solr 官方提供的功能更多，ElasticSearch 更注重核心功能，高级功能多由第三方插件提供\n搜索性能：Solr 在传统搜索应用中表现更好，ElasticSearch 在处理实时搜索应用时效率更高\n易用性：ElasticSearch 提供简单的 RESTful API，隐藏了 Lucene 的复杂性，更易于使用",
-      "referenceAnswer": "分布式管理：Solr 使用 Zookeeper 进行分布式管理，ElasticSearch 自身带有分布式协调管理功能\n数据格式支持：Solr 支持更多格式的数据，ElasticSearch 仅支持 JSON 文件格式\n功能特性：Solr 官方提供的功能更多，ElasticSearch 更注重核心功能，高级功能多由第三方插件提供\n搜索性能：Solr 在传统搜索应用中表现更好，ElasticSearch 在处理实时搜索应用时效率更高\n易用性：ElasticSearch 提供简单的 RESTful API，隐藏了 Lucene 的复杂性，更易于使用",
-      "explanation": "主观题以参考答案为准。答题时先覆盖关键词，再补充原因、步骤或对比点。 术语理解：RESTful：一种 HTTP 接口风格，用 GET、POST、PUT、DELETE 表示不同操作。 Lucene：全文检索核心库，可以理解为 ElasticSearch 底层的“搜索发动机”。 Solr：同样基于 Lucene 的搜索服务器，常与传统搜索、ZooKeeper 管理联系在一起。 答题方法：先写核心概念，再列关键区别、作用或步骤。",
-      "memoryTip": "Solr 和 ES 都基于 Lucene；Solr 常联想 ZooKeeper，ES 常联想开箱即用和近实时。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "answer": "鍒嗗竷寮忕鐞嗭細Solr 浣跨敤 Zookeeper 杩涜鍒嗗竷寮忕鐞嗭紝ElasticSearch 鑷韩甯︽湁鍒嗗竷寮忓崗璋冪鐞嗗姛鑳絓n鏁版嵁鏍煎紡鏀寔锛歋olr 鏀寔鏇村鏍煎紡鐨勬暟鎹紝ElasticSearch 浠呮敮鎸?JSON 鏂囦欢鏍煎紡\n鍔熻兘鐗规€э細Solr 瀹樻柟鎻愪緵鐨勫姛鑳芥洿澶氾紝ElasticSearch 鏇存敞閲嶆牳蹇冨姛鑳斤紝楂樼骇鍔熻兘澶氱敱绗笁鏂规彃浠舵彁渚沑n鎼滅储鎬ц兘锛歋olr 鍦ㄤ紶缁熸悳绱㈠簲鐢ㄤ腑琛ㄧ幇鏇村ソ锛孍lasticSearch 鍦ㄥ鐞嗗疄鏃舵悳绱㈠簲鐢ㄦ椂鏁堢巼鏇撮珮\n鏄撶敤鎬э細ElasticSearch 鎻愪緵绠€鍗曠殑 RESTful API锛岄殣钘忎簡 Lucene 鐨勫鏉傛€э紝鏇存槗浜庝娇鐢?,
+      "referenceAnswer": "鍒嗗竷寮忕鐞嗭細Solr 浣跨敤 Zookeeper 杩涜鍒嗗竷寮忕鐞嗭紝ElasticSearch 鑷韩甯︽湁鍒嗗竷寮忓崗璋冪鐞嗗姛鑳絓n鏁版嵁鏍煎紡鏀寔锛歋olr 鏀寔鏇村鏍煎紡鐨勬暟鎹紝ElasticSearch 浠呮敮鎸?JSON 鏂囦欢鏍煎紡\n鍔熻兘鐗规€э細Solr 瀹樻柟鎻愪緵鐨勫姛鑳芥洿澶氾紝ElasticSearch 鏇存敞閲嶆牳蹇冨姛鑳斤紝楂樼骇鍔熻兘澶氱敱绗笁鏂规彃浠舵彁渚沑n鎼滅储鎬ц兘锛歋olr 鍦ㄤ紶缁熸悳绱㈠簲鐢ㄤ腑琛ㄧ幇鏇村ソ锛孍lasticSearch 鍦ㄥ鐞嗗疄鏃舵悳绱㈠簲鐢ㄦ椂鏁堢巼鏇撮珮\n鏄撶敤鎬э細ElasticSearch 鎻愪緵绠€鍗曠殑 RESTful API锛岄殣钘忎簡 Lucene 鐨勫鏉傛€э紝鏇存槗浜庝娇鐢?,
+      "explanation": "涓昏棰樹互鍙傝€冪瓟妗堜负鍑嗐€傜瓟棰樻椂鍏堣鐩栧叧閿瘝锛屽啀琛ュ厖鍘熷洜銆佹楠ゆ垨瀵规瘮鐐广€?鏈鐞嗚В锛歊ESTful锛氫竴绉?HTTP 鎺ュ彛椋庢牸锛岀敤 GET銆丳OST銆丳UT銆丏ELETE 琛ㄧず涓嶅悓鎿嶄綔銆?Lucene锛氬叏鏂囨绱㈡牳蹇冨簱锛屽彲浠ョ悊瑙ｄ负 ElasticSearch 搴曞眰鐨勨€滄悳绱㈠彂鍔ㄦ満鈥濄€?Solr锛氬悓鏍峰熀浜?Lucene 鐨勬悳绱㈡湇鍔″櫒锛屽父涓庝紶缁熸悳绱€乑ooKeeper 绠＄悊鑱旂郴鍦ㄤ竴璧枫€?绛旈鏂规硶锛氬厛鍐欐牳蹇冩蹇碉紝鍐嶅垪鍏抽敭鍖哄埆銆佷綔鐢ㄦ垨姝ラ銆?,
+      "memoryTip": "Solr 鍜?ES 閮藉熀浜?Lucene锛汼olr 甯歌仈鎯?ZooKeeper锛孍S 甯歌仈鎯冲紑绠卞嵆鐢ㄥ拰杩戝疄鏃躲€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "基础概念",
-        "运维优化"
+        "鍩虹姒傚康",
+        "杩愮淮浼樺寲"
       ],
-      "conciseAnswer": "Solr 依赖 ZooKeeper、功能更全，偏传统搜索；ElasticSearch 自带分布式协调、REST 简单，偏实时搜索和易用。",
+      "conciseAnswer": "Solr 渚濊禆 ZooKeeper銆佸姛鑳芥洿鍏紝鍋忎紶缁熸悳绱紱ElasticSearch 鑷甫鍒嗗竷寮忓崗璋冦€丷EST 绠€鍗曪紝鍋忓疄鏃舵悳绱㈠拰鏄撶敤銆?,
       "answerBlocks": [
         {
           "type": "text",
           "items": [
-            "分布式管理：Solr 使用 Zookeeper 进行分布式管理，ElasticSearch 自身带有分布式协调管理功能",
-            "数据格式支持：Solr 支持更多格式的数据，ElasticSearch 仅支持 JSON 文件格式",
-            "功能特性：Solr 官方提供的功能更多，ElasticSearch 更注重核心功能，高级功能多由第三方插件提供",
-            "搜索性能：Solr 在传统搜索应用中表现更好，ElasticSearch 在处理实时搜索应用时效率更高",
-            "易用性：ElasticSearch 提供简单的 RESTful API，隐藏了 Lucene 的复杂性，更易于使用"
+            "鍒嗗竷寮忕鐞嗭細Solr 浣跨敤 Zookeeper 杩涜鍒嗗竷寮忕鐞嗭紝ElasticSearch 鑷韩甯︽湁鍒嗗竷寮忓崗璋冪鐞嗗姛鑳?,
+            "鏁版嵁鏍煎紡鏀寔锛歋olr 鏀寔鏇村鏍煎紡鐨勬暟鎹紝ElasticSearch 浠呮敮鎸?JSON 鏂囦欢鏍煎紡",
+            "鍔熻兘鐗规€э細Solr 瀹樻柟鎻愪緵鐨勫姛鑳芥洿澶氾紝ElasticSearch 鏇存敞閲嶆牳蹇冨姛鑳斤紝楂樼骇鍔熻兘澶氱敱绗笁鏂规彃浠舵彁渚?,
+            "鎼滅储鎬ц兘锛歋olr 鍦ㄤ紶缁熸悳绱㈠簲鐢ㄤ腑琛ㄧ幇鏇村ソ锛孍lasticSearch 鍦ㄥ鐞嗗疄鏃舵悳绱㈠簲鐢ㄦ椂鏁堢巼鏇撮珮",
+            "鏄撶敤鎬э細ElasticSearch 鎻愪緵绠€鍗曠殑 RESTful API锛岄殣钘忎簡 Lucene 鐨勫鏉傛€э紝鏇存槗浜庝娇鐢?
           ]
         }
       ]
@@ -2772,27 +2772,27 @@ window.QUESTION_BANK = {
     {
       "id": "q137",
       "type": "short",
-      "question": "简述 ElasticSearch 的安装和启动步骤（Windows 环境）。",
+      "question": "绠€杩?ElasticSearch 鐨勫畨瑁呭拰鍚姩姝ラ锛圵indows 鐜锛夈€?,
       "options": {},
-      "answer": "下载：从官方网站下载对应版本的 Windows 版 ElasticSearch 压缩包\n解压：将压缩包解压到指定目录\n配置：修改 config/elasticsearch.yml 文件，开启跨域访问支持\n环境准备：确保已安装 JDK 11+ 并配置好环境变量\n启动：运行 bin/elasticsearch.bat 文件，通过浏览器访问 http://localhost:9200 验证是否启动成功",
-      "referenceAnswer": "下载：从官方网站下载对应版本的 Windows 版 ElasticSearch 压缩包\n解压：将压缩包解压到指定目录\n配置：修改 config/elasticsearch.yml 文件，开启跨域访问支持\n环境准备：确保已安装 JDK 11+ 并配置好环境变量\n启动：运行 bin/elasticsearch.bat 文件，通过浏览器访问 http://localhost:9200 验证是否启动成功",
-      "explanation": "主观题以参考答案为准。答题时先覆盖关键词，再补充原因、步骤或对比点。 答题方法：先写核心概念，再列关键区别、作用或步骤。",
-      "memoryTip": "简答题用“三点式”：先写核心概念，再列 2-4 个要点，最后补一句作用或适用场景。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "answer": "涓嬭浇锛氫粠瀹樻柟缃戠珯涓嬭浇瀵瑰簲鐗堟湰鐨?Windows 鐗?ElasticSearch 鍘嬬缉鍖匼n瑙ｅ帇锛氬皢鍘嬬缉鍖呰В鍘嬪埌鎸囧畾鐩綍\n閰嶇疆锛氫慨鏀?config/elasticsearch.yml 鏂囦欢锛屽紑鍚法鍩熻闂敮鎸乗n鐜鍑嗗锛氱‘淇濆凡瀹夎 JDK 11+ 骞堕厤缃ソ鐜鍙橀噺\n鍚姩锛氳繍琛?bin/elasticsearch.bat 鏂囦欢锛岄€氳繃娴忚鍣ㄨ闂?http://localhost:9200 楠岃瘉鏄惁鍚姩鎴愬姛",
+      "referenceAnswer": "涓嬭浇锛氫粠瀹樻柟缃戠珯涓嬭浇瀵瑰簲鐗堟湰鐨?Windows 鐗?ElasticSearch 鍘嬬缉鍖匼n瑙ｅ帇锛氬皢鍘嬬缉鍖呰В鍘嬪埌鎸囧畾鐩綍\n閰嶇疆锛氫慨鏀?config/elasticsearch.yml 鏂囦欢锛屽紑鍚法鍩熻闂敮鎸乗n鐜鍑嗗锛氱‘淇濆凡瀹夎 JDK 11+ 骞堕厤缃ソ鐜鍙橀噺\n鍚姩锛氳繍琛?bin/elasticsearch.bat 鏂囦欢锛岄€氳繃娴忚鍣ㄨ闂?http://localhost:9200 楠岃瘉鏄惁鍚姩鎴愬姛",
+      "explanation": "涓昏棰樹互鍙傝€冪瓟妗堜负鍑嗐€傜瓟棰樻椂鍏堣鐩栧叧閿瘝锛屽啀琛ュ厖鍘熷洜銆佹楠ゆ垨瀵规瘮鐐广€?绛旈鏂规硶锛氬厛鍐欐牳蹇冩蹇碉紝鍐嶅垪鍏抽敭鍖哄埆銆佷綔鐢ㄦ垨姝ラ銆?,
+      "memoryTip": "绠€绛旈鐢ㄢ€滀笁鐐瑰紡鈥濓細鍏堝啓鏍稿績姒傚康锛屽啀鍒?2-4 涓鐐癸紝鏈€鍚庤ˉ涓€鍙ヤ綔鐢ㄦ垨閫傜敤鍦烘櫙銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "安装配置",
-        "综合复习"
+        "瀹夎閰嶇疆",
+        "缁煎悎澶嶄範"
       ],
-      "conciseAnswer": "下载 → 解压 → 配置 elasticsearch.yml → 准备 JDK → 运行 elasticsearch.bat → 访问 9200 验证。",
+      "conciseAnswer": "涓嬭浇 鈫?瑙ｅ帇 鈫?閰嶇疆 elasticsearch.yml 鈫?鍑嗗 JDK 鈫?杩愯 elasticsearch.bat 鈫?璁块棶 9200 楠岃瘉銆?,
       "answerBlocks": [
         {
           "type": "text",
           "items": [
-            "下载：从官方网站下载对应版本的 Windows 版 ElasticSearch 压缩包",
-            "解压：将压缩包解压到指定目录",
-            "配置：修改 config/elasticsearch.yml 文件，开启跨域访问支持",
-            "环境准备：确保已安装 JDK 11+ 并配置好环境变量",
-            "启动：运行 bin/elasticsearch.bat 文件，通过浏览器访问 http://localhost:9200 验证是否启动成功"
+            "涓嬭浇锛氫粠瀹樻柟缃戠珯涓嬭浇瀵瑰簲鐗堟湰鐨?Windows 鐗?ElasticSearch 鍘嬬缉鍖?,
+            "瑙ｅ帇锛氬皢鍘嬬缉鍖呰В鍘嬪埌鎸囧畾鐩綍",
+            "閰嶇疆锛氫慨鏀?config/elasticsearch.yml 鏂囦欢锛屽紑鍚法鍩熻闂敮鎸?,
+            "鐜鍑嗗锛氱‘淇濆凡瀹夎 JDK 11+ 骞堕厤缃ソ鐜鍙橀噺",
+            "鍚姩锛氳繍琛?bin/elasticsearch.bat 鏂囦欢锛岄€氳繃娴忚鍣ㄨ闂?http://localhost:9200 楠岃瘉鏄惁鍚姩鎴愬姛"
           ]
         }
       ]
@@ -2800,34 +2800,28 @@ window.QUESTION_BANK = {
     {
       "id": "q138",
       "type": "short",
-      "question": "简述 ElasticSearch 的核心概念及其与关系型数据库的对应关系。",
+      "question": "绠€杩?ElasticSearch 鐨勬牳蹇冩蹇靛強鍏朵笌鍏崇郴鍨嬫暟鎹簱鐨勫搴斿叧绯汇€?,
       "options": {},
-      "answer": "索引（Index）对应关系型数据库中的数据库（Database）\n类型（Type）对应关系型数据库中的表（Table）\n文档（Document）对应关系型数据库中的行（Row）\n字段（Field）对应关系型数据库中的列（Column）\n映射（Mapping）对应关系型数据库中的表结构（Schema）\n解释 ElasticSearch 中索引、类型、文档和字段的概念。\n索引（Index）：一个拥有相似特征的文档的集合，由小写字母名称标识\n类型（Type）：索引的逻辑分类与分区，为具有共同字段的文档定义\n文档（Document）：可被索引的基础信息单元，以 JSON 格式表示\n字段（Field）：相当于数据表的字段，对文档数据根据不同属性进行分类标识\n关系：一个索引可以包含多个类型，一个类型可以包含多个文档，一个文档包含多个字段",
-      "referenceAnswer": "索引（Index）对应关系型数据库中的数据库（Database）\n类型（Type）对应关系型数据库中的表（Table）\n文档（Document）对应关系型数据库中的行（Row）\n字段（Field）对应关系型数据库中的列（Column）\n映射（Mapping）对应关系型数据库中的表结构（Schema）\n解释 ElasticSearch 中索引、类型、文档和字段的概念。\n索引（Index）：一个拥有相似特征的文档的集合，由小写字母名称标识\n类型（Type）：索引的逻辑分类与分区，为具有共同字段的文档定义\n文档（Document）：可被索引的基础信息单元，以 JSON 格式表示\n字段（Field）：相当于数据表的字段，对文档数据根据不同属性进行分类标识\n关系：一个索引可以包含多个类型，一个类型可以包含多个文档，一个文档包含多个字段",
-      "explanation": "主观题以参考答案为准。答题时先覆盖关键词，再补充原因、步骤或对比点。 术语理解：Document：文档，ElasticSearch 中存储和检索的基本数据单位。 Index：索引，类似关系型数据库里的表，用来组织一类文档。 Field：字段，文档里的属性，类似数据库表中的列。 答题方法：先写核心概念，再列关键区别、作用或步骤。",
-      "memoryTip": "简答题用“三点式”：先写核心概念，再列 2-4 个要点，最后补一句作用或适用场景。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "answer": "绱㈠紩锛圛ndex锛夊搴斿叧绯诲瀷鏁版嵁搴撲腑鐨勬暟鎹簱锛圖atabase锛塡n绫诲瀷锛圱ype锛夊搴斿叧绯诲瀷鏁版嵁搴撲腑鐨勮〃锛圱able锛塡n鏂囨。锛圖ocument锛夊搴斿叧绯诲瀷鏁版嵁搴撲腑鐨勮锛圧ow锛塡n瀛楁锛團ield锛夊搴斿叧绯诲瀷鏁版嵁搴撲腑鐨勫垪锛圕olumn锛塡n鏄犲皠锛圡apping锛夊搴斿叧绯诲瀷鏁版嵁搴撲腑鐨勮〃缁撴瀯锛圫chema锛?,
+      "referenceAnswer": "绱㈠紩锛圛ndex锛夊搴斿叧绯诲瀷鏁版嵁搴撲腑鐨勬暟鎹簱锛圖atabase锛塡n绫诲瀷锛圱ype锛夊搴斿叧绯诲瀷鏁版嵁搴撲腑鐨勮〃锛圱able锛塡n鏂囨。锛圖ocument锛夊搴斿叧绯诲瀷鏁版嵁搴撲腑鐨勮锛圧ow锛塡n瀛楁锛團ield锛夊搴斿叧绯诲瀷鏁版嵁搴撲腑鐨勫垪锛圕olumn锛塡n鏄犲皠锛圡apping锛夊搴斿叧绯诲瀷鏁版嵁搴撲腑鐨勮〃缁撴瀯锛圫chema锛?,
+      "explanation": "涓昏棰樹互鍙傝€冪瓟妗堜负鍑嗐€傜瓟棰樻椂鍏堣鐩栧叧閿瘝锛屽啀琛ュ厖鍘熷洜銆佹楠ゆ垨瀵规瘮鐐广€?鏈鐞嗚В锛欴ocument锛氭枃妗ｏ紝ElasticSearch 涓瓨鍌ㄥ拰妫€绱㈢殑鍩烘湰鏁版嵁鍗曚綅銆?Index锛氱储寮曪紝绫讳技鍏崇郴鍨嬫暟鎹簱閲岀殑琛紝鐢ㄦ潵缁勭粐涓€绫绘枃妗ｃ€?Field锛氬瓧娈碉紝鏂囨。閲岀殑灞炴€э紝绫讳技鏁版嵁搴撹〃涓殑鍒椼€?绛旈鏂规硶锛氬厛鍐欐牳蹇冩蹇碉紝鍐嶅垪鍏抽敭鍖哄埆銆佷綔鐢ㄦ垨姝ラ銆?,
+      "memoryTip": "绠€绛旈鐢ㄢ€滀笁鐐瑰紡鈥濓細鍏堝啓鏍稿績姒傚康锛屽啀鍒?2-4 涓鐐癸紝鏈€鍚庤ˉ涓€鍙ヤ綔鐢ㄦ垨閫傜敤鍦烘櫙銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "基础概念",
-        "索引与映射",
-        "综合复习"
+        "鍩虹姒傚康",
+        "绱㈠紩涓庢槧灏?,
+        "缁煎悎澶嶄範"
       ],
-      "conciseAnswer": "Index≈库/表集合，Type≈表，Document≈行，Field≈列，Mapping≈表结构。",
+      "conciseAnswer": "Index鈮堝簱/琛ㄩ泦鍚堬紝Type鈮堣〃锛孌ocument鈮堣锛孎ield鈮堝垪锛孧apping鈮堣〃缁撴瀯銆?,
       "answerBlocks": [
         {
           "type": "text",
           "items": [
-            "索引（Index）对应关系型数据库中的数据库（Database）",
-            "类型（Type）对应关系型数据库中的表（Table）",
-            "文档（Document）对应关系型数据库中的行（Row）",
-            "字段（Field）对应关系型数据库中的列（Column）",
-            "映射（Mapping）对应关系型数据库中的表结构（Schema）",
-            "解释 ElasticSearch 中索引、类型、文档和字段的概念。",
-            "索引（Index）：一个拥有相似特征的文档的集合，由小写字母名称标识",
-            "类型（Type）：索引的逻辑分类与分区，为具有共同字段的文档定义",
-            "文档（Document）：可被索引的基础信息单元，以 JSON 格式表示",
-            "字段（Field）：相当于数据表的字段，对文档数据根据不同属性进行分类标识",
-            "关系：一个索引可以包含多个类型，一个类型可以包含多个文档，一个文档包含多个字段"
+            "绱㈠紩锛圛ndex锛夊搴斿叧绯诲瀷鏁版嵁搴撲腑鐨勬暟鎹簱锛圖atabase锛?,
+            "绫诲瀷锛圱ype锛夊搴斿叧绯诲瀷鏁版嵁搴撲腑鐨勮〃锛圱able锛?,
+            "鏂囨。锛圖ocument锛夊搴斿叧绯诲瀷鏁版嵁搴撲腑鐨勮锛圧ow锛?,
+            "瀛楁锛團ield锛夊搴斿叧绯诲瀷鏁版嵁搴撲腑鐨勫垪锛圕olumn锛?,
+            "鏄犲皠锛圡apping锛夊搴斿叧绯诲瀷鏁版嵁搴撲腑鐨勮〃缁撴瀯锛圫chema锛?
           ]
         }
       ]
@@ -2835,27 +2829,27 @@ window.QUESTION_BANK = {
     {
       "id": "q139",
       "type": "short",
-      "question": "简述 ElasticSearch Head 插件的安装步骤。",
+      "question": "瑙ｉ噴 ElasticSearch 涓储寮曘€佺被鍨嬨€佹枃妗ｅ拰瀛楁鐨勬蹇点€?,
       "options": {},
-      "answer": "下载 Head 插件：从 GitHub 下载 elasticsearch-head-master 压缩包\n安装 Node.js：下载并安装 Node.js，通过 node -v 验证安装成功\n安装 Grunt：执行 npm install -g grunt-cli 全局安装 Grunt\n安装依赖：进入 elasticsearch-head-master 目录，执行 npm install 安装依赖\n启动插件：执行 grunt server 启动 Head 插件，通过 http://localhost:9100 访问",
-      "referenceAnswer": "下载 Head 插件：从 GitHub 下载 elasticsearch-head-master 压缩包\n安装 Node.js：下载并安装 Node.js，通过 node -v 验证安装成功\n安装 Grunt：执行 npm install -g grunt-cli 全局安装 Grunt\n安装依赖：进入 elasticsearch-head-master 目录，执行 npm install 安装依赖\n启动插件：执行 grunt server 启动 Head 插件，通过 http://localhost:9100 访问",
-      "explanation": "主观题以参考答案为准。答题时先覆盖关键词，再补充原因、步骤或对比点。 术语理解：master：主节点角色，负责集群管理、元数据变更和分片调度。 答题方法：先写核心概念，再列关键区别、作用或步骤。",
-      "memoryTip": "简答题用“三点式”：先写核心概念，再列 2-4 个要点，最后补一句作用或适用场景。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "answer": "绱㈠紩锛圛ndex锛夛細涓€涓嫢鏈夌浉浼肩壒寰佺殑鏂囨。鐨勯泦鍚堬紝鐢卞皬鍐欏瓧姣嶅悕绉版爣璇哱n绫诲瀷锛圱ype锛夛細绱㈠紩鐨勯€昏緫鍒嗙被涓庡垎鍖猴紝涓哄叿鏈夊叡鍚屽瓧娈电殑鏂囨。瀹氫箟\n鏂囨。锛圖ocument锛夛細鍙绱㈠紩鐨勫熀纭€淇℃伅鍗曞厓锛屼互 JSON 鏍煎紡琛ㄧず\n瀛楁锛團ield锛夛細鐩稿綋浜庢暟鎹〃鐨勫瓧娈碉紝瀵规枃妗ｆ暟鎹牴鎹笉鍚屽睘鎬ц繘琛屽垎绫绘爣璇哱n鍏崇郴锛氫竴涓储寮曞彲浠ュ寘鍚涓被鍨嬶紝涓€涓被鍨嬪彲浠ュ寘鍚涓枃妗ｏ紝涓€涓枃妗ｅ寘鍚涓瓧娈?,
+      "referenceAnswer": "绱㈠紩锛圛ndex锛夛細涓€涓嫢鏈夌浉浼肩壒寰佺殑鏂囨。鐨勯泦鍚堬紝鐢卞皬鍐欏瓧姣嶅悕绉版爣璇哱n绫诲瀷锛圱ype锛夛細绱㈠紩鐨勯€昏緫鍒嗙被涓庡垎鍖猴紝涓哄叿鏈夊叡鍚屽瓧娈电殑鏂囨。瀹氫箟\n鏂囨。锛圖ocument锛夛細鍙绱㈠紩鐨勫熀纭€淇℃伅鍗曞厓锛屼互 JSON 鏍煎紡琛ㄧず\n瀛楁锛團ield锛夛細鐩稿綋浜庢暟鎹〃鐨勫瓧娈碉紝瀵规枃妗ｆ暟鎹牴鎹笉鍚屽睘鎬ц繘琛屽垎绫绘爣璇哱n鍏崇郴锛氫竴涓储寮曞彲浠ュ寘鍚涓被鍨嬶紝涓€涓被鍨嬪彲浠ュ寘鍚涓枃妗ｏ紝涓€涓枃妗ｅ寘鍚涓瓧娈?,
+      "explanation": "涓昏棰樹互鍙傝€冪瓟妗堜负鍑嗐€傜瓟棰樻椂鍏堣鐩栧叧閿瘝锛屽啀琛ュ厖鍘熷洜銆佹楠ゆ垨瀵规瘮鐐广€?鏈鐞嗚В锛欴ocument锛氭枃妗ｏ紝ElasticSearch 涓瓨鍌ㄥ拰妫€绱㈢殑鍩烘湰鏁版嵁鍗曚綅銆?Index锛氱储寮曪紝绫讳技鍏崇郴鍨嬫暟鎹簱閲岀殑琛紝鐢ㄦ潵缁勭粐涓€绫绘枃妗ｃ€?Field锛氬瓧娈碉紝鏂囨。閲岀殑灞炴€э紝绫讳技鏁版嵁搴撹〃涓殑鍒椼€?绛旈鏂规硶锛氬厛鍐欐牳蹇冩蹇碉紝鍐嶅垪鍏抽敭鍖哄埆銆佷綔鐢ㄦ垨姝ラ銆?,
+      "memoryTip": "绠€绛旈鐢ㄢ€滀笁鐐瑰紡鈥濓細鍏堝啓鏍稿績姒傚康锛屽啀鍒?2-4 涓鐐癸紝鏈€鍚庤ˉ涓€鍙ヤ綔鐢ㄦ垨閫傜敤鍦烘櫙銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "安装配置",
-        "集群与分片"
+        "鍩虹姒傚康",
+        "绱㈠紩涓庢槧灏?
       ],
-      "conciseAnswer": "下载 Head → 安装 Node.js → 安装 grunt-cli → npm install → grunt server → 访问 9100。",
+      "conciseAnswer": "Index 鏄枃妗ｉ泦鍚堬紱Type 鏄€昏緫鍒嗙被锛汥ocument 鏄?JSON 鏁版嵁鍗曞厓锛汧ield 鏄枃妗ｅ睘鎬с€?,
       "answerBlocks": [
         {
           "type": "text",
           "items": [
-            "下载 Head 插件：从 GitHub 下载 elasticsearch-head-master 压缩包",
-            "安装 Node.js：下载并安装 Node.js，通过 node -v 验证安装成功",
-            "安装 Grunt：执行 npm install -g grunt-cli 全局安装 Grunt",
-            "安装依赖：进入 elasticsearch-head-master 目录，执行 npm install 安装依赖",
-            "启动插件：执行 grunt server 启动 Head 插件，通过 http://localhost:9100 访问"
+            "绱㈠紩锛圛ndex锛夛細涓€涓嫢鏈夌浉浼肩壒寰佺殑鏂囨。鐨勯泦鍚堬紝鐢卞皬鍐欏瓧姣嶅悕绉版爣璇?,
+            "绫诲瀷锛圱ype锛夛細绱㈠紩鐨勯€昏緫鍒嗙被涓庡垎鍖猴紝涓哄叿鏈夊叡鍚屽瓧娈电殑鏂囨。瀹氫箟",
+            "鏂囨。锛圖ocument锛夛細鍙绱㈠紩鐨勫熀纭€淇℃伅鍗曞厓锛屼互 JSON 鏍煎紡琛ㄧず",
+            "瀛楁锛團ield锛夛細鐩稿綋浜庢暟鎹〃鐨勫瓧娈碉紝瀵规枃妗ｆ暟鎹牴鎹笉鍚屽睘鎬ц繘琛屽垎绫绘爣璇?,
+            "鍏崇郴锛氫竴涓储寮曞彲浠ュ寘鍚涓被鍨嬶紝涓€涓被鍨嬪彲浠ュ寘鍚涓枃妗ｏ紝涓€涓枃妗ｅ寘鍚涓瓧娈?
           ]
         }
       ]
@@ -2863,32 +2857,27 @@ window.QUESTION_BANK = {
     {
       "id": "q140",
       "type": "short",
-      "question": "简述 ElasticSearch 中 match 查询和 term 查询的区别。",
+      "question": "绠€杩?ElasticSearch Head 鎻掍欢鐨勫畨瑁呮楠ゃ€?,
       "options": {},
-      "answer": "match 查询：\n会对查询条件进行分词处理\n将分词后的词项与索引中的词项进行匹配\n适合用于全文检索场景\nterm 查询：\n不会对查询条件进行分词处理\n直接将查询条件作为整体与索引中的词项进行精确匹配\n适合用于 keyword、数字、日期等类型的字段查询",
-      "referenceAnswer": "match 查询：\n会对查询条件进行分词处理\n将分词后的词项与索引中的词项进行匹配\n适合用于全文检索场景\nterm 查询：\n不会对查询条件进行分词处理\n直接将查询条件作为整体与索引中的词项进行精确匹配\n适合用于 keyword、数字、日期等类型的字段查询",
-      "explanation": "主观题以参考答案为准。答题时先覆盖关键词，再补充原因、步骤或对比点。 术语理解：keyword：关键词类型，不分词，适合精确匹配、排序和聚合。 match：匹配查询，会先分析/分词，适合全文检索。 term：词项查询，不分析查询词，适合精确值。 答题方法：先写核心概念，再列关键区别、作用或步骤。",
-      "memoryTip": "term 是“词项”：不分词，拿完整值去精确匹配。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "answer": "涓嬭浇 Head 鎻掍欢锛氫粠 GitHub 涓嬭浇 elasticsearch-head-master 鍘嬬缉鍖匼n瀹夎 Node.js锛氫笅杞藉苟瀹夎 Node.js锛岄€氳繃 node -v 楠岃瘉瀹夎鎴愬姛\n瀹夎 Grunt锛氭墽琛?npm install -g grunt-cli 鍏ㄥ眬瀹夎 Grunt\n瀹夎渚濊禆锛氳繘鍏?elasticsearch-head-master 鐩綍锛屾墽琛?npm install 瀹夎渚濊禆\n鍚姩鎻掍欢锛氭墽琛?grunt server 鍚姩 Head 鎻掍欢锛岄€氳繃 http://localhost:9100 璁块棶",
+      "referenceAnswer": "涓嬭浇 Head 鎻掍欢锛氫粠 GitHub 涓嬭浇 elasticsearch-head-master 鍘嬬缉鍖匼n瀹夎 Node.js锛氫笅杞藉苟瀹夎 Node.js锛岄€氳繃 node -v 楠岃瘉瀹夎鎴愬姛\n瀹夎 Grunt锛氭墽琛?npm install -g grunt-cli 鍏ㄥ眬瀹夎 Grunt\n瀹夎渚濊禆锛氳繘鍏?elasticsearch-head-master 鐩綍锛屾墽琛?npm install 瀹夎渚濊禆\n鍚姩鎻掍欢锛氭墽琛?grunt server 鍚姩 Head 鎻掍欢锛岄€氳繃 http://localhost:9100 璁块棶",
+      "explanation": "涓昏棰樹互鍙傝€冪瓟妗堜负鍑嗐€傜瓟棰樻椂鍏堣鐩栧叧閿瘝锛屽啀琛ュ厖鍘熷洜銆佹楠ゆ垨瀵规瘮鐐广€?鏈鐞嗚В锛歮aster锛氫富鑺傜偣瑙掕壊锛岃礋璐ｉ泦缇ょ鐞嗐€佸厓鏁版嵁鍙樻洿鍜屽垎鐗囪皟搴︺€?绛旈鏂规硶锛氬厛鍐欐牳蹇冩蹇碉紝鍐嶅垪鍏抽敭鍖哄埆銆佷綔鐢ㄦ垨姝ラ銆?,
+      "memoryTip": "绠€绛旈鐢ㄢ€滀笁鐐瑰紡鈥濓細鍏堝啓鏍稿績姒傚康锛屽啀鍒?2-4 涓鐐癸紝鏈€鍚庤ˉ涓€鍙ヤ綔鐢ㄦ垨閫傜敤鍦烘櫙銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "IK 分词器",
-        "查询 DSL",
-        "索引与映射",
-        "综合复习"
+        "瀹夎閰嶇疆",
+        "闆嗙兢涓庡垎鐗?
       ],
-      "conciseAnswer": "match 会分词，适合全文检索；term 不分词，适合 keyword、数字、日期精确匹配。",
+      "conciseAnswer": "涓嬭浇 Head 鈫?瀹夎 Node.js 鈫?瀹夎 grunt-cli 鈫?npm install 鈫?grunt server 鈫?璁块棶 9100銆?,
       "answerBlocks": [
         {
           "type": "text",
           "items": [
-            "match 查询：",
-            "会对查询条件进行分词处理",
-            "将分词后的词项与索引中的词项进行匹配",
-            "适合用于全文检索场景",
-            "term 查询：",
-            "不会对查询条件进行分词处理",
-            "直接将查询条件作为整体与索引中的词项进行精确匹配",
-            "适合用于 keyword、数字、日期等类型的字段查询"
+            "涓嬭浇 Head 鎻掍欢锛氫粠 GitHub 涓嬭浇 elasticsearch-head-master 鍘嬬缉鍖?,
+            "瀹夎 Node.js锛氫笅杞藉苟瀹夎 Node.js锛岄€氳繃 node -v 楠岃瘉瀹夎鎴愬姛",
+            "瀹夎 Grunt锛氭墽琛?npm install -g grunt-cli 鍏ㄥ眬瀹夎 Grunt",
+            "瀹夎渚濊禆锛氳繘鍏?elasticsearch-head-master 鐩綍锛屾墽琛?npm install 瀹夎渚濊禆",
+            "鍚姩鎻掍欢锛氭墽琛?grunt server 鍚姩 Head 鎻掍欢锛岄€氳繃 http://localhost:9100 璁块棶"
           ]
         }
       ]
@@ -2896,25 +2885,32 @@ window.QUESTION_BANK = {
     {
       "id": "q141",
       "type": "short",
-      "question": "简述 IK 分词器的两种分词算法及其区别。",
+      "question": "绠€杩?ElasticSearch 涓?match 鏌ヨ鍜?term 鏌ヨ鐨勫尯鍒€?,
       "options": {},
-      "answer": "ik_smart：最少切分算法，会将文本进行最粗粒度的拆分，尽可能少地生成词项\nik_max_word：最细粒度划分算法，会将文本拆分成尽可能多的词项，穷尽所有可能的组合区别：ik_smart 适合用于查询，ik_max_word 适合用于索引构建",
-      "referenceAnswer": "ik_smart：最少切分算法，会将文本进行最粗粒度的拆分，尽可能少地生成词项\nik_max_word：最细粒度划分算法，会将文本拆分成尽可能多的词项，穷尽所有可能的组合区别：ik_smart 适合用于查询，ik_max_word 适合用于索引构建",
-      "explanation": "主观题以参考答案为准。答题时先覆盖关键词，再补充原因、步骤或对比点。 术语理解：ik_max_word：IK 最细切分，词更多，偏提高召回率。 ik_smart：IK 最少切分，词更少，偏精确和高效。 答题方法：先写核心概念，再列关键区别、作用或步骤。",
-      "memoryTip": "简答题用“三点式”：先写核心概念，再列 2-4 个要点，最后补一句作用或适用场景。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "answer": "match 鏌ヨ锛歕n浼氬鏌ヨ鏉′欢杩涜鍒嗚瘝澶勭悊\n灏嗗垎璇嶅悗鐨勮瘝椤逛笌绱㈠紩涓殑璇嶉」杩涜鍖归厤\n閫傚悎鐢ㄤ簬鍏ㄦ枃妫€绱㈠満鏅痋nterm 鏌ヨ锛歕n涓嶄細瀵规煡璇㈡潯浠惰繘琛屽垎璇嶅鐞哱n鐩存帴灏嗘煡璇㈡潯浠朵綔涓烘暣浣撲笌绱㈠紩涓殑璇嶉」杩涜绮剧‘鍖归厤\n閫傚悎鐢ㄤ簬 keyword銆佹暟瀛椼€佹棩鏈熺瓑绫诲瀷鐨勫瓧娈垫煡璇?,
+      "referenceAnswer": "match 鏌ヨ锛歕n浼氬鏌ヨ鏉′欢杩涜鍒嗚瘝澶勭悊\n灏嗗垎璇嶅悗鐨勮瘝椤逛笌绱㈠紩涓殑璇嶉」杩涜鍖归厤\n閫傚悎鐢ㄤ簬鍏ㄦ枃妫€绱㈠満鏅痋nterm 鏌ヨ锛歕n涓嶄細瀵规煡璇㈡潯浠惰繘琛屽垎璇嶅鐞哱n鐩存帴灏嗘煡璇㈡潯浠朵綔涓烘暣浣撲笌绱㈠紩涓殑璇嶉」杩涜绮剧‘鍖归厤\n閫傚悎鐢ㄤ簬 keyword銆佹暟瀛椼€佹棩鏈熺瓑绫诲瀷鐨勫瓧娈垫煡璇?,
+      "explanation": "涓昏棰樹互鍙傝€冪瓟妗堜负鍑嗐€傜瓟棰樻椂鍏堣鐩栧叧閿瘝锛屽啀琛ュ厖鍘熷洜銆佹楠ゆ垨瀵规瘮鐐广€?鏈鐞嗚В锛歬eyword锛氬叧閿瘝绫诲瀷锛屼笉鍒嗚瘝锛岄€傚悎绮剧‘鍖归厤銆佹帓搴忓拰鑱氬悎銆?match锛氬尮閰嶆煡璇紝浼氬厛鍒嗘瀽/鍒嗚瘝锛岄€傚悎鍏ㄦ枃妫€绱€?term锛氳瘝椤规煡璇紝涓嶅垎鏋愭煡璇㈣瘝锛岄€傚悎绮剧‘鍊笺€?绛旈鏂规硶锛氬厛鍐欐牳蹇冩蹇碉紝鍐嶅垪鍏抽敭鍖哄埆銆佷綔鐢ㄦ垨姝ラ銆?,
+      "memoryTip": "term 鏄€滆瘝椤光€濓細涓嶅垎璇嶏紝鎷垮畬鏁村€煎幓绮剧‘鍖归厤銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "IK 分词器",
-        "查询 DSL",
-        "索引与映射"
+        "IK 鍒嗚瘝鍣?,
+        "鏌ヨ DSL",
+        "绱㈠紩涓庢槧灏?,
+        "缁煎悎澶嶄範"
       ],
-      "conciseAnswer": "ik_smart：少切，偏精确，适合查询；ik_max_word：多切，召回高，适合建索引。",
+      "conciseAnswer": "match 浼氬垎璇嶏紝閫傚悎鍏ㄦ枃妫€绱紱term 涓嶅垎璇嶏紝閫傚悎 keyword銆佹暟瀛椼€佹棩鏈熺簿纭尮閰嶃€?,
       "answerBlocks": [
         {
           "type": "text",
           "items": [
-            "ik_smart：最少切分算法，会将文本进行最粗粒度的拆分，尽可能少地生成词项",
-            "ik_max_word：最细粒度划分算法，会将文本拆分成尽可能多的词项，穷尽所有可能的组合区别：ik_smart 适合用于查询，ik_max_word 适合用于索引构建"
+            "match 鏌ヨ锛?,
+            "浼氬鏌ヨ鏉′欢杩涜鍒嗚瘝澶勭悊",
+            "灏嗗垎璇嶅悗鐨勮瘝椤逛笌绱㈠紩涓殑璇嶉」杩涜鍖归厤",
+            "閫傚悎鐢ㄤ簬鍏ㄦ枃妫€绱㈠満鏅?,
+            "term 鏌ヨ锛?,
+            "涓嶄細瀵规煡璇㈡潯浠惰繘琛屽垎璇嶅鐞?,
+            "鐩存帴灏嗘煡璇㈡潯浠朵綔涓烘暣浣撲笌绱㈠紩涓殑璇嶉」杩涜绮剧‘鍖归厤",
+            "閫傚悎鐢ㄤ簬 keyword銆佹暟瀛椼€佹棩鏈熺瓑绫诲瀷鐨勫瓧娈垫煡璇?
           ]
         }
       ]
@@ -2922,30 +2918,25 @@ window.QUESTION_BANK = {
     {
       "id": "q142",
       "type": "short",
-      "question": "简述 ElasticSearch 中文档的创建、查询、更新和删除操作的 RESTful API。",
+      "question": "绠€杩?IK 鍒嗚瘝鍣ㄧ殑涓ょ鍒嗚瘝绠楁硶鍙婂叾鍖哄埆銆?,
       "options": {},
-      "answer": "创建文档：\n指定 ID：PUT / 索引名 / 类型名 / 文档\n自动生成 ID：POST / 索引名 / 类型名\n查询文档：GET / 索引名 / 类型名 / 文档 ID\n更新文档：PUT / 索引名 / 类型名 / 文档 ID 或 POST / 索引名 / 类型名 / 文档 ID\n删除文档：DELETE / 索引名 / 类型名 / 文档 ID",
-      "referenceAnswer": "创建文档：\n指定 ID：PUT / 索引名 / 类型名 / 文档\n自动生成 ID：POST / 索引名 / 类型名\n查询文档：GET / 索引名 / 类型名 / 文档 ID\n更新文档：PUT / 索引名 / 类型名 / 文档 ID 或 POST / 索引名 / 类型名 / 文档 ID\n删除文档：DELETE / 索引名 / 类型名 / 文档 ID",
-      "explanation": "主观题以参考答案为准。答题时先覆盖关键词，再补充原因、步骤或对比点。 术语理解：RESTful：一种 HTTP 接口风格，用 GET、POST、PUT、DELETE 表示不同操作。 答题方法：先写核心概念，再列关键区别、作用或步骤。",
-      "memoryTip": "简答题用“三点式”：先写核心概念，再列 2-4 个要点，最后补一句作用或适用场景。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "answer": "ik_smart锛氭渶灏戝垏鍒嗙畻娉曪紝浼氬皢鏂囨湰杩涜鏈€绮楃矑搴︾殑鎷嗗垎锛屽敖鍙兘灏戝湴鐢熸垚璇嶉」\nik_max_word锛氭渶缁嗙矑搴﹀垝鍒嗙畻娉曪紝浼氬皢鏂囨湰鎷嗗垎鎴愬敖鍙兘澶氱殑璇嶉」锛岀┓灏芥墍鏈夊彲鑳界殑缁勫悎鍖哄埆锛歩k_smart 閫傚悎鐢ㄤ簬鏌ヨ锛宨k_max_word 閫傚悎鐢ㄤ簬绱㈠紩鏋勫缓",
+      "referenceAnswer": "ik_smart锛氭渶灏戝垏鍒嗙畻娉曪紝浼氬皢鏂囨湰杩涜鏈€绮楃矑搴︾殑鎷嗗垎锛屽敖鍙兘灏戝湴鐢熸垚璇嶉」\nik_max_word锛氭渶缁嗙矑搴﹀垝鍒嗙畻娉曪紝浼氬皢鏂囨湰鎷嗗垎鎴愬敖鍙兘澶氱殑璇嶉」锛岀┓灏芥墍鏈夊彲鑳界殑缁勫悎鍖哄埆锛歩k_smart 閫傚悎鐢ㄤ簬鏌ヨ锛宨k_max_word 閫傚悎鐢ㄤ簬绱㈠紩鏋勫缓",
+      "explanation": "涓昏棰樹互鍙傝€冪瓟妗堜负鍑嗐€傜瓟棰樻椂鍏堣鐩栧叧閿瘝锛屽啀琛ュ厖鍘熷洜銆佹楠ゆ垨瀵规瘮鐐广€?鏈鐞嗚В锛歩k_max_word锛欼K 鏈€缁嗗垏鍒嗭紝璇嶆洿澶氾紝鍋忔彁楂樺彫鍥炵巼銆?ik_smart锛欼K 鏈€灏戝垏鍒嗭紝璇嶆洿灏戯紝鍋忕簿纭拰楂樻晥銆?绛旈鏂规硶锛氬厛鍐欐牳蹇冩蹇碉紝鍐嶅垪鍏抽敭鍖哄埆銆佷綔鐢ㄦ垨姝ラ銆?,
+      "memoryTip": "绠€绛旈鐢ㄢ€滀笁鐐瑰紡鈥濓細鍏堝啓鏍稿績姒傚康锛屽啀鍒?2-4 涓鐐癸紝鏈€鍚庤ˉ涓€鍙ヤ綔鐢ㄦ垨閫傜敤鍦烘櫙銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "查询 DSL",
-        "索引与映射",
-        "综合复习",
-        "运维优化"
+        "IK 鍒嗚瘝鍣?,
+        "鏌ヨ DSL",
+        "绱㈠紩涓庢槧灏?
       ],
-      "conciseAnswer": "增：PUT 指定 ID / POST 自动 ID；查：GET；改：PUT/POST 指定 ID；删：DELETE。",
+      "conciseAnswer": "ik_smart锛氬皯鍒囷紝鍋忕簿纭紝閫傚悎鏌ヨ锛沬k_max_word锛氬鍒囷紝鍙洖楂橈紝閫傚悎寤虹储寮曘€?,
       "answerBlocks": [
         {
           "type": "text",
           "items": [
-            "创建文档：",
-            "指定 ID：PUT / 索引名 / 类型名 / 文档",
-            "自动生成 ID：POST / 索引名 / 类型名",
-            "查询文档：GET / 索引名 / 类型名 / 文档 ID",
-            "更新文档：PUT / 索引名 / 类型名 / 文档 ID 或 POST / 索引名 / 类型名 / 文档 ID",
-            "删除文档：DELETE / 索引名 / 类型名 / 文档 ID"
+            "ik_smart锛氭渶灏戝垏鍒嗙畻娉曪紝浼氬皢鏂囨湰杩涜鏈€绮楃矑搴︾殑鎷嗗垎锛屽敖鍙兘灏戝湴鐢熸垚璇嶉」",
+            "ik_max_word锛氭渶缁嗙矑搴﹀垝鍒嗙畻娉曪紝浼氬皢鏂囨湰鎷嗗垎鎴愬敖鍙兘澶氱殑璇嶉」锛岀┓灏芥墍鏈夊彲鑳界殑缁勫悎鍖哄埆锛歩k_smart 閫傚悎鐢ㄤ簬鏌ヨ锛宨k_max_word 閫傚悎鐢ㄤ簬绱㈠紩鏋勫缓"
           ]
         }
       ]
@@ -2953,30 +2944,30 @@ window.QUESTION_BANK = {
     {
       "id": "q143",
       "type": "short",
-      "question": "简述 ElasticSearch 中聚合查询的概念及其常用类型。",
+      "question": "绠€杩?ElasticSearch 涓枃妗ｇ殑鍒涘缓銆佹煡璇€佹洿鏂板拰鍒犻櫎鎿嶄綔鐨?RESTful API銆?,
       "options": {},
-      "answer": "概念：聚合查询用于对数据进行统计和分析，可以从不同维度对数据进行汇总\n常用类型：\n桶聚合（Bucket Aggregation）：将数据分组到不同的桶中，如 terms 聚合\n指标聚合（Metric Aggregation）：计算数据的统计指标，如 avg、max、min、sum 等\n管道聚合（Pipeline Aggregation）：对其他聚合的结果进行再次聚合\n矩阵聚合（Matrix Aggregation）：对多个字段进行统计分析",
-      "referenceAnswer": "概念：聚合查询用于对数据进行统计和分析，可以从不同维度对数据进行汇总\n常用类型：\n桶聚合（Bucket Aggregation）：将数据分组到不同的桶中，如 terms 聚合\n指标聚合（Metric Aggregation）：计算数据的统计指标，如 avg、max、min、sum 等\n管道聚合（Pipeline Aggregation）：对其他聚合的结果进行再次聚合\n矩阵聚合（Matrix Aggregation）：对多个字段进行统计分析",
-      "explanation": "主观题以参考答案为准。答题时先覆盖关键词，再补充原因、步骤或对比点。 术语理解：term：词项查询，不分析查询词，适合精确值。 答题方法：先写核心概念，再列关键区别、作用或步骤。",
-      "memoryTip": "简答题用“三点式”：先写核心概念，再列 2-4 个要点，最后补一句作用或适用场景。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "answer": "鍒涘缓鏂囨。锛歕n鎸囧畾 ID锛歅UT / 绱㈠紩鍚?/ 绫诲瀷鍚?/ 鏂囨。\n鑷姩鐢熸垚 ID锛歅OST / 绱㈠紩鍚?/ 绫诲瀷鍚峔n鏌ヨ鏂囨。锛欸ET / 绱㈠紩鍚?/ 绫诲瀷鍚?/ 鏂囨。 ID\n鏇存柊鏂囨。锛歅UT / 绱㈠紩鍚?/ 绫诲瀷鍚?/ 鏂囨。 ID 鎴?POST / 绱㈠紩鍚?/ 绫诲瀷鍚?/ 鏂囨。 ID\n鍒犻櫎鏂囨。锛欴ELETE / 绱㈠紩鍚?/ 绫诲瀷鍚?/ 鏂囨。 ID",
+      "referenceAnswer": "鍒涘缓鏂囨。锛歕n鎸囧畾 ID锛歅UT / 绱㈠紩鍚?/ 绫诲瀷鍚?/ 鏂囨。\n鑷姩鐢熸垚 ID锛歅OST / 绱㈠紩鍚?/ 绫诲瀷鍚峔n鏌ヨ鏂囨。锛欸ET / 绱㈠紩鍚?/ 绫诲瀷鍚?/ 鏂囨。 ID\n鏇存柊鏂囨。锛歅UT / 绱㈠紩鍚?/ 绫诲瀷鍚?/ 鏂囨。 ID 鎴?POST / 绱㈠紩鍚?/ 绫诲瀷鍚?/ 鏂囨。 ID\n鍒犻櫎鏂囨。锛欴ELETE / 绱㈠紩鍚?/ 绫诲瀷鍚?/ 鏂囨。 ID",
+      "explanation": "涓昏棰樹互鍙傝€冪瓟妗堜负鍑嗐€傜瓟棰樻椂鍏堣鐩栧叧閿瘝锛屽啀琛ュ厖鍘熷洜銆佹楠ゆ垨瀵规瘮鐐广€?鏈鐞嗚В锛歊ESTful锛氫竴绉?HTTP 鎺ュ彛椋庢牸锛岀敤 GET銆丳OST銆丳UT銆丏ELETE 琛ㄧず涓嶅悓鎿嶄綔銆?绛旈鏂规硶锛氬厛鍐欐牳蹇冩蹇碉紝鍐嶅垪鍏抽敭鍖哄埆銆佷綔鐢ㄦ垨姝ラ銆?,
+      "memoryTip": "绠€绛旈鐢ㄢ€滀笁鐐瑰紡鈥濓細鍏堝啓鏍稿績姒傚康锛屽啀鍒?2-4 涓鐐癸紝鏈€鍚庤ˉ涓€鍙ヤ綔鐢ㄦ垨閫傜敤鍦烘櫙銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "基础概念",
-        "查询 DSL",
-        "索引与映射",
-        "综合复习"
+        "鏌ヨ DSL",
+        "绱㈠紩涓庢槧灏?,
+        "缁煎悎澶嶄範",
+        "杩愮淮浼樺寲"
       ],
-      "conciseAnswer": "聚合用于统计分析；常见类型：桶聚合、指标聚合、管道聚合、矩阵聚合。",
+      "conciseAnswer": "澧烇細PUT 鎸囧畾 ID / POST 鑷姩 ID锛涙煡锛欸ET锛涙敼锛歅UT/POST 鎸囧畾 ID锛涘垹锛欴ELETE銆?,
       "answerBlocks": [
         {
           "type": "text",
           "items": [
-            "概念：聚合查询用于对数据进行统计和分析，可以从不同维度对数据进行汇总",
-            "常用类型：",
-            "桶聚合（Bucket Aggregation）：将数据分组到不同的桶中，如 terms 聚合",
-            "指标聚合（Metric Aggregation）：计算数据的统计指标，如 avg、max、min、sum 等",
-            "管道聚合（Pipeline Aggregation）：对其他聚合的结果进行再次聚合",
-            "矩阵聚合（Matrix Aggregation）：对多个字段进行统计分析"
+            "鍒涘缓鏂囨。锛?,
+            "鎸囧畾 ID锛歅UT / 绱㈠紩鍚?/ 绫诲瀷鍚?/ 鏂囨。",
+            "鑷姩鐢熸垚 ID锛歅OST / 绱㈠紩鍚?/ 绫诲瀷鍚?,
+            "鏌ヨ鏂囨。锛欸ET / 绱㈠紩鍚?/ 绫诲瀷鍚?/ 鏂囨。 ID",
+            "鏇存柊鏂囨。锛歅UT / 绱㈠紩鍚?/ 绫诲瀷鍚?/ 鏂囨。 ID 鎴?POST / 绱㈠紩鍚?/ 绫诲瀷鍚?/ 鏂囨。 ID",
+            "鍒犻櫎鏂囨。锛欴ELETE / 绱㈠紩鍚?/ 绫诲瀷鍚?/ 鏂囨。 ID"
           ]
         }
       ]
@@ -2984,30 +2975,30 @@ window.QUESTION_BANK = {
     {
       "id": "q144",
       "type": "short",
-      "question": "简述 ElasticSearch 中分片和复制的作用。",
+      "question": "绠€杩?ElasticSearch 涓仛鍚堟煡璇㈢殑姒傚康鍙婂叾甯哥敤绫诲瀷銆?,
       "options": {},
-      "answer": "分片的作用：\n允许水平分割与扩展内容容量\n允许在分片之上进行分布式、并行的操作，提高性能和吞吐量\n复制的作用：\n在分片节点失败时提供高可用性，实现故障转移\n扩展搜索量吞吐量，搜索可以在所有复制上并行运行\n注意：复制分片从不与主分片置于同一节点上",
-      "referenceAnswer": "分片的作用：\n允许水平分割与扩展内容容量\n允许在分片之上进行分布式、并行的操作，提高性能和吞吐量\n复制的作用：\n在分片节点失败时提供高可用性，实现故障转移\n扩展搜索量吞吐量，搜索可以在所有复制上并行运行\n注意：复制分片从不与主分片置于同一节点上",
-      "explanation": "主观题以参考答案为准。答题时先覆盖关键词，再补充原因、步骤或对比点。 答题方法：先写核心概念，再列关键区别、作用或步骤。",
-      "memoryTip": "Shard 分片记“拆”：把一个索引拆成多份，解决容量和并行处理。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "answer": "姒傚康锛氳仛鍚堟煡璇㈢敤浜庡鏁版嵁杩涜缁熻鍜屽垎鏋愶紝鍙互浠庝笉鍚岀淮搴﹀鏁版嵁杩涜姹囨€籠n甯哥敤绫诲瀷锛歕n妗惰仛鍚堬紙Bucket Aggregation锛夛細灏嗘暟鎹垎缁勫埌涓嶅悓鐨勬《涓紝濡?terms 鑱氬悎\n鎸囨爣鑱氬悎锛圡etric Aggregation锛夛細璁＄畻鏁版嵁鐨勭粺璁℃寚鏍囷紝濡?avg銆乵ax銆乵in銆乻um 绛塡n绠￠亾鑱氬悎锛圥ipeline Aggregation锛夛細瀵瑰叾浠栬仛鍚堢殑缁撴灉杩涜鍐嶆鑱氬悎\n鐭╅樀鑱氬悎锛圡atrix Aggregation锛夛細瀵瑰涓瓧娈佃繘琛岀粺璁″垎鏋?,
+      "referenceAnswer": "姒傚康锛氳仛鍚堟煡璇㈢敤浜庡鏁版嵁杩涜缁熻鍜屽垎鏋愶紝鍙互浠庝笉鍚岀淮搴﹀鏁版嵁杩涜姹囨€籠n甯哥敤绫诲瀷锛歕n妗惰仛鍚堬紙Bucket Aggregation锛夛細灏嗘暟鎹垎缁勫埌涓嶅悓鐨勬《涓紝濡?terms 鑱氬悎\n鎸囨爣鑱氬悎锛圡etric Aggregation锛夛細璁＄畻鏁版嵁鐨勭粺璁℃寚鏍囷紝濡?avg銆乵ax銆乵in銆乻um 绛塡n绠￠亾鑱氬悎锛圥ipeline Aggregation锛夛細瀵瑰叾浠栬仛鍚堢殑缁撴灉杩涜鍐嶆鑱氬悎\n鐭╅樀鑱氬悎锛圡atrix Aggregation锛夛細瀵瑰涓瓧娈佃繘琛岀粺璁″垎鏋?,
+      "explanation": "涓昏棰樹互鍙傝€冪瓟妗堜负鍑嗐€傜瓟棰樻椂鍏堣鐩栧叧閿瘝锛屽啀琛ュ厖鍘熷洜銆佹楠ゆ垨瀵规瘮鐐广€?鏈鐞嗚В锛歵erm锛氳瘝椤规煡璇紝涓嶅垎鏋愭煡璇㈣瘝锛岄€傚悎绮剧‘鍊笺€?绛旈鏂规硶锛氬厛鍐欐牳蹇冩蹇碉紝鍐嶅垪鍏抽敭鍖哄埆銆佷綔鐢ㄦ垨姝ラ銆?,
+      "memoryTip": "绠€绛旈鐢ㄢ€滀笁鐐瑰紡鈥濓細鍏堝啓鏍稿績姒傚康锛屽啀鍒?2-4 涓鐐癸紝鏈€鍚庤ˉ涓€鍙ヤ綔鐢ㄦ垨閫傜敤鍦烘櫙銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "综合复习",
-        "运维优化",
-        "集群与分片"
+        "鍩虹姒傚康",
+        "鏌ヨ DSL",
+        "绱㈠紩涓庢槧灏?,
+        "缁煎悎澶嶄範"
       ],
-      "conciseAnswer": "分片负责拆数据、扩容量、并行处理；复制负责高可用、故障转移、提高搜索吞吐。",
+      "conciseAnswer": "鑱氬悎鐢ㄤ簬缁熻鍒嗘瀽锛涘父瑙佺被鍨嬶細妗惰仛鍚堛€佹寚鏍囪仛鍚堛€佺閬撹仛鍚堛€佺煩闃佃仛鍚堛€?,
       "answerBlocks": [
         {
           "type": "text",
           "items": [
-            "分片的作用：",
-            "允许水平分割与扩展内容容量",
-            "允许在分片之上进行分布式、并行的操作，提高性能和吞吐量",
-            "复制的作用：",
-            "在分片节点失败时提供高可用性，实现故障转移",
-            "扩展搜索量吞吐量，搜索可以在所有复制上并行运行",
-            "注意：复制分片从不与主分片置于同一节点上"
+            "姒傚康锛氳仛鍚堟煡璇㈢敤浜庡鏁版嵁杩涜缁熻鍜屽垎鏋愶紝鍙互浠庝笉鍚岀淮搴﹀鏁版嵁杩涜姹囨€?,
+            "甯哥敤绫诲瀷锛?,
+            "妗惰仛鍚堬紙Bucket Aggregation锛夛細灏嗘暟鎹垎缁勫埌涓嶅悓鐨勬《涓紝濡?terms 鑱氬悎",
+            "鎸囨爣鑱氬悎锛圡etric Aggregation锛夛細璁＄畻鏁版嵁鐨勭粺璁℃寚鏍囷紝濡?avg銆乵ax銆乵in銆乻um 绛?,
+            "绠￠亾鑱氬悎锛圥ipeline Aggregation锛夛細瀵瑰叾浠栬仛鍚堢殑缁撴灉杩涜鍐嶆鑱氬悎",
+            "鐭╅樀鑱氬悎锛圡atrix Aggregation锛夛細瀵瑰涓瓧娈佃繘琛岀粺璁″垎鏋?
           ]
         }
       ]
@@ -3015,28 +3006,30 @@ window.QUESTION_BANK = {
     {
       "id": "q145",
       "type": "short",
-      "question": "简述 ElasticSearch 集群的工作原理。",
+      "question": "绠€杩?ElasticSearch 涓垎鐗囧拰澶嶅埗鐨勪綔鐢ㄣ€?,
       "options": {},
-      "answer": "集群由一个或多个节点组成，共同持有整个数据并提供索引和搜索功能）\n集群有一个唯一的名称，节点通过指定集群名称加入集群\n集群中有一个主节点，负责管理集群状态，包括索引的创建和删除、节点的加入和离开等\n索引被分成多个主分片，分布在不同的节点上，每个主分片可以有多个复制分片\n当节点失败时，集群会自动将该节点上的分片分配到其他节点，实现故障转移",
-      "referenceAnswer": "集群由一个或多个节点组成，共同持有整个数据并提供索引和搜索功能）\n集群有一个唯一的名称，节点通过指定集群名称加入集群\n集群中有一个主节点，负责管理集群状态，包括索引的创建和删除、节点的加入和离开等\n索引被分成多个主分片，分布在不同的节点上，每个主分片可以有多个复制分片\n当节点失败时，集群会自动将该节点上的分片分配到其他节点，实现故障转移",
-      "explanation": "主观题以参考答案为准。答题时先覆盖关键词，再补充原因、步骤或对比点。 答题方法：先写核心概念，再列关键区别、作用或步骤。",
-      "memoryTip": "简答题用“三点式”：先写核心概念，再列 2-4 个要点，最后补一句作用或适用场景。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "answer": "鍒嗙墖鐨勪綔鐢細\n鍏佽姘村钩鍒嗗壊涓庢墿灞曞唴瀹瑰閲廫n鍏佽鍦ㄥ垎鐗囦箣涓婅繘琛屽垎甯冨紡銆佸苟琛岀殑鎿嶄綔锛屾彁楂樻€ц兘鍜屽悶鍚愰噺\n澶嶅埗鐨勪綔鐢細\n鍦ㄥ垎鐗囪妭鐐瑰け璐ユ椂鎻愪緵楂樺彲鐢ㄦ€э紝瀹炵幇鏁呴殰杞Щ\n鎵╁睍鎼滅储閲忓悶鍚愰噺锛屾悳绱㈠彲浠ュ湪鎵€鏈夊鍒朵笂骞惰杩愯\n娉ㄦ剰锛氬鍒跺垎鐗囦粠涓嶄笌涓诲垎鐗囩疆浜庡悓涓€鑺傜偣涓?,
+      "referenceAnswer": "鍒嗙墖鐨勪綔鐢細\n鍏佽姘村钩鍒嗗壊涓庢墿灞曞唴瀹瑰閲廫n鍏佽鍦ㄥ垎鐗囦箣涓婅繘琛屽垎甯冨紡銆佸苟琛岀殑鎿嶄綔锛屾彁楂樻€ц兘鍜屽悶鍚愰噺\n澶嶅埗鐨勪綔鐢細\n鍦ㄥ垎鐗囪妭鐐瑰け璐ユ椂鎻愪緵楂樺彲鐢ㄦ€э紝瀹炵幇鏁呴殰杞Щ\n鎵╁睍鎼滅储閲忓悶鍚愰噺锛屾悳绱㈠彲浠ュ湪鎵€鏈夊鍒朵笂骞惰杩愯\n娉ㄦ剰锛氬鍒跺垎鐗囦粠涓嶄笌涓诲垎鐗囩疆浜庡悓涓€鑺傜偣涓?,
+      "explanation": "涓昏棰樹互鍙傝€冪瓟妗堜负鍑嗐€傜瓟棰樻椂鍏堣鐩栧叧閿瘝锛屽啀琛ュ厖鍘熷洜銆佹楠ゆ垨瀵规瘮鐐广€?绛旈鏂规硶锛氬厛鍐欐牳蹇冩蹇碉紝鍐嶅垪鍏抽敭鍖哄埆銆佷綔鐢ㄦ垨姝ラ銆?,
+      "memoryTip": "Shard 鍒嗙墖璁扳€滄媶鈥濓細鎶婁竴涓储寮曟媶鎴愬浠斤紝瑙ｅ喅瀹归噺鍜屽苟琛屽鐞嗐€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "索引与映射",
-        "运维优化",
-        "集群与分片"
+        "缁煎悎澶嶄範",
+        "杩愮淮浼樺寲",
+        "闆嗙兢涓庡垎鐗?
       ],
-      "conciseAnswer": "节点组成集群；主节点管状态；索引拆成主分片和副本；节点故障后自动分配分片。",
+      "conciseAnswer": "鍒嗙墖璐熻矗鎷嗘暟鎹€佹墿瀹归噺銆佸苟琛屽鐞嗭紱澶嶅埗璐熻矗楂樺彲鐢ㄣ€佹晠闅滆浆绉汇€佹彁楂樻悳绱㈠悶鍚愩€?,
       "answerBlocks": [
         {
           "type": "text",
           "items": [
-            "集群由一个或多个节点组成，共同持有整个数据并提供索引和搜索功能）",
-            "集群有一个唯一的名称，节点通过指定集群名称加入集群",
-            "集群中有一个主节点，负责管理集群状态，包括索引的创建和删除、节点的加入和离开等",
-            "索引被分成多个主分片，分布在不同的节点上，每个主分片可以有多个复制分片",
-            "当节点失败时，集群会自动将该节点上的分片分配到其他节点，实现故障转移"
+            "鍒嗙墖鐨勪綔鐢細",
+            "鍏佽姘村钩鍒嗗壊涓庢墿灞曞唴瀹瑰閲?,
+            "鍏佽鍦ㄥ垎鐗囦箣涓婅繘琛屽垎甯冨紡銆佸苟琛岀殑鎿嶄綔锛屾彁楂樻€ц兘鍜屽悶鍚愰噺",
+            "澶嶅埗鐨勪綔鐢細",
+            "鍦ㄥ垎鐗囪妭鐐瑰け璐ユ椂鎻愪緵楂樺彲鐢ㄦ€э紝瀹炵幇鏁呴殰杞Щ",
+            "鎵╁睍鎼滅储閲忓悶鍚愰噺锛屾悳绱㈠彲浠ュ湪鎵€鏈夊鍒朵笂骞惰杩愯",
+            "娉ㄦ剰锛氬鍒跺垎鐗囦粠涓嶄笌涓诲垎鐗囩疆浜庡悓涓€鑺傜偣涓?
           ]
         }
       ]
@@ -3044,67 +3037,56 @@ window.QUESTION_BANK = {
     {
       "id": "q146",
       "type": "short",
-      "question": "简述 ElasticSearch 集群搭建的基本步骤。",
+      "question": "绠€杩?ElasticSearch 闆嗙兢鐨勫伐浣滃師鐞嗐€?,
       "options": {},
-      "answer": "准备环境：安装 JDK 11+，配置环境变量\n下载并解压 ElasticSearch 安装包到各个节点\n修改每个节点的配置文件，包括集群名称、节点名称、网络配置、集群发现配置等\n清空所有节点的 data 目录\n依次启动所有节点，验证集群是否正常运行",
-      "referenceAnswer": "准备环境：安装 JDK 11+，配置环境变量\n下载并解压 ElasticSearch 安装包到各个节点\n修改每个节点的配置文件，包括集群名称、节点名称、网络配置、集群发现配置等\n清空所有节点的 data 目录\n依次启动所有节点，验证集群是否正常运行",
-      "explanation": "主观题以参考答案为准。答题时先覆盖关键词，再补充原因、步骤或对比点。 答题方法：先写核心概念，再列关键区别、作用或步骤。",
-      "memoryTip": "简答题用“三点式”：先写核心概念，再列 2-4 个要点，最后补一句作用或适用场景。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "answer": "闆嗙兢鐢变竴涓垨澶氫釜鑺傜偣缁勬垚锛屽叡鍚屾寔鏈夋暣涓暟鎹苟鎻愪緵绱㈠紩鍜屾悳绱㈠姛鑳斤級\n闆嗙兢鏈変竴涓敮涓€鐨勫悕绉帮紝鑺傜偣閫氳繃鎸囧畾闆嗙兢鍚嶇О鍔犲叆闆嗙兢\n闆嗙兢涓湁涓€涓富鑺傜偣锛岃礋璐ｇ鐞嗛泦缇ょ姸鎬侊紝鍖呮嫭绱㈠紩鐨勫垱寤哄拰鍒犻櫎銆佽妭鐐圭殑鍔犲叆鍜岀寮€绛塡n绱㈠紩琚垎鎴愬涓富鍒嗙墖锛屽垎甯冨湪涓嶅悓鐨勮妭鐐逛笂锛屾瘡涓富鍒嗙墖鍙互鏈夊涓鍒跺垎鐗嘰n褰撹妭鐐瑰け璐ユ椂锛岄泦缇や細鑷姩灏嗚鑺傜偣涓婄殑鍒嗙墖鍒嗛厤鍒板叾浠栬妭鐐癸紝瀹炵幇鏁呴殰杞Щ",
+      "referenceAnswer": "闆嗙兢鐢变竴涓垨澶氫釜鑺傜偣缁勬垚锛屽叡鍚屾寔鏈夋暣涓暟鎹苟鎻愪緵绱㈠紩鍜屾悳绱㈠姛鑳斤級\n闆嗙兢鏈変竴涓敮涓€鐨勫悕绉帮紝鑺傜偣閫氳繃鎸囧畾闆嗙兢鍚嶇О鍔犲叆闆嗙兢\n闆嗙兢涓湁涓€涓富鑺傜偣锛岃礋璐ｇ鐞嗛泦缇ょ姸鎬侊紝鍖呮嫭绱㈠紩鐨勫垱寤哄拰鍒犻櫎銆佽妭鐐圭殑鍔犲叆鍜岀寮€绛塡n绱㈠紩琚垎鎴愬涓富鍒嗙墖锛屽垎甯冨湪涓嶅悓鐨勮妭鐐逛笂锛屾瘡涓富鍒嗙墖鍙互鏈夊涓鍒跺垎鐗嘰n褰撹妭鐐瑰け璐ユ椂锛岄泦缇や細鑷姩灏嗚鑺傜偣涓婄殑鍒嗙墖鍒嗛厤鍒板叾浠栬妭鐐癸紝瀹炵幇鏁呴殰杞Щ",
+      "explanation": "涓昏棰樹互鍙傝€冪瓟妗堜负鍑嗐€傜瓟棰樻椂鍏堣鐩栧叧閿瘝锛屽啀琛ュ厖鍘熷洜銆佹楠ゆ垨瀵规瘮鐐广€?绛旈鏂规硶锛氬厛鍐欐牳蹇冩蹇碉紝鍐嶅垪鍏抽敭鍖哄埆銆佷綔鐢ㄦ垨姝ラ銆?,
+      "memoryTip": "绠€绛旈鐢ㄢ€滀笁鐐瑰紡鈥濓細鍏堝啓鏍稿績姒傚康锛屽啀鍒?2-4 涓鐐癸紝鏈€鍚庤ˉ涓€鍙ヤ綔鐢ㄦ垨閫傜敤鍦烘櫙銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "安装配置",
-        "集群与分片"
+        "绱㈠紩涓庢槧灏?,
+        "杩愮淮浼樺寲",
+        "闆嗙兢涓庡垎鐗?
       ],
-      "conciseAnswer": "装 JDK → 解压 ES → 配置集群/节点/网络/发现 → 清 data → 逐节点启动并验证。",
+      "conciseAnswer": "鑺傜偣缁勬垚闆嗙兢锛涗富鑺傜偣绠＄姸鎬侊紱绱㈠紩鎷嗘垚涓诲垎鐗囧拰鍓湰锛涜妭鐐规晠闅滃悗鑷姩鍒嗛厤鍒嗙墖銆?,
       "answerBlocks": [
         {
           "type": "text",
           "items": [
-            "准备环境：安装 JDK 11+，配置环境变量",
-            "下载并解压 ElasticSearch 安装包到各个节点",
-            "修改每个节点的配置文件，包括集群名称、节点名称、网络配置、集群发现配置等",
-            "清空所有节点的 data 目录",
-            "依次启动所有节点，验证集群是否正常运行"
+            "闆嗙兢鐢变竴涓垨澶氫釜鑺傜偣缁勬垚锛屽叡鍚屾寔鏈夋暣涓暟鎹苟鎻愪緵绱㈠紩鍜屾悳绱㈠姛鑳斤級",
+            "闆嗙兢鏈変竴涓敮涓€鐨勫悕绉帮紝鑺傜偣閫氳繃鎸囧畾闆嗙兢鍚嶇О鍔犲叆闆嗙兢",
+            "闆嗙兢涓湁涓€涓富鑺傜偣锛岃礋璐ｇ鐞嗛泦缇ょ姸鎬侊紝鍖呮嫭绱㈠紩鐨勫垱寤哄拰鍒犻櫎銆佽妭鐐圭殑鍔犲叆鍜岀寮€绛?,
+            "绱㈠紩琚垎鎴愬涓富鍒嗙墖锛屽垎甯冨湪涓嶅悓鐨勮妭鐐逛笂锛屾瘡涓富鍒嗙墖鍙互鏈夊涓鍒跺垎鐗?,
+            "褰撹妭鐐瑰け璐ユ椂锛岄泦缇や細鑷姩灏嗚鑺傜偣涓婄殑鍒嗙墖鍒嗛厤鍒板叾浠栬妭鐐癸紝瀹炵幇鏁呴殰杞Щ"
           ]
         }
       ]
     },
     {
       "id": "q147",
-      "type": "comprehensive",
-      "question": "背景：某互联网公司为了排查线上服务器故障，决定使用 ElasticSearch 存储所有服务器的系统日志。日志数据包含以下字段：\nlog_id：日志唯一标识（长整型）\nserver_ip：服务器 IP 地址（字符串，不需要分词）\nlog_level：日志级别（字符串，可选值：DEBUG、INFO、WARN、ERROR，不需要分词）\nlog_content：日志内容（长文本，需要支持全文检索）\ncreate_time：日志生成时间（日期类型）\nprocess_name：产生日志的进程名称（字符串，不需要分词）\n公司计划创建一个名为system_logs的索引来存储这些日志，每天大约产生 50 万条日志数据，需要保留 30 天的日志记录。运维人员需要能够快速查询特定服务器、特定级别的错误日志，以及根据日志内容搜索相关故障信息。\n\n问题：（1）请写出创建system_logs索引时，log_content字段的映射配置，要求使用 IK 分词器的最少切分算法，并说明为什么选择该算法。",
+      "type": "short",
+      "question": "绠€杩?ElasticSearch 闆嗙兢鎼缓鐨勫熀鏈楠ゃ€?,
       "options": {},
-      "answer": "log_content字段的映射配置：\n\"log_content\": {\n\"type\": \"text\",\n\"analyzer\": \"ik_smart\"\n}\n选择`ik_smart`算法的原因：\n`ik_smart`是最少切分算法，会将文本进行最粗粒度的拆分，生成的词项数量较少\n对于日志查询场景，用户通常搜索完整的错误关键词，最少切分可以提高查询效率，减少无关结果",
-      "referenceAnswer": "log_content字段的映射配置：\n\"log_content\": {\n\"type\": \"text\",\n\"analyzer\": \"ik_smart\"\n}\n选择`ik_smart`算法的原因：\n`ik_smart`是最少切分算法，会将文本进行最粗粒度的拆分，生成的词项数量较少\n对于日志查询场景，用户通常搜索完整的错误关键词，最少切分可以提高查询效率，减少无关结果",
-      "explanation": "综合题以参考答案为准。先识别业务场景，再写映射、DSL、原因或优化步骤。 术语理解：ik_smart：IK 最少切分，词更少，偏精确和高效。 text：文本类型，会分词，适合全文检索。 答题方法：按“场景需求→字段设计→DSL 查询→原因/优化”组织答案。",
-      "memoryTip": "综合题用“场景-字段-查询-优化”四步：先看业务场景，再定字段类型，接着写 DSL，最后补原因或优化措施。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "answer": "鍑嗗鐜锛氬畨瑁?JDK 11+锛岄厤缃幆澧冨彉閲廫n涓嬭浇骞惰В鍘?ElasticSearch 瀹夎鍖呭埌鍚勪釜鑺傜偣\n淇敼姣忎釜鑺傜偣鐨勯厤缃枃浠讹紝鍖呮嫭闆嗙兢鍚嶇О銆佽妭鐐瑰悕绉般€佺綉缁滈厤缃€侀泦缇ゅ彂鐜伴厤缃瓑\n娓呯┖鎵€鏈夎妭鐐圭殑 data 鐩綍\n渚濇鍚姩鎵€鏈夎妭鐐癸紝楠岃瘉闆嗙兢鏄惁姝ｅ父杩愯",
+      "referenceAnswer": "鍑嗗鐜锛氬畨瑁?JDK 11+锛岄厤缃幆澧冨彉閲廫n涓嬭浇骞惰В鍘?ElasticSearch 瀹夎鍖呭埌鍚勪釜鑺傜偣\n淇敼姣忎釜鑺傜偣鐨勯厤缃枃浠讹紝鍖呮嫭闆嗙兢鍚嶇О銆佽妭鐐瑰悕绉般€佺綉缁滈厤缃€侀泦缇ゅ彂鐜伴厤缃瓑\n娓呯┖鎵€鏈夎妭鐐圭殑 data 鐩綍\n渚濇鍚姩鎵€鏈夎妭鐐癸紝楠岃瘉闆嗙兢鏄惁姝ｅ父杩愯",
+      "explanation": "涓昏棰樹互鍙傝€冪瓟妗堜负鍑嗐€傜瓟棰樻椂鍏堣鐩栧叧閿瘝锛屽啀琛ュ厖鍘熷洜銆佹楠ゆ垨瀵规瘮鐐广€?绛旈鏂规硶锛氬厛鍐欐牳蹇冩蹇碉紝鍐嶅垪鍏抽敭鍖哄埆銆佷綔鐢ㄦ垨姝ラ銆?,
+      "memoryTip": "绠€绛旈鐢ㄢ€滀笁鐐瑰紡鈥濓細鍏堝啓鏍稿績姒傚康锛屽啀鍒?2-4 涓鐐癸紝鏈€鍚庤ˉ涓€鍙ヤ綔鐢ㄦ垨閫傜敤鍦烘櫙銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "IK 分词器",
-        "安装配置",
-        "查询 DSL",
-        "索引与映射",
-        "综合复习",
-        "运维优化"
+        "瀹夎閰嶇疆",
+        "闆嗙兢涓庡垎鐗?
       ],
-      "conciseAnswer": "log_content 用 text，analyzer 用 ik_smart；原因：最少切分，效率高，减少无关结果。",
+      "conciseAnswer": "瑁?JDK 鈫?瑙ｅ帇 ES 鈫?閰嶇疆闆嗙兢/鑺傜偣/缃戠粶/鍙戠幇 鈫?娓?data 鈫?閫愯妭鐐瑰惎鍔ㄥ苟楠岃瘉銆?,
       "answerBlocks": [
         {
           "type": "text",
           "items": [
-            "log_content字段的映射配置："
-          ]
-        },
-        {
-          "type": "code",
-          "content": "\"log_content\": {\n\"type\": \"text\",\n\"analyzer\": \"ik_smart\"\n}"
-        },
-        {
-          "type": "text",
-          "items": [
-            "选择`ik_smart`算法的原因：",
-            "`ik_smart`是最少切分算法，会将文本进行最粗粒度的拆分，生成的词项数量较少",
-            "对于日志查询场景，用户通常搜索完整的错误关键词，最少切分可以提高查询效率，减少无关结果"
+            "鍑嗗鐜锛氬畨瑁?JDK 11+锛岄厤缃幆澧冨彉閲?,
+            "涓嬭浇骞惰В鍘?ElasticSearch 瀹夎鍖呭埌鍚勪釜鑺傜偣",
+            "淇敼姣忎釜鑺傜偣鐨勯厤缃枃浠讹紝鍖呮嫭闆嗙兢鍚嶇О銆佽妭鐐瑰悕绉般€佺綉缁滈厤缃€侀泦缇ゅ彂鐜伴厤缃瓑",
+            "娓呯┖鎵€鏈夎妭鐐圭殑 data 鐩綍",
+            "渚濇鍚姩鎵€鏈夎妭鐐癸紝楠岃瘉闆嗙兢鏄惁姝ｅ父杩愯"
           ]
         }
       ]
@@ -3112,82 +3094,95 @@ window.QUESTION_BANK = {
     {
       "id": "q148",
       "type": "comprehensive",
-      "question": "背景：某互联网公司为了排查线上服务器故障，决定使用 ElasticSearch 存储所有服务器的系统日志。日志数据包含以下字段：\nlog_id：日志唯一标识（长整型）\nserver_ip：服务器 IP 地址（字符串，不需要分词）\nlog_level：日志级别（字符串，可选值：DEBUG、INFO、WARN、ERROR，不需要分词）\nlog_content：日志内容（长文本，需要支持全文检索）\ncreate_time：日志生成时间（日期类型）\nprocess_name：产生日志的进程名称（字符串，不需要分词）\n公司计划创建一个名为system_logs的索引来存储这些日志，每天大约产生 50 万条日志数据，需要保留 30 天的日志记录。运维人员需要能够快速查询特定服务器、特定级别的错误日志，以及根据日志内容搜索相关故障信息。\n\n问题：运维人员需要查询 IP 为192.168.1.100的服务器在 2024 年 6 月 1 日产生的所有 ERROR 级别日志，请写出该查询的核心 DSL 语句（只需要写出query部分即可）。",
+      "question": "鑳屾櫙锛氭煇浜掕仈缃戝叕鍙镐负浜嗘帓鏌ョ嚎涓婃湇鍔″櫒鏁呴殰锛屽喅瀹氫娇鐢?ElasticSearch 瀛樺偍鎵€鏈夋湇鍔″櫒鐨勭郴缁熸棩蹇椼€傛棩蹇楁暟鎹寘鍚互涓嬪瓧娈碉細\nlog_id锛氭棩蹇楀敮涓€鏍囪瘑锛堥暱鏁村瀷锛塡nserver_ip锛氭湇鍔″櫒 IP 鍦板潃锛堝瓧绗︿覆锛屼笉闇€瑕佸垎璇嶏級\nlog_level锛氭棩蹇楃骇鍒紙瀛楃涓诧紝鍙€夊€硷細DEBUG銆両NFO銆乄ARN銆丒RROR锛屼笉闇€瑕佸垎璇嶏級\nlog_content锛氭棩蹇楀唴瀹癸紙闀挎枃鏈紝闇€瑕佹敮鎸佸叏鏂囨绱級\ncreate_time锛氭棩蹇楃敓鎴愭椂闂达紙鏃ユ湡绫诲瀷锛塡nprocess_name锛氫骇鐢熸棩蹇楃殑杩涚▼鍚嶇О锛堝瓧绗︿覆锛屼笉闇€瑕佸垎璇嶏級\n鍏徃璁″垝鍒涘缓涓€涓悕涓簊ystem_logs鐨勭储寮曟潵瀛樺偍杩欎簺鏃ュ織锛屾瘡澶╁ぇ绾︿骇鐢?50 涓囨潯鏃ュ織鏁版嵁锛岄渶瑕佷繚鐣?30 澶╃殑鏃ュ織璁板綍銆傝繍缁翠汉鍛橀渶瑕佽兘澶熷揩閫熸煡璇㈢壒瀹氭湇鍔″櫒銆佺壒瀹氱骇鍒殑閿欒鏃ュ織锛屼互鍙婃牴鎹棩蹇楀唴瀹规悳绱㈢浉鍏虫晠闅滀俊鎭€俓n\n闂锛氾紙1锛夎鍐欏嚭鍒涘缓system_logs绱㈠紩鏃讹紝log_content瀛楁鐨勬槧灏勯厤缃紝瑕佹眰浣跨敤 IK 鍒嗚瘝鍣ㄧ殑鏈€灏戝垏鍒嗙畻娉曪紝骞惰鏄庝负浠€涔堥€夋嫨璇ョ畻娉曘€?,
       "options": {},
-      "answer": "\"query\": {\n\"bool\": {\n\"must\": [\n{\"match\": {\"server_ip\": \"192.168.1.100\"}},\n{\"match\": {\"log_level\": \"ERROR\"}}\n],\n\"filter\": {\n\"range\": {\n\"create_time\": {\n\"gte\": \"2024-06-01\",\n\"lt\": \"2024-06-02\"\n}\n}\n}\n}\n}",
-      "referenceAnswer": "\"query\": {\n\"bool\": {\n\"must\": [\n{\"match\": {\"server_ip\": \"192.168.1.100\"}},\n{\"match\": {\"log_level\": \"ERROR\"}}\n],\n\"filter\": {\n\"range\": {\n\"create_time\": {\n\"gte\": \"2024-06-01\",\n\"lt\": \"2024-06-02\"\n}\n}\n}\n}\n}",
-      "explanation": "综合题以参考答案为准。先识别业务场景，再写映射、DSL、原因或优化步骤。 术语理解：match：匹配查询，会先分析/分词，适合全文检索。 range：范围查询，常用于数字、日期区间。 bool：布尔查询，用 must、filter、should 等组合条件。 答题方法：按“场景需求→字段设计→DSL 查询→原因/优化”组织答案。",
-      "memoryTip": "综合题用“场景-字段-查询-优化”四步：先看业务场景，再定字段类型，接着写 DSL，最后补原因或优化措施。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "answer": "log_content瀛楁鐨勬槧灏勯厤缃細\n\"log_content\": {\n\"type\": \"text\",\n\"analyzer\": \"ik_smart\"\n}\n閫夋嫨`ik_smart`绠楁硶鐨勫師鍥狅細\n`ik_smart`鏄渶灏戝垏鍒嗙畻娉曪紝浼氬皢鏂囨湰杩涜鏈€绮楃矑搴︾殑鎷嗗垎锛岀敓鎴愮殑璇嶉」鏁伴噺杈冨皯\n瀵逛簬鏃ュ織鏌ヨ鍦烘櫙锛岀敤鎴烽€氬父鎼滅储瀹屾暣鐨勯敊璇叧閿瘝锛屾渶灏戝垏鍒嗗彲浠ユ彁楂樻煡璇㈡晥鐜囷紝鍑忓皯鏃犲叧缁撴灉",
+      "referenceAnswer": "log_content瀛楁鐨勬槧灏勯厤缃細\n\"log_content\": {\n\"type\": \"text\",\n\"analyzer\": \"ik_smart\"\n}\n閫夋嫨`ik_smart`绠楁硶鐨勫師鍥狅細\n`ik_smart`鏄渶灏戝垏鍒嗙畻娉曪紝浼氬皢鏂囨湰杩涜鏈€绮楃矑搴︾殑鎷嗗垎锛岀敓鎴愮殑璇嶉」鏁伴噺杈冨皯\n瀵逛簬鏃ュ織鏌ヨ鍦烘櫙锛岀敤鎴烽€氬父鎼滅储瀹屾暣鐨勯敊璇叧閿瘝锛屾渶灏戝垏鍒嗗彲浠ユ彁楂樻煡璇㈡晥鐜囷紝鍑忓皯鏃犲叧缁撴灉",
+      "explanation": "缁煎悎棰樹互鍙傝€冪瓟妗堜负鍑嗐€傚厛璇嗗埆涓氬姟鍦烘櫙锛屽啀鍐欐槧灏勩€丏SL銆佸師鍥犳垨浼樺寲姝ラ銆?鏈鐞嗚В锛歩k_smart锛欼K 鏈€灏戝垏鍒嗭紝璇嶆洿灏戯紝鍋忕簿纭拰楂樻晥銆?text锛氭枃鏈被鍨嬶紝浼氬垎璇嶏紝閫傚悎鍏ㄦ枃妫€绱€?绛旈鏂规硶锛氭寜鈥滃満鏅渶姹傗啋瀛楁璁捐鈫扗SL 鏌ヨ鈫掑師鍥?浼樺寲鈥濈粍缁囩瓟妗堛€?,
+      "memoryTip": "缁煎悎棰樼敤鈥滃満鏅?瀛楁-鏌ヨ-浼樺寲鈥濆洓姝ワ細鍏堢湅涓氬姟鍦烘櫙锛屽啀瀹氬瓧娈电被鍨嬶紝鎺ョ潃鍐?DSL锛屾渶鍚庤ˉ鍘熷洜鎴栦紭鍖栨帾鏂姐€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "IK 分词器",
-        "基础概念",
-        "查询 DSL",
-        "索引与映射",
-        "综合复习",
-        "运维优化"
+        "IK 鍒嗚瘝鍣?,
+        "瀹夎閰嶇疆",
+        "鏌ヨ DSL",
+        "绱㈠紩涓庢槧灏?,
+        "缁煎悎澶嶄範",
+        "杩愮淮浼樺寲"
       ],
-      "conciseAnswer": "bool 查询：must 匹配 server_ip 和 log_level，filter 用 range 限制 create_time 为 2024-06-01 当天。",
+      "conciseAnswer": "log_content 鐢?text锛宎nalyzer 鐢?ik_smart锛涘師鍥狅細鏈€灏戝垏鍒嗭紝鏁堢巼楂橈紝鍑忓皯鏃犲叧缁撴灉銆?,
       "answerBlocks": [
         {
+          "type": "text",
+          "items": [
+            "log_content瀛楁鐨勬槧灏勯厤缃細"
+          ]
+        },
+        {
           "type": "code",
-          "content": "\"query\": {\n\"bool\": {\n\"must\": [\n{\"match\": {\"server_ip\": \"192.168.1.100\"}},\n{\"match\": {\"log_level\": \"ERROR\"}}\n],\n\"filter\": {\n\"range\": {\n\"create_time\": {\n\"gte\": \"2024-06-01\",\n\"lt\": \"2024-06-02\"\n}\n}\n}\n}\n}"
+          "content": "\"log_content\": {\n  \"type\": \"text\",\n  \"analyzer\": \"ik_smart\"\n}"
+        },
+        {
+          "type": "text",
+          "items": [
+            "閫夋嫨`ik_smart`绠楁硶鐨勫師鍥狅細",
+            "`ik_smart`鏄渶灏戝垏鍒嗙畻娉曪紝浼氬皢鏂囨湰杩涜鏈€绮楃矑搴︾殑鎷嗗垎锛岀敓鎴愮殑璇嶉」鏁伴噺杈冨皯",
+            "瀵逛簬鏃ュ織鏌ヨ鍦烘櫙锛岀敤鎴烽€氬父鎼滅储瀹屾暣鐨勯敊璇叧閿瘝锛屾渶灏戝垏鍒嗗彲浠ユ彁楂樻煡璇㈡晥鐜囷紝鍑忓皯鏃犲叧缁撴灉"
+          ]
         }
       ]
     },
     {
       "id": "q149",
       "type": "comprehensive",
-      "question": "背景：某互联网公司为了排查线上服务器故障，决定使用 ElasticSearch 存储所有服务器的系统日志。日志数据包含以下字段：\nlog_id：日志唯一标识（长整型）\nserver_ip：服务器 IP 地址（字符串，不需要分词）\nlog_level：日志级别（字符串，可选值：DEBUG、INFO、WARN、ERROR，不需要分词）\nlog_content：日志内容（长文本，需要支持全文检索）\ncreate_time：日志生成时间（日期类型）\nprocess_name：产生日志的进程名称（字符串，不需要分词）\n公司计划创建一个名为system_logs的索引来存储这些日志，每天大约产生 50 万条日志数据，需要保留 30 天的日志记录。运维人员需要能够快速查询特定服务器、特定级别的错误日志，以及根据日志内容搜索相关故障信息。\n\n问题：如果某天运维人员发现查询日志的速度变得很慢，经过检查发现集群健康状态为yellow，请说明可能的原因以及对应的解决方法（写出 2 种）。",
+      "question": "鑳屾櫙锛氭煇浜掕仈缃戝叕鍙镐负浜嗘帓鏌ョ嚎涓婃湇鍔″櫒鏁呴殰锛屽喅瀹氫娇鐢?ElasticSearch 瀛樺偍鎵€鏈夋湇鍔″櫒鐨勭郴缁熸棩蹇椼€傛棩蹇楁暟鎹寘鍚互涓嬪瓧娈碉細\nlog_id锛氭棩蹇楀敮涓€鏍囪瘑锛堥暱鏁村瀷锛塡nserver_ip锛氭湇鍔″櫒 IP 鍦板潃锛堝瓧绗︿覆锛屼笉闇€瑕佸垎璇嶏級\nlog_level锛氭棩蹇楃骇鍒紙瀛楃涓诧紝鍙€夊€硷細DEBUG銆両NFO銆乄ARN銆丒RROR锛屼笉闇€瑕佸垎璇嶏級\nlog_content锛氭棩蹇楀唴瀹癸紙闀挎枃鏈紝闇€瑕佹敮鎸佸叏鏂囨绱級\ncreate_time锛氭棩蹇楃敓鎴愭椂闂达紙鏃ユ湡绫诲瀷锛塡nprocess_name锛氫骇鐢熸棩蹇楃殑杩涚▼鍚嶇О锛堝瓧绗︿覆锛屼笉闇€瑕佸垎璇嶏級\n鍏徃璁″垝鍒涘缓涓€涓悕涓簊ystem_logs鐨勭储寮曟潵瀛樺偍杩欎簺鏃ュ織锛屾瘡澶╁ぇ绾︿骇鐢?50 涓囨潯鏃ュ織鏁版嵁锛岄渶瑕佷繚鐣?30 澶╃殑鏃ュ織璁板綍銆傝繍缁翠汉鍛橀渶瑕佽兘澶熷揩閫熸煡璇㈢壒瀹氭湇鍔″櫒銆佺壒瀹氱骇鍒殑閿欒鏃ュ織锛屼互鍙婃牴鎹棩蹇楀唴瀹规悳绱㈢浉鍏虫晠闅滀俊鎭€俓n\n闂锛氳繍缁翠汉鍛橀渶瑕佹煡璇?IP 涓?92.168.1.100鐨勬湇鍔″櫒鍦?2024 骞?6 鏈?1 鏃ヤ骇鐢熺殑鎵€鏈?ERROR 绾у埆鏃ュ織锛岃鍐欏嚭璇ユ煡璇㈢殑鏍稿績 DSL 璇彞锛堝彧闇€瑕佸啓鍑簈uery閮ㄥ垎鍗冲彲锛夈€?,
       "options": {},
-      "answer": "可能原因 1：集群中只有一个节点，索引的复制分片无法分配\n解决方法：增加至少一个节点，让复制分片可以分配到其他节点上\n可能原因 2：某个节点离线，导致该节点上的复制分片丢失\n解决方法：重启离线的节点，或者重新分配丢失的分片",
-      "referenceAnswer": "可能原因 1：集群中只有一个节点，索引的复制分片无法分配\n解决方法：增加至少一个节点，让复制分片可以分配到其他节点上\n可能原因 2：某个节点离线，导致该节点上的复制分片丢失\n解决方法：重启离线的节点，或者重新分配丢失的分片",
-      "explanation": "综合题以参考答案为准。先识别业务场景，再写映射、DSL、原因或优化步骤。 答题方法：按“场景需求→字段设计→DSL 查询→原因/优化”组织答案。",
-      "memoryTip": "yellow 像黄灯警告：主分片能用，但复制分片没完全分配。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "answer": "\"query\": {\n\"bool\": {\n\"must\": [\n{\"match\": {\"server_ip\": \"192.168.1.100\"}},\n{\"match\": {\"log_level\": \"ERROR\"}}\n],\n\"filter\": {\n\"range\": {\n\"create_time\": {\n\"gte\": \"2024-06-01\",\n\"lt\": \"2024-06-02\"\n}\n}\n}\n}\n}",
+      "referenceAnswer": "\"query\": {\n\"bool\": {\n\"must\": [\n{\"match\": {\"server_ip\": \"192.168.1.100\"}},\n{\"match\": {\"log_level\": \"ERROR\"}}\n],\n\"filter\": {\n\"range\": {\n\"create_time\": {\n\"gte\": \"2024-06-01\",\n\"lt\": \"2024-06-02\"\n}\n}\n}\n}\n}",
+      "explanation": "缁煎悎棰樹互鍙傝€冪瓟妗堜负鍑嗐€傚厛璇嗗埆涓氬姟鍦烘櫙锛屽啀鍐欐槧灏勩€丏SL銆佸師鍥犳垨浼樺寲姝ラ銆?鏈鐞嗚В锛歮atch锛氬尮閰嶆煡璇紝浼氬厛鍒嗘瀽/鍒嗚瘝锛岄€傚悎鍏ㄦ枃妫€绱€?range锛氳寖鍥存煡璇紝甯哥敤浜庢暟瀛椼€佹棩鏈熷尯闂淬€?bool锛氬竷灏旀煡璇紝鐢?must銆乫ilter銆乻hould 绛夌粍鍚堟潯浠躲€?绛旈鏂规硶锛氭寜鈥滃満鏅渶姹傗啋瀛楁璁捐鈫扗SL 鏌ヨ鈫掑師鍥?浼樺寲鈥濈粍缁囩瓟妗堛€?,
+      "memoryTip": "缁煎悎棰樼敤鈥滃満鏅?瀛楁-鏌ヨ-浼樺寲鈥濆洓姝ワ細鍏堢湅涓氬姟鍦烘櫙锛屽啀瀹氬瓧娈电被鍨嬶紝鎺ョ潃鍐?DSL锛屾渶鍚庤ˉ鍘熷洜鎴栦紭鍖栨帾鏂姐€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "IK 分词器",
-        "查询 DSL",
-        "索引与映射",
-        "运维优化",
-        "集群与分片"
+        "IK 鍒嗚瘝鍣?,
+        "鍩虹姒傚康",
+        "鏌ヨ DSL",
+        "绱㈠紩涓庢槧灏?,
+        "缁煎悎澶嶄範",
+        "杩愮淮浼樺寲"
       ],
-      "conciseAnswer": "两类原因：单节点副本无法分配；节点离线导致副本丢失。解决：加节点；重启或重新分配。",
+      "conciseAnswer": "bool 鏌ヨ锛歮ust 鍖归厤 server_ip 鍜?log_level锛宖ilter 鐢?range 闄愬埗 create_time 涓?2024-06-01 褰撳ぉ銆?,
       "answerBlocks": [
         {
-          "type": "text",
-          "items": [
-            "可能原因 1：集群中只有一个节点，索引的复制分片无法分配",
-            "解决方法：增加至少一个节点，让复制分片可以分配到其他节点上",
-            "可能原因 2：某个节点离线，导致该节点上的复制分片丢失",
-            "解决方法：重启离线的节点，或者重新分配丢失的分片"
-          ]
+          "type": "code",
+          "content": "\"query\": {\n  \"bool\": {\n    \"must\": [\n      {\"match\": {\"server_ip\": \"192.168.1.100\"}},\n      {\"match\": {\"log_level\": \"ERROR\"}}\n    ],\n  \"filter\": {\n    \"range\": {\n      \"create_time\": {\n        \"gte\": \"2024-06-01\",\n        \"lt\": \"2024-06-02\"\n      }\n  }\n}\n}\n}"
         }
       ]
     },
     {
       "id": "q150",
       "type": "comprehensive",
-      "question": "背景：某地方新闻网站为了提升用户的搜索体验，决定将原有的数据库搜索替换为 ElasticSearch 全文搜索。新闻数据包含以下字段：\nnews_id：新闻唯一标识（长整型）\ntitle：新闻标题（字符串，需要支持全文检索和高亮显示）\ncontent：新闻内容（长文本，需要支持全文检索和高亮显示）\nauthor：作者姓名（字符串，不需要分词）\npublish_time：发布时间（日期类型）\nsource：新闻来源（字符串，不需要分词）\n网站每天发布约 200 条新闻，总新闻量约 10 万条。用户可以通过关键词搜索新闻标题和内容，搜索结果需要按发布时间倒序排序，并高亮显示匹配的关键词。\n\n问题：在创建news索引时，title和content字段应该使用哪种分词器？请说明选择该分词器的原因。",
+      "question": "鑳屾櫙锛氭煇浜掕仈缃戝叕鍙镐负浜嗘帓鏌ョ嚎涓婃湇鍔″櫒鏁呴殰锛屽喅瀹氫娇鐢?ElasticSearch 瀛樺偍鎵€鏈夋湇鍔″櫒鐨勭郴缁熸棩蹇椼€傛棩蹇楁暟鎹寘鍚互涓嬪瓧娈碉細\nlog_id锛氭棩蹇楀敮涓€鏍囪瘑锛堥暱鏁村瀷锛塡nserver_ip锛氭湇鍔″櫒 IP 鍦板潃锛堝瓧绗︿覆锛屼笉闇€瑕佸垎璇嶏級\nlog_level锛氭棩蹇楃骇鍒紙瀛楃涓诧紝鍙€夊€硷細DEBUG銆両NFO銆乄ARN銆丒RROR锛屼笉闇€瑕佸垎璇嶏級\nlog_content锛氭棩蹇楀唴瀹癸紙闀挎枃鏈紝闇€瑕佹敮鎸佸叏鏂囨绱級\ncreate_time锛氭棩蹇楃敓鎴愭椂闂达紙鏃ユ湡绫诲瀷锛塡nprocess_name锛氫骇鐢熸棩蹇楃殑杩涚▼鍚嶇О锛堝瓧绗︿覆锛屼笉闇€瑕佸垎璇嶏級\n鍏徃璁″垝鍒涘缓涓€涓悕涓簊ystem_logs鐨勭储寮曟潵瀛樺偍杩欎簺鏃ュ織锛屾瘡澶╁ぇ绾︿骇鐢?50 涓囨潯鏃ュ織鏁版嵁锛岄渶瑕佷繚鐣?30 澶╃殑鏃ュ織璁板綍銆傝繍缁翠汉鍛橀渶瑕佽兘澶熷揩閫熸煡璇㈢壒瀹氭湇鍔″櫒銆佺壒瀹氱骇鍒殑閿欒鏃ュ織锛屼互鍙婃牴鎹棩蹇楀唴瀹规悳绱㈢浉鍏虫晠闅滀俊鎭€俓n\n闂锛氬鏋滄煇澶╄繍缁翠汉鍛樺彂鐜版煡璇㈡棩蹇楃殑閫熷害鍙樺緱寰堟參锛岀粡杩囨鏌ュ彂鐜伴泦缇ゅ仴搴风姸鎬佷负yellow锛岃璇存槑鍙兘鐨勫師鍥犱互鍙婂搴旂殑瑙ｅ喅鏂规硶锛堝啓鍑?2 绉嶏級銆?,
       "options": {},
-      "answer": "应该使用 IK 分词器的ik_max_word算法 原因：\nik_max_word是最细粒度划分算法，会将文本拆分成尽可能多的词项\n对于新闻搜索场景，用户可能搜索新闻中的任意关键词，最细粒度划分可以提高召回率，确保相关新闻都能被搜索到",
-      "referenceAnswer": "应该使用 IK 分词器的ik_max_word算法 原因：\nik_max_word是最细粒度划分算法，会将文本拆分成尽可能多的词项\n对于新闻搜索场景，用户可能搜索新闻中的任意关键词，最细粒度划分可以提高召回率，确保相关新闻都能被搜索到",
-      "explanation": "综合题以参考答案为准。先识别业务场景，再写映射、DSL、原因或优化步骤。 术语理解：ik_max_word：IK 最细切分，词更多，偏提高召回率。 答题方法：按“场景需求→字段设计→DSL 查询→原因/优化”组织答案。",
-      "memoryTip": "综合题用“场景-字段-查询-优化”四步：先看业务场景，再定字段类型，接着写 DSL，最后补原因或优化措施。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "answer": "鍙兘鍘熷洜 1锛氶泦缇や腑鍙湁涓€涓妭鐐癸紝绱㈠紩鐨勫鍒跺垎鐗囨棤娉曞垎閰峔n瑙ｅ喅鏂规硶锛氬鍔犺嚦灏戜竴涓妭鐐癸紝璁╁鍒跺垎鐗囧彲浠ュ垎閰嶅埌鍏朵粬鑺傜偣涓奬n鍙兘鍘熷洜 2锛氭煇涓妭鐐圭绾匡紝瀵艰嚧璇ヨ妭鐐逛笂鐨勫鍒跺垎鐗囦涪澶盶n瑙ｅ喅鏂规硶锛氶噸鍚绾跨殑鑺傜偣锛屾垨鑰呴噸鏂板垎閰嶄涪澶辩殑鍒嗙墖",
+      "referenceAnswer": "鍙兘鍘熷洜 1锛氶泦缇や腑鍙湁涓€涓妭鐐癸紝绱㈠紩鐨勫鍒跺垎鐗囨棤娉曞垎閰峔n瑙ｅ喅鏂规硶锛氬鍔犺嚦灏戜竴涓妭鐐癸紝璁╁鍒跺垎鐗囧彲浠ュ垎閰嶅埌鍏朵粬鑺傜偣涓奬n鍙兘鍘熷洜 2锛氭煇涓妭鐐圭绾匡紝瀵艰嚧璇ヨ妭鐐逛笂鐨勫鍒跺垎鐗囦涪澶盶n瑙ｅ喅鏂规硶锛氶噸鍚绾跨殑鑺傜偣锛屾垨鑰呴噸鏂板垎閰嶄涪澶辩殑鍒嗙墖",
+      "explanation": "缁煎悎棰樹互鍙傝€冪瓟妗堜负鍑嗐€傚厛璇嗗埆涓氬姟鍦烘櫙锛屽啀鍐欐槧灏勩€丏SL銆佸師鍥犳垨浼樺寲姝ラ銆?绛旈鏂规硶锛氭寜鈥滃満鏅渶姹傗啋瀛楁璁捐鈫扗SL 鏌ヨ鈫掑師鍥?浼樺寲鈥濈粍缁囩瓟妗堛€?,
+      "memoryTip": "yellow 鍍忛粍鐏鍛婏細涓诲垎鐗囪兘鐢紝浣嗗鍒跺垎鐗囨病瀹屽叏鍒嗛厤銆?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "IK 分词器",
-        "索引与映射",
-        "综合复习"
+        "IK 鍒嗚瘝鍣?,
+        "鏌ヨ DSL",
+        "绱㈠紩涓庢槧灏?,
+        "杩愮淮浼樺寲",
+        "闆嗙兢涓庡垎鐗?
       ],
-      "conciseAnswer": "title/content 用 ik_max_word；切词多、召回高，适合新闻关键词搜索。",
+      "conciseAnswer": "涓ょ被鍘熷洜锛氬崟鑺傜偣鍓湰鏃犳硶鍒嗛厤锛涜妭鐐圭绾垮鑷村壇鏈涪澶便€傝В鍐筹細鍔犺妭鐐癸紱閲嶅惎鎴栭噸鏂板垎閰嶃€?,
       "answerBlocks": [
         {
           "type": "text",
           "items": [
-            "应该使用 IK 分词器的ik_max_word算法 原因：",
-            "ik_max_word是最细粒度划分算法，会将文本拆分成尽可能多的词项",
-            "对于新闻搜索场景，用户可能搜索新闻中的任意关键词，最细粒度划分可以提高召回率，确保相关新闻都能被搜索到"
+            "鍙兘鍘熷洜 1锛氶泦缇や腑鍙湁涓€涓妭鐐癸紝绱㈠紩鐨勫鍒跺垎鐗囨棤娉曞垎閰?,
+            "瑙ｅ喅鏂规硶锛氬鍔犺嚦灏戜竴涓妭鐐癸紝璁╁鍒跺垎鐗囧彲浠ュ垎閰嶅埌鍏朵粬鑺傜偣涓?,
+            "鍙兘鍘熷洜 2锛氭煇涓妭鐐圭绾匡紝瀵艰嚧璇ヨ妭鐐逛笂鐨勫鍒跺垎鐗囦涪澶?,
+            "瑙ｅ喅鏂规硶锛氶噸鍚绾跨殑鑺傜偣锛屾垨鑰呴噸鏂板垎閰嶄涪澶辩殑鍒嗙墖"
           ]
         }
       ]
@@ -3195,82 +3190,80 @@ window.QUESTION_BANK = {
     {
       "id": "q151",
       "type": "comprehensive",
-      "question": "背景：某地方新闻网站为了提升用户的搜索体验，决定将原有的数据库搜索替换为 ElasticSearch 全文搜索。新闻数据包含以下字段：\nnews_id：新闻唯一标识（长整型）\ntitle：新闻标题（字符串，需要支持全文检索和高亮显示）\ncontent：新闻内容（长文本，需要支持全文检索和高亮显示）\nauthor：作者姓名（字符串，不需要分词）\npublish_time：发布时间（日期类型）\nsource：新闻来源（字符串，不需要分词）\n网站每天发布约 200 条新闻，总新闻量约 10 万条。用户可以通过关键词搜索新闻标题和内容，搜索结果需要按发布时间倒序排序，并高亮显示匹配的关键词。\n\n问题：用户搜索关键词 \"高考\"，需要在新闻标题和内容中进行搜索，并对匹配的关键词进行高亮显示，请写出该查询的核心 DSL 语句（只需要写出query和highlight部分即可）。",
+      "question": "鑳屾櫙锛氭煇鍦版柟鏂伴椈缃戠珯涓轰簡鎻愬崌鐢ㄦ埛鐨勬悳绱綋楠岋紝鍐冲畾灏嗗師鏈夌殑鏁版嵁搴撴悳绱㈡浛鎹负 ElasticSearch 鍏ㄦ枃鎼滅储銆傛柊闂绘暟鎹寘鍚互涓嬪瓧娈碉細\nnews_id锛氭柊闂诲敮涓€鏍囪瘑锛堥暱鏁村瀷锛塡ntitle锛氭柊闂绘爣棰橈紙瀛楃涓诧紝闇€瑕佹敮鎸佸叏鏂囨绱㈠拰楂樹寒鏄剧ず锛塡ncontent锛氭柊闂诲唴瀹癸紙闀挎枃鏈紝闇€瑕佹敮鎸佸叏鏂囨绱㈠拰楂樹寒鏄剧ず锛塡nauthor锛氫綔鑰呭鍚嶏紙瀛楃涓诧紝涓嶉渶瑕佸垎璇嶏級\npublish_time锛氬彂甯冩椂闂达紙鏃ユ湡绫诲瀷锛塡nsource锛氭柊闂绘潵婧愶紙瀛楃涓诧紝涓嶉渶瑕佸垎璇嶏級\n缃戠珯姣忓ぉ鍙戝竷绾?200 鏉℃柊闂伙紝鎬绘柊闂婚噺绾?10 涓囨潯銆傜敤鎴峰彲浠ラ€氳繃鍏抽敭璇嶆悳绱㈡柊闂绘爣棰樺拰鍐呭锛屾悳绱㈢粨鏋滈渶瑕佹寜鍙戝竷鏃堕棿鍊掑簭鎺掑簭锛屽苟楂樹寒鏄剧ず鍖归厤鐨勫叧閿瘝銆俓n\n闂锛氬湪鍒涘缓news绱㈠紩鏃讹紝title鍜宑ontent瀛楁搴旇浣跨敤鍝鍒嗚瘝鍣紵璇疯鏄庨€夋嫨璇ュ垎璇嶅櫒鐨勫師鍥犮€?,
       "options": {},
-      "answer": "\"query\": {\n\"multi_match\": {\n\"query\": \"高考\",\n\"fields\": [\"title\", \"content\"]\n}\n}\n\"highlight\": {\n\"fields\": {\n\"title\": {},\n\"content\": {}\n}\n}",
-      "referenceAnswer": "\"query\": {\n\"multi_match\": {\n\"query\": \"高考\",\n\"fields\": [\"title\", \"content\"]\n}\n}\n\"highlight\": {\n\"fields\": {\n\"title\": {},\n\"content\": {}\n}\n}",
-      "explanation": "综合题以参考答案为准。先识别业务场景，再写映射、DSL、原因或优化步骤。 术语理解：multi_match：多字段匹配，一次在多个字段里搜索。 highlight：高亮显示，把命中的关键词突出展示。 答题方法：按“场景需求→字段设计→DSL 查询→原因/优化”组织答案。",
-      "memoryTip": "综合题用“场景-字段-查询-优化”四步：先看业务场景，再定字段类型，接着写 DSL，最后补原因或优化措施。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "answer": "搴旇浣跨敤 IK 鍒嗚瘝鍣ㄧ殑ik_max_word绠楁硶 鍘熷洜锛歕nik_max_word鏄渶缁嗙矑搴﹀垝鍒嗙畻娉曪紝浼氬皢鏂囨湰鎷嗗垎鎴愬敖鍙兘澶氱殑璇嶉」\n瀵逛簬鏂伴椈鎼滅储鍦烘櫙锛岀敤鎴峰彲鑳芥悳绱㈡柊闂讳腑鐨勪换鎰忓叧閿瘝锛屾渶缁嗙矑搴﹀垝鍒嗗彲浠ユ彁楂樺彫鍥炵巼锛岀‘淇濈浉鍏虫柊闂婚兘鑳借鎼滅储鍒?,
+      "referenceAnswer": "搴旇浣跨敤 IK 鍒嗚瘝鍣ㄧ殑ik_max_word绠楁硶 鍘熷洜锛歕nik_max_word鏄渶缁嗙矑搴﹀垝鍒嗙畻娉曪紝浼氬皢鏂囨湰鎷嗗垎鎴愬敖鍙兘澶氱殑璇嶉」\n瀵逛簬鏂伴椈鎼滅储鍦烘櫙锛岀敤鎴峰彲鑳芥悳绱㈡柊闂讳腑鐨勪换鎰忓叧閿瘝锛屾渶缁嗙矑搴﹀垝鍒嗗彲浠ユ彁楂樺彫鍥炵巼锛岀‘淇濈浉鍏虫柊闂婚兘鑳借鎼滅储鍒?,
+      "explanation": "缁煎悎棰樹互鍙傝€冪瓟妗堜负鍑嗐€傚厛璇嗗埆涓氬姟鍦烘櫙锛屽啀鍐欐槧灏勩€丏SL銆佸師鍥犳垨浼樺寲姝ラ銆?鏈鐞嗚В锛歩k_max_word锛欼K 鏈€缁嗗垏鍒嗭紝璇嶆洿澶氾紝鍋忔彁楂樺彫鍥炵巼銆?绛旈鏂规硶锛氭寜鈥滃満鏅渶姹傗啋瀛楁璁捐鈫扗SL 鏌ヨ鈫掑師鍥?浼樺寲鈥濈粍缁囩瓟妗堛€?,
+      "memoryTip": "缁煎悎棰樼敤鈥滃満鏅?瀛楁-鏌ヨ-浼樺寲鈥濆洓姝ワ細鍏堢湅涓氬姟鍦烘櫙锛屽啀瀹氬瓧娈电被鍨嬶紝鎺ョ潃鍐?DSL锛屾渶鍚庤ˉ鍘熷洜鎴栦紭鍖栨帾鏂姐€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "IK 分词器",
-        "基础概念",
-        "查询 DSL",
-        "索引与映射",
-        "综合复习"
+        "IK 鍒嗚瘝鍣?,
+        "绱㈠紩涓庢槧灏?,
+        "缁煎悎澶嶄範"
       ],
-      "conciseAnswer": "multi_match 同时搜 title、content；highlight 高亮 title、content。",
+      "conciseAnswer": "title/content 鐢?ik_max_word锛涘垏璇嶅銆佸彫鍥為珮锛岄€傚悎鏂伴椈鍏抽敭璇嶆悳绱€?,
       "answerBlocks": [
         {
-          "type": "code",
-          "content": "\"query\": {\n\"multi_match\": {\n\"query\": \"高考\",\n\"fields\": [\"title\", \"content\"]\n}\n}\n\"highlight\": {\n\"fields\": {\n\"title\": {},\n\"content\": {}\n}\n}"
+          "type": "text",
+          "items": [
+            "搴旇浣跨敤 IK 鍒嗚瘝鍣ㄧ殑ik_max_word绠楁硶 鍘熷洜锛?,
+            "ik_max_word鏄渶缁嗙矑搴﹀垝鍒嗙畻娉曪紝浼氬皢鏂囨湰鎷嗗垎鎴愬敖鍙兘澶氱殑璇嶉」",
+            "瀵逛簬鏂伴椈鎼滅储鍦烘櫙锛岀敤鎴峰彲鑳芥悳绱㈡柊闂讳腑鐨勪换鎰忓叧閿瘝锛屾渶缁嗙矑搴﹀垝鍒嗗彲浠ユ彁楂樺彫鍥炵巼锛岀‘淇濈浉鍏虫柊闂婚兘鑳借鎼滅储鍒?
+          ]
         }
       ]
     },
     {
       "id": "q152",
       "type": "comprehensive",
-      "question": "背景：某地方新闻网站为了提升用户的搜索体验，决定将原有的数据库搜索替换为 ElasticSearch 全文搜索。新闻数据包含以下字段：\nnews_id：新闻唯一标识（长整型）\ntitle：新闻标题（字符串，需要支持全文检索和高亮显示）\ncontent：新闻内容（长文本，需要支持全文检索和高亮显示）\nauthor：作者姓名（字符串，不需要分词）\npublish_time：发布时间（日期类型）\nsource：新闻来源（字符串，不需要分词）\n网站每天发布约 200 条新闻，总新闻量约 10 万条。用户可以通过关键词搜索新闻标题和内容，搜索结果需要按发布时间倒序排序，并高亮显示匹配的关键词。\n\n问题：如果用户反映搜索结果中出现了很多不相关的新闻，比如搜索 \"高考\" 时出现了 \"中考\" 相关的新闻，请分析可能的原因，并提出2 种优化方法。",
+      "question": "鑳屾櫙锛氭煇鍦版柟鏂伴椈缃戠珯涓轰簡鎻愬崌鐢ㄦ埛鐨勬悳绱綋楠岋紝鍐冲畾灏嗗師鏈夌殑鏁版嵁搴撴悳绱㈡浛鎹负 ElasticSearch 鍏ㄦ枃鎼滅储銆傛柊闂绘暟鎹寘鍚互涓嬪瓧娈碉細\nnews_id锛氭柊闂诲敮涓€鏍囪瘑锛堥暱鏁村瀷锛塡ntitle锛氭柊闂绘爣棰橈紙瀛楃涓诧紝闇€瑕佹敮鎸佸叏鏂囨绱㈠拰楂樹寒鏄剧ず锛塡ncontent锛氭柊闂诲唴瀹癸紙闀挎枃鏈紝闇€瑕佹敮鎸佸叏鏂囨绱㈠拰楂樹寒鏄剧ず锛塡nauthor锛氫綔鑰呭鍚嶏紙瀛楃涓诧紝涓嶉渶瑕佸垎璇嶏級\npublish_time锛氬彂甯冩椂闂达紙鏃ユ湡绫诲瀷锛塡nsource锛氭柊闂绘潵婧愶紙瀛楃涓诧紝涓嶉渶瑕佸垎璇嶏級\n缃戠珯姣忓ぉ鍙戝竷绾?200 鏉℃柊闂伙紝鎬绘柊闂婚噺绾?10 涓囨潯銆傜敤鎴峰彲浠ラ€氳繃鍏抽敭璇嶆悳绱㈡柊闂绘爣棰樺拰鍐呭锛屾悳绱㈢粨鏋滈渶瑕佹寜鍙戝竷鏃堕棿鍊掑簭鎺掑簭锛屽苟楂樹寒鏄剧ず鍖归厤鐨勫叧閿瘝銆俓n\n闂锛氱敤鎴锋悳绱㈠叧閿瘝 \"楂樿€僜"锛岄渶瑕佸湪鏂伴椈鏍囬鍜屽唴瀹逛腑杩涜鎼滅储锛屽苟瀵瑰尮閰嶇殑鍏抽敭璇嶈繘琛岄珮浜樉绀猴紝璇峰啓鍑鸿鏌ヨ鐨勬牳蹇?DSL 璇彞锛堝彧闇€瑕佸啓鍑簈uery鍜宧ighlight閮ㄥ垎鍗冲彲锛夈€?,
       "options": {},
-      "answer": "可能原因：分词器将 \"高考\" 和 \"中考\" 都拆分成了 \"考\" 这个词项，导致匹配到了包含 \"考\" 的所有新闻\n优化方法：\n使用match_phrase短语查询，要求关键词作为一个整体出现\n调整字段的权重，让标题字段的权重高于内容字段，提高标题匹配的新闻的排名",
-      "referenceAnswer": "可能原因：分词器将 \"高考\" 和 \"中考\" 都拆分成了 \"考\" 这个词项，导致匹配到了包含 \"考\" 的所有新闻\n优化方法：\n使用match_phrase短语查询，要求关键词作为一个整体出现\n调整字段的权重，让标题字段的权重高于内容字段，提高标题匹配的新闻的排名",
-      "explanation": "综合题以参考答案为准。先识别业务场景，再写映射、DSL、原因或优化步骤。 术语理解：match_phrase：短语匹配，要求词语按顺序整体出现。 答题方法：按“场景需求→字段设计→DSL 查询→原因/优化”组织答案。",
-      "memoryTip": "综合题用“场景-字段-查询-优化”四步：先看业务场景，再定字段类型，接着写 DSL，最后补原因或优化措施。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "answer": "\"query\": {\n\"multi_match\": {\n\"query\": \"楂樿€僜",\n\"fields\": [\"title\", \"content\"]\n}\n}\n\"highlight\": {\n\"fields\": {\n\"title\": {},\n\"content\": {}\n}\n}",
+      "referenceAnswer": "\"query\": {\n\"multi_match\": {\n\"query\": \"楂樿€僜",\n\"fields\": [\"title\", \"content\"]\n}\n}\n\"highlight\": {\n\"fields\": {\n\"title\": {},\n\"content\": {}\n}\n}",
+      "explanation": "缁煎悎棰樹互鍙傝€冪瓟妗堜负鍑嗐€傚厛璇嗗埆涓氬姟鍦烘櫙锛屽啀鍐欐槧灏勩€丏SL銆佸師鍥犳垨浼樺寲姝ラ銆?鏈鐞嗚В锛歮ulti_match锛氬瀛楁鍖归厤锛屼竴娆″湪澶氫釜瀛楁閲屾悳绱€?highlight锛氶珮浜樉绀猴紝鎶婂懡涓殑鍏抽敭璇嶇獊鍑哄睍绀恒€?绛旈鏂规硶锛氭寜鈥滃満鏅渶姹傗啋瀛楁璁捐鈫扗SL 鏌ヨ鈫掑師鍥?浼樺寲鈥濈粍缁囩瓟妗堛€?,
+      "memoryTip": "缁煎悎棰樼敤鈥滃満鏅?瀛楁-鏌ヨ-浼樺寲鈥濆洓姝ワ細鍏堢湅涓氬姟鍦烘櫙锛屽啀瀹氬瓧娈电被鍨嬶紝鎺ョ潃鍐?DSL锛屾渶鍚庤ˉ鍘熷洜鎴栦紭鍖栨帾鏂姐€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "IK 分词器",
-        "查询 DSL",
-        "索引与映射",
-        "运维优化"
+        "IK 鍒嗚瘝鍣?,
+        "鍩虹姒傚康",
+        "鏌ヨ DSL",
+        "绱㈠紩涓庢槧灏?,
+        "缁煎悎澶嶄範"
       ],
-      "conciseAnswer": "原因：分词过细匹配到“考”。优化：用 match_phrase；提高标题字段权重。",
+      "conciseAnswer": "multi_match 鍚屾椂鎼?title銆乧ontent锛沨ighlight 楂樹寒 title銆乧ontent銆?,
       "answerBlocks": [
         {
-          "type": "text",
-          "items": [
-            "可能原因：分词器将 \"高考\" 和 \"中考\" 都拆分成了 \"考\" 这个词项，导致匹配到了包含 \"考\" 的所有新闻",
-            "优化方法：",
-            "使用match_phrase短语查询，要求关键词作为一个整体出现",
-            "调整字段的权重，让标题字段的权重高于内容字段，提高标题匹配的新闻的排名"
-          ]
+          "type": "code",
+          "content": "\"query\": {\n  \"multi_match\": {\n    \"query\": \"楂樿€僜",\n    \"fields\": [\"title\", \"content\"]\n  }\n}\n\"highlight\": {\n  \"fields\": {\n    \"title\": {},\n    \"content\": {}\n  }\n}"
         }
       ]
     },
     {
       "id": "q153",
       "type": "comprehensive",
-      "question": "背景：某大学图书馆为了方便师生查找图书，决定使用 ElasticSearch 搭建图书检索系统。图书信息包含以下字段：\nbook_id：图书唯一标识（长整型）\nbook_name：图书名称（字符串，需要支持全文检索）\nauthor：作者姓名（字符串，需要支持全文检索）\npublisher：出版社名称（字符串，不需要分词）\npublish_date：出版日期（日期类型）\ncategory：图书分类（字符串，不需要分词）\nintroduction：图书简介（长文本，需要支持全文检索）\nstock：库存数量（整型）\n图书馆目前有大约 20 万册图书，师生可以通过图书名称、作者、出版社和分类进行查询，查询结果需要按出版日期倒序排序。\n\n问题：在创建books索引时，publisher字段应该设置为哪种数据类型？请说明原因。",
+      "question": "鑳屾櫙锛氭煇鍦版柟鏂伴椈缃戠珯涓轰簡鎻愬崌鐢ㄦ埛鐨勬悳绱綋楠岋紝鍐冲畾灏嗗師鏈夌殑鏁版嵁搴撴悳绱㈡浛鎹负 ElasticSearch 鍏ㄦ枃鎼滅储銆傛柊闂绘暟鎹寘鍚互涓嬪瓧娈碉細\nnews_id锛氭柊闂诲敮涓€鏍囪瘑锛堥暱鏁村瀷锛塡ntitle锛氭柊闂绘爣棰橈紙瀛楃涓诧紝闇€瑕佹敮鎸佸叏鏂囨绱㈠拰楂樹寒鏄剧ず锛塡ncontent锛氭柊闂诲唴瀹癸紙闀挎枃鏈紝闇€瑕佹敮鎸佸叏鏂囨绱㈠拰楂樹寒鏄剧ず锛塡nauthor锛氫綔鑰呭鍚嶏紙瀛楃涓诧紝涓嶉渶瑕佸垎璇嶏級\npublish_time锛氬彂甯冩椂闂达紙鏃ユ湡绫诲瀷锛塡nsource锛氭柊闂绘潵婧愶紙瀛楃涓诧紝涓嶉渶瑕佸垎璇嶏級\n缃戠珯姣忓ぉ鍙戝竷绾?200 鏉℃柊闂伙紝鎬绘柊闂婚噺绾?10 涓囨潯銆傜敤鎴峰彲浠ラ€氳繃鍏抽敭璇嶆悳绱㈡柊闂绘爣棰樺拰鍐呭锛屾悳绱㈢粨鏋滈渶瑕佹寜鍙戝竷鏃堕棿鍊掑簭鎺掑簭锛屽苟楂樹寒鏄剧ず鍖归厤鐨勫叧閿瘝銆俓n\n闂锛氬鏋滅敤鎴峰弽鏄犳悳绱㈢粨鏋滀腑鍑虹幇浜嗗緢澶氫笉鐩稿叧鐨勬柊闂伙紝姣斿鎼滅储 \"楂樿€僜" 鏃跺嚭鐜颁簡 \"涓€僜" 鐩稿叧鐨勬柊闂伙紝璇峰垎鏋愬彲鑳界殑鍘熷洜锛屽苟鎻愬嚭2 绉嶄紭鍖栨柟娉曘€?,
       "options": {},
-      "answer": "应该设置为keyword类型\n原因：\nkeyword类型不会对字段值进行分词，会将整个字符串作为一个词项进行索引\n出版社名称是一个整体，不需要进行全文检索，只需要精确匹配，使用keyword类型可以提高查询效率",
-      "referenceAnswer": "应该设置为keyword类型\n原因：\nkeyword类型不会对字段值进行分词，会将整个字符串作为一个词项进行索引\n出版社名称是一个整体，不需要进行全文检索，只需要精确匹配，使用keyword类型可以提高查询效率",
-      "explanation": "综合题以参考答案为准。先识别业务场景，再写映射、DSL、原因或优化步骤。 术语理解：keyword：关键词类型，不分词，适合精确匹配、排序和聚合。 答题方法：按“场景需求→字段设计→DSL 查询→原因/优化”组织答案。",
-      "memoryTip": "综合题用“场景-字段-查询-优化”四步：先看业务场景，再定字段类型，接着写 DSL，最后补原因或优化措施。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "answer": "鍙兘鍘熷洜锛氬垎璇嶅櫒灏?\"楂樿€僜" 鍜?\"涓€僜" 閮芥媶鍒嗘垚浜?\"鑰僜" 杩欎釜璇嶉」锛屽鑷村尮閰嶅埌浜嗗寘鍚?\"鑰僜" 鐨勬墍鏈夋柊闂籠n浼樺寲鏂规硶锛歕n浣跨敤match_phrase鐭鏌ヨ锛岃姹傚叧閿瘝浣滀负涓€涓暣浣撳嚭鐜癨n璋冩暣瀛楁鐨勬潈閲嶏紝璁╂爣棰樺瓧娈电殑鏉冮噸楂樹簬鍐呭瀛楁锛屾彁楂樻爣棰樺尮閰嶇殑鏂伴椈鐨勬帓鍚?,
+      "referenceAnswer": "鍙兘鍘熷洜锛氬垎璇嶅櫒灏?\"楂樿€僜" 鍜?\"涓€僜" 閮芥媶鍒嗘垚浜?\"鑰僜" 杩欎釜璇嶉」锛屽鑷村尮閰嶅埌浜嗗寘鍚?\"鑰僜" 鐨勬墍鏈夋柊闂籠n浼樺寲鏂规硶锛歕n浣跨敤match_phrase鐭鏌ヨ锛岃姹傚叧閿瘝浣滀负涓€涓暣浣撳嚭鐜癨n璋冩暣瀛楁鐨勬潈閲嶏紝璁╂爣棰樺瓧娈电殑鏉冮噸楂樹簬鍐呭瀛楁锛屾彁楂樻爣棰樺尮閰嶇殑鏂伴椈鐨勬帓鍚?,
+      "explanation": "缁煎悎棰樹互鍙傝€冪瓟妗堜负鍑嗐€傚厛璇嗗埆涓氬姟鍦烘櫙锛屽啀鍐欐槧灏勩€丏SL銆佸師鍥犳垨浼樺寲姝ラ銆?鏈鐞嗚В锛歮atch_phrase锛氱煭璇尮閰嶏紝瑕佹眰璇嶈鎸夐『搴忔暣浣撳嚭鐜般€?绛旈鏂规硶锛氭寜鈥滃満鏅渶姹傗啋瀛楁璁捐鈫扗SL 鏌ヨ鈫掑師鍥?浼樺寲鈥濈粍缁囩瓟妗堛€?,
+      "memoryTip": "缁煎悎棰樼敤鈥滃満鏅?瀛楁-鏌ヨ-浼樺寲鈥濆洓姝ワ細鍏堢湅涓氬姟鍦烘櫙锛屽啀瀹氬瓧娈电被鍨嬶紝鎺ョ潃鍐?DSL锛屾渶鍚庤ˉ鍘熷洜鎴栦紭鍖栨帾鏂姐€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "IK 分词器",
-        "查询 DSL",
-        "索引与映射",
-        "综合复习"
+        "IK 鍒嗚瘝鍣?,
+        "鏌ヨ DSL",
+        "绱㈠紩涓庢槧灏?,
+        "杩愮淮浼樺寲"
       ],
-      "conciseAnswer": "publisher 用 keyword；出版社名称是整体，不分词，适合精确匹配。",
+      "conciseAnswer": "鍘熷洜锛氬垎璇嶈繃缁嗗尮閰嶅埌鈥滆€冣€濄€備紭鍖栵細鐢?match_phrase锛涙彁楂樻爣棰樺瓧娈垫潈閲嶃€?,
       "answerBlocks": [
         {
           "type": "text",
           "items": [
-            "应该设置为keyword类型",
-            "原因：",
-            "keyword类型不会对字段值进行分词，会将整个字符串作为一个词项进行索引",
-            "出版社名称是一个整体，不需要进行全文检索，只需要精确匹配，使用keyword类型可以提高查询效率"
+            "鍙兘鍘熷洜锛氬垎璇嶅櫒灏?\"楂樿€僜" 鍜?\"涓€僜" 閮芥媶鍒嗘垚浜?\"鑰僜" 杩欎釜璇嶉」锛屽鑷村尮閰嶅埌浜嗗寘鍚?\"鑰僜" 鐨勬墍鏈夋柊闂?,
+            "浼樺寲鏂规硶锛?,
+            "浣跨敤match_phrase鐭鏌ヨ锛岃姹傚叧閿瘝浣滀负涓€涓暣浣撳嚭鐜?,
+            "璋冩暣瀛楁鐨勬潈閲嶏紝璁╂爣棰樺瓧娈电殑鏉冮噸楂樹簬鍐呭瀛楁锛屾彁楂樻爣棰樺尮閰嶇殑鏂伴椈鐨勬帓鍚?
           ]
         }
       ]
@@ -3278,83 +3271,83 @@ window.QUESTION_BANK = {
     {
       "id": "q154",
       "type": "comprehensive",
-      "question": "背景：某大学图书馆为了方便师生查找图书，决定使用 ElasticSearch 搭建图书检索系统。图书信息包含以下字段：\nbook_id：图书唯一标识（长整型）\nbook_name：图书名称（字符串，需要支持全文检索）\nauthor：作者姓名（字符串，需要支持全文检索）\npublisher：出版社名称（字符串，不需要分词）\npublish_date：出版日期（日期类型）\ncategory：图书分类（字符串，不需要分词）\nintroduction：图书简介（长文本，需要支持全文检索）\nstock：库存数量（整型）\n图书馆目前有大约 20 万册图书，师生可以通过图书名称、作者、出版社和分类进行查询，查询结果需要按出版日期倒序排序。\n\n问题：师生需要查询 \"机械工业出版社\" 出版的所有 \"计算机\" 类图书，请写出该查询的核心 DSL 语句（只需要写出query部分即可）。",
+      "question": "鑳屾櫙锛氭煇澶у鍥句功棣嗕负浜嗘柟渚垮笀鐢熸煡鎵惧浘涔︼紝鍐冲畾浣跨敤 ElasticSearch 鎼缓鍥句功妫€绱㈢郴缁熴€傚浘涔︿俊鎭寘鍚互涓嬪瓧娈碉細\nbook_id锛氬浘涔﹀敮涓€鏍囪瘑锛堥暱鏁村瀷锛塡nbook_name锛氬浘涔﹀悕绉帮紙瀛楃涓诧紝闇€瑕佹敮鎸佸叏鏂囨绱級\nauthor锛氫綔鑰呭鍚嶏紙瀛楃涓诧紝闇€瑕佹敮鎸佸叏鏂囨绱級\npublisher锛氬嚭鐗堢ぞ鍚嶇О锛堝瓧绗︿覆锛屼笉闇€瑕佸垎璇嶏級\npublish_date锛氬嚭鐗堟棩鏈燂紙鏃ユ湡绫诲瀷锛塡ncategory锛氬浘涔﹀垎绫伙紙瀛楃涓诧紝涓嶉渶瑕佸垎璇嶏級\nintroduction锛氬浘涔︾畝浠嬶紙闀挎枃鏈紝闇€瑕佹敮鎸佸叏鏂囨绱級\nstock锛氬簱瀛樻暟閲忥紙鏁村瀷锛塡n鍥句功棣嗙洰鍓嶆湁澶х害 20 涓囧唽鍥句功锛屽笀鐢熷彲浠ラ€氳繃鍥句功鍚嶇О銆佷綔鑰呫€佸嚭鐗堢ぞ鍜屽垎绫昏繘琛屾煡璇紝鏌ヨ缁撴灉闇€瑕佹寜鍑虹増鏃ユ湡鍊掑簭鎺掑簭銆俓n\n闂锛氬湪鍒涘缓books绱㈠紩鏃讹紝publisher瀛楁搴旇璁剧疆涓哄摢绉嶆暟鎹被鍨嬶紵璇疯鏄庡師鍥犮€?,
       "options": {},
-      "answer": "\"query\": {\n\"bool\": {\n\"must\": [\n{\"match\": {\"publisher\": \"机械工业出版社\"}},\n{\"match\": {\"category\": \"计算机\"}}\n]\n}\n}",
-      "referenceAnswer": "\"query\": {\n\"bool\": {\n\"must\": [\n{\"match\": {\"publisher\": \"机械工业出版社\"}},\n{\"match\": {\"category\": \"计算机\"}}\n]\n}\n}",
-      "explanation": "综合题以参考答案为准。先识别业务场景，再写映射、DSL、原因或优化步骤。 术语理解：match：匹配查询，会先分析/分词，适合全文检索。 bool：布尔查询，用 must、filter、should 等组合条件。 答题方法：按“场景需求→字段设计→DSL 查询→原因/优化”组织答案。",
-      "memoryTip": "综合题用“场景-字段-查询-优化”四步：先看业务场景，再定字段类型，接着写 DSL，最后补原因或优化措施。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "answer": "搴旇璁剧疆涓簁eyword绫诲瀷\n鍘熷洜锛歕nkeyword绫诲瀷涓嶄細瀵瑰瓧娈靛€艰繘琛屽垎璇嶏紝浼氬皢鏁翠釜瀛楃涓蹭綔涓轰竴涓瘝椤硅繘琛岀储寮昞n鍑虹増绀惧悕绉版槸涓€涓暣浣擄紝涓嶉渶瑕佽繘琛屽叏鏂囨绱紝鍙渶瑕佺簿纭尮閰嶏紝浣跨敤keyword绫诲瀷鍙互鎻愰珮鏌ヨ鏁堢巼",
+      "referenceAnswer": "搴旇璁剧疆涓簁eyword绫诲瀷\n鍘熷洜锛歕nkeyword绫诲瀷涓嶄細瀵瑰瓧娈靛€艰繘琛屽垎璇嶏紝浼氬皢鏁翠釜瀛楃涓蹭綔涓轰竴涓瘝椤硅繘琛岀储寮昞n鍑虹増绀惧悕绉版槸涓€涓暣浣擄紝涓嶉渶瑕佽繘琛屽叏鏂囨绱紝鍙渶瑕佺簿纭尮閰嶏紝浣跨敤keyword绫诲瀷鍙互鎻愰珮鏌ヨ鏁堢巼",
+      "explanation": "缁煎悎棰樹互鍙傝€冪瓟妗堜负鍑嗐€傚厛璇嗗埆涓氬姟鍦烘櫙锛屽啀鍐欐槧灏勩€丏SL銆佸師鍥犳垨浼樺寲姝ラ銆?鏈鐞嗚В锛歬eyword锛氬叧閿瘝绫诲瀷锛屼笉鍒嗚瘝锛岄€傚悎绮剧‘鍖归厤銆佹帓搴忓拰鑱氬悎銆?绛旈鏂规硶锛氭寜鈥滃満鏅渶姹傗啋瀛楁璁捐鈫扗SL 鏌ヨ鈫掑師鍥?浼樺寲鈥濈粍缁囩瓟妗堛€?,
+      "memoryTip": "缁煎悎棰樼敤鈥滃満鏅?瀛楁-鏌ヨ-浼樺寲鈥濆洓姝ワ細鍏堢湅涓氬姟鍦烘櫙锛屽啀瀹氬瓧娈电被鍨嬶紝鎺ョ潃鍐?DSL锛屾渶鍚庤ˉ鍘熷洜鎴栦紭鍖栨帾鏂姐€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "IK 分词器",
-        "基础概念",
-        "查询 DSL",
-        "索引与映射",
-        "综合复习"
+        "IK 鍒嗚瘝鍣?,
+        "鏌ヨ DSL",
+        "绱㈠紩涓庢槧灏?,
+        "缁煎悎澶嶄範"
       ],
-      "conciseAnswer": "bool 查询：must 同时匹配 publisher=机械工业出版社、category=计算机。",
+      "conciseAnswer": "publisher 鐢?keyword锛涘嚭鐗堢ぞ鍚嶇О鏄暣浣擄紝涓嶅垎璇嶏紝閫傚悎绮剧‘鍖归厤銆?,
       "answerBlocks": [
         {
-          "type": "code",
-          "content": "\"query\": {\n\"bool\": {\n\"must\": [\n{\"match\": {\"publisher\": \"机械工业出版社\"}},\n{\"match\": {\"category\": \"计算机\"}}\n]\n}\n}"
+          "type": "text",
+          "items": [
+            "搴旇璁剧疆涓簁eyword绫诲瀷",
+            "鍘熷洜锛?,
+            "keyword绫诲瀷涓嶄細瀵瑰瓧娈靛€艰繘琛屽垎璇嶏紝浼氬皢鏁翠釜瀛楃涓蹭綔涓轰竴涓瘝椤硅繘琛岀储寮?,
+            "鍑虹増绀惧悕绉版槸涓€涓暣浣擄紝涓嶉渶瑕佽繘琛屽叏鏂囨绱紝鍙渶瑕佺簿纭尮閰嶏紝浣跨敤keyword绫诲瀷鍙互鎻愰珮鏌ヨ鏁堢巼"
+          ]
         }
       ]
     },
     {
       "id": "q155",
       "type": "comprehensive",
-      "question": "背景：某大学图书馆为了方便师生查找图书，决定使用 ElasticSearch 搭建图书检索系统。图书信息包含以下字段：\nbook_id：图书唯一标识（长整型）\nbook_name：图书名称（字符串，需要支持全文检索）\nauthor：作者姓名（字符串，需要支持全文检索）\npublisher：出版社名称（字符串，不需要分词）\npublish_date：出版日期（日期类型）\ncategory：图书分类（字符串，不需要分词）\nintroduction：图书简介（长文本，需要支持全文检索）\nstock：库存数量（整型）\n图书馆目前有大约 20 万册图书，师生可以通过图书名称、作者、出版社和分类进行查询，查询结果需要按出版日期倒序排序。\n\n问题：随着图书数量的增加，查询速度逐渐变慢，请提出 4 种针对索引设计的优化方法。",
+      "question": "鑳屾櫙锛氭煇澶у鍥句功棣嗕负浜嗘柟渚垮笀鐢熸煡鎵惧浘涔︼紝鍐冲畾浣跨敤 ElasticSearch 鎼缓鍥句功妫€绱㈢郴缁熴€傚浘涔︿俊鎭寘鍚互涓嬪瓧娈碉細\nbook_id锛氬浘涔﹀敮涓€鏍囪瘑锛堥暱鏁村瀷锛塡nbook_name锛氬浘涔﹀悕绉帮紙瀛楃涓诧紝闇€瑕佹敮鎸佸叏鏂囨绱級\nauthor锛氫綔鑰呭鍚嶏紙瀛楃涓诧紝闇€瑕佹敮鎸佸叏鏂囨绱級\npublisher锛氬嚭鐗堢ぞ鍚嶇О锛堝瓧绗︿覆锛屼笉闇€瑕佸垎璇嶏級\npublish_date锛氬嚭鐗堟棩鏈燂紙鏃ユ湡绫诲瀷锛塡ncategory锛氬浘涔﹀垎绫伙紙瀛楃涓诧紝涓嶉渶瑕佸垎璇嶏級\nintroduction锛氬浘涔︾畝浠嬶紙闀挎枃鏈紝闇€瑕佹敮鎸佸叏鏂囨绱級\nstock锛氬簱瀛樻暟閲忥紙鏁村瀷锛塡n鍥句功棣嗙洰鍓嶆湁澶х害 20 涓囧唽鍥句功锛屽笀鐢熷彲浠ラ€氳繃鍥句功鍚嶇О銆佷綔鑰呫€佸嚭鐗堢ぞ鍜屽垎绫昏繘琛屾煡璇紝鏌ヨ缁撴灉闇€瑕佹寜鍑虹増鏃ユ湡鍊掑簭鎺掑簭銆俓n\n闂锛氬笀鐢熼渶瑕佹煡璇?\"鏈烘宸ヤ笟鍑虹増绀綷" 鍑虹増鐨勬墍鏈?\"璁＄畻鏈篭" 绫诲浘涔︼紝璇峰啓鍑鸿鏌ヨ鐨勬牳蹇?DSL 璇彞锛堝彧闇€瑕佸啓鍑簈uery閮ㄥ垎鍗冲彲锛夈€?,
       "options": {},
-      "answer": "合理设置分片数量：根据数据量和节点数量，将主分片数量设置为 3-5 个，每个分片大小控制在 20-50GB\n优化字段类型：对于不需要全文检索的字段，如book_id、stock等，使用对应的数值类型，避免使用text类型\n关闭不需要的字段功能：对于不需要排序和聚合的字段，关闭doc_values和fielddata功能，节省存储空间\n使用索引别名：将不同年份的图书数据分别存储在不同的索引中，使用别名进行统一查询，提高查询效率",
-      "referenceAnswer": "合理设置分片数量：根据数据量和节点数量，将主分片数量设置为 3-5 个，每个分片大小控制在 20-50GB\n优化字段类型：对于不需要全文检索的字段，如book_id、stock等，使用对应的数值类型，避免使用text类型\n关闭不需要的字段功能：对于不需要排序和聚合的字段，关闭doc_values和fielddata功能，节省存储空间\n使用索引别名：将不同年份的图书数据分别存储在不同的索引中，使用别名进行统一查询，提高查询效率",
-      "explanation": "综合题以参考答案为准。先识别业务场景，再写映射、DSL、原因或优化步骤。 术语理解：text：文本类型，会分词，适合全文检索。 答题方法：按“场景需求→字段设计→DSL 查询→原因/优化”组织答案。",
-      "memoryTip": "综合题用“场景-字段-查询-优化”四步：先看业务场景，再定字段类型，接着写 DSL，最后补原因或优化措施。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "answer": "\"query\": {\n\"bool\": {\n\"must\": [\n{\"match\": {\"publisher\": \"鏈烘宸ヤ笟鍑虹増绀綷"}},\n{\"match\": {\"category\": \"璁＄畻鏈篭"}}\n]\n}\n}",
+      "referenceAnswer": "\"query\": {\n\"bool\": {\n\"must\": [\n{\"match\": {\"publisher\": \"鏈烘宸ヤ笟鍑虹増绀綷"}},\n{\"match\": {\"category\": \"璁＄畻鏈篭"}}\n]\n}\n}",
+      "explanation": "缁煎悎棰樹互鍙傝€冪瓟妗堜负鍑嗐€傚厛璇嗗埆涓氬姟鍦烘櫙锛屽啀鍐欐槧灏勩€丏SL銆佸師鍥犳垨浼樺寲姝ラ銆?鏈鐞嗚В锛歮atch锛氬尮閰嶆煡璇紝浼氬厛鍒嗘瀽/鍒嗚瘝锛岄€傚悎鍏ㄦ枃妫€绱€?bool锛氬竷灏旀煡璇紝鐢?must銆乫ilter銆乻hould 绛夌粍鍚堟潯浠躲€?绛旈鏂规硶锛氭寜鈥滃満鏅渶姹傗啋瀛楁璁捐鈫扗SL 鏌ヨ鈫掑師鍥?浼樺寲鈥濈粍缁囩瓟妗堛€?,
+      "memoryTip": "缁煎悎棰樼敤鈥滃満鏅?瀛楁-鏌ヨ-浼樺寲鈥濆洓姝ワ細鍏堢湅涓氬姟鍦烘櫙锛屽啀瀹氬瓧娈电被鍨嬶紝鎺ョ潃鍐?DSL锛屾渶鍚庤ˉ鍘熷洜鎴栦紭鍖栨帾鏂姐€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "IK 分词器",
-        "查询 DSL",
-        "索引与映射",
-        "运维优化",
-        "集群与分片"
+        "IK 鍒嗚瘝鍣?,
+        "鍩虹姒傚康",
+        "鏌ヨ DSL",
+        "绱㈠紩涓庢槧灏?,
+        "缁煎悎澶嶄範"
       ],
-      "conciseAnswer": "优化：合理分片；优化字段类型；关闭无用 doc_values/fielddata；按年份拆索引并用别名。",
+      "conciseAnswer": "bool 鏌ヨ锛歮ust 鍚屾椂鍖归厤 publisher=鏈烘宸ヤ笟鍑虹増绀俱€乧ategory=璁＄畻鏈恒€?,
       "answerBlocks": [
         {
-          "type": "text",
-          "items": [
-            "合理设置分片数量：根据数据量和节点数量，将主分片数量设置为 3-5 个，每个分片大小控制在 20-50GB",
-            "优化字段类型：对于不需要全文检索的字段，如book_id、stock等，使用对应的数值类型，避免使用text类型",
-            "关闭不需要的字段功能：对于不需要排序和聚合的字段，关闭doc_values和fielddata功能，节省存储空间",
-            "使用索引别名：将不同年份的图书数据分别存储在不同的索引中，使用别名进行统一查询，提高查询效率"
-          ]
+          "type": "code",
+          "content": "\"query\": {\n  \"bool\": {\n    \"must\": [\n      {\"match\": {\"publisher\": \"鏈烘宸ヤ笟鍑虹増绀綷"}},\n      {\"match\": {\"category\": \"璁＄畻鏈篭"}}\n    ]\n}\n}"
         }
       ]
     },
     {
       "id": "q156",
       "type": "comprehensive",
-      "question": "背景：某小型电商平台使用 ElasticSearch 存储订单数据，方便客服人员快速查询订单信息。订单数据包含以下字段：\norder_id：订单唯一标识（长整型）\nuser_name：用户姓名（字符串，需要支持模糊查询）\nphone：用户手机号（字符串，不需要分词）\norder_status：订单状态（字符串，可选值：待付款、待发货、已发货、已完成、已取消，不需要分词）\ntotal_amount：订单总金额（浮点型）\ncreate_time：订单创建时间（日期类型）\naddress：收货地址（字符串，需要支持全文检索）\n平台目前有大约 50 万条订单数据，客服人员每天需要查询数百次订单信息，主要通过订单号、用户手机号和订单状态进行查询。\n\n问题：由于业务调整，平台需要删除所有 2023 年 1 月 1 日之前的订单数据，请写出删除这些订单的操作步骤（用文字描述即可）。",
+      "question": "鑳屾櫙锛氭煇澶у鍥句功棣嗕负浜嗘柟渚垮笀鐢熸煡鎵惧浘涔︼紝鍐冲畾浣跨敤 ElasticSearch 鎼缓鍥句功妫€绱㈢郴缁熴€傚浘涔︿俊鎭寘鍚互涓嬪瓧娈碉細\nbook_id锛氬浘涔﹀敮涓€鏍囪瘑锛堥暱鏁村瀷锛塡nbook_name锛氬浘涔﹀悕绉帮紙瀛楃涓诧紝闇€瑕佹敮鎸佸叏鏂囨绱級\nauthor锛氫綔鑰呭鍚嶏紙瀛楃涓诧紝闇€瑕佹敮鎸佸叏鏂囨绱級\npublisher锛氬嚭鐗堢ぞ鍚嶇О锛堝瓧绗︿覆锛屼笉闇€瑕佸垎璇嶏級\npublish_date锛氬嚭鐗堟棩鏈燂紙鏃ユ湡绫诲瀷锛塡ncategory锛氬浘涔﹀垎绫伙紙瀛楃涓诧紝涓嶉渶瑕佸垎璇嶏級\nintroduction锛氬浘涔︾畝浠嬶紙闀挎枃鏈紝闇€瑕佹敮鎸佸叏鏂囨绱級\nstock锛氬簱瀛樻暟閲忥紙鏁村瀷锛塡n鍥句功棣嗙洰鍓嶆湁澶х害 20 涓囧唽鍥句功锛屽笀鐢熷彲浠ラ€氳繃鍥句功鍚嶇О銆佷綔鑰呫€佸嚭鐗堢ぞ鍜屽垎绫昏繘琛屾煡璇紝鏌ヨ缁撴灉闇€瑕佹寜鍑虹増鏃ユ湡鍊掑簭鎺掑簭銆俓n\n闂锛氶殢鐫€鍥句功鏁伴噺鐨勫鍔狅紝鏌ヨ閫熷害閫愭笎鍙樻參锛岃鎻愬嚭 4 绉嶉拡瀵圭储寮曡璁＄殑浼樺寲鏂规硶銆?,
       "options": {},
-      "answer": "首先使用查询语句确认 2023 年 1 月 1 日之前的订单数量，避免误删（1 分）\n使用DeleteByQueryRequest执行按条件删除操作，查询条件为create_time < \"2023-01-01\"（1 分）\n删除完成后，验证删除结果，确认所有符合条件的订单都已被删除（1 分）",
-      "referenceAnswer": "首先使用查询语句确认 2023 年 1 月 1 日之前的订单数量，避免误删（1 分）\n使用DeleteByQueryRequest执行按条件删除操作，查询条件为create_time < \"2023-01-01\"（1 分）\n删除完成后，验证删除结果，确认所有符合条件的订单都已被删除（1 分）",
-      "explanation": "综合题以参考答案为准。先识别业务场景，再写映射、DSL、原因或优化步骤。 答题方法：按“场景需求→字段设计→DSL 查询→原因/优化”组织答案。",
-      "memoryTip": "综合题用“场景-字段-查询-优化”四步：先看业务场景，再定字段类型，接着写 DSL，最后补原因或优化措施。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "answer": "鍚堢悊璁剧疆鍒嗙墖鏁伴噺锛氭牴鎹暟鎹噺鍜岃妭鐐规暟閲忥紝灏嗕富鍒嗙墖鏁伴噺璁剧疆涓?3-5 涓紝姣忎釜鍒嗙墖澶у皬鎺у埗鍦?20-50GB\n浼樺寲瀛楁绫诲瀷锛氬浜庝笉闇€瑕佸叏鏂囨绱㈢殑瀛楁锛屽book_id銆乻tock绛夛紝浣跨敤瀵瑰簲鐨勬暟鍊肩被鍨嬶紝閬垮厤浣跨敤text绫诲瀷\n鍏抽棴涓嶉渶瑕佺殑瀛楁鍔熻兘锛氬浜庝笉闇€瑕佹帓搴忓拰鑱氬悎鐨勫瓧娈碉紝鍏抽棴doc_values鍜宖ielddata鍔熻兘锛岃妭鐪佸瓨鍌ㄧ┖闂碶n浣跨敤绱㈠紩鍒悕锛氬皢涓嶅悓骞翠唤鐨勫浘涔︽暟鎹垎鍒瓨鍌ㄥ湪涓嶅悓鐨勭储寮曚腑锛屼娇鐢ㄥ埆鍚嶈繘琛岀粺涓€鏌ヨ锛屾彁楂樻煡璇㈡晥鐜?,
+      "referenceAnswer": "鍚堢悊璁剧疆鍒嗙墖鏁伴噺锛氭牴鎹暟鎹噺鍜岃妭鐐规暟閲忥紝灏嗕富鍒嗙墖鏁伴噺璁剧疆涓?3-5 涓紝姣忎釜鍒嗙墖澶у皬鎺у埗鍦?20-50GB\n浼樺寲瀛楁绫诲瀷锛氬浜庝笉闇€瑕佸叏鏂囨绱㈢殑瀛楁锛屽book_id銆乻tock绛夛紝浣跨敤瀵瑰簲鐨勬暟鍊肩被鍨嬶紝閬垮厤浣跨敤text绫诲瀷\n鍏抽棴涓嶉渶瑕佺殑瀛楁鍔熻兘锛氬浜庝笉闇€瑕佹帓搴忓拰鑱氬悎鐨勫瓧娈碉紝鍏抽棴doc_values鍜宖ielddata鍔熻兘锛岃妭鐪佸瓨鍌ㄧ┖闂碶n浣跨敤绱㈠紩鍒悕锛氬皢涓嶅悓骞翠唤鐨勫浘涔︽暟鎹垎鍒瓨鍌ㄥ湪涓嶅悓鐨勭储寮曚腑锛屼娇鐢ㄥ埆鍚嶈繘琛岀粺涓€鏌ヨ锛屾彁楂樻煡璇㈡晥鐜?,
+      "explanation": "缁煎悎棰樹互鍙傝€冪瓟妗堜负鍑嗐€傚厛璇嗗埆涓氬姟鍦烘櫙锛屽啀鍐欐槧灏勩€丏SL銆佸師鍥犳垨浼樺寲姝ラ銆?鏈鐞嗚В锛歵ext锛氭枃鏈被鍨嬶紝浼氬垎璇嶏紝閫傚悎鍏ㄦ枃妫€绱€?绛旈鏂规硶锛氭寜鈥滃満鏅渶姹傗啋瀛楁璁捐鈫扗SL 鏌ヨ鈫掑師鍥?浼樺寲鈥濈粍缁囩瓟妗堛€?,
+      "memoryTip": "缁煎悎棰樼敤鈥滃満鏅?瀛楁-鏌ヨ-浼樺寲鈥濆洓姝ワ細鍏堢湅涓氬姟鍦烘櫙锛屽啀瀹氬瓧娈电被鍨嬶紝鎺ョ潃鍐?DSL锛屾渶鍚庤ˉ鍘熷洜鎴栦紭鍖栨帾鏂姐€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "IK 分词器",
-        "Spring Boot",
-        "查询 DSL",
-        "索引与映射",
-        "运维优化"
+        "IK 鍒嗚瘝鍣?,
+        "鏌ヨ DSL",
+        "绱㈠紩涓庢槧灏?,
+        "杩愮淮浼樺寲",
+        "闆嗙兢涓庡垎鐗?
       ],
-      "conciseAnswer": "先查询确认数量 → 用 DeleteByQueryRequest 按 create_time < 2023-01-01 删除 → 验证结果。",
+      "conciseAnswer": "浼樺寲锛氬悎鐞嗗垎鐗囷紱浼樺寲瀛楁绫诲瀷锛涘叧闂棤鐢?doc_values/fielddata锛涙寜骞翠唤鎷嗙储寮曞苟鐢ㄥ埆鍚嶃€?,
       "answerBlocks": [
         {
           "type": "text",
           "items": [
-            "首先使用查询语句确认 2023 年 1 月 1 日之前的订单数量，避免误删（1 分）",
-            "使用DeleteByQueryRequest执行按条件删除操作，查询条件为create_time < \"2023-01-01\"（1 分）",
-            "删除完成后，验证删除结果，确认所有符合条件的订单都已被删除（1 分）"
+            "鍚堢悊璁剧疆鍒嗙墖鏁伴噺锛氭牴鎹暟鎹噺鍜岃妭鐐规暟閲忥紝灏嗕富鍒嗙墖鏁伴噺璁剧疆涓?3-5 涓紝姣忎釜鍒嗙墖澶у皬鎺у埗鍦?20-50GB",
+            "浼樺寲瀛楁绫诲瀷锛氬浜庝笉闇€瑕佸叏鏂囨绱㈢殑瀛楁锛屽book_id銆乻tock绛夛紝浣跨敤瀵瑰簲鐨勬暟鍊肩被鍨嬶紝閬垮厤浣跨敤text绫诲瀷",
+            "鍏抽棴涓嶉渶瑕佺殑瀛楁鍔熻兘锛氬浜庝笉闇€瑕佹帓搴忓拰鑱氬悎鐨勫瓧娈碉紝鍏抽棴doc_values鍜宖ielddata鍔熻兘锛岃妭鐪佸瓨鍌ㄧ┖闂?,
+            "浣跨敤绱㈠紩鍒悕锛氬皢涓嶅悓骞翠唤鐨勫浘涔︽暟鎹垎鍒瓨鍌ㄥ湪涓嶅悓鐨勭储寮曚腑锛屼娇鐢ㄥ埆鍚嶈繘琛岀粺涓€鏌ヨ锛屾彁楂樻煡璇㈡晥鐜?
           ]
         }
       ]
@@ -3362,55 +3355,84 @@ window.QUESTION_BANK = {
     {
       "id": "q157",
       "type": "comprehensive",
-      "question": "背景：某小型电商平台使用 ElasticSearch 存储订单数据，方便客服人员快速查询订单信息。订单数据包含以下字段：\norder_id：订单唯一标识（长整型）\nuser_name：用户姓名（字符串，需要支持模糊查询）\nphone：用户手机号（字符串，不需要分词）\norder_status：订单状态（字符串，可选值：待付款、待发货、已发货、已完成、已取消，不需要分词）\ntotal_amount：订单总金额（浮点型）\ncreate_time：订单创建时间（日期类型）\naddress：收货地址（字符串，需要支持全文检索）\n平台目前有大约 50 万条订单数据，客服人员每天需要查询数百次订单信息，主要通过订单号、用户手机号和订单状态进行查询。\n\n问题：客服人员需要查询所有状态为 \"待发货\" 且总金额大于 100 元的订单，请写出该查询的核心 DSL 语句（只需要写出query部分即可）。",
+      "question": "鑳屾櫙锛氭煇灏忓瀷鐢靛晢骞冲彴浣跨敤 ElasticSearch 瀛樺偍璁㈠崟鏁版嵁锛屾柟渚垮鏈嶄汉鍛樺揩閫熸煡璇㈣鍗曚俊鎭€傝鍗曟暟鎹寘鍚互涓嬪瓧娈碉細\norder_id锛氳鍗曞敮涓€鏍囪瘑锛堥暱鏁村瀷锛塡nuser_name锛氱敤鎴峰鍚嶏紙瀛楃涓诧紝闇€瑕佹敮鎸佹ā绯婃煡璇級\nphone锛氱敤鎴锋墜鏈哄彿锛堝瓧绗︿覆锛屼笉闇€瑕佸垎璇嶏級\norder_status锛氳鍗曠姸鎬侊紙瀛楃涓诧紝鍙€夊€硷細寰呬粯娆俱€佸緟鍙戣揣銆佸凡鍙戣揣銆佸凡瀹屾垚銆佸凡鍙栨秷锛屼笉闇€瑕佸垎璇嶏級\ntotal_amount锛氳鍗曟€婚噾棰濓紙娴偣鍨嬶級\ncreate_time锛氳鍗曞垱寤烘椂闂达紙鏃ユ湡绫诲瀷锛塡naddress锛氭敹璐у湴鍧€锛堝瓧绗︿覆锛岄渶瑕佹敮鎸佸叏鏂囨绱級\n骞冲彴鐩墠鏈夊ぇ绾?50 涓囨潯璁㈠崟鏁版嵁锛屽鏈嶄汉鍛樻瘡澶╅渶瑕佹煡璇㈡暟鐧炬璁㈠崟淇℃伅锛屼富瑕侀€氳繃璁㈠崟鍙枫€佺敤鎴锋墜鏈哄彿鍜岃鍗曠姸鎬佽繘琛屾煡璇€俓n\n闂锛氱敱浜庝笟鍔¤皟鏁达紝骞冲彴闇€瑕佸垹闄ゆ墍鏈?2023 骞?1 鏈?1 鏃ヤ箣鍓嶇殑璁㈠崟鏁版嵁锛岃鍐欏嚭鍒犻櫎杩欎簺璁㈠崟鐨勬搷浣滄楠わ紙鐢ㄦ枃瀛楁弿杩板嵆鍙級銆?,
       "options": {},
-      "answer": "\"query\": {\n\"bool\": {\n\"must\": [\n{\"match\": {\"order_status\": \"待发货\"}}\n],\n\"filter\": {\n\"range\": {\n\"total_amount\": {\n\"gt\": 100\n}\n}\n}\n}\n}",
-      "referenceAnswer": "\"query\": {\n\"bool\": {\n\"must\": [\n{\"match\": {\"order_status\": \"待发货\"}}\n],\n\"filter\": {\n\"range\": {\n\"total_amount\": {\n\"gt\": 100\n}\n}\n}\n}\n}",
-      "explanation": "综合题以参考答案为准。先识别业务场景，再写映射、DSL、原因或优化步骤。 术语理解：match：匹配查询，会先分析/分词，适合全文检索。 range：范围查询，常用于数字、日期区间。 bool：布尔查询，用 must、filter、should 等组合条件。 答题方法：按“场景需求→字段设计→DSL 查询→原因/优化”组织答案。",
-      "memoryTip": "综合题用“场景-字段-查询-优化”四步：先看业务场景，再定字段类型，接着写 DSL，最后补原因或优化措施。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "answer": "棣栧厛浣跨敤鏌ヨ璇彞纭 2023 骞?1 鏈?1 鏃ヤ箣鍓嶇殑璁㈠崟鏁伴噺锛岄伩鍏嶈鍒狅紙1 鍒嗭級\n浣跨敤DeleteByQueryRequest鎵ц鎸夋潯浠跺垹闄ゆ搷浣滐紝鏌ヨ鏉′欢涓篶reate_time < \"2023-01-01\"锛? 鍒嗭級\n鍒犻櫎瀹屾垚鍚庯紝楠岃瘉鍒犻櫎缁撴灉锛岀‘璁ゆ墍鏈夌鍚堟潯浠剁殑璁㈠崟閮藉凡琚垹闄わ紙1 鍒嗭級",
+      "referenceAnswer": "棣栧厛浣跨敤鏌ヨ璇彞纭 2023 骞?1 鏈?1 鏃ヤ箣鍓嶇殑璁㈠崟鏁伴噺锛岄伩鍏嶈鍒狅紙1 鍒嗭級\n浣跨敤DeleteByQueryRequest鎵ц鎸夋潯浠跺垹闄ゆ搷浣滐紝鏌ヨ鏉′欢涓篶reate_time < \"2023-01-01\"锛? 鍒嗭級\n鍒犻櫎瀹屾垚鍚庯紝楠岃瘉鍒犻櫎缁撴灉锛岀‘璁ゆ墍鏈夌鍚堟潯浠剁殑璁㈠崟閮藉凡琚垹闄わ紙1 鍒嗭級",
+      "explanation": "缁煎悎棰樹互鍙傝€冪瓟妗堜负鍑嗐€傚厛璇嗗埆涓氬姟鍦烘櫙锛屽啀鍐欐槧灏勩€丏SL銆佸師鍥犳垨浼樺寲姝ラ銆?绛旈鏂规硶锛氭寜鈥滃満鏅渶姹傗啋瀛楁璁捐鈫扗SL 鏌ヨ鈫掑師鍥?浼樺寲鈥濈粍缁囩瓟妗堛€?,
+      "memoryTip": "缁煎悎棰樼敤鈥滃満鏅?瀛楁-鏌ヨ-浼樺寲鈥濆洓姝ワ細鍏堢湅涓氬姟鍦烘櫙锛屽啀瀹氬瓧娈电被鍨嬶紝鎺ョ潃鍐?DSL锛屾渶鍚庤ˉ鍘熷洜鎴栦紭鍖栨帾鏂姐€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "IK 分词器",
-        "基础概念",
-        "查询 DSL",
-        "索引与映射",
-        "综合复习"
+        "IK 鍒嗚瘝鍣?,
+        "Spring Boot",
+        "鏌ヨ DSL",
+        "绱㈠紩涓庢槧灏?,
+        "杩愮淮浼樺寲"
       ],
-      "conciseAnswer": "bool 查询：must 匹配 order_status=待发货，filter 用 range 限制 total_amount > 100。",
+      "conciseAnswer": "鍏堟煡璇㈢‘璁ゆ暟閲?鈫?鐢?DeleteByQueryRequest 鎸?create_time < 2023-01-01 鍒犻櫎 鈫?楠岃瘉缁撴灉銆?,
       "answerBlocks": [
         {
-          "type": "code",
-          "content": "\"query\": {\n\"bool\": {\n\"must\": [\n{\"match\": {\"order_status\": \"待发货\"}}\n],\n\"filter\": {\n\"range\": {\n\"total_amount\": {\n\"gt\": 100\n}\n}\n}\n}\n}"
+          "type": "text",
+          "items": [
+            "棣栧厛浣跨敤鏌ヨ璇彞纭 2023 骞?1 鏈?1 鏃ヤ箣鍓嶇殑璁㈠崟鏁伴噺锛岄伩鍏嶈鍒狅紙1 鍒嗭級",
+            "浣跨敤DeleteByQueryRequest鎵ц鎸夋潯浠跺垹闄ゆ搷浣滐紝鏌ヨ鏉′欢涓篶reate_time < \"2023-01-01\"锛? 鍒嗭級",
+            "鍒犻櫎瀹屾垚鍚庯紝楠岃瘉鍒犻櫎缁撴灉锛岀‘璁ゆ墍鏈夌鍚堟潯浠剁殑璁㈠崟閮藉凡琚垹闄わ紙1 鍒嗭級"
+          ]
         }
       ]
     },
     {
       "id": "q158",
       "type": "comprehensive",
-      "question": "背景：某小型电商平台使用 ElasticSearch 存储订单数据，方便客服人员快速查询订单信息。订单数据包含以下字段：\norder_id：订单唯一标识（长整型）\nuser_name：用户姓名（字符串，需要支持模糊查询）\nphone：用户手机号（字符串，不需要分词）\norder_status：订单状态（字符串，可选值：待付款、待发货、已发货、已完成、已取消，不需要分词）\ntotal_amount：订单总金额（浮点型）\ncreate_time：订单创建时间（日期类型）\naddress：收货地址（字符串，需要支持全文检索）\n平台目前有大约 50 万条订单数据，客服人员每天需要查询数百次订单信息，主要通过订单号、用户手机号和订单状态进行查询。\n\n问题：为了防止数据丢失，平台需要定期对 ElasticSearch 中的订单数据进行备份，请写出 2 种常用的备份方法，并说明各自的优点。",
+      "question": "鑳屾櫙锛氭煇灏忓瀷鐢靛晢骞冲彴浣跨敤 ElasticSearch 瀛樺偍璁㈠崟鏁版嵁锛屾柟渚垮鏈嶄汉鍛樺揩閫熸煡璇㈣鍗曚俊鎭€傝鍗曟暟鎹寘鍚互涓嬪瓧娈碉細\norder_id锛氳鍗曞敮涓€鏍囪瘑锛堥暱鏁村瀷锛塡nuser_name锛氱敤鎴峰鍚嶏紙瀛楃涓诧紝闇€瑕佹敮鎸佹ā绯婃煡璇級\nphone锛氱敤鎴锋墜鏈哄彿锛堝瓧绗︿覆锛屼笉闇€瑕佸垎璇嶏級\norder_status锛氳鍗曠姸鎬侊紙瀛楃涓诧紝鍙€夊€硷細寰呬粯娆俱€佸緟鍙戣揣銆佸凡鍙戣揣銆佸凡瀹屾垚銆佸凡鍙栨秷锛屼笉闇€瑕佸垎璇嶏級\ntotal_amount锛氳鍗曟€婚噾棰濓紙娴偣鍨嬶級\ncreate_time锛氳鍗曞垱寤烘椂闂达紙鏃ユ湡绫诲瀷锛塡naddress锛氭敹璐у湴鍧€锛堝瓧绗︿覆锛岄渶瑕佹敮鎸佸叏鏂囨绱級\n骞冲彴鐩墠鏈夊ぇ绾?50 涓囨潯璁㈠崟鏁版嵁锛屽鏈嶄汉鍛樻瘡澶╅渶瑕佹煡璇㈡暟鐧炬璁㈠崟淇℃伅锛屼富瑕侀€氳繃璁㈠崟鍙枫€佺敤鎴锋墜鏈哄彿鍜岃鍗曠姸鎬佽繘琛屾煡璇€俓n\n闂锛氬鏈嶄汉鍛橀渶瑕佹煡璇㈡墍鏈夌姸鎬佷负 \"寰呭彂璐" 涓旀€婚噾棰濆ぇ浜?100 鍏冪殑璁㈠崟锛岃鍐欏嚭璇ユ煡璇㈢殑鏍稿績 DSL 璇彞锛堝彧闇€瑕佸啓鍑簈uery閮ㄥ垎鍗冲彲锛夈€?,
       "options": {},
-      "answer": "方法 1：使用 ElasticSearch 的快照功能（Snapshot）\n优点：支持增量备份，备份和恢复速度快，支持备份整个集群或指定索引）\n方法 2：使用_reindexAPI 将数据复制到另一个集群\n优点：操作简单，不需要额外的存储系统，适合小数据量备份",
-      "referenceAnswer": "方法 1：使用 ElasticSearch 的快照功能（Snapshot）\n优点：支持增量备份，备份和恢复速度快，支持备份整个集群或指定索引）\n方法 2：使用_reindexAPI 将数据复制到另一个集群\n优点：操作简单，不需要额外的存储系统，适合小数据量备份",
-      "explanation": "综合题以参考答案为准。先识别业务场景，再写映射、DSL、原因或优化步骤。 术语理解：Snapshot：快照备份，ElasticSearch 官方备份/恢复机制。 _reindex：重建索引/复制数据 API，可把数据复制到新索引或另一个集群。 答题方法：按“场景需求→字段设计→DSL 查询→原因/优化”组织答案。",
-      "memoryTip": "备份两条路：Snapshot 官方快照；_reindex 复制到别处。",
-      "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
+      "answer": "\"query\": {\n\"bool\": {\n\"must\": [\n{\"match\": {\"order_status\": \"寰呭彂璐"}}\n],\n\"filter\": {\n\"range\": {\n\"total_amount\": {\n\"gt\": 100\n}\n}\n}\n}\n}",
+      "referenceAnswer": "\"query\": {\n\"bool\": {\n\"must\": [\n{\"match\": {\"order_status\": \"寰呭彂璐"}}\n],\n\"filter\": {\n\"range\": {\n\"total_amount\": {\n\"gt\": 100\n}\n}\n}\n}\n}",
+      "explanation": "缁煎悎棰樹互鍙傝€冪瓟妗堜负鍑嗐€傚厛璇嗗埆涓氬姟鍦烘櫙锛屽啀鍐欐槧灏勩€丏SL銆佸師鍥犳垨浼樺寲姝ラ銆?鏈鐞嗚В锛歮atch锛氬尮閰嶆煡璇紝浼氬厛鍒嗘瀽/鍒嗚瘝锛岄€傚悎鍏ㄦ枃妫€绱€?range锛氳寖鍥存煡璇紝甯哥敤浜庢暟瀛椼€佹棩鏈熷尯闂淬€?bool锛氬竷灏旀煡璇紝鐢?must銆乫ilter銆乻hould 绛夌粍鍚堟潯浠躲€?绛旈鏂规硶锛氭寜鈥滃満鏅渶姹傗啋瀛楁璁捐鈫扗SL 鏌ヨ鈫掑師鍥?浼樺寲鈥濈粍缁囩瓟妗堛€?,
+      "memoryTip": "缁煎悎棰樼敤鈥滃満鏅?瀛楁-鏌ヨ-浼樺寲鈥濆洓姝ワ細鍏堢湅涓氬姟鍦烘櫙锛屽啀瀹氬瓧娈电被鍨嬶紝鎺ョ潃鍐?DSL锛屾渶鍚庤ˉ鍘熷洜鎴栦紭鍖栨帾鏂姐€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
       "tags": [
-        "IK 分词器",
-        "查询 DSL",
-        "索引与映射",
-        "综合复习",
-        "运维优化",
-        "集群与分片"
+        "IK 鍒嗚瘝鍣?,
+        "鍩虹姒傚康",
+        "鏌ヨ DSL",
+        "绱㈠紩涓庢槧灏?,
+        "缁煎悎澶嶄範"
       ],
-      "conciseAnswer": "两种：Snapshot 快照，支持增量、恢复快；_reindex 复制到另一集群，简单适合小数据。",
+      "conciseAnswer": "bool 鏌ヨ锛歮ust 鍖归厤 order_status=寰呭彂璐э紝filter 鐢?range 闄愬埗 total_amount > 100銆?,
+      "answerBlocks": [
+        {
+          "type": "code",
+          "content": "\"query\": {\n  \"bool\": {\n    \"must\": [\n      {\"match\": {\"order_status\": \"寰呭彂璐"}}\n    ],\n  \"filter\": {\n    \"range\": {\n      \"total_amount\": {\n        \"gt\": 100\n      }\n  }\n}\n}\n}"
+        }
+      ]
+    },
+    {
+      "id": "q159",
+      "type": "comprehensive",
+      "question": "鑳屾櫙锛氭煇灏忓瀷鐢靛晢骞冲彴浣跨敤 ElasticSearch 瀛樺偍璁㈠崟鏁版嵁锛屾柟渚垮鏈嶄汉鍛樺揩閫熸煡璇㈣鍗曚俊鎭€傝鍗曟暟鎹寘鍚互涓嬪瓧娈碉細\norder_id锛氳鍗曞敮涓€鏍囪瘑锛堥暱鏁村瀷锛塡nuser_name锛氱敤鎴峰鍚嶏紙瀛楃涓诧紝闇€瑕佹敮鎸佹ā绯婃煡璇級\nphone锛氱敤鎴锋墜鏈哄彿锛堝瓧绗︿覆锛屼笉闇€瑕佸垎璇嶏級\norder_status锛氳鍗曠姸鎬侊紙瀛楃涓诧紝鍙€夊€硷細寰呬粯娆俱€佸緟鍙戣揣銆佸凡鍙戣揣銆佸凡瀹屾垚銆佸凡鍙栨秷锛屼笉闇€瑕佸垎璇嶏級\ntotal_amount锛氳鍗曟€婚噾棰濓紙娴偣鍨嬶級\ncreate_time锛氳鍗曞垱寤烘椂闂达紙鏃ユ湡绫诲瀷锛塡naddress锛氭敹璐у湴鍧€锛堝瓧绗︿覆锛岄渶瑕佹敮鎸佸叏鏂囨绱級\n骞冲彴鐩墠鏈夊ぇ绾?50 涓囨潯璁㈠崟鏁版嵁锛屽鏈嶄汉鍛樻瘡澶╅渶瑕佹煡璇㈡暟鐧炬璁㈠崟淇℃伅锛屼富瑕侀€氳繃璁㈠崟鍙枫€佺敤鎴锋墜鏈哄彿鍜岃鍗曠姸鎬佽繘琛屾煡璇€俓n\n闂锛氫负浜嗛槻姝㈡暟鎹涪澶憋紝骞冲彴闇€瑕佸畾鏈熷 ElasticSearch 涓殑璁㈠崟鏁版嵁杩涜澶囦唤锛岃鍐欏嚭 2 绉嶅父鐢ㄧ殑澶囦唤鏂规硶锛屽苟璇存槑鍚勮嚜鐨勪紭鐐广€?,
+      "options": {},
+      "answer": "鏂规硶 1锛氫娇鐢?ElasticSearch 鐨勫揩鐓у姛鑳斤紙Snapshot锛塡n浼樼偣锛氭敮鎸佸閲忓浠斤紝澶囦唤鍜屾仮澶嶉€熷害蹇紝鏀寔澶囦唤鏁翠釜闆嗙兢鎴栨寚瀹氱储寮曪級\n鏂规硶 2锛氫娇鐢╛reindexAPI 灏嗘暟鎹鍒跺埌鍙︿竴涓泦缇n浼樼偣锛氭搷浣滅畝鍗曪紝涓嶉渶瑕侀澶栫殑瀛樺偍绯荤粺锛岄€傚悎灏忔暟鎹噺澶囦唤",
+      "referenceAnswer": "鏂规硶 1锛氫娇鐢?ElasticSearch 鐨勫揩鐓у姛鑳斤紙Snapshot锛塡n浼樼偣锛氭敮鎸佸閲忓浠斤紝澶囦唤鍜屾仮澶嶉€熷害蹇紝鏀寔澶囦唤鏁翠釜闆嗙兢鎴栨寚瀹氱储寮曪級\n鏂规硶 2锛氫娇鐢╛reindexAPI 灏嗘暟鎹鍒跺埌鍙︿竴涓泦缇n浼樼偣锛氭搷浣滅畝鍗曪紝涓嶉渶瑕侀澶栫殑瀛樺偍绯荤粺锛岄€傚悎灏忔暟鎹噺澶囦唤",
+      "explanation": "缁煎悎棰樹互鍙傝€冪瓟妗堜负鍑嗐€傚厛璇嗗埆涓氬姟鍦烘櫙锛屽啀鍐欐槧灏勩€丏SL銆佸師鍥犳垨浼樺寲姝ラ銆?鏈鐞嗚В锛歋napshot锛氬揩鐓у浠斤紝ElasticSearch 瀹樻柟澶囦唤/鎭㈠鏈哄埗銆?_reindex锛氶噸寤虹储寮?澶嶅埗鏁版嵁 API锛屽彲鎶婃暟鎹鍒跺埌鏂扮储寮曟垨鍙︿竴涓泦缇ゃ€?绛旈鏂规硶锛氭寜鈥滃満鏅渶姹傗啋瀛楁璁捐鈫扗SL 鏌ヨ鈫掑師鍥?浼樺寲鈥濈粍缁囩瓟妗堛€?,
+      "memoryTip": "澶囦唤涓ゆ潯璺細Snapshot 瀹樻柟蹇収锛沖reindex 澶嶅埗鍒板埆澶勩€?,
+      "source": "ElasticSearch鍒嗗竷寮忔悳绱㈠紩鎿?澶嶄範璧勬枡.docx",
+      "tags": [
+        "IK 鍒嗚瘝鍣?,
+        "鏌ヨ DSL",
+        "绱㈠紩涓庢槧灏?,
+        "缁煎悎澶嶄範",
+        "杩愮淮浼樺寲",
+        "闆嗙兢涓庡垎鐗?
+      ],
+      "conciseAnswer": "涓ょ锛歋napshot 蹇収锛屾敮鎸佸閲忋€佹仮澶嶅揩锛沖reindex 澶嶅埗鍒板彟涓€闆嗙兢锛岀畝鍗曢€傚悎灏忔暟鎹€?,
       "answerBlocks": [
         {
           "type": "text",
           "items": [
-            "方法 1：使用 ElasticSearch 的快照功能（Snapshot）",
-            "优点：支持增量备份，备份和恢复速度快，支持备份整个集群或指定索引）",
-            "方法 2：使用_reindexAPI 将数据复制到另一个集群",
-            "优点：操作简单，不需要额外的存储系统，适合小数据量备份"
+            "鏂规硶 1锛氫娇鐢?ElasticSearch 鐨勫揩鐓у姛鑳斤紙Snapshot锛?,
+            "浼樼偣锛氭敮鎸佸閲忓浠斤紝澶囦唤鍜屾仮澶嶉€熷害蹇紝鏀寔澶囦唤鏁翠釜闆嗙兢鎴栨寚瀹氱储寮曪級",
+            "鏂规硶 2锛氫娇鐢╛reindexAPI 灏嗘暟鎹鍒跺埌鍙︿竴涓泦缇?,
+            "浼樼偣锛氭搷浣滅畝鍗曪紝涓嶉渶瑕侀澶栫殑瀛樺偍绯荤粺锛岄€傚悎灏忔暟鎹噺澶囦唤"
           ]
         }
       ]

@@ -137,7 +137,21 @@ function activePracticeSession() {
   return progress.activeReview || app.submittedReview;
 }
 
+function sanitizeReviewSession(session) {
+  const matchesType = (question) => session.typeFilter === "all" || question.type === session.typeFilter;
+  const validIds = new Set(questions.filter(matchesType).map((q) => q.id));
+  const queue = (session.queue || []).filter((id) => validIds.has(id));
+  if (queue.length) {
+    session.queue = queue;
+  } else {
+    session.queue = questions.filter(matchesType).map((q) => q.id);
+  }
+  session.current = Math.min(session.current || 0, Math.max(session.queue.length - 1, 0));
+  return session;
+}
+
 function applyReviewSession(session) {
+  sanitizeReviewSession(session);
   app.typeFilter = session.typeFilter || "all";
   app.order = session.order || "sequential";
   app.queue = session.queue?.length ? session.queue : questions.map((q) => q.id);
