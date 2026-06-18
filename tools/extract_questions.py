@@ -269,7 +269,7 @@ def parse_judge(lines: list[str], start_id: int) -> list[dict]:
 def looks_like_short_question(line: str) -> bool:
     if re.match(r"^\d+[.、]\s*", line):
         return True
-    return line.startswith("简述")
+    return line.startswith(("简述", "解释", "说明", "列出", "描述", "比较", "分析"))
 
 
 def parse_short(lines: list[str], start_id: int) -> list[dict]:
@@ -308,6 +308,8 @@ def is_scenario_start(line: str) -> bool:
 
 def looks_like_comprehensive_question(line: str) -> bool:
     if line == "问题":
+        return False
+    if line.startswith(("应该", "原因", "可能原因", "解决方法", "优化方法", "方法", "优点")):
         return False
     return any(token in line for token in ("请", "应该", "如果")) and not is_scenario_start(line)
 
@@ -394,6 +396,111 @@ def tag_memory_tip(question: dict) -> str:
     return "复习时先圈出题干关键词，再用一句中文把英文术语翻译出来，最后对应到答案。"
 
 
+def is_code_line(line: str) -> bool:
+    stripped = line.strip()
+    if not stripped:
+        return False
+    code_prefixes = ('"', "{", "}", "[", "]", "],")
+    return stripped.startswith(code_prefixes) or stripped.startswith('{"') or stripped.endswith("},")
+
+
+def answer_blocks(answer: str) -> list[dict]:
+    blocks: list[dict] = []
+    pending_text: list[str] = []
+    pending_code: list[str] = []
+
+    def flush_text() -> None:
+        nonlocal pending_text
+        if pending_text:
+            blocks.append({"type": "text", "items": pending_text})
+            pending_text = []
+
+    def flush_code() -> None:
+        nonlocal pending_code
+        if pending_code:
+            blocks.append({"type": "code", "content": "\n".join(pending_code)})
+            pending_code = []
+
+    for raw_line in answer.splitlines():
+        stripped = raw_line.strip()
+        if not stripped:
+            continue
+        if is_code_line(stripped):
+            flush_text()
+            pending_code.append(stripped)
+        else:
+            flush_code()
+            pending_text.append(stripped)
+    flush_code()
+    flush_text()
+    for block in blocks:
+        if block["type"] == "code":
+            block["content"] = indent_code_block(block["content"])
+    return blocks
+
+
+def indent_code_block(code: str) -> str:
+    lines = [line.strip() for line in code.splitlines() if line.strip()]
+    if not lines:
+        return ""
+    formatted: list[str] = []
+    depth = 0
+    for line in lines:
+        if line.startswith(("}", "]")):
+            depth = max(depth - 1, 0)
+        formatted.append(f"{'  ' * depth}{line}")
+        opens = line.count("{") + line.count("[")
+        closes = line.count("}") + line.count("]")
+        depth = max(depth + opens - closes, 0)
+    return "\n".join(formatted)
+
+
+def concise_subjective_answer(question: dict) -> str:
+    text = question.get("question", "")
+    answer = question.get("referenceAnswer", "")
+    combined = f"{text}\n{answer}"
+
+    if "log_content" in combined and "映射" in combined:
+        return "log_content 用 text，analyzer 用 ik_smart；原因：最少切分，效率高，减少无关结果。"
+    if "title和content" in combined and "分词器" in combined:
+        return "title/content 用 ik_max_word；切词多、召回高，适合新闻关键词搜索。"
+    if "备份" in combined and "Snapshot" in combined:
+        return "两种：Snapshot 快照，支持增量、恢复快；_reindex 复制到另一集群，简单适合小数据。"
+
+    rules = [
+        ("ElasticSearch 与 Solr", "Solr 依赖 ZooKeeper、功能更全，偏传统搜索；ElasticSearch 自带分布式协调、REST 简单，偏实时搜索和易用。"),
+        ("安装和启动步骤", "下载 → 解压 → 配置 elasticsearch.yml → 准备 JDK → 运行 elasticsearch.bat → 访问 9200 验证。"),
+        ("核心概念及其与关系型数据库", "Index≈库/表集合，Type≈表，Document≈行，Field≈列，Mapping≈表结构。"),
+        ("索引、类型、文档和字段", "Index 是文档集合；Type 是逻辑分类；Document 是 JSON 数据单元；Field 是文档属性。"),
+        ("Head 插件", "下载 Head → 安装 Node.js → 安装 grunt-cli → npm install → grunt server → 访问 9100。"),
+        ("match 查询和 term 查询", "match 会分词，适合全文检索；term 不分词，适合 keyword、数字、日期精确匹配。"),
+        ("IK 分词器", "ik_smart：少切，偏精确，适合查询；ik_max_word：多切，召回高，适合建索引。"),
+        ("创建、查询、更新和删除操作", "增：PUT 指定 ID / POST 自动 ID；查：GET；改：PUT/POST 指定 ID；删：DELETE。"),
+        ("聚合查询", "聚合用于统计分析；常见类型：桶聚合、指标聚合、管道聚合、矩阵聚合。"),
+        ("分片和复制", "分片负责拆数据、扩容量、并行处理；复制负责高可用、故障转移、提高搜索吞吐。"),
+        ("集群的工作原理", "节点组成集群；主节点管状态；索引拆成主分片和副本；节点故障后自动分配分片。"),
+        ("集群搭建", "装 JDK → 解压 ES → 配置集群/节点/网络/发现 → 清 data → 逐节点启动并验证。"),
+        ("log_content字段的映射配置", "log_content 用 text，analyzer 用 ik_smart；原因：最少切分，效率高，减少无关结果。"),
+        ("192.168.1.100", "bool 查询：must 匹配 server_ip 和 log_level，filter 用 range 限制 create_time 为 2024-06-01 当天。"),
+        ("健康状态为yellow", "两类原因：单节点副本无法分配；节点离线导致副本丢失。解决：加节点；重启或重新分配。"),
+        ("title和content字段应该使用哪种分词器", "title/content 用 ik_max_word；切词多、召回高，适合新闻关键词搜索。"),
+        ('关键词 "高考"', "multi_match 同时搜 title、content；highlight 高亮 title、content。"),
+        ("不相关的新闻", "原因：分词过细匹配到“考”。优化：用 match_phrase；提高标题字段权重。"),
+        ("publisher字段", "publisher 用 keyword；出版社名称是整体，不分词，适合精确匹配。"),
+        ("机械工业出版社", "bool 查询：must 同时匹配 publisher=机械工业出版社、category=计算机。"),
+        ("查询速度逐渐变慢", "优化：合理分片；优化字段类型；关闭无用 doc_values/fielddata；按年份拆索引并用别名。"),
+        ("删除所有 2023 年 1 月 1 日之前", "先查询确认数量 → 用 DeleteByQueryRequest 按 create_time < 2023-01-01 删除 → 验证结果。"),
+        ("待发货", "bool 查询：must 匹配 order_status=待发货，filter 用 range 限制 total_amount > 100。"),
+        ("备份方法", "两种：Snapshot 快照，支持增量、恢复快；_reindex 复制到另一集群，简单适合小数据。"),
+    ]
+    for keyword, summary in rules:
+        if keyword in combined:
+            return summary
+
+    lines = [line.strip() for line in answer.splitlines() if line.strip() and not is_code_line(line)]
+    return "；".join(lines[:4])
+
+
 def enhance_question_quality(question: dict) -> dict:
     if question["type"] in {"single", "multiple"}:
         answer = "".join(question["answer"]) if isinstance(question["answer"], list) else question["answer"]
@@ -420,6 +527,8 @@ def enhance_question_quality(question: dict) -> dict:
         question["memoryTip"] = tag_memory_tip(question)
 
     if question["type"] in {"short", "comprehensive"}:
+        question["conciseAnswer"] = concise_subjective_answer(question)
+        question["answerBlocks"] = answer_blocks(question.get("referenceAnswer", ""))
         if question["type"] == "short":
             question["explanation"] = f"{question['explanation']} 答题方法：先写核心概念，再列关键区别、作用或步骤。"
         else:
