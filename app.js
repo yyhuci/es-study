@@ -14,6 +14,7 @@ let progress = loadProgress();
 let app = {
   view: "dashboard",
   typeFilter: "all",
+  wrongTypeFilter: "all",
   order: "sequential",
   queue: questions.map((q) => q.id),
   current: 0,
@@ -81,19 +82,41 @@ function grade(question, answer) {
   return normalizeAnswer(answer) === normalizeAnswer(question.answer);
 }
 
-function recordAttempt(question, correct) {
+function markWrongQuestion(question, options = {}) {
+  const { increment = true, at = new Date().toISOString() } = options;
+  const previous = progress.wrong[question.id] || {};
+  progress.wrong[question.id] = {
+    ...previous,
+    count: increment ? (previous.count || 0) + 1 : Math.max(previous.count || 0, 1),
+    lastAt: at,
+    type: question.type,
+    tags: question.tags || [],
+  };
+  delete progress.wrong[question.id].resolvedAt;
+}
+
+function resolveWrongQuestion(question, at = new Date().toISOString()) {
+  if (progress.wrong[question.id]) {
+    progress.wrong[question.id] = {
+      ...progress.wrong[question.id],
+      type: question.type,
+      tags: question.tags || progress.wrong[question.id].tags || [],
+      resolvedAt: at,
+    };
+  }
+}
+
+function recordAttempt(question, correct, options = {}) {
+  const { skipWrongIncrement = false } = options;
   const item = progress.attempts[question.id] || { total: 0, correct: 0 };
   item.total += 1;
   if (correct) item.correct += 1;
   item.lastAt = new Date().toISOString();
   progress.attempts[question.id] = item;
   if (!correct) {
-    progress.wrong[question.id] = {
-      count: (progress.wrong[question.id]?.count || 0) + 1,
-      lastAt: item.lastAt,
-    };
-  } else if (progress.wrong[question.id]) {
-    progress.wrong[question.id].resolvedAt = item.lastAt;
+    markWrongQuestion(question, { increment: !skipWrongIncrement, at: item.lastAt });
+  } else {
+    resolveWrongQuestion(question, item.lastAt);
   }
   saveProgress();
 }
@@ -111,6 +134,7 @@ function makeReviewSession(sourceQuestions = questions, source = "practice") {
     answered: {},
     answers: {},
     subjective: {},
+    instantWrong: {},
     revealed: {},
     submitted: false,
     startedAt: new Date().toISOString(),
@@ -135,6 +159,11 @@ function stashActiveReview() {
 
 function activePracticeSession() {
   return progress.activeReview || app.submittedReview;
+}
+
+function isPracticeQuestionChecked(question, session = activePracticeSession()) {
+  if (!question || !session) return false;
+  return Boolean(session.submitted || session.revealed?.[question.id] || session.answered?.[question.id]?.checkedAt);
 }
 
 function sanitizeReviewSession(session) {
@@ -182,8 +211,16 @@ function savePracticeAnswer(question) {
   if (isObjective(question)) {
     const answer = selectedAnswer(question);
     if (Array.isArray(answer) ? answer.length : answer) {
+      const correct = grade(question, answer);
       session.answers[question.id] = answer;
-      session.answered[question.id] = { at: new Date().toISOString() };
+      session.answered[question.id] = { at: new Date().toISOString(), correct };
+      if (question.type !== "multiple" && correct === false) {
+        session.instantWrong = session.instantWrong || {};
+        markWrongQuestion(question, { increment: !session.instantWrong[question.id] });
+        session.instantWrong[question.id] = true;
+      } else if (question.type !== "multiple" && correct === true) {
+        resolveWrongQuestion(question);
+      }
     } else {
       delete session.answers[question.id];
       delete session.answered[question.id];
@@ -207,7 +244,7 @@ function loadPracticeAnswer(question) {
   const saved = session.answers?.[question.id];
   app.selected = Array.isArray(saved) ? saved : saved ? [saved] : [];
   app.subjectiveDraft = session.subjective?.[question.id] || "";
-  app.checked = session.submitted || session.revealed?.[question.id] ? { correct: isObjective(question) ? grade(question, saved) : null } : null;
+  app.checked = isPracticeQuestionChecked(question, session) ? { correct: isObjective(question) ? grade(question, saved) : null } : null;
 }
 
 function reviewSummary(session, status) {
@@ -263,6 +300,7 @@ function abandonActiveReview() {
 function submitActiveReview() {
   const session = progress.activeReview;
   if (!session) return;
+  savePracticeAnswer(currentQuestion());
   const answeredCount = Object.keys(session.answered || {}).length;
   if (answeredCount < session.queue.length) return;
   session.queue.map(byId).forEach((question) => {
@@ -274,7 +312,7 @@ function submitActiveReview() {
       correct,
       submittedAt: new Date().toISOString(),
     };
-    if (isObjective(question)) recordAttempt(question, correct);
+    if (isObjective(question)) recordAttempt(question, correct, { skipWrongIncrement: Boolean(session.instantWrong?.[question.id]) });
   });
   session.submitted = true;
   session.status = "completed";
@@ -304,7 +342,14 @@ function revealCurrentAnswer() {
   session.current = app.current;
   session.lastAt = new Date().toISOString();
   saveProgress();
-  app.checked = { correct: isObjective(question) ? grade(question, session.answers?.[question.id]) : null };
+  const correct = isObjective(question) ? grade(question, session.answers?.[question.id]) : null;
+  if (correct === false) {
+    session.instantWrong = session.instantWrong || {};
+    markWrongQuestion(question, { increment: !session.instantWrong[question.id] });
+    session.instantWrong[question.id] = true;
+    saveProgress();
+  }
+  app.checked = { correct };
   render();
 }
 
@@ -520,6 +565,7 @@ function renderPractice() {
       ${practiceToolbar()}
       ${renderQuestion(question)}
       ${renderPracticeActions(question)}
+      ${app.checked ? renderAnswerBox(question, app.checked) : ""}
       ${renderCompletedReviewNotice()}
     </section>
     <aside class="side-panel">
@@ -553,7 +599,6 @@ function practiceToolbar() {
 }
 
 function renderQuestion(question, mode = "practice") {
-  const result = app.checked;
   return `
     <article>
       <div class="question-meta">
@@ -562,13 +607,13 @@ function renderQuestion(question, mode = "practice") {
       </div>
       <div class="question-text">${escapeHtml(question.question)}</div>
       ${isObjective(question) ? renderOptions(question) : renderSubjective(question)}
-      ${result ? renderAnswerBox(question, result) : ""}
     </article>
   `;
 }
 
 function renderOptions(question) {
   const entries = question.type === "judge" ? Object.entries(question.options) : Object.entries(question.options);
+  const locked = !app.exam && isPracticeQuestionChecked(question);
   return `<div class="options">
     ${entries.map(([key, value]) => {
       const selected = app.selected.includes(key);
@@ -578,7 +623,7 @@ function renderOptions(question) {
       if (selected) classes.push("is-selected");
       if (checked && correctKeys.includes(key)) classes.push("is-correct");
       if (checked && selected && !correctKeys.includes(key)) classes.push("is-wrong");
-      return `<button class="${classes.join(" ")}" data-option="${key}">
+      return `<button class="${classes.join(" ")}" data-option="${key}" ${locked ? "disabled" : ""}>
         <span class="option-key">${key}</span><span>${escapeHtml(value)}</span>
       </button>`;
     }).join("")}
@@ -598,14 +643,13 @@ function renderPracticeActions(question) {
   const answered = Object.keys(session?.answered || {}).length;
   const total = session?.queue?.length || app.queue.length;
   const submitted = Boolean(session?.submitted);
-  const revealed = Boolean(session?.revealed?.[question.id]);
   const canSubmit = answered === total && total > 0 && !submitted;
+  const checked = isPracticeQuestionChecked(question, session);
   return `
     <div class="actions">
       <button class="ghost-action" data-action="prev" ${app.current === 0 ? "disabled" : ""}>上一题</button>
-      ${!submitted && !revealed ? `<button class="ghost-action" data-action="reveal-answer">提前看解析</button>` : ""}
       ${submitted ? `<button class="ghost-action" disabled>已提交，正在复盘</button>` : `<button class="primary-action" data-action="submit-review" ${canSubmit ? "" : "disabled"}>提交本轮</button>`}
-      <button class="ghost-action" data-action="next">下一题</button>
+      <button class="ghost-action" data-action="next">${!submitted && !checked ? "判断并看解析" : "下一题"}</button>
     </div>
     ${!submitted && !canSubmit ? `<p class="muted">还有 ${Math.max(0, total - answered)} 题未作答，全部完成后统一提交并显示解析。</p>` : ""}
   `;
@@ -638,6 +682,12 @@ function renderAnswerBox(question, result) {
           </div>
         ` : ""}
         <div class="reference-answer">${formatSubjectiveAnswer(question)}</div>
+        ${question.type === "short" && question.explanation ? `
+          <div class="subjective-explanation">
+            <strong>讲解</strong>
+            <div>${formatExplanation(question.explanation)}</div>
+          </div>
+        ` : ""}
         ${selfButtons(question)}
       </div>
     `;
@@ -649,10 +699,18 @@ function renderAnswerBox(question, result) {
     <div class="${className}">
       <h3>${result.correct === null ? "参考答案" : result.correct ? "回答正确" : "回答错误"}</h3>
       <p><strong>正确答案：</strong>${escapeHtml(answer)}</p>
-      <p><strong>解析：</strong>${escapeHtml(question.explanation)}</p>
+      <div><strong>解析：</strong>${formatExplanation(question.explanation)}</div>
       ${question.memoryTip ? `<p><strong>记忆方法：</strong>${escapeHtml(question.memoryTip)}</p>` : ""}
     </div>
   `;
+}
+
+function formatExplanation(text) {
+  return String(text || "")
+    .split(/\n+/)
+    .filter(Boolean)
+    .map((line) => `<p>${escapeHtml(line)}</p>`)
+    .join("");
 }
 
 function formatSubjectiveAnswer(question) {
@@ -696,20 +754,46 @@ function renderSideInfo(question) {
 }
 
 function renderWrong() {
-  const wrongIds = Object.entries(progress.wrong)
+  const wrongQuestions = Object.entries(progress.wrong)
     .filter(([, item]) => !item.resolvedAt)
-    .map(([id]) => id);
+    .map(([id]) => byId(id))
+    .filter(Boolean);
+  const filteredWrongQuestions = wrongQuestions.filter((question) => app.wrongTypeFilter === "all" || question.type === app.wrongTypeFilter);
+  const groups = Object.entries(TYPE_LABELS)
+    .map(([type, label]) => {
+      const items = filteredWrongQuestions.filter((question) => question.type === type);
+      return { type, label, items };
+    })
+    .filter((group) => group.items.length);
   main.innerHTML = `
     <section class="panel full-width">
       <div class="toolbar">
         <div>
           <h2>错题本</h2>
-          <p class="muted">只显示仍未重新答对的题目。</p>
+          <p class="muted">答错会立即进入错题本，并按题型分类；重新答对后会从待复习中移除。</p>
         </div>
-        <button class="primary-action" data-action="practice-wrong" ${wrongIds.length ? "" : "disabled"}>开始错题练习</button>
+        <div class="filter-row">
+          <select class="select" data-control="wrong-type">
+            <option value="all" ${app.wrongTypeFilter === "all" ? "selected" : ""}>全部错题</option>
+            ${Object.entries(TYPE_LABELS).map(([value, label]) => `<option value="${value}" ${app.wrongTypeFilter === value ? "selected" : ""}>${label}</option>`).join("")}
+          </select>
+          <button class="primary-action" data-action="practice-wrong" ${filteredWrongQuestions.length ? "" : "disabled"}>练习当前分类</button>
+        </div>
       </div>
-      ${wrongIds.length ? `<div class="wrong-list">${wrongIds.map((id) => wrongRow(byId(id))).join("")}</div>` : `<div class="empty">还没有待复习错题。</div>`}
+      ${groups.length ? groups.map(wrongGroup).join("") : `<div class="empty">当前分类还没有待复习错题。</div>`}
     </section>
+  `;
+}
+
+function wrongGroup(group) {
+  return `
+    <div class="wrong-section">
+      <div class="wrong-section-title">
+        <h3>${group.label}</h3>
+        <span class="chip">${group.items.length} 题</span>
+      </div>
+      <div class="wrong-list">${group.items.map(wrongRow).join("")}</div>
+    </div>
   `;
 }
 
@@ -861,8 +945,43 @@ function checkCurrent() {
   render();
 }
 
+function judgeCurrentPracticeQuestion() {
+  const session = progress.activeReview;
+  const question = currentQuestion();
+  if (!session || !question || session.submitted) return true;
+  if (isPracticeQuestionChecked(question, session)) return true;
+  if (isObjective(question) && !app.selected.length) {
+    alert("请先选择答案，再进入下一题。");
+    return false;
+  }
+  savePracticeAnswer(question);
+  const saved = session.answers?.[question.id];
+  const correct = isObjective(question) ? grade(question, saved) : null;
+  session.answered[question.id] = {
+    ...(session.answered[question.id] || {}),
+    correct,
+    checkedAt: new Date().toISOString(),
+  };
+  if (correct === false) {
+    session.instantWrong = session.instantWrong || {};
+    markWrongQuestion(question, { increment: !session.instantWrong[question.id] });
+    session.instantWrong[question.id] = true;
+  } else if (correct === true) {
+    resolveWrongQuestion(question);
+  }
+  session.revealed = session.revealed || {};
+  session.revealed[question.id] = new Date().toISOString();
+  app.checked = { correct };
+  saveProgress();
+  render();
+  return false;
+}
+
 function moveQuestion(delta) {
-  app.current = Math.max(0, Math.min(app.queue.length - 1, app.current + delta));
+  if (delta > 0 && app.view === "practice" && !judgeCurrentPracticeQuestion()) return;
+  const nextIndex = Math.max(0, Math.min(app.queue.length - 1, app.current + delta));
+  if (nextIndex === app.current) return;
+  app.current = nextIndex;
   app.selected = [];
   app.subjectiveDraft = "";
   app.checked = null;
@@ -939,6 +1058,7 @@ document.addEventListener("click", (event) => {
     const question = app.exam ? byId(app.exam.ids[app.exam.index]) : currentQuestion();
     if (app.exam?.submitted) return;
     if (!app.exam && activePracticeSession()?.submitted) return;
+    if (!app.exam && isPracticeQuestionChecked(question)) return;
     if (question.type === "multiple") {
       app.selected = app.selected.includes(key) ? app.selected.filter((item) => item !== key) : [...app.selected, key];
     } else {
@@ -983,7 +1103,11 @@ document.addEventListener("click", (event) => {
   if (action === "prev") moveQuestion(-1);
   if (action === "next") moveQuestion(1);
   if (action === "practice-wrong") {
-    const wrongQuestions = Object.entries(progress.wrong).filter(([, item]) => !item.resolvedAt).map(([id]) => byId(id)).filter(Boolean);
+    const wrongQuestions = Object.entries(progress.wrong)
+      .filter(([, item]) => !item.resolvedAt)
+      .map(([id]) => byId(id))
+      .filter((question) => question && (app.wrongTypeFilter === "all" || question.type === app.wrongTypeFilter));
+    app.typeFilter = app.wrongTypeFilter;
     startPractice(wrongQuestions);
   }
   if (action === "start-exam") setView("exam");
@@ -1032,6 +1156,10 @@ document.addEventListener("change", async (event) => {
     }
     app.order = event.target.value;
     startPractice(questions, { recordAbandoned: false, restoreDraft: true });
+  }
+  if (control === "wrong-type") {
+    app.wrongTypeFilter = event.target.value;
+    render();
   }
   if (control === "import-progress") {
     const file = event.target.files?.[0];

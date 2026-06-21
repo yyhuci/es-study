@@ -136,16 +136,108 @@ def concept_reason(question: str, answer: str, options: dict[str, str], qtype: s
 
 
 def objective_explanation(question: str, answer: str, options: dict[str, str], qtype: str) -> str:
+    return detailed_objective_explanation(question, answer, options, qtype)
+
+
+def knowledge_point(text: str, qtype: str) -> str:
+    tags = infer_tags(text)
+    tag_text = "、".join(tags)
+    if qtype == "single":
+        return f"本题考查 {tag_text} 中的核心概念识别，重点是把题干关键词和唯一正确概念对应起来。"
+    if qtype == "multiple":
+        return f"本题考查 {tag_text} 的多个相关知识点，重点是逐项判断，既不能漏选正确项，也不能把相近但不符合题意的项选进去。"
+    if qtype == "judge":
+        return f"本题考查 {tag_text} 的概念边界，重点判断题干表述是否符合 ElasticSearch 的真实机制。"
+    return f"本题考查 {tag_text}，答题时要覆盖定义、作用、步骤或对比关系。"
+
+
+def option_reason(question: str, option_text: str, is_correct: bool) -> str:
+    text = f"{question} {option_text}"
+    rules = [
+        (["Lucene"], "Lucene 是 ElasticSearch 底层使用的全文检索核心库，ES 在它之上提供分布式、REST API 和集群能力。"),
+        (["Solr"], "Solr 也是基于 Lucene 的搜索服务器，但它不是 ElasticSearch 的底层核心库；两者是同类产品，不是实现关系。"),
+        (["Hadoop"], "Hadoop 主要用于大数据分布式存储和计算，不是 ES 的全文检索核心库。"),
+        (["Spark"], "Spark 主要用于大数据计算分析，不是 ES 的全文检索核心库。"),
+        (["Java"], "ElasticSearch 本身使用 Java 开发，部署和运行时常与 JDK 环境相关。"),
+        (["C++"], "C++ 不是 ElasticSearch 的开发语言，不能作为本题答案。"),
+        (["Python"], "Python 常用于客户端脚本或数据处理，但不是 ElasticSearch 本身的开发语言。"),
+        (["Go"], "Go 不是 ElasticSearch 本身的开发语言。"),
+        (["关系型数据库存储"], "ElasticSearch 是搜索与分析引擎，不是以表、事务和关系约束为核心的关系型数据库。"),
+        (["全文检索"], "全文检索是 ElasticSearch 的核心能力，依靠倒排索引和分词实现关键词搜索。"),
+        (["数据分析"], "ElasticSearch 支持聚合查询和统计分析，因此数据分析属于它的常见能力。"),
+        (["分布式存储"], "ElasticSearch 可以把索引拆成分片分布在多个节点上，因此具备分布式存储能力。"),
+        (["9200"], "9200 是默认 HTTP/REST 访问端口，浏览器、Postman 和程序客户端通常通过它访问 ES。"),
+        (["9300"], "9300 主要用于 ES 节点之间的内部通信，不是默认 HTTP REST 访问端口。"),
+        (["8080"], "8080 是很多 Web 服务常见端口，但不是 ElasticSearch 默认 HTTP 端口。"),
+        (["3306"], "3306 是 MySQL 默认端口，不是 ElasticSearch 端口。"),
+        (["主分片"], "主分片保存原始数据，是索引水平拆分后的基本数据单元。"),
+        (["复制分片"], "复制分片是主分片的副本，用于容灾和提升查询吞吐。"),
+        (["green"], "green 表示主分片和复制分片都正常分配，是最健康状态。"),
+        (["yellow"], "yellow 表示主分片正常，但至少有复制分片未分配。"),
+        (["red"], "red 表示至少有主分片不可用，会影响数据读写。"),
+        (["text"], "text 类型会分词，适合全文检索长文本。"),
+        (["keyword"], "keyword 类型不分词，适合精确匹配、排序和聚合。"),
+        (["match_phrase"], "match_phrase 要求短语按顺序整体匹配，适合解决普通 match 过宽的问题。"),
+        (["multi_match"], "multi_match 用于让同一个关键词同时匹配多个字段。"),
+        (["term"], "term 不分析查询词，适合 keyword、数字、日期等精确值匹配。"),
+        (["match"], "match 会先分析/分词再匹配，适合 text 字段全文检索。"),
+        (["ik_smart"], "ik_smart 是最少切分，词项更少，偏精确和高效。"),
+        (["ik_max_word"], "ik_max_word 是最细切分，词项更多，召回率更高。"),
+        (["standard"], "standard 分词器对中文语义支持较弱，中文搜索通常不如 IK 分词器合适。"),
+        (["RestHighLevelClient"], "RestHighLevelClient 是 ES 7.x 常见 Java 高级 REST 客户端。"),
+        (["BulkRequest"], "BulkRequest 用于一次提交多条增删改请求，适合批量操作。"),
+        (["CreateIndexRequest"], "CreateIndexRequest 表示创建索引请求，名称直接对应功能。"),
+        (["DeleteIndexRequest"], "DeleteIndexRequest 表示删除索引请求。"),
+        (["GetIndexRequest"], "GetIndexRequest 常用于获取或判断索引相关信息。"),
+        (["exists"], "exists 表示判断是否存在，常用于判断索引或字段是否存在。"),
+        (["Snapshot"], "Snapshot 是 ES 官方快照备份和恢复机制，适合增量备份。"),
+        (["_reindex"], "_reindex 用于把数据重新写入新索引或复制到其他集群，适合迁移和重建。"),
+        (["DELETE"], "DELETE 用于删除指定索引、文档或按查询删除数据。"),
+        (["PUT"], "PUT 常用于创建或更新指定名称/ID 的资源，具有较强的幂等含义。"),
+        (["POST"], "POST 常用于提交操作或自动生成文档 ID。"),
+        (["GET"], "GET 用于查询资源或获取文档、索引信息。"),
+    ]
+    for keywords, reason in rules:
+        if any(keyword in text for keyword in keywords):
+            return reason if is_correct else f"{reason} 因此不是本题答案。"
+    if is_correct:
+        return "该选项与题干关键词直接对应，符合 ElasticSearch 的概念、功能或使用场景。"
+    return "该选项与题干要求不匹配，属于相近概念、其他技术或不完整表述，因此不能选。"
+
+
+def detailed_objective_explanation(question: str, answer: str, options: dict[str, str], qtype: str) -> str:
     if qtype == "judge":
         note = glossary_note(question)
-        suffix = f" 术语理解：{note}" if note else ""
-        return f"该说法为“{answer}”。{concept_reason(question, answer, options, qtype)}{suffix}"
+        result = "正确" if answer == "正确" else "错误"
+        lines = [
+            f"知识点：{knowledge_point(question, qtype)}",
+            f"答案解析：该说法为“{result}”。{concept_reason(question, answer, options, qtype)}",
+        ]
+        if result == "正确":
+            lines.append("为什么正确：题干表述与 ElasticSearch 的定义、特性或常见用法一致，没有把概念范围说窄或说错。")
+        else:
+            lines.append("为什么错误：题干中存在绝对化、范围错误或概念混淆，需要回到 ES 的真实功能判断，不能只看关键词熟悉就判正确。")
+        if note:
+            lines.append(f"术语说明：{note}")
+        return "\n".join(lines)
     correct = answer_text(answer, options)
     note = glossary_note(f"{question} {correct}")
-    suffix = f" 术语理解：{note}" if note else ""
+    correct_keys = set(answer if isinstance(answer, list) else list(str(answer)))
+    option_lines = []
+    for key, value in options.items():
+        is_correct = key in correct_keys
+        label = "应选" if is_correct else "不选"
+        option_lines.append(f"{key}. {value}：{label}。{option_reason(question, value, is_correct)}")
+    lines = [
+        f"知识点：{knowledge_point(question + ' ' + ' '.join(options.values()), qtype)}",
+        f"答案解析：正确选项是 {''.join(answer) if isinstance(answer, list) else answer}（{correct}）。{concept_reason(question, answer, options, qtype)}",
+        "选项分析：" + "\n".join(option_lines),
+    ]
+    if note:
+        lines.append(f"术语说明：{note}")
     if qtype == "multiple":
-        return f"正确选项是 {answer}（{correct}）。{concept_reason(question, answer, options, qtype)}{suffix}"
-    return f"正确选项是 {answer}（{correct}）。{concept_reason(question, answer, options, qtype)}{suffix}"
+        lines.append("多选判断方法：本题必须逐项判断，凡是符合题干范围的都要选；只选一个熟悉选项会漏选。")
+    return "\n".join(lines)
 
 
 def memory_tip(text: str, qtype: str) -> str:
@@ -230,7 +322,7 @@ def parse_choices(lines: list[str], qtype: str, start_id: int) -> list[dict]:
                 "answer": list(answer) if qtype == "multiple" else answer,
                 "referenceAnswer": answer,
                 "explanation": objective_explanation(question, answer, options, qtype),
-                "memoryTip": memory_tip(question + " " + answer_text(answer, options), qtype),
+                "memoryTip": "",
                 "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
                 "tags": infer_tags(question + " " + " ".join(options.values())),
             }
@@ -257,7 +349,7 @@ def parse_judge(lines: list[str], start_id: int) -> list[dict]:
                 "answer": answer_key,
                 "referenceAnswer": answer_label,
                 "explanation": objective_explanation(question, answer_label, {}, "judge"),
-                "memoryTip": memory_tip(question, "judge"),
+                "memoryTip": "",
                 "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
                 "tags": infer_tags(question),
             }
@@ -287,8 +379,8 @@ def parse_short(lines: list[str], start_id: int) -> list[dict]:
                 "options": {},
                 "answer": "",
                 "referenceAnswer": "",
-                "explanation": "主观题以参考答案为准。答题时先覆盖关键词，再补充原因、步骤或对比点。",
-                "memoryTip": memory_tip(line, "short"),
+                "explanation": "",
+                "memoryTip": "",
                 "source": "ElasticSearch分布式搜索引擎-复习资料.docx",
                 "tags": infer_tags(line),
             }
@@ -501,6 +593,32 @@ def concise_subjective_answer(question: dict) -> str:
     return "；".join(lines[:4])
 
 
+def detailed_short_explanation(question: dict) -> str:
+    question_text = question.get("question", "")
+    answer = question.get("referenceAnswer", "")
+    answer_lines = [line.strip() for line in answer.splitlines() if line.strip()]
+    point = knowledge_point(f"{question_text}\n{answer}", "short")
+    glossary = glossary_note(f"{question_text}\n{answer}")
+    key_lines = []
+    for index, line in enumerate(answer_lines[:8], 1):
+        if "：" in line:
+            label, detail = line.split("：", 1)
+            key_lines.append(f"{index}. {label}：这一点必须写，因为它说明了“{label}”在本题中的具体含义或作用；{detail}")
+        elif "对应" in line:
+            key_lines.append(f"{index}. {line}：这是概念映射关系，答题时要把 ES 概念和关系型数据库概念一一对应，不能只写其中一边。")
+        else:
+            key_lines.append(f"{index}. {line}：这是参考答案中的核心得分点，说明本题要求的定义、步骤、区别或作用。")
+    why = "为什么这样答：简答题不是只写一个名词，而是要把题干问到的范围说完整。参考答案中的每一行都对应一个得分点：定义题要写清楚含义，步骤题要写清楚顺序，对比题要写清楚差异，作用题要写清楚为什么有用。"
+    parts = [
+        f"知识点：{point}",
+        "答题要点：\n" + "\n".join(key_lines),
+        why,
+    ]
+    if glossary:
+        parts.append(f"术语说明：{glossary}")
+    return "\n".join(parts)
+
+
 def enhance_question_quality(question: dict) -> dict:
     if question["type"] in {"single", "multiple"}:
         answer = "".join(question["answer"]) if isinstance(question["answer"], list) else question["answer"]
@@ -516,21 +634,24 @@ def enhance_question_quality(question: dict) -> dict:
         ]
     )
     note = glossary_note(context)
-    if note and "术语理解：" not in question.get("explanation", ""):
+    if note and "术语理解：" not in question.get("explanation", "") and "术语说明：" not in question.get("explanation", ""):
         question["explanation"] = f"{question['explanation']} 术语理解：{note}"
 
-    generic_tips = [
-        "把题干关键词和答案关键词配对记忆",
-        "多选题用“逐项判定法”",
-    ]
-    if any(tip in question.get("memoryTip", "") for tip in generic_tips):
-        question["memoryTip"] = tag_memory_tip(question)
+    if question["type"] in {"single", "multiple", "judge", "short"}:
+        question["memoryTip"] = ""
+    else:
+        generic_tips = [
+            "把题干关键词和答案关键词配对记忆",
+            "多选题用“逐项判定法”",
+        ]
+        if any(tip in question.get("memoryTip", "") for tip in generic_tips):
+            question["memoryTip"] = tag_memory_tip(question)
 
     if question["type"] in {"short", "comprehensive"}:
         question["conciseAnswer"] = concise_subjective_answer(question)
         question["answerBlocks"] = answer_blocks(question.get("referenceAnswer", ""))
         if question["type"] == "short":
-            question["explanation"] = f"{question['explanation']} 答题方法：先写核心概念，再列关键区别、作用或步骤。"
+            question["explanation"] = detailed_short_explanation(question)
         else:
             question["explanation"] = f"{question['explanation']} 答题方法：按“场景需求→字段设计→DSL 查询→原因/优化”组织答案。"
     return question

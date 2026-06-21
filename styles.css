@@ -365,6 +365,23 @@ h3 {
   gap: 10px;
 }
 
+.wrong-section {
+  display: grid;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.wrong-section-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.wrong-section-title h3 {
+  margin: 0;
+}
+
 .list-row {
   display: grid;
   gap: 8px;
