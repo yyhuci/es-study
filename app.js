@@ -300,9 +300,13 @@ function abandonActiveReview() {
 function submitActiveReview() {
   const session = progress.activeReview;
   if (!session) return;
-  savePracticeAnswer(currentQuestion());
+  if (!checkCurrentPracticeQuestion()) return;
   const answeredCount = Object.keys(session.answered || {}).length;
-  if (answeredCount < session.queue.length) return;
+  if (answeredCount < session.queue.length) {
+    alert(`还有 ${session.queue.length - answeredCount} 题未完成，请先答完再提交本轮。`);
+    render();
+    return;
+  }
   session.queue.map(byId).forEach((question) => {
     if (!question) return;
     const answer = session.answers?.[question.id];
@@ -447,6 +451,10 @@ function statSummary() {
 }
 
 function setView(view) {
+  if (view === "practice" && !progress.activeReview && !app.submittedReview) {
+    startPractice();
+    return;
+  }
   app.view = view;
   document.querySelectorAll(".nav-tab").forEach((tab) => {
     tab.classList.toggle("is-active", tab.dataset.view === view);
@@ -648,7 +656,7 @@ function renderPracticeActions(question) {
   return `
     <div class="actions">
       <button class="ghost-action" data-action="prev" ${app.current === 0 ? "disabled" : ""}>上一题</button>
-      ${submitted ? `<button class="ghost-action" disabled>已提交，正在复盘</button>` : `<button class="primary-action" data-action="submit-review" ${canSubmit ? "" : "disabled"}>提交本轮</button>`}
+      ${submitted ? `<button class="ghost-action" disabled>已提交，正在复盘</button>` : `<button class="primary-action" data-action="submit-review">提交本轮</button>`}
       <button class="ghost-action" data-action="next">${!submitted && !checked ? "判断并看解析" : "下一题"}</button>
     </div>
     ${!submitted && !canSubmit ? `<p class="muted">还有 ${Math.max(0, total - answered)} 题未作答，全部完成后统一提交并显示解析。</p>` : ""}
@@ -945,13 +953,13 @@ function checkCurrent() {
   render();
 }
 
-function judgeCurrentPracticeQuestion() {
+function checkCurrentPracticeQuestion() {
   const session = progress.activeReview;
   const question = currentQuestion();
   if (!session || !question || session.submitted) return true;
   if (isPracticeQuestionChecked(question, session)) return true;
   if (isObjective(question) && !app.selected.length) {
-    alert("请先选择答案，再进入下一题。");
+    alert("请先选择答案，再继续。");
     return false;
   }
   savePracticeAnswer(question);
@@ -973,6 +981,11 @@ function judgeCurrentPracticeQuestion() {
   session.revealed[question.id] = new Date().toISOString();
   app.checked = { correct };
   saveProgress();
+  return true;
+}
+
+function judgeCurrentPracticeQuestion() {
+  if (!checkCurrentPracticeQuestion()) return false;
   render();
   return false;
 }
