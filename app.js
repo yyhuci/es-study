@@ -846,7 +846,7 @@ function renderExam() {
     <section class="question-panel">
       <div class="exam-header">
         <strong>第 ${exam.index + 1} / ${exam.ids.length} 题</strong>
-        <span class="muted">${exam.submitted ? "已交卷" : `剩余 ${formatTime(remainingSeconds(exam))}`}</span>
+        <span class="muted" data-exam-timer>${exam.submitted ? "已交卷" : `剩余 ${formatTime(remainingSeconds(exam))}`}</span>
         <button class="danger-action" data-action="submit-exam">${exam.submitted ? "查看报告" : "交卷"}</button>
       </div>
       ${renderExamQuestion(question)}
@@ -985,7 +985,9 @@ function checkCurrentPracticeQuestion() {
 }
 
 function judgeCurrentPracticeQuestion() {
+  const wasChecked = isPracticeQuestionChecked(currentQuestion());
   if (!checkCurrentPracticeQuestion()) return false;
+  if (wasChecked) return true;
   render();
   return false;
 }
@@ -1042,6 +1044,12 @@ function formatTime(seconds) {
   const mins = Math.floor(seconds / 60);
   const secs = String(seconds % 60).padStart(2, "0");
   return `${mins}:${secs}`;
+}
+
+function updateExamTimer() {
+  if (app.view !== "exam" || !app.exam || app.exam.submitted) return;
+  const timer = document.querySelector("[data-exam-timer]");
+  if (timer) timer.textContent = `剩余 ${formatTime(remainingSeconds(app.exam))}`;
 }
 
 function exportProgress() {
@@ -1197,7 +1205,7 @@ document.addEventListener("input", (event) => {
 });
 
 setInterval(() => {
-  if (app.view === "exam" && app.exam && !app.exam.submitted) render();
+  updateExamTimer();
 }, 1000);
 
 document.querySelector('[data-action="start-exam"]').addEventListener("click", () => setView("exam"));
